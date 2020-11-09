@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="order.orderLogDao" >
+  <resultMap id="BaseResultMap" type="com.taisf.services.order.entity.OrderLogEntity" >
+
+    <!-- 基础map -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="order_sn" property="orderSn" jdbcType="VARCHAR" />
+    <result column="from_status" property="fromStatus" jdbcType="TINYINT" />
+    <result column="to_status" property="toStatus" jdbcType="TINYINT" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="create_id" property="createId" jdbcType="VARCHAR" />
+    <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+    <result column="is_show" property="isShow" jdbcType="TINYINT" />
+  </resultMap>
+  
+  <sql id="Base_Column_List" >
+    <!--  基础列集合 -->
+    id, title, order_sn, from_status, to_status, remark, create_id, create_date, is_show
+  </sql>
+
+
+  <select id="getOrderLogListByOrderSn" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    <!--  -->
+    select
+    <include refid="Base_Column_List" />
+    FROM t_order_log
+    WHERE
+    order_sn = #{orderSn,jdbcType=VARCHAR}
+    AND
+    is_show = 1
+  </select>
+
+
+  <!-- 保存订单的操作记录 -->
+  <insert id="insertOrderLog" parameterType="com.taisf.services.order.entity.OrderLogEntity" >
+    <!--  -->
+    insert into t_order_log
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+
+      <if test="title != null" >
+        title,
+      </if>
+      <if test="orderSn != null" >
+        order_sn,
+      </if>
+      <if test="fromStatus != null" >
+        from_status,
+      </if>
+      <if test="toStatus != null" >
+        to_status,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="createId != null" >
+        create_id,
+      </if>
+      <if test="createDate != null" >
+        create_date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+
+      <if test="title != null" >
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="orderSn != null" >
+        #{orderSn,jdbcType=VARCHAR},
+      </if>
+      <if test="fromStatus != null" >
+        #{fromStatus,jdbcType=TINYINT},
+      </if>
+      <if test="toStatus != null" >
+        #{toStatus,jdbcType=TINYINT},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createId != null" >
+        #{createId,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null" >
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+
+
+</mapper>

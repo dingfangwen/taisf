@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="order.orderProductDao">
+
+    <resultMap id="BaseResultMap" type="com.taisf.services.order.entity.OrderProductEntity">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="order_sn" jdbcType="VARCHAR" property="orderSn"/>
+        <result column="product_name" jdbcType="VARCHAR" property="productName"/>
+        <result column="product_type" jdbcType="INTEGER" property="productType"/>
+        <result column="product_code" jdbcType="INTEGER" property="productCode"/>
+        <result column="product_num" jdbcType="VARCHAR" property="productNum"/>
+        <result column="product_price" jdbcType="INTEGER" property="productPrice"/>
+        <result column="product_classify" jdbcType="VARCHAR" property="productClassify"/>
+    </resultMap>
+    <resultMap id="ListMap" type="com.taisf.services.order.vo.OrderProductListVO" extends="BaseResultMap">
+        <result column="classify_name" jdbcType="VARCHAR" property="classifyName"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id,order_sn, product_name, product_code, product_type, product_num,product_price
+    </sql>
+
+
+    <select id="getOrderProductByOrderSnList" resultMap="ListMap">
+        select
+        op.id,op.order_sn, op.product_name, op.product_code, op.product_type, op.product_num,op.product_price,pc.classify_name,p.product_classify
+        from t_order_product op LEFT  JOIN  t_product p ON op.product_code = p.id LEFT  JOIN t_product_classify pc ON  p.product_classify = pc.classify_code
+        where order_sn in
+
+        <foreach collection="list" item="orderSn" separator="," open="(" close=")">
+            #{orderSn,jdbcType=VARCHAR}
+        </foreach>
+    </select>
+
+
+    <select id="getOrderProductByOrderSn" parameterType="java.lang.String" resultMap="ListMap">
+        select
+        op.id,op.order_sn, op.product_name, op.product_code, op.product_type, op.product_num,op.product_price,pc.classify_name,p.product_classify
+        from t_order_product op LEFT  JOIN  t_product p ON op.product_code = p.id LEFT  JOIN t_product_classify pc ON  p.product_classify = pc.classify_code
+        where order_sn = #{orderSn,jdbcType=VARCHAR}
+    </select>
+    <select id="getOrderProductListByOrderSn"  resultMap="ListMap">
+        select
+        op.id,op.order_sn, op.product_name, op.product_code, op.product_type, op.product_num,op.product_price,pc.classify_name,p.product_classify
+        from t_order_product op LEFT  JOIN  t_product p ON op.product_code = p.id LEFT  JOIN t_product_classify pc ON  p.product_classify = pc.classify_code
+        where order_sn in
+        <foreach collection="list" item="orderSn" separator="," open="(" close=")">
+            #{orderSn,jdbcType=VARCHAR}
+        </foreach>
+    </select>
+
+
+    <!-- 保存 -->
+    <insert id="saveOrderProduct" parameterType="com.taisf.services.order.entity.OrderProductEntity">
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+
+        insert into t_order_product
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="orderSn != null">
+                order_sn,
+            </if>
+            <if test="productName != null">
+                product_name,
+            </if>
+
+            <if test="productType != null">
+                product_type,
+            </if>
+            <if test="productCode != null">
+                product_code,
+            </if>
+
+            <if test="productNum != null">
+                product_num,
+            </if>
+            <if test="productPrice != null">
+                product_price,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+
+            <if test="orderSn != null">
+                #{orderSn,jdbcType=VARCHAR},
+            </if>
+            <if test="productName != null">
+                #{productName,jdbcType=VARCHAR},
+            </if>
+
+            <if test="productType != null">
+                #{productType,jdbcType=INTEGER},
+            </if>
+            <if test="productCode != null">
+                #{productCode,jdbcType=INTEGER},
+            </if>
+
+            <if test="productNum != null">
+                #{productNum,jdbcType=INTEGER},
+            </if>
+            <if test="productPrice != null">
+                #{productPrice,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+
+    <select id="getEverydayTaskPgeList" parameterType="com.taisf.services.order.dto.DayTaskRequest" resultType="com.taisf.services.order.vo.DayTaskVO">
+
+        select
+            ca.num as productNum,
+            p.product_name as productName,
+            pc.classify_name as productClassify ,
+            sw.window_name AS windowName
+            from
+            (
+                select
+                tmp.product_code, sum(tmp.product_num) as num
+                from
+                (
+                    SELECT
+                    CASE WHEN op.product_type = 3 THEN op.product_code
+                    WHEN op.product_type = 2 THEN p2.id
+                    ELSE p1.id  END AS product_code,
+                    op.product_num
+                    FROM
+                    t_order_product op
+                    INNER JOIN t_order o ON o.order_sn = op.order_sn
+                    LEFT JOIN t_product p1 ON op.product_code = p1.id  and op.product_type = 1
+                    LEFT JOIN t_product_package package ON op.product_code = package.package_id  and op.product_type = 2
+                    LEFT JOIN t_product p2 ON  p2.id = package.product_id
+                    where  1=1
+                    and TO_DAYS( now() ) - TO_DAYS(o.create_time) = 0
+                    <if test="enterpriseCode != null and enterpriseCode != '' ">
+                        AND o.enterprise_code = #{enterpriseCode,jdbcType=VARCHAR}
+                    </if>
+                    <if test="supplierCode != null and supplierCode != '' ">
+                        AND o.supplier_code = #{supplierCode,jdbcType=VARCHAR}
+                    </if>
+
+                    AND  o.order_status = 50
+              )tmp
+              group by tmp.product_code
+            )ca inner JOIN t_product p ON ca.product_code = p.id
+        LEFT JOIN t_supplier_window sw ON p.window_code = sw.window_code
+        LEFT JOIN t_product_classify pc ON pc.classify_code = p.product_classify
+        order by p.product_classify asc
+
+    </select>
+
+
+</mapper>

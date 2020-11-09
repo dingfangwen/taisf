@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="order.orderMoneyDao" >
+  <resultMap id="BaseResultMap" type="com.taisf.services.order.entity.OrderMoneyEntity" >
+    <!-- 基础map -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="order_sn" property="orderSn" jdbcType="VARCHAR" />
+    <result column="sum_money" property="sumMoney" jdbcType="INTEGER" />
+    <result column="coupon_money" property="couponMoney" jdbcType="INTEGER" />
+    <result column="discount_money" property="discountMoney" jdbcType="INTEGER" />
+    <result column="red_money" property="redMoney" jdbcType="INTEGER" />
+    <result column="need_pay" property="needPay" jdbcType="INTEGER" />
+    <result column="pay_balance" property="payBalance" jdbcType="INTEGER" />
+    <result column="carry_money" property="carryMoney" jdbcType="INTEGER" />
+  </resultMap>
+
+
+  <sql id="Base_Column_List" >
+    <!-- -->
+     order_sn, sum_money, coupon_money, discount_money,red_money, need_pay, pay_money, pay_balance, carry_money
+    
+  </sql>
+
+
+  <select id="getOrderMoneyByOrderSn" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    <!-- 通过定orderSn 获取订单价格 -->
+    SELECT
+      <include refid="Base_Column_List" />
+    FROM t_order_money
+
+    WHERE order_sn = #{orderSn,jdbcType=VARCHAR}
+  </select>
+
+
+  <insert id="saveOrderMoney" parameterType="com.taisf.services.order.entity.OrderMoneyEntity" >
+    <!--  -->
+    INSERT INTO t_order_money
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+
+      <if test="uid != null" >
+        uid,
+      </if>
+      <if test="orderSn != null" >
+        order_sn,
+      </if>
+      <if test="sumMoney != null" >
+        sum_money,
+      </if>
+      <if test="couponMoney != null" >
+        coupon_money,
+      </if>
+      <if test="redMoney != null" >
+        red_money,
+      </if>
+      <if test="discountMoney != null" >
+        discount_money,
+      </if>
+      <if test="needPay != null" >
+        need_pay,
+      </if>
+      <if test="payMoney != null" >
+        pay_money,
+      </if>
+      <if test="payBalance != null" >
+        pay_balance,
+      </if>
+      <if test="carryMoney != null" >
+        carry_money,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="uid != null" >
+        #{uid,jdbcType=VARCHAR},
+      </if>
+
+      <if test="orderSn != null" >
+        #{orderSn,jdbcType=VARCHAR},
+      </if>
+
+      <if test="sumMoney != null" >
+         #{sumMoney,jdbcType=INTEGER},
+      </if>
+      <if test="couponMoney != null" >
+        #{couponMoney,jdbcType=INTEGER},
+      </if>
+      <if test="redMoney != null" >
+        #{redMoney,jdbcType=INTEGER},
+      </if>
+      <if test="discountMoney != null" >
+        #{discountMoney,jdbcType=INTEGER},
+      </if>
+      <if test="needPay != null" >
+        #{needPay,jdbcType=INTEGER},
+      </if>
+      <if test="payMoney != null" >
+        #{payMoney,jdbcType=INTEGER},
+      </if>
+      <if test="payBalance != null" >
+        #{payBalance,jdbcType=INTEGER},
+      </if>
+      <if test="carryMoney != null" >
+        #{carryMoney,jdbcType=INTEGER},
+      </if>
+
+    </trim>
+  </insert>
+
+
+
+  <update id="updateOrderMoney" parameterType="com.taisf.services.order.entity.OrderMoneyEntity" >
+    <!-- 更新订单金额 -->
+    UPDATE t_order_money
+    <set >
+      <if test="sumMoney != null" >
+        sum_money = #{sumMoney,jdbcType=INTEGER},
+      </if>
+      <if test="couponMoney != null" >
+        coupon_money = #{couponMoney,jdbcType=INTEGER},
+      </if>
+      <if test="redMoney != null" >
+        red_money =  #{redMoney,jdbcType=INTEGER},
+      </if>
+      <if test="discountMoney != null" >
+        discount_money = #{discountMoney,jdbcType=INTEGER},
+      </if>
+      <if test="needPay != null" >
+        need_pay = #{needPay,jdbcType=INTEGER},
+      </if>
+      <if test="payMoney != null" >
+        pay_money = #{payMoney,jdbcType=INTEGER},
+      </if>
+      <if test="payBalance != null" >
+        pay_balance = #{payBalance,jdbcType=INTEGER},
+      </if>
+      <if test="carryMoney != null" >
+        carry_money =  #{carryMoney,jdbcType=INTEGER},
+      </if>
+    
+    </set>
+    WHERE order_sn = #{orderSn,jdbcType=VARCHAR}
+  </update>
+
+
+</mapper>

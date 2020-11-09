@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="supplier.supplierProductDao">
+
+    <resultMap id="BaseResultMap" type="com.taisf.services.supplier.entity.SupplierProductEntity">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="supplier_code" jdbcType="VARCHAR" property="supplierCode"/>
+        <result column="product_code" jdbcType="INTEGER" property="productCode"/>
+        <result column="product_type" jdbcType="INTEGER" property="productType"/>
+        <result column="product_price" jdbcType="INTEGER" property="productPrice"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="is_send" jdbcType="SMALLINT" property="isSend"/>
+        <result column="for_lunch" jdbcType="INTEGER" property="forLunch"/>
+        <result column="for_dinner" jdbcType="INTEGER" property="forDinner"/>
+    </resultMap>
+
+
+    <resultMap id="BaseProductMap" type="com.taisf.services.product.entity.ProductEntity">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="product_name" jdbcType="VARCHAR" property="productName"/>
+        <result column="product_classify" jdbcType="INTEGER" property="productClassify"/>
+        <result column="product_type" jdbcType="INTEGER" property="productType"/>
+        <result column="supplier_product_type" jdbcType="INTEGER" property="supplierProductType"/>
+        <result column="product_source" jdbcType="INTEGER" property="productSource"/>
+        <result column="product_des" jdbcType="VARCHAR" property="productDes"/>
+        <result column="product_pic" jdbcType="VARCHAR" property="productPic"/>
+        <result column="price_sale" jdbcType="INTEGER" property="priceSale"/>
+        <result column="price_market" jdbcType="INTEGER" property="priceMarket"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="is_del" jdbcType="INTEGER" property="isDel"/>
+        <result column="for_lunch" jdbcType="INTEGER" property="forLunch"/>
+        <result column="for_dinner" jdbcType="INTEGER" property="forDinner"/>
+
+    </resultMap>
+
+
+    <sql id="Base_Column_List_Supplier">
+    t.id, t.product_name, t.product_classify, t.product_type, t.supplier_product_type,t.product_source, t.product_des, t.product_pic,
+    t.price_sale  as price_sale,   t.price_market  as price_market, t.create_time, t.update_time, is_del, p.for_lunch, p.for_dinner
+  </sql>
+
+
+    <sql id="Base_Column_List">
+    id, supplier_code, product_code, product_type,product_price, create_time, is_send,for_lunch,for_dinner
+  </sql>
+
+    <select id="getProductListBySupplierAndType" parameterType="com.taisf.services.supplier.dto.SupplierProductRequest"
+            resultMap="BaseProductMap">
+        select
+        <include refid="Base_Column_List_Supplier"/>
+        from t_product t
+        inner join t_supplier_product p ON p.product_code = t.id
+        where p.supplier_code = #{supplierCode,jdbcType=VARCHAR}
+        <if test="productClassify != null">
+            and t.product_classify = #{productClassify,jdbcType=VARCHAR}
+        </if>
+        <if test="week != null">
+            and p.week = #{week,jdbcType=INTEGER}
+        </if>
+
+        <if test="orderType != null and orderType == '20' ">
+            and p.for_lunch = 1
+        </if>
+
+        <if test="orderType != null and orderType == '30' ">
+            and p.for_dinner = 1
+        </if>
+        <if test="productIds != null ">
+            and t.id in <foreach collection="productIds" item="item" index="index"
+                               open="(" separator="," close=")">#{item}</foreach>
+        </if>
+
+
+    </select>
+
+    <select id="getSupplierProductByCode" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from t_supplier_product
+        where supplier_code = #{t_supplierCode,jdbcType=VARCHAR}
+    </select>
+
+
+
+    <select id="getSupplierProductByCodeAndWeek" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        FROM t_supplier_product sp
+        WHERE
+        sp.week = #{week,jdbcType=INTEGER} AND
+        sp.supplier_code = #{supplierCode,jdbcType=VARCHAR}
+    </select>
+
+    <select id="getSupplierProductByUserId" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        FROM t_supplier_product sp
+        WHERE sp.supplier_code =
+        (SELECT es.supplier_code FROM t_employee_supplier es WHERE es.user_id = #{userId,jdbcType=VARCHAR})
+    </select>
+
+
+    <delete id="deleteByUserIdAndProudctIdAndWeek" parameterType="map">
+        delete from t_supplier_product
+        where product_code = #{productId,jdbcType=INTEGER}
+        AND week =  #{week,jdbcType=INTEGER}
+        AND supplier_code = #{supplierCode,jdbcType=VARCHAR}
+    </delete>
+
+    <delete id="deleteBySupplierCodeAndProudctId" parameterType="map">
+    delete from t_supplier_product
+    where product_code = #{productId,jdbcType=INTEGER}
+    AND supplier_code = #{supplierCode,jdbcType=VARCHAR}
+  </delete>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_supplier_product
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <insert id="saveSupplierProduct" parameterType="com.taisf.services.supplier.entity.SupplierProductEntity">
+        insert into t_supplier_product
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+
+            <if test="week != null">
+                week,
+            </if>
+
+            <if test="supplierCode != null">
+                supplier_code,
+            </if>
+            <if test="productCode != null">
+                product_code,
+            </if>
+            <if test="productType != null">
+                product_type,
+            </if>
+            <if test="productPrice != null">
+                product_price,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="isSend != null">
+                is_send,
+            </if>
+            <if test="forLunch != null">
+                for_lunch,
+            </if>
+            <if test="forDinner != null">
+                for_dinner,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="week != null">
+                #{week,jdbcType=INTEGER},
+            </if>
+            <if test="supplierCode != null">
+                #{supplierCode,jdbcType=VARCHAR},
+            </if>
+            <if test="productCode != null">
+                #{productCode,jdbcType=INTEGER},
+            </if>
+            <if test="productType != null">
+                #{productType,jdbcType=INTEGER},
+            </if>
+            <if test="productPrice != null">
+                #{productPrice,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="isSend != null">
+                #{isSend,jdbcType=SMALLINT},
+            </if>
+            <if test="forLunch != null">
+                #{forLunch,jdbcType=INTEGER},
+            </if>
+            <if test="forDinner != null">
+                #{forDinner,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateSupplierProduct" parameterType="com.taisf.services.supplier.entity.SupplierProductEntity">
+        update t_supplier_product
+        <set>
+            <if test="supplierCode != null">
+                supplier_code = #{supplierCode,jdbcType=VARCHAR},
+            </if>
+            <if test="productCode != null">
+                product_code = #{productCode,jdbcType=INTEGER},
+            </if>
+            <if test="productType != null">
+                product_type = #{productType,jdbcType=INTEGER},
+            </if>
+            <if test="productPrice != null">
+                product_price = #{productPrice,jdbcType=INTEGER},
+            </if>
+
+
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="isSend != null">
+                is_send = #{isSend,jdbcType=SMALLINT},
+            </if>
+        </set>
+        where supplier_code = #{t_supplierCode,jdbcType=VARCHAR}
+    </update>
+
+    <resultMap id="BaseResultMapList" type="com.taisf.services.product.ProductVO">
+        <result column="id" jdbcType="INTEGER" property="id"/>
+        <result column="product_name" jdbcType="VARCHAR" property="productName"/>
+        <result column="product_classify" jdbcType="INTEGER" property="productClassify"/>
+        <result column="classify_name" jdbcType="VARCHAR" property="classifyName"/>
+        <result column="product_type" jdbcType="INTEGER" property="productType"/>
+        <result column="supplier_product_type" jdbcType="INTEGER" property="supplierProductType"/>
+        <result column="product_source" jdbcType="INTEGER" property="productSource"/>
+        <result column="price_sale" jdbcType="INTEGER" property="priceSale"/>
+
+        <result column="for_lunch" jdbcType="INTEGER" property="forLunch"/>
+        <result column="for_dinner" jdbcType="INTEGER" property="forDinner"/>
+    </resultMap>
+
+    <select id="pageListSupplierProduct" parameterType="com.taisf.services.product.dto.ProductListRequest"
+            resultMap="BaseResultMapList">
+        select t_product.id,
+        t_product.product_name, pc.classify_name,t_product.product_classify, t_product.product_type, t_product.supplier_product_type, t_product.product_source,t_product.price_sale,for_lunch,for_dinner
+        from t_supplier_product
+        INNER JOIN t_product ON t_product.id = t_supplier_product.product_code
+        LEFT  JOIN t_product_classify pc ON t_product.product_classify = pc.classify_code
+        where 1=1
+        <if test="supplierCode != null and supplierCode != ''">
+            AND t_supplier_product.supplier_code = #{supplierCode}
+        </if>
+
+        <if test="productName != null and productName != ''">
+            AND t_product.product_name = #{productName}
+        </if>
+        <if test="productClassify != null and productClassify != ''">
+            AND t_product.product_classify = #{productClassify}
+        </if>
+        <if test="productType != null and productType != ''">
+            AND t_product.product_type = #{productType}
+        </if>
+        <if test="productSource != null and productSource != ''">
+            AND t_product.product_source = #{productSource}
+        </if>
+        <if test="week != null ">
+            AND t_supplier_product.week = #{week}
+        </if>
+        <if test="forLunch != null and forLunch != ''">
+            AND for_lunch = #{forLunch}
+        </if>
+        <if test="forDinner != null and forDinner != ''">
+            AND for_dinner = #{forDinner}
+        </if>
+    </select>
+</mapper>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="supplierWindowDao" >
+  <resultMap id="BaseResultMap" type="com.taisf.services.window.entity.SupplierWindowEntity" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="supplier_code" property="supplierCode" jdbcType="VARCHAR" />
+    <result column="window_code" property="windowCode" jdbcType="VARCHAR" />
+    <result column="window_name" property="windowName" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, supplier_code, window_code, window_name, create_time, update_time
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_supplier_window
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+ <select id="pageListSupplierWindow" resultMap="BaseResultMap" parameterType="com.taisf.services.window.req.SupplierWindowListRequest" >
+    select
+    <include refid="Base_Column_List" />
+    from t_supplier_window
+    where 1=1
+   <if test="supplierCode != null and supplierCode != ''">
+     AND supplier_code = #{supplierCode,jdbcType=VARCHAR}
+   </if>
+   <if test="windowName != null and windowName != ''">
+     AND window_name LIKE concat("%",#{windowName,jdbcType=VARCHAR},"%")
+   </if>
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_supplier_window
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+  <insert id="insertSelective" parameterType="com.taisf.services.window.entity.SupplierWindowEntity" >
+    insert into t_supplier_window
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="supplierCode != null" >
+        supplier_code,
+      </if>
+      <if test="windowCode != null" >
+        window_code,
+      </if>
+      <if test="windowName != null" >
+        window_name,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="supplierCode != null" >
+        #{supplierCode,jdbcType=VARCHAR},
+      </if>
+      <if test="windowCode != null" >
+        #{windowCode,jdbcType=VARCHAR},
+      </if>
+      <if test="windowName != null" >
+        #{windowName,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.taisf.services.window.entity.SupplierWindowEntity" >
+    update t_supplier_window
+    <set >
+      <if test="supplierCode != null" >
+        supplier_code = #{supplierCode,jdbcType=VARCHAR},
+      </if>
+      <if test="windowCode != null" >
+        window_code = #{windowCode,jdbcType=VARCHAR},
+      </if>
+      <if test="windowName != null" >
+        window_name = #{windowName,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+</mapper>

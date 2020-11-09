@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="enterprise.enterpriseFinanceDao">
+
+  <resultMap id="BaseResultMap" type="com.taisf.services.enterprise.entity.EnterpriseFinanceEntity">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="enterprise_code" jdbcType="VARCHAR" property="enterpriseCode" />
+    <result column="finance_name" jdbcType="VARCHAR" property="financeName" />
+    <result column="fee_day" jdbcType="INTEGER" property="feeDay" />
+    <result column="check_type" jdbcType="INTEGER" property="checkType" />
+    <result column="invoice_title" jdbcType="VARCHAR" property="invoiceTitle" />
+    <result column="enterprise_account" jdbcType="VARCHAR" property="enterpriseAccount" />
+    <result column="enterprise_tax" jdbcType="VARCHAR" property="enterpriseTax" />
+  </resultMap>
+
+
+  <sql id="Base_Column_List">
+    id, enterprise_code, finance_name, fee_day, check_type, invoice_title, enterprise_account, 
+    enterprise_tax
+  </sql>
+
+
+  <select id="getEnterpriseFinanceByCode" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_enterprise_finance
+    where enterprise_code = #{enterpriseCode,jdbcType=INTEGER}
+  </select>
+
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_enterprise_finance
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+
+  <insert id="saveEnterpriseFinance" parameterType="com.taisf.services.enterprise.entity.EnterpriseFinanceEntity">
+    insert into t_enterprise_finance
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+
+      <if test="enterpriseCode != null">
+        enterprise_code,
+      </if>
+      <if test="financeName != null">
+        finance_name,
+      </if>
+      <if test="feeDay != null">
+        fee_day,
+      </if>
+      <if test="checkType != null">
+        check_type,
+      </if>
+      <if test="invoiceTitle != null">
+        invoice_title,
+      </if>
+      <if test="enterpriseAccount != null">
+        enterprise_account,
+      </if>
+      <if test="enterpriseTax != null">
+        enterprise_tax,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+
+      <if test="enterpriseCode != null">
+        #{enterpriseCode,jdbcType=VARCHAR},
+      </if>
+      <if test="financeName != null">
+        #{financeName,jdbcType=VARCHAR},
+      </if>
+      <if test="feeDay != null">
+        #{feeDay,jdbcType=INTEGER},
+      </if>
+      <if test="checkType != null">
+        #{checkType,jdbcType=INTEGER},
+      </if>
+      <if test="invoiceTitle != null">
+        #{invoiceTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="enterpriseAccount != null">
+        #{enterpriseAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="enterpriseTax != null">
+        #{enterpriseTax,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateEnterpriseFinance" parameterType="com.taisf.services.enterprise.entity.EnterpriseFinanceEntity">
+    update t_enterprise_finance
+    <set>
+      <if test="financeName != null">
+        finance_name = #{financeName,jdbcType=VARCHAR},
+      </if>
+      <if test="feeDay != null">
+        fee_day = #{feeDay,jdbcType=INTEGER},
+      </if>
+      <if test="checkType != null">
+        check_type = #{checkType,jdbcType=INTEGER},
+      </if>
+      <if test="invoiceTitle != null">
+        invoice_title = #{invoiceTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="enterpriseAccount != null">
+        enterprise_account = #{enterpriseAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="enterpriseTax != null">
+        enterprise_tax = #{enterpriseTax,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where  enterprise_code = #{enterpriseCode,jdbcType=VARCHAR}
+  </update>
+
+</mapper>

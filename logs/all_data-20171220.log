@@ -1,0 +1,66 @@
+2017-12-20 15:35:40.010 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2017-12-20 15:35:41.129 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2017-12-20 15:35:41.129 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2017-12-20 15:35:41.202 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2017-12-20 15:35:41.203 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2017-12-20 15:35:41.472 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2017-12-20 15:35:41.536 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/payment-service/target/classes/com/jk/services/payment/dao/map/payLockDao.xml]'
+2017-12-20 15:35:41.554 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/payment-service/target/classes/com/jk/services/payment/dao/map/payDetailDao.xml]'
+2017-12-20 15:35:41.566 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/payment-service/target/classes/com/jk/services/payment/dao/map/payAccountDao.xml]'
+2017-12-20 15:35:41.579 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/payment-service/target/classes/com/jk/services/payment/dao/map/payLogDao.xml]'
+2017-12-20 15:35:41.596 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/payment-service/target/classes/com/jk/services/payment/dao/map/payDao.xml]'
+2017-12-20 15:35:41.685 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2017-12-20 15:35:41.685 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2017-12-20 15:35:41.756 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2017-12-20 15:35:41.756 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2017-12-20 15:35:41.998 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2017-12-20 15:35:42.006 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/payment-service/target/classes/com/jk/services/payment/dao/map/payLockDao.xml]'
+2017-12-20 15:35:42.017 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/payment-service/target/classes/com/jk/services/payment/dao/map/payDetailDao.xml]'
+2017-12-20 15:35:42.026 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/payment-service/target/classes/com/jk/services/payment/dao/map/payAccountDao.xml]'
+2017-12-20 15:35:42.036 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/payment-service/target/classes/com/jk/services/payment/dao/map/payLogDao.xml]'
+2017-12-20 15:35:42.049 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/payment-service/target/classes/com/jk/services/payment/dao/map/payDao.xml]'
+2017-12-20 15:35:42.374 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2017-12-20 15:35:42.387 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66629f63] was not registered for synchronization because synchronization is not active
+2017-12-20 15:35:42.401 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2017-12-20 15:35:42.402 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2017-12-20 15:35:42.402 [main] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@31024624] will not be managed by Spring
+2017-12-20 15:35:42.408 [main] DEBUG payment.payAccountDao.insert - ==>  Preparing: insert into t_pay_account (name, product_code, partner,account, partner_key,password, code, code_key, remark ) values (?, ?, ?,?, ?,?, ?, ?, ? ) 
+2017-12-20 15:35:42.433 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+insert into t_pay_account (name, product_code, partner,account, partner_key,password, code, code_key, remark
+      )
+    values (?, ?, ?,?, ?,?, ?, ?, ?
+      )
+2017-12-20 15:35:42.433 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+insert into t_pay_account (name, product_code, partner,account, partner_key,password, code, code_key, remark
+      )
+    values (?, ?, ?,?, ?,?, ?, ?, ?
+      )
+2017-12-20 15:35:42.455 [main] DEBUG payment.payAccountDao.insert - ==> Parameters: name(String), pcode(String), assword(String), account(String), null, null, ode(String), odeKey(String), remark(String)
+2017-12-20 15:35:42.456 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [name, pcode, assword, account, null, null, ode, odeKey, remark]
+2017-12-20 15:35:42.456 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, OTHER, OTHER, VARCHAR, VARCHAR, VARCHAR]
+2017-12-20 15:35:42.456 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [name, pcode, assword, account, null, null, ode, odeKey, remark]
+2017-12-20 15:35:42.456 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, OTHER, OTHER, VARCHAR, VARCHAR, VARCHAR]
+2017-12-20 15:35:42.473 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 16.933486 millis. 
+insert into t_pay_account (name, product_code, partner,account, partner_key,password, code, code_key, remark
+      )
+    values (?, ?, ?,?, ?,?, ?, ?, ?
+      )
+2017-12-20 15:35:42.473 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 16.933486 millis. 
+insert into t_pay_account (name, product_code, partner,account, partner_key,password, code, code_key, remark
+      )
+    values (?, ?, ?,?, ?,?, ?, ?, ?
+      )
+2017-12-20 15:35:42.473 [main] DEBUG payment.payAccountDao.insert - <==    Updates: 1
+2017-12-20 15:35:42.473 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2017-12-20 15:35:42.473 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2017-12-20 15:35:42.474 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66629f63]
+2017-12-20 15:35:42.476 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2017-12-20 15:35:42.477 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2017-12-20 15:35:42.706 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2017-12-20 15:35:42.706 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2017-12-20 15:35:42.706 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2017-12-20 15:35:42.707 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2017-12-20 15:35:42.708 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2017-12-20 15:35:42.708 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2017-12-20 15:35:42.708 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2017-12-20 15:35:42.708 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed

@@ -1,0 +1,1784 @@
+2019-04-28 12:07:24.527 [main] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2019-04-28 12:07:24.537 [main] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2019-04-28 12:07:24.538 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2019-04-28 12:07:24.595 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-28 12:07:24.596 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://sandbox.iplitz.com:80
+2019-04-28 12:07:24.782 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connecting to sandbox.iplitz.com/116.62.137.37:80
+2019-04-28 12:07:24.816 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.36.130:61837<->116.62.137.37:80
+2019-04-28 12:07:24.817 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /api/open/digest/get HTTP/1.1
+2019-04-28 12:07:24.817 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+2019-04-28 12:07:24.818 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+2019-04-28 12:07:24.820 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> POST /api/open/digest/get HTTP/1.1
+2019-04-28 12:07:24.820 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Type: application/json
+2019-04-28 12:07:24.820 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Length: 134
+2019-04-28 12:07:24.820 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Host: sandbox.iplitz.com
+2019-04-28 12:07:24.820 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Connection: Keep-Alive
+2019-04-28 12:07:24.820 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)
+2019-04-28 12:07:24.820 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2019-04-28 12:07:24.821 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "POST /api/open/digest/get HTTP/1.1[\r][\n]"
+2019-04-28 12:07:24.821 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Type: application/json[\r][\n]"
+2019-04-28 12:07:24.821 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Length: 134[\r][\n]"
+2019-04-28 12:07:24.821 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Host: sandbox.iplitz.com[\r][\n]"
+2019-04-28 12:07:24.821 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2019-04-28 12:07:24.821 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)[\r][\n]"
+2019-04-28 12:07:24.821 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2019-04-28 12:07:24.821 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "[\r][\n]"
+2019-04-28 12:07:24.821 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "{"AppId":"aef9400912e14c8db42201b42c075cab","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","Timestamp":"1556424443818","CellNos":"[5]"}"
+2019-04-28 12:07:24.858 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+2019-04-28 12:07:24.858 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Server: nginx[\r][\n]"
+2019-04-28 12:07:24.858 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Date: Sun, 28 Apr 2019 04:07:24 GMT[\r][\n]"
+2019-04-28 12:07:24.858 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2019-04-28 12:07:24.858 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Length: 94[\r][\n]"
+2019-04-28 12:07:24.859 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+2019-04-28 12:07:24.859 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Set-Cookie: JSESSIONID=40D8D56A725BFC75195446652B6F652E; Path=/; HttpOnly[\r][\n]"
+2019-04-28 12:07:24.859 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Origin: *[\r][\n]"
+2019-04-28 12:07:24.859 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-28 12:07:24.859 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-28 12:07:24.859 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization[\r][\n]"
+2019-04-28 12:07:24.859 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+2019-04-28 12:07:24.860 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "{"Data":"177B8E44AFD7DD54F2FF6DB63EFE9556","Success":true,"Code":0,"Msg":"[0xe8][0x8e][0xb7][0xe5][0x8f][0x96][0xe7][0xad][0xbe][0xe5][0x90][0x8d][0xe6][0x88][0x90][0xe5][0x8a][0x9f]"}"
+2019-04-28 12:07:24.864 [main] DEBUG org.apache.http.headers - http-outgoing-0 << HTTP/1.1 200 OK
+2019-04-28 12:07:24.864 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Server: nginx
+2019-04-28 12:07:24.864 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Date: Sun, 28 Apr 2019 04:07:24 GMT
+2019-04-28 12:07:24.864 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Type: application/json;charset=UTF-8
+2019-04-28 12:07:24.864 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Length: 94
+2019-04-28 12:07:24.865 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Connection: keep-alive
+2019-04-28 12:07:24.865 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Set-Cookie: JSESSIONID=40D8D56A725BFC75195446652B6F652E; Path=/; HttpOnly
+2019-04-28 12:07:24.865 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Origin: *
+2019-04-28 12:07:24.865 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-28 12:07:24.865 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-28 12:07:24.865 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+2019-04-28 12:07:24.869 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+2019-04-28 12:07:24.875 [main] DEBUG o.a.http.client.protocol.ResponseProcessCookies - Cookie accepted [JSESSIONID="40D8D56A725BFC75195446652B6F652E", version:0, domain:sandbox.iplitz.com, path:/, expiry:null]
+2019-04-28 12:07:24.877 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 0][route: {}->http://sandbox.iplitz.com:80] can be kept alive indefinitely
+2019-04-28 12:07:24.877 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {}->http://sandbox.iplitz.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-28 12:07:24.877 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Cancelling request execution
+2019-04-28 12:07:24.878 [main] INFO  com.jk.framework.common.utils.CloseableHttpUtil - time:811ms,API:http://sandbox.iplitz.com/api/open/digest/get,parMap:{"AppId":"aef9400912e14c8db42201b42c075cab","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","Timestamp":"1556424443818","CellNos":"[5]"},headerMap:null
+2019-04-28 12:07:24.934 [main] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2019-04-28 12:07:24.934 [main] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2019-04-28 12:07:24.935 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2019-04-28 12:07:24.935 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 1][route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-28 12:07:24.935 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://sandbox.iplitz.com:80
+2019-04-28 12:07:24.936 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connecting to sandbox.iplitz.com/116.62.137.37:80
+2019-04-28 12:07:24.984 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.36.130:61838<->116.62.137.37:80
+2019-04-28 12:07:24.985 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /api/open/opencells HTTP/1.1
+2019-04-28 12:07:24.986 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+2019-04-28 12:07:24.986 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+2019-04-28 12:07:24.986 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> POST /api/open/opencells HTTP/1.1
+2019-04-28 12:07:24.986 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Content-Type: application/json
+2019-04-28 12:07:24.986 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Content-Length: 178
+2019-04-28 12:07:24.987 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Host: sandbox.iplitz.com
+2019-04-28 12:07:24.987 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Connection: Keep-Alive
+2019-04-28 12:07:24.987 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)
+2019-04-28 12:07:24.987 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Accept-Encoding: gzip,deflate
+2019-04-28 12:07:24.987 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "POST /api/open/opencells HTTP/1.1[\r][\n]"
+2019-04-28 12:07:24.987 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Content-Type: application/json[\r][\n]"
+2019-04-28 12:07:24.987 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Content-Length: 178[\r][\n]"
+2019-04-28 12:07:24.987 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Host: sandbox.iplitz.com[\r][\n]"
+2019-04-28 12:07:24.987 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+2019-04-28 12:07:24.987 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)[\r][\n]"
+2019-04-28 12:07:24.987 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2019-04-28 12:07:24.987 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "[\r][\n]"
+2019-04-28 12:07:24.987 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "{"AppId":"aef9400912e14c8db42201b42c075cab","Digest":"177B8E44AFD7DD54F2FF6DB63EFE9556","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","Timestamp":"1556424443818","CellNos":"[5]"}"
+2019-04-28 12:07:25.257 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "HTTP/1.1 200 OK[\r][\n]"
+2019-04-28 12:07:25.258 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Server: nginx[\r][\n]"
+2019-04-28 12:07:25.258 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Date: Sun, 28 Apr 2019 04:07:25 GMT[\r][\n]"
+2019-04-28 12:07:25.258 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2019-04-28 12:07:25.258 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Content-Length: 250[\r][\n]"
+2019-04-28 12:07:25.258 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Connection: keep-alive[\r][\n]"
+2019-04-28 12:07:25.258 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Set-Cookie: JSESSIONID=76F1FD71BB4437543C13C20D456EF5D4; Path=/; HttpOnly[\r][\n]"
+2019-04-28 12:07:25.258 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Origin: *[\r][\n]"
+2019-04-28 12:07:25.258 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-28 12:07:25.258 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-28 12:07:25.258 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization[\r][\n]"
+2019-04-28 12:07:25.258 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "[\r][\n]"
+2019-04-28 12:07:25.258 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "{"AppId":"aef9400912e14c8db42201b42c075cab","Data":{"AppId":"aef9400912e14c8db42201b42c075cab","Cells":[{"CellNo":"5","OutOrderId":"TA190428RQOG00FJ111024"}],"DeviceId":"1f088093eb117f8520da8e7758bc3e8e"},"Success":true,"Code":0,"Msg":"[0xe5][0xbc][0x80][0xe5][0x90][0xaf][0xe6][0x88][0x90][0xe5][0x8a][0x9f]"}"
+2019-04-28 12:07:25.259 [main] DEBUG org.apache.http.headers - http-outgoing-1 << HTTP/1.1 200 OK
+2019-04-28 12:07:25.259 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Server: nginx
+2019-04-28 12:07:25.259 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Date: Sun, 28 Apr 2019 04:07:25 GMT
+2019-04-28 12:07:25.259 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Content-Type: application/json;charset=UTF-8
+2019-04-28 12:07:25.259 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Content-Length: 250
+2019-04-28 12:07:25.259 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Connection: keep-alive
+2019-04-28 12:07:25.259 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Set-Cookie: JSESSIONID=76F1FD71BB4437543C13C20D456EF5D4; Path=/; HttpOnly
+2019-04-28 12:07:25.259 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Origin: *
+2019-04-28 12:07:25.259 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-28 12:07:25.259 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-28 12:07:25.259 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+2019-04-28 12:07:25.259 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+2019-04-28 12:07:25.260 [main] DEBUG o.a.http.client.protocol.ResponseProcessCookies - Cookie accepted [JSESSIONID="76F1FD71BB4437543C13C20D456EF5D4", version:0, domain:sandbox.iplitz.com, path:/, expiry:null]
+2019-04-28 12:07:25.260 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 1][route: {}->http://sandbox.iplitz.com:80] can be kept alive indefinitely
+2019-04-28 12:07:25.260 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 1][route: {}->http://sandbox.iplitz.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-28 12:07:25.260 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Cancelling request execution
+2019-04-28 12:07:25.260 [main] INFO  com.jk.framework.common.utils.CloseableHttpUtil - time:331ms,API:http://sandbox.iplitz.com/api/open/opencells,parMap:{"AppId":"aef9400912e14c8db42201b42c075cab","Digest":"177B8E44AFD7DD54F2FF6DB63EFE9556","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","Timestamp":"1556424443818","CellNos":"[5]"},headerMap:null
+2019-04-28 12:14:21.667 [main] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2019-04-28 12:14:21.683 [main] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2019-04-28 12:14:21.684 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2019-04-28 12:14:21.751 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-28 12:14:21.752 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://sandbox.iplitz.com:80
+2019-04-28 12:14:21.757 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connecting to sandbox.iplitz.com/116.62.137.37:80
+2019-04-28 12:14:21.802 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.36.130:63602<->116.62.137.37:80
+2019-04-28 12:14:21.802 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /api/open/digest/get HTTP/1.1
+2019-04-28 12:14:21.802 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+2019-04-28 12:14:21.803 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+2019-04-28 12:14:21.805 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> POST /api/open/digest/get HTTP/1.1
+2019-04-28 12:14:21.806 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Type: application/json
+2019-04-28 12:14:21.806 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Length: 134
+2019-04-28 12:14:21.806 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Host: sandbox.iplitz.com
+2019-04-28 12:14:21.806 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Connection: Keep-Alive
+2019-04-28 12:14:21.806 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)
+2019-04-28 12:14:21.806 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2019-04-28 12:14:21.806 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "POST /api/open/digest/get HTTP/1.1[\r][\n]"
+2019-04-28 12:14:21.806 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Type: application/json[\r][\n]"
+2019-04-28 12:14:21.806 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Length: 134[\r][\n]"
+2019-04-28 12:14:21.806 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Host: sandbox.iplitz.com[\r][\n]"
+2019-04-28 12:14:21.806 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2019-04-28 12:14:21.807 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)[\r][\n]"
+2019-04-28 12:14:21.807 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2019-04-28 12:14:21.807 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "[\r][\n]"
+2019-04-28 12:14:21.807 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "{"AppId":"aef9400912e14c8db42201b42c075cab","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","Timestamp":"1556424860951","CellNos":"[9]"}"
+2019-04-28 12:14:21.854 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+2019-04-28 12:14:21.854 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Server: nginx[\r][\n]"
+2019-04-28 12:14:21.854 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Date: Sun, 28 Apr 2019 04:14:21 GMT[\r][\n]"
+2019-04-28 12:14:21.854 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2019-04-28 12:14:21.854 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Length: 94[\r][\n]"
+2019-04-28 12:14:21.854 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+2019-04-28 12:14:21.854 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Set-Cookie: JSESSIONID=8E77636EAE86B82C324E05AE4F929657; Path=/; HttpOnly[\r][\n]"
+2019-04-28 12:14:21.854 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Origin: *[\r][\n]"
+2019-04-28 12:14:21.855 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-28 12:14:21.855 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-28 12:14:21.855 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization[\r][\n]"
+2019-04-28 12:14:21.855 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+2019-04-28 12:14:21.855 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "{"Data":"A5EB8EF936D37B6DE9CA16C7DF8AD193","Success":true,"Code":0,"Msg":"[0xe8][0x8e][0xb7][0xe5][0x8f][0x96][0xe7][0xad][0xbe][0xe5][0x90][0x8d][0xe6][0x88][0x90][0xe5][0x8a][0x9f]"}"
+2019-04-28 12:14:21.857 [main] DEBUG org.apache.http.headers - http-outgoing-0 << HTTP/1.1 200 OK
+2019-04-28 12:14:21.858 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Server: nginx
+2019-04-28 12:14:21.858 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Date: Sun, 28 Apr 2019 04:14:21 GMT
+2019-04-28 12:14:21.858 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Type: application/json;charset=UTF-8
+2019-04-28 12:14:21.858 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Length: 94
+2019-04-28 12:14:21.858 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Connection: keep-alive
+2019-04-28 12:14:21.858 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Set-Cookie: JSESSIONID=8E77636EAE86B82C324E05AE4F929657; Path=/; HttpOnly
+2019-04-28 12:14:21.858 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Origin: *
+2019-04-28 12:14:21.858 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-28 12:14:21.858 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-28 12:14:21.858 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+2019-04-28 12:14:21.862 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+2019-04-28 12:14:21.866 [main] DEBUG o.a.http.client.protocol.ResponseProcessCookies - Cookie accepted [JSESSIONID="8E77636EAE86B82C324E05AE4F929657", version:0, domain:sandbox.iplitz.com, path:/, expiry:null]
+2019-04-28 12:14:21.867 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 0][route: {}->http://sandbox.iplitz.com:80] can be kept alive indefinitely
+2019-04-28 12:14:21.867 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {}->http://sandbox.iplitz.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-28 12:14:21.868 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Cancelling request execution
+2019-04-28 12:14:21.868 [main] INFO  com.jk.framework.common.utils.CloseableHttpUtil - time:643ms,API:http://sandbox.iplitz.com/api/open/digest/get,parMap:{"AppId":"aef9400912e14c8db42201b42c075cab","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","Timestamp":"1556424860951","CellNos":"[9]"},headerMap:null
+2019-04-28 12:14:21.922 [main] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2019-04-28 12:14:21.923 [main] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2019-04-28 12:14:21.923 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2019-04-28 12:14:21.923 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 1][route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-28 12:14:21.923 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://sandbox.iplitz.com:80
+2019-04-28 12:14:21.923 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connecting to sandbox.iplitz.com/116.62.137.37:80
+2019-04-28 12:14:21.967 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.36.130:63603<->116.62.137.37:80
+2019-04-28 12:14:21.968 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /api/open/opencells HTTP/1.1
+2019-04-28 12:14:21.968 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+2019-04-28 12:14:21.968 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+2019-04-28 12:14:21.969 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> POST /api/open/opencells HTTP/1.1
+2019-04-28 12:14:21.969 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Content-Type: application/json
+2019-04-28 12:14:21.969 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Content-Length: 178
+2019-04-28 12:14:21.969 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Host: sandbox.iplitz.com
+2019-04-28 12:14:21.969 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Connection: Keep-Alive
+2019-04-28 12:14:21.969 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)
+2019-04-28 12:14:21.969 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Accept-Encoding: gzip,deflate
+2019-04-28 12:14:21.970 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "POST /api/open/opencells HTTP/1.1[\r][\n]"
+2019-04-28 12:14:21.970 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Content-Type: application/json[\r][\n]"
+2019-04-28 12:14:21.970 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Content-Length: 178[\r][\n]"
+2019-04-28 12:14:21.970 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Host: sandbox.iplitz.com[\r][\n]"
+2019-04-28 12:14:21.970 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+2019-04-28 12:14:21.970 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)[\r][\n]"
+2019-04-28 12:14:21.970 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2019-04-28 12:14:21.970 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "[\r][\n]"
+2019-04-28 12:14:21.970 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "{"AppId":"aef9400912e14c8db42201b42c075cab","Digest":"A5EB8EF936D37B6DE9CA16C7DF8AD193","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","Timestamp":"1556424860951","CellNos":"[9]"}"
+2019-04-28 12:14:22.295 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "HTTP/1.1 200 OK[\r][\n]"
+2019-04-28 12:14:22.295 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Server: nginx[\r][\n]"
+2019-04-28 12:14:22.295 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Date: Sun, 28 Apr 2019 04:14:22 GMT[\r][\n]"
+2019-04-28 12:14:22.295 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2019-04-28 12:14:22.295 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Content-Length: 250[\r][\n]"
+2019-04-28 12:14:22.295 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Connection: keep-alive[\r][\n]"
+2019-04-28 12:14:22.295 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Set-Cookie: JSESSIONID=D1A5FF87AC57D73C3C5B75D302698537; Path=/; HttpOnly[\r][\n]"
+2019-04-28 12:14:22.295 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Origin: *[\r][\n]"
+2019-04-28 12:14:22.295 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-28 12:14:22.295 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-28 12:14:22.295 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization[\r][\n]"
+2019-04-28 12:14:22.295 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "[\r][\n]"
+2019-04-28 12:14:22.295 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "{"AppId":"aef9400912e14c8db42201b42c075cab","Data":{"AppId":"aef9400912e14c8db42201b42c075cab","Cells":[{"CellNo":"9","OutOrderId":"TA190428YSRO8DRJ111734"}],"DeviceId":"1f088093eb117f8520da8e7758bc3e8e"},"Success":true,"Code":0,"Msg":"[0xe5][0xbc][0x80][0xe5][0x90][0xaf][0xe6][0x88][0x90][0xe5][0x8a][0x9f]"}"
+2019-04-28 12:14:22.295 [main] DEBUG org.apache.http.headers - http-outgoing-1 << HTTP/1.1 200 OK
+2019-04-28 12:14:22.295 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Server: nginx
+2019-04-28 12:14:22.296 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Date: Sun, 28 Apr 2019 04:14:22 GMT
+2019-04-28 12:14:22.296 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Content-Type: application/json;charset=UTF-8
+2019-04-28 12:14:22.296 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Content-Length: 250
+2019-04-28 12:14:22.296 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Connection: keep-alive
+2019-04-28 12:14:22.296 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Set-Cookie: JSESSIONID=D1A5FF87AC57D73C3C5B75D302698537; Path=/; HttpOnly
+2019-04-28 12:14:22.296 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Origin: *
+2019-04-28 12:14:22.296 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-28 12:14:22.296 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-28 12:14:22.296 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+2019-04-28 12:14:22.296 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+2019-04-28 12:14:22.296 [main] DEBUG o.a.http.client.protocol.ResponseProcessCookies - Cookie accepted [JSESSIONID="D1A5FF87AC57D73C3C5B75D302698537", version:0, domain:sandbox.iplitz.com, path:/, expiry:null]
+2019-04-28 12:14:22.296 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 1][route: {}->http://sandbox.iplitz.com:80] can be kept alive indefinitely
+2019-04-28 12:14:22.296 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 1][route: {}->http://sandbox.iplitz.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-28 12:14:22.296 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Cancelling request execution
+2019-04-28 12:14:22.297 [main] INFO  com.jk.framework.common.utils.CloseableHttpUtil - time:381ms,API:http://sandbox.iplitz.com/api/open/opencells,parMap:{"AppId":"aef9400912e14c8db42201b42c075cab","Digest":"A5EB8EF936D37B6DE9CA16C7DF8AD193","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","Timestamp":"1556424860951","CellNos":"[9]"},headerMap:null
+2019-04-28 13:12:42.994 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-04-28 13:12:45.187 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 13:12:45.187 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 13:12:45.248 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 13:12:45.249 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 13:12:45.617 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 13:12:45.716 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 13:12:45.831 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 13:12:45.831 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 13:12:45.912 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 13:12:45.912 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 13:12:45.942 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 13:12:45.966 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 13:12:46.368 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 取餐成功消息,par:{"userId":"2c91cb36626fa57801626fba16410002","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 13:12:46.372 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 发送推送申请成功推送,par:{"userId":"2c91cb36626fa57801626fba16410002","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 13:12:46.386 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 13:12:46.386 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 13:12:46.397 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 13:12:46.397 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 13:12:46.422 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2019-04-28 13:12:46.441 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3676ac27]
+2019-04-28 13:12:46.457 [main] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@aec50a1] will be managed by Spring
+2019-04-28 13:12:46.462 [main] DEBUG push.deviceDao.findDeviceByUserId - ==>  Preparing: select id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode from t_device where user_id = ? limit 1 
+2019-04-28 13:12:46.490 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:12:46.490 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:12:46.510 [main] DEBUG push.deviceDao.findDeviceByUserId - ==> Parameters: 2c91cb36626fa57801626fba16410002(String)
+2019-04-28 13:12:46.513 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [2c91cb36626fa57801626fba16410002]
+2019-04-28 13:12:46.513 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2019-04-28 13:12:46.513 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [2c91cb36626fa57801626fba16410002]
+2019-04-28 13:12:46.513 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2019-04-28 13:12:46.519 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 6.445265 millis. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:12:46.519 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 6.445265 millis. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:12:46.523 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2019-04-28 13:12:46.528 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2019-04-28 13:12:46.529 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2019-04-28 13:12:46.531 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2019-04-28 13:12:46.549 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [334, 13065ffa4e5bf721c6b, 2c91cb36626fa57801626fba16410002, 13065ffa4e5bf721c6b, 4, 0, null, null]
+2019-04-28 13:12:46.550 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [334, 13065ffa4e5bf721c6b, 2c91cb36626fa57801626fba16410002, 13065ffa4e5bf721c6b, 4, 0, null, null]
+2019-04-28 13:12:46.562 [main] DEBUG push.deviceDao.findDeviceByUserId - <==      Total: 1
+2019-04-28 13:12:46.563 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2019-04-28 13:12:46.564 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2019-04-28 13:12:46.568 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2019-04-28 13:12:46.569 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2019-04-28 13:12:46.570 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3676ac27]
+2019-04-28 13:12:46.570 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3676ac27]
+2019-04-28 13:12:46.570 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3676ac27]
+2019-04-28 13:12:46.570 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3676ac27]
+2019-04-28 13:12:46.578 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2019-04-28 13:12:46.579 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2019-04-28 13:12:46.581 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2019-04-28 13:12:46.582 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2019-04-28 13:12:46.622 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2019-04-28 13:12:46.623 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2019-04-28 13:12:46.645 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 13:12:46.942 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 13:12:46.944 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 13:12:46.946 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 13:12:47.019 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 13:12:47.019 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 13:12:47.020 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 13:12:47.020 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 13:12:47.023 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 13:12:47.023 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 13:12:47.023 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2019-04-28 13:12:47.024 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2019-04-28 13:19:12.256 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-04-28 13:19:13.833 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 13:19:13.833 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 13:19:13.893 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 13:19:13.893 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 13:19:14.134 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 13:19:14.264 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 13:19:14.364 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 13:19:14.365 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 13:19:14.424 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 13:19:14.425 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 13:19:14.454 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 13:19:14.469 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 13:19:14.847 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 取餐成功消息,par:{"userId":"2c91cb36626fa57801626fba16410002","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 13:19:14.853 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 发送推送申请成功推送,par:{"userId":"2c91cb36626fa57801626fba16410002","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 13:19:14.885 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 13:19:14.885 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 13:19:14.896 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 13:19:14.896 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 13:19:14.921 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2019-04-28 13:19:14.933 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3676ac27]
+2019-04-28 13:19:14.941 [main] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@aec50a1] will be managed by Spring
+2019-04-28 13:19:14.947 [main] DEBUG push.deviceDao.findDeviceByUserId - ==>  Preparing: select id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode from t_device where user_id = ? limit 1 
+2019-04-28 13:19:14.985 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:19:14.985 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:19:15.001 [main] DEBUG push.deviceDao.findDeviceByUserId - ==> Parameters: 2c91cb36626fa57801626fba16410002(String)
+2019-04-28 13:19:15.002 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [2c91cb36626fa57801626fba16410002]
+2019-04-28 13:19:15.002 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2019-04-28 13:19:15.002 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [2c91cb36626fa57801626fba16410002]
+2019-04-28 13:19:15.002 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2019-04-28 13:19:15.008 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 6.25573 millis. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:19:15.009 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 6.25573 millis. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:19:15.013 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2019-04-28 13:19:15.015 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2019-04-28 13:19:15.015 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2019-04-28 13:19:15.015 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2019-04-28 13:19:15.031 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [334, 13065ffa4e5bf721c6b, 2c91cb36626fa57801626fba16410002, 13065ffa4e5bf721c6b, 4, 0, null, null]
+2019-04-28 13:19:15.031 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [334, 13065ffa4e5bf721c6b, 2c91cb36626fa57801626fba16410002, 13065ffa4e5bf721c6b, 4, 0, null, null]
+2019-04-28 13:19:15.034 [main] DEBUG push.deviceDao.findDeviceByUserId - <==      Total: 1
+2019-04-28 13:19:15.034 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2019-04-28 13:19:15.034 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2019-04-28 13:19:15.035 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2019-04-28 13:19:15.035 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2019-04-28 13:19:15.035 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3676ac27]
+2019-04-28 13:19:15.035 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3676ac27]
+2019-04-28 13:19:15.035 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3676ac27]
+2019-04-28 13:19:15.035 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3676ac27]
+2019-04-28 13:19:15.041 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2019-04-28 13:19:15.042 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2019-04-28 13:19:15.042 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2019-04-28 13:19:15.042 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2019-04-28 13:19:15.058 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2019-04-28 13:19:15.059 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2019-04-28 13:19:15.088 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 13:19:15.499 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 13:19:15.502 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 13:19:15.505 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 13:19:15.583 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 13:19:15.583 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 13:19:15.584 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 13:19:15.584 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 13:19:15.586 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 13:19:15.587 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 13:19:15.588 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2019-04-28 13:19:15.588 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2019-04-28 13:21:11.539 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-04-28 13:21:12.409 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 13:21:12.409 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 13:21:12.483 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 13:21:12.483 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 13:21:12.740 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 13:21:12.831 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 13:21:12.909 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 13:21:12.909 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 13:21:12.991 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 13:21:12.992 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 13:21:13.031 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 13:21:13.082 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 13:21:17.334 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 取餐成功消息,par:{"userId":"2c91cb36626fa57801626fba16410002","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 13:21:19.463 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 发送推送申请成功推送,par:{"userId":"2c91cb36626fa57801626fba16410002","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 13:21:19.481 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 13:21:19.482 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 13:21:19.497 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 13:21:19.498 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 13:21:19.511 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2019-04-28 13:21:19.525 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44bd4b0a]
+2019-04-28 13:21:19.533 [main] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@20cece0b] will be managed by Spring
+2019-04-28 13:21:19.538 [main] DEBUG push.deviceDao.findDeviceByUserId - ==>  Preparing: select id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode from t_device where user_id = ? limit 1 
+2019-04-28 13:21:19.556 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:21:19.556 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:21:19.576 [main] DEBUG push.deviceDao.findDeviceByUserId - ==> Parameters: 2c91cb36626fa57801626fba16410002(String)
+2019-04-28 13:21:19.577 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [2c91cb36626fa57801626fba16410002]
+2019-04-28 13:21:19.578 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2019-04-28 13:21:19.578 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [2c91cb36626fa57801626fba16410002]
+2019-04-28 13:21:19.578 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2019-04-28 13:21:19.586 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 8.332682 millis. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:21:19.586 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 8.332682 millis. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:21:19.591 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2019-04-28 13:21:19.596 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2019-04-28 13:21:19.596 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2019-04-28 13:21:19.596 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2019-04-28 13:21:19.625 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [334, 13065ffa4e5bf721c6b, 2c91cb36626fa57801626fba16410002, 13065ffa4e5bf721c6b, 4, 0, null, null]
+2019-04-28 13:21:19.625 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [334, 13065ffa4e5bf721c6b, 2c91cb36626fa57801626fba16410002, 13065ffa4e5bf721c6b, 4, 0, null, null]
+2019-04-28 13:21:19.629 [main] DEBUG push.deviceDao.findDeviceByUserId - <==      Total: 1
+2019-04-28 13:21:19.630 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2019-04-28 13:21:19.631 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2019-04-28 13:21:19.632 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2019-04-28 13:21:19.633 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2019-04-28 13:21:19.634 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44bd4b0a]
+2019-04-28 13:21:19.635 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44bd4b0a]
+2019-04-28 13:21:19.636 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44bd4b0a]
+2019-04-28 13:21:19.637 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44bd4b0a]
+2019-04-28 13:21:19.643 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2019-04-28 13:21:19.644 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2019-04-28 13:21:19.645 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2019-04-28 13:21:19.645 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2019-04-28 13:21:19.671 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2019-04-28 13:21:19.671 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2019-04-28 13:21:24.157 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 13:21:25.494 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 13:21:25.503 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 13:21:25.506 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 13:21:35.343 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 13:21:35.343 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 13:21:35.344 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 13:21:35.344 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 13:21:35.345 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 13:21:35.345 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 13:21:35.345 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2019-04-28 13:21:35.345 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2019-04-28 13:22:05.762 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-04-28 13:22:06.515 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 13:22:06.515 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 13:22:06.589 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 13:22:06.590 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 13:22:06.773 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 13:22:06.885 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 13:22:06.979 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 13:22:06.979 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 13:22:07.081 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 13:22:07.081 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 13:22:07.127 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 13:22:07.146 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 13:22:10.367 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 取餐成功消息,par:{"userId":"2c91cb36626fa57801626fba16410002","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 13:22:11.243 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 发送推送申请成功推送,par:{"userId":"2c91cb36626fa57801626fba16410002","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 13:22:11.277 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 13:22:11.277 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 13:22:11.293 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 13:22:11.294 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 13:22:11.312 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2019-04-28 13:22:11.344 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@612e21b9]
+2019-04-28 13:22:11.357 [main] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@13d9261f] will be managed by Spring
+2019-04-28 13:22:11.379 [main] DEBUG push.deviceDao.findDeviceByUserId - ==>  Preparing: select id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode from t_device where user_id = ? limit 1 
+2019-04-28 13:22:11.455 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:22:11.455 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:22:11.490 [main] DEBUG push.deviceDao.findDeviceByUserId - ==> Parameters: 2c91cb36626fa57801626fba16410002(String)
+2019-04-28 13:22:11.492 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [2c91cb36626fa57801626fba16410002]
+2019-04-28 13:22:11.493 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2019-04-28 13:22:11.493 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [2c91cb36626fa57801626fba16410002]
+2019-04-28 13:22:11.493 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2019-04-28 13:22:11.505 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 12.133603 millis. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:22:11.505 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 12.133603 millis. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:22:11.510 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2019-04-28 13:22:11.513 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2019-04-28 13:22:11.513 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2019-04-28 13:22:11.513 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2019-04-28 13:22:11.532 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [334, 13065ffa4e5bf721c6b, 2c91cb36626fa57801626fba16410002, 13065ffa4e5bf721c6b, 4, 0, null, null]
+2019-04-28 13:22:11.532 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [334, 13065ffa4e5bf721c6b, 2c91cb36626fa57801626fba16410002, 13065ffa4e5bf721c6b, 4, 0, null, null]
+2019-04-28 13:22:11.536 [main] DEBUG push.deviceDao.findDeviceByUserId - <==      Total: 1
+2019-04-28 13:22:11.536 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2019-04-28 13:22:11.536 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2019-04-28 13:22:11.537 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2019-04-28 13:22:11.537 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2019-04-28 13:22:11.538 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@612e21b9]
+2019-04-28 13:22:11.538 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@612e21b9]
+2019-04-28 13:22:11.539 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@612e21b9]
+2019-04-28 13:22:11.539 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@612e21b9]
+2019-04-28 13:22:11.548 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2019-04-28 13:22:11.548 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2019-04-28 13:22:11.548 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2019-04-28 13:22:11.548 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2019-04-28 13:22:11.774 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2019-04-28 13:22:11.774 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2019-04-28 13:22:13.278 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 13:22:13.565 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 13:22:13.568 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 13:22:13.570 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 13:22:13.721 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 13:22:13.722 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 13:22:13.724 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 13:22:13.725 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 13:22:13.727 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 13:22:13.727 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 13:22:13.727 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2019-04-28 13:22:13.728 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2019-04-28 13:22:56.323 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-04-28 13:22:57.157 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 13:22:57.158 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 13:22:57.232 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 13:22:57.232 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 13:22:57.419 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 13:22:57.530 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 13:22:57.619 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 13:22:57.619 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 13:22:57.698 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 13:22:57.699 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 13:22:57.733 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 13:22:57.748 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 13:23:00.494 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 取餐成功消息,par:{"userId":"2c91cb36626fa57801626fba16410002","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 13:23:02.566 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 发送推送申请成功推送,par:{"userId":"2c91cb36626fa57801626fba16410002","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 13:23:06.100 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 13:23:06.100 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 13:23:06.136 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 13:23:06.137 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 13:23:06.183 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2019-04-28 13:23:06.310 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@612e21b9]
+2019-04-28 13:23:06.372 [main] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@13d9261f] will be managed by Spring
+2019-04-28 13:23:06.432 [main] DEBUG push.deviceDao.findDeviceByUserId - ==>  Preparing: select id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode from t_device where user_id = ? limit 1 
+2019-04-28 13:23:06.470 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:23:06.471 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:23:06.719 [main] DEBUG push.deviceDao.findDeviceByUserId - ==> Parameters: 2c91cb36626fa57801626fba16410002(String)
+2019-04-28 13:23:06.723 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [2c91cb36626fa57801626fba16410002]
+2019-04-28 13:23:06.724 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2019-04-28 13:23:06.724 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [2c91cb36626fa57801626fba16410002]
+2019-04-28 13:23:06.724 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2019-04-28 13:23:06.734 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 11.603592 millis. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:23:06.736 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 11.603592 millis. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:23:06.743 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2019-04-28 13:23:06.750 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2019-04-28 13:23:06.751 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2019-04-28 13:23:06.753 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2019-04-28 13:23:06.951 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [334, 13065ffa4e5bf721c6b, 2c91cb36626fa57801626fba16410002, 13065ffa4e5bf721c6b, 4, 0, null, null]
+2019-04-28 13:23:06.952 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [334, 13065ffa4e5bf721c6b, 2c91cb36626fa57801626fba16410002, 13065ffa4e5bf721c6b, 4, 0, null, null]
+2019-04-28 13:23:06.960 [main] DEBUG push.deviceDao.findDeviceByUserId - <==      Total: 1
+2019-04-28 13:23:06.961 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2019-04-28 13:23:06.962 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2019-04-28 13:23:06.963 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2019-04-28 13:23:06.963 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2019-04-28 13:23:06.964 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@612e21b9]
+2019-04-28 13:23:06.965 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@612e21b9]
+2019-04-28 13:23:06.965 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@612e21b9]
+2019-04-28 13:23:06.966 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@612e21b9]
+2019-04-28 13:23:06.975 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2019-04-28 13:23:06.976 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2019-04-28 13:23:06.977 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2019-04-28 13:23:06.977 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2019-04-28 13:23:07.001 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2019-04-28 13:23:07.002 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2019-04-28 13:23:14.508 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 13:23:14.586 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 13:23:14.586 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 13:23:14.589 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 13:23:14.590 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 13:23:14.592 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 13:23:14.592 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 13:23:14.592 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2019-04-28 13:23:14.592 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2019-04-28 13:23:48.923 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-04-28 13:23:49.656 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 13:23:49.656 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 13:23:49.735 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 13:23:49.735 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 13:23:49.890 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 13:23:50.016 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 13:23:50.096 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 13:23:50.096 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 13:23:50.168 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 13:23:50.169 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 13:23:50.199 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 13:23:50.216 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 13:24:04.021 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 取餐成功消息,par:{"userId":"2c91340c6135fb79016135fb79e60000","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 13:24:05.542 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 发送推送申请成功推送,par:{"userId":"2c91340c6135fb79016135fb79e60000","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 13:24:06.451 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 13:24:06.454 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 13:24:06.546 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 13:24:06.548 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 13:24:06.584 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2019-04-28 13:24:06.659 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@612e21b9]
+2019-04-28 13:24:06.685 [main] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@13d9261f] will be managed by Spring
+2019-04-28 13:24:06.741 [main] DEBUG push.deviceDao.findDeviceByUserId - ==>  Preparing: select id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode from t_device where user_id = ? limit 1 
+2019-04-28 13:24:06.781 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:24:06.782 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:24:07.082 [main] DEBUG push.deviceDao.findDeviceByUserId - ==> Parameters: 2c91340c6135fb79016135fb79e60000(String)
+2019-04-28 13:24:07.086 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [2c91340c6135fb79016135fb79e60000]
+2019-04-28 13:24:07.086 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2019-04-28 13:24:07.087 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [2c91340c6135fb79016135fb79e60000]
+2019-04-28 13:24:07.087 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2019-04-28 13:24:07.095 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 9.420092 millis. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:24:07.096 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 9.420092 millis. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:24:07.103 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2019-04-28 13:24:07.111 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2019-04-28 13:24:07.112 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2019-04-28 13:24:07.113 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2019-04-28 13:24:07.293 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [390, 1507bfd3f798976eb4e, 2c91340c6135fb79016135fb79e60000, 1507bfd3f798976eb4e, 14, 0, null, null]
+2019-04-28 13:24:07.294 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [390, 1507bfd3f798976eb4e, 2c91340c6135fb79016135fb79e60000, 1507bfd3f798976eb4e, 14, 0, null, null]
+2019-04-28 13:24:07.302 [main] DEBUG push.deviceDao.findDeviceByUserId - <==      Total: 1
+2019-04-28 13:24:07.303 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2019-04-28 13:24:07.303 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2019-04-28 13:24:07.304 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2019-04-28 13:24:07.304 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2019-04-28 13:24:07.305 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@612e21b9]
+2019-04-28 13:24:07.306 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@612e21b9]
+2019-04-28 13:24:07.307 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@612e21b9]
+2019-04-28 13:24:07.307 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@612e21b9]
+2019-04-28 13:24:07.321 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2019-04-28 13:24:07.322 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2019-04-28 13:24:07.323 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2019-04-28 13:24:07.324 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2019-04-28 13:24:07.378 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2019-04-28 13:24:07.379 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2019-04-28 13:24:17.640 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 13:24:18.994 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 13:24:19.001 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 13:24:19.005 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 13:25:37.210 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 13:25:37.210 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 13:25:37.210 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 13:25:37.210 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 13:25:37.211 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 13:25:37.211 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 13:25:37.212 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2019-04-28 13:25:37.212 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2019-04-28 13:26:39.813 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-04-28 13:26:40.724 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 13:26:40.724 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 13:26:40.807 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 13:26:40.808 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 13:26:41.012 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 13:26:41.169 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 13:26:41.258 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 13:26:41.258 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 13:26:41.340 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 13:26:41.340 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 13:26:41.379 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 13:26:41.394 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 13:26:41.870 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 取餐成功消息,par:{"userId":"2c91340c6135fb79016135fb79e60000","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 13:26:46.135 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 发送推送申请成功推送,par:{"userId":"2c91340c6135fb79016135fb79e60000","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 13:26:50.197 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 13:26:50.199 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 13:26:50.245 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 13:26:50.247 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 13:26:50.300 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2019-04-28 13:26:50.391 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@612e21b9]
+2019-04-28 13:26:50.417 [main] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@13d9261f] will be managed by Spring
+2019-04-28 13:26:50.471 [main] DEBUG push.deviceDao.findDeviceByUserId - ==>  Preparing: select id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode from t_device where user_id = ? limit 1 
+2019-04-28 13:26:50.507 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:26:50.508 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:26:50.780 [main] DEBUG push.deviceDao.findDeviceByUserId - ==> Parameters: 2c91340c6135fb79016135fb79e60000(String)
+2019-04-28 13:26:50.784 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [2c91340c6135fb79016135fb79e60000]
+2019-04-28 13:26:50.784 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2019-04-28 13:26:50.785 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [2c91340c6135fb79016135fb79e60000]
+2019-04-28 13:26:50.785 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2019-04-28 13:26:50.796 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 12.032608 millis. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:26:50.797 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 12.032608 millis. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:26:50.805 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2019-04-28 13:26:50.812 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2019-04-28 13:26:50.813 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2019-04-28 13:26:50.814 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2019-04-28 13:26:50.994 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [390, 1507bfd3f798976eb4e, 2c91340c6135fb79016135fb79e60000, 1507bfd3f798976eb4e, 14, 0, null, null]
+2019-04-28 13:26:50.995 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [390, 1507bfd3f798976eb4e, 2c91340c6135fb79016135fb79e60000, 1507bfd3f798976eb4e, 14, 0, null, null]
+2019-04-28 13:26:51.003 [main] DEBUG push.deviceDao.findDeviceByUserId - <==      Total: 1
+2019-04-28 13:26:51.004 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2019-04-28 13:26:51.005 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2019-04-28 13:26:51.006 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2019-04-28 13:26:51.006 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2019-04-28 13:26:51.007 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@612e21b9]
+2019-04-28 13:26:51.008 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@612e21b9]
+2019-04-28 13:26:51.008 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@612e21b9]
+2019-04-28 13:26:51.009 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@612e21b9]
+2019-04-28 13:26:51.022 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2019-04-28 13:26:51.023 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2019-04-28 13:26:51.025 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2019-04-28 13:26:51.025 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2019-04-28 13:26:51.064 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2019-04-28 13:26:51.064 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2019-04-28 13:27:12.274 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 13:27:13.641 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 13:27:13.648 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 13:27:13.652 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 13:27:39.890 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 13:27:39.891 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 13:27:39.891 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 13:27:39.891 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 13:27:39.893 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 13:27:39.894 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 13:27:39.896 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2019-04-28 13:27:39.897 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2019-04-28 13:27:48.810 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-04-28 13:27:49.574 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 13:27:49.574 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 13:27:49.653 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 13:27:49.653 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 13:27:49.866 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 13:27:49.992 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 13:27:50.061 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 13:27:50.061 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 13:27:50.118 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 13:27:50.118 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 13:27:50.144 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 13:27:50.159 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 13:27:50.578 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 取餐成功消息,par:{"userId":"2c91340c6135fb79016135fb79e60000","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 13:28:33.756 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-04-28 13:28:34.492 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 13:28:34.492 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 13:28:34.564 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 13:28:34.565 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 13:28:34.736 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 13:28:34.834 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 13:28:34.926 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 13:28:34.926 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 13:28:34.994 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 13:28:34.994 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 13:28:35.043 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 13:28:35.069 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 13:28:35.485 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 取餐成功消息,par:{"userId":"2c91340c6135fb79016135fb79e60000","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 13:28:35.490 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 发送推送申请成功推送,par:{"userId":"2c91340c6135fb79016135fb79e60000","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 13:28:35.503 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 13:28:35.503 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 13:28:35.516 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 13:28:35.516 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 13:28:35.556 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2019-04-28 13:28:35.569 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3676ac27]
+2019-04-28 13:28:35.586 [main] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@aec50a1] will be managed by Spring
+2019-04-28 13:28:35.597 [main] DEBUG push.deviceDao.findDeviceByUserId - ==>  Preparing: select id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode from t_device where user_id = ? limit 1 
+2019-04-28 13:28:35.617 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:28:35.617 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:28:35.631 [main] DEBUG push.deviceDao.findDeviceByUserId - ==> Parameters: 2c91340c6135fb79016135fb79e60000(String)
+2019-04-28 13:28:35.632 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [2c91340c6135fb79016135fb79e60000]
+2019-04-28 13:28:35.632 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2019-04-28 13:28:35.633 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [2c91340c6135fb79016135fb79e60000]
+2019-04-28 13:28:35.633 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2019-04-28 13:28:35.642 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 9.639856 millis. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:28:35.642 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 9.639856 millis. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:28:35.645 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2019-04-28 13:28:35.648 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2019-04-28 13:28:35.648 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2019-04-28 13:28:35.648 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2019-04-28 13:28:35.662 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [390, 1507bfd3f798976eb4e, 2c91340c6135fb79016135fb79e60000, 1507bfd3f798976eb4e, 14, 0, null, null]
+2019-04-28 13:28:35.662 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [390, 1507bfd3f798976eb4e, 2c91340c6135fb79016135fb79e60000, 1507bfd3f798976eb4e, 14, 0, null, null]
+2019-04-28 13:28:35.665 [main] DEBUG push.deviceDao.findDeviceByUserId - <==      Total: 1
+2019-04-28 13:28:35.665 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2019-04-28 13:28:35.665 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2019-04-28 13:28:35.665 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2019-04-28 13:28:35.666 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2019-04-28 13:28:35.666 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3676ac27]
+2019-04-28 13:28:35.666 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3676ac27]
+2019-04-28 13:28:35.666 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3676ac27]
+2019-04-28 13:28:35.666 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3676ac27]
+2019-04-28 13:28:35.671 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2019-04-28 13:28:35.672 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2019-04-28 13:28:35.672 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2019-04-28 13:28:35.672 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2019-04-28 13:28:35.694 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2019-04-28 13:28:35.694 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2019-04-28 13:28:35.711 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 13:28:35.976 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 13:28:35.978 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 13:28:35.979 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 13:28:36.074 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 13:28:36.074 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 13:28:36.074 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 13:28:36.074 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 13:28:36.075 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 13:28:36.075 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 13:28:36.076 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2019-04-28 13:28:36.076 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2019-04-28 13:29:18.484 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 发送推送申请成功推送,par:{"userId":"2c91340c6135fb79016135fb79e60000","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 13:29:18.516 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 13:29:18.516 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 13:29:18.530 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 13:29:18.530 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 13:29:18.543 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2019-04-28 13:29:18.550 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 13:29:18.550 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 13:29:18.551 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 13:29:18.551 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 13:29:18.553 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 13:29:18.553 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 13:29:25.481 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-04-28 13:29:26.470 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 13:29:26.471 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 13:29:26.537 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 13:29:26.537 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 13:29:26.748 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 13:29:26.877 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 13:29:26.966 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 13:29:26.966 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 13:29:27.038 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 13:29:27.038 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 13:29:27.073 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 13:29:27.099 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 13:29:27.530 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 取餐成功消息,par:{"userId":"2c91340c6135fb79016135fb79e60000","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 13:29:31.383 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 发送推送申请成功推送,par:{"userId":"2c91340c6135fb79016135fb79e60000","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 13:29:36.004 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 13:29:36.005 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 13:29:36.040 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 13:29:36.041 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 13:29:36.078 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2019-04-28 13:29:36.182 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@302edb74]
+2019-04-28 13:29:36.225 [main] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@e9ef5b6] will be managed by Spring
+2019-04-28 13:29:36.314 [main] DEBUG push.deviceDao.findDeviceByUserId - ==>  Preparing: select id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode from t_device where user_id = ? limit 1 
+2019-04-28 13:29:36.356 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:29:36.356 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:29:36.621 [main] DEBUG push.deviceDao.findDeviceByUserId - ==> Parameters: 2c91340c6135fb79016135fb79e60000(String)
+2019-04-28 13:29:36.625 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [2c91340c6135fb79016135fb79e60000]
+2019-04-28 13:29:36.626 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2019-04-28 13:29:36.627 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [2c91340c6135fb79016135fb79e60000]
+2019-04-28 13:29:36.627 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2019-04-28 13:29:36.636 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 10.866797 millis. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:29:36.637 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 10.866797 millis. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 13:29:36.644 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2019-04-28 13:29:36.653 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2019-04-28 13:29:36.653 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2019-04-28 13:29:36.654 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2019-04-28 13:29:36.856 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [390, 1507bfd3f798976eb4e, 2c91340c6135fb79016135fb79e60000, 1507bfd3f798976eb4e, 14, 0, null, null]
+2019-04-28 13:29:36.858 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [390, 1507bfd3f798976eb4e, 2c91340c6135fb79016135fb79e60000, 1507bfd3f798976eb4e, 14, 0, null, null]
+2019-04-28 13:29:36.867 [main] DEBUG push.deviceDao.findDeviceByUserId - <==      Total: 1
+2019-04-28 13:29:36.867 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2019-04-28 13:29:36.868 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2019-04-28 13:29:36.869 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2019-04-28 13:29:36.870 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2019-04-28 13:29:36.871 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@302edb74]
+2019-04-28 13:29:36.872 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@302edb74]
+2019-04-28 13:29:36.872 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@302edb74]
+2019-04-28 13:29:36.873 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@302edb74]
+2019-04-28 13:29:36.883 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2019-04-28 13:29:36.884 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2019-04-28 13:29:36.885 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2019-04-28 13:29:36.886 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2019-04-28 13:29:36.916 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2019-04-28 13:29:36.917 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2019-04-28 13:33:18.757 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 13:33:18.837 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 13:33:18.837 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 13:33:18.838 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 13:33:18.839 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 13:33:18.841 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 13:33:18.842 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 13:33:18.843 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2019-04-28 13:33:18.843 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2019-04-28 13:33:24.745 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-04-28 13:33:25.833 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 13:33:25.833 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 13:33:25.932 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 13:33:25.933 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 13:33:26.150 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 13:33:26.252 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 13:33:26.337 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 13:33:26.337 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 13:33:26.482 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 13:33:26.482 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 13:33:26.525 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 13:33:26.553 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 13:33:26.912 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 取餐成功消息,par:{"userId":"2c91340c6135fb79016135fb79e60000","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 13:34:22.994 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 发送推送申请成功推送,par:{"userId":"2c91340c6135fb79016135fb79e60000","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 13:34:23.012 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 13:34:23.012 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 13:34:23.026 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 13:34:23.027 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 13:34:23.053 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2019-04-28 13:34:23.065 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@858d8b4]
+2019-04-28 13:34:23.079 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 13:34:23.080 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 13:34:23.081 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 13:34:23.081 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 13:34:23.085 [main] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@644ded04] will be managed by Spring
+2019-04-28 13:34:23.085 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 13:34:23.085 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 14:06:59.767 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-04-28 14:07:00.973 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 14:07:00.973 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 14:07:01.050 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 14:07:01.050 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 14:07:01.230 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 14:07:01.321 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 14:07:01.395 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 14:07:01.395 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 14:07:01.469 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 14:07:01.469 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 14:07:01.500 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 14:07:01.518 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 14:07:01.851 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 取餐成功消息,par:{"userId":"2c91340c6135fb79016135fb79e60000","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 14:07:01.855 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 发送推送申请成功推送,par:{"userId":"2c91340c6135fb79016135fb79e60000","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 14:07:01.869 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 14:07:01.869 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 14:07:01.882 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 14:07:01.882 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 14:07:01.912 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2019-04-28 14:07:01.927 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5707c1cb]
+2019-04-28 14:07:01.939 [main] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@70e29e14] will be managed by Spring
+2019-04-28 14:07:01.946 [main] DEBUG push.deviceDao.findDeviceByUserId - ==>  Preparing: select id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode from t_device where user_id = ? limit 1 
+2019-04-28 14:07:01.968 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 14:07:01.968 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 14:07:01.982 [main] DEBUG push.deviceDao.findDeviceByUserId - ==> Parameters: 2c91340c6135fb79016135fb79e60000(String)
+2019-04-28 14:07:01.984 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [2c91340c6135fb79016135fb79e60000]
+2019-04-28 14:07:01.984 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2019-04-28 14:07:01.984 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [2c91340c6135fb79016135fb79e60000]
+2019-04-28 14:07:01.984 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2019-04-28 14:07:01.990 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 5.9583 millis. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 14:07:01.990 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 5.9583 millis. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 14:07:01.995 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2019-04-28 14:07:01.998 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2019-04-28 14:07:01.998 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2019-04-28 14:07:01.998 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2019-04-28 14:07:02.013 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [390, 1507bfd3f798976eb4e, 2c91340c6135fb79016135fb79e60000, 1507bfd3f798976eb4e, 14, 0, null, null]
+2019-04-28 14:07:02.014 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [390, 1507bfd3f798976eb4e, 2c91340c6135fb79016135fb79e60000, 1507bfd3f798976eb4e, 14, 0, null, null]
+2019-04-28 14:07:02.017 [main] DEBUG push.deviceDao.findDeviceByUserId - <==      Total: 1
+2019-04-28 14:07:02.017 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2019-04-28 14:07:02.017 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2019-04-28 14:07:02.017 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2019-04-28 14:07:02.018 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2019-04-28 14:07:02.018 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5707c1cb]
+2019-04-28 14:07:02.018 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5707c1cb]
+2019-04-28 14:07:02.018 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5707c1cb]
+2019-04-28 14:07:02.018 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5707c1cb]
+2019-04-28 14:07:02.024 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2019-04-28 14:07:02.024 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2019-04-28 14:07:02.024 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2019-04-28 14:07:02.024 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2019-04-28 14:07:02.039 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2019-04-28 14:07:02.039 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2019-04-28 14:07:02.055 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 14:07:02.235 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 14:07:02.237 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 14:07:02.238 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 14:07:02.321 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 14:07:02.321 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 14:07:02.322 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 14:07:02.322 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 14:07:02.323 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 14:07:02.323 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 14:07:02.323 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2019-04-28 14:07:02.323 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2019-04-28 14:07:31.774 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-04-28 14:07:32.487 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 14:07:32.487 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 14:07:32.543 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 14:07:32.543 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 14:07:32.702 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 14:07:32.790 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 14:07:32.859 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 14:07:32.859 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 14:07:32.917 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 14:07:32.918 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 14:07:32.942 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 14:07:32.962 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 14:07:33.292 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 取餐成功消息,par:{"userId":"2c91340c6135fb79016135fb79e60000","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 14:07:39.824 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 发送推送申请成功推送,par:{"userId":"2c91340c6135fb79016135fb79e60000","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 14:07:43.134 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 14:07:43.134 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 14:07:43.161 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 14:07:43.162 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 14:07:43.191 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2019-04-28 14:07:43.263 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@302edb74]
+2019-04-28 14:07:43.292 [main] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@e9ef5b6] will be managed by Spring
+2019-04-28 14:07:43.349 [main] DEBUG push.deviceDao.findDeviceByUserId - ==>  Preparing: select id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode from t_device where user_id = ? limit 1 
+2019-04-28 14:07:43.386 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 14:07:43.387 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 14:07:43.640 [main] DEBUG push.deviceDao.findDeviceByUserId - ==> Parameters: 2c91340c6135fb79016135fb79e60000(String)
+2019-04-28 14:07:43.644 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [2c91340c6135fb79016135fb79e60000]
+2019-04-28 14:07:43.645 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2019-04-28 14:07:43.646 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [2c91340c6135fb79016135fb79e60000]
+2019-04-28 14:07:43.646 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2019-04-28 14:07:43.654 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 10.010292 millis. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 14:07:43.655 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 10.010292 millis. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 14:07:43.661 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2019-04-28 14:07:43.668 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2019-04-28 14:07:43.669 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2019-04-28 14:07:43.670 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2019-04-28 14:07:43.853 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [390, 1507bfd3f798976eb4e, 2c91340c6135fb79016135fb79e60000, 1507bfd3f798976eb4e, 14, 0, null, null]
+2019-04-28 14:07:43.854 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [390, 1507bfd3f798976eb4e, 2c91340c6135fb79016135fb79e60000, 1507bfd3f798976eb4e, 14, 0, null, null]
+2019-04-28 14:07:43.862 [main] DEBUG push.deviceDao.findDeviceByUserId - <==      Total: 1
+2019-04-28 14:07:43.863 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2019-04-28 14:07:43.863 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2019-04-28 14:07:43.864 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2019-04-28 14:07:43.865 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2019-04-28 14:07:43.866 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@302edb74]
+2019-04-28 14:07:43.867 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@302edb74]
+2019-04-28 14:07:43.867 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@302edb74]
+2019-04-28 14:07:43.868 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@302edb74]
+2019-04-28 14:07:43.876 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2019-04-28 14:07:43.876 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2019-04-28 14:07:43.877 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2019-04-28 14:07:43.877 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2019-04-28 14:07:43.902 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2019-04-28 14:07:43.903 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2019-04-28 14:08:13.174 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 14:08:14.432 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 14:08:14.440 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 14:08:14.444 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 14:08:32.985 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 14:08:32.985 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 14:08:32.986 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 14:08:32.986 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 14:08:32.987 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 14:08:32.987 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 14:08:32.987 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2019-04-28 14:08:32.987 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2019-04-28 14:09:45.285 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-04-28 14:09:46.039 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 14:09:46.040 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 14:09:46.114 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 14:09:46.114 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 14:09:46.285 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 14:09:46.357 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 14:09:46.435 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 14:09:46.435 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 14:09:46.515 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 14:09:46.515 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 14:09:46.551 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 14:09:46.566 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 14:09:46.884 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 取餐成功消息,par:{"userId":"2c91340c6135fb79016135fb79e60000","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 14:09:46.888 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 发送推送申请成功推送,par:{"userId":"2c91340c6135fb79016135fb79e60000","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 14:09:49.542 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 14:09:49.542 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 14:09:49.552 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 14:09:49.552 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 14:09:49.562 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2019-04-28 14:09:49.573 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@612e21b9]
+2019-04-28 14:09:49.581 [main] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@13d9261f] will be managed by Spring
+2019-04-28 14:09:49.586 [main] DEBUG push.deviceDao.findDeviceByUserId - ==>  Preparing: select id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode from t_device where user_id = ? limit 1 
+2019-04-28 14:09:49.604 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 14:09:49.604 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 14:09:49.621 [main] DEBUG push.deviceDao.findDeviceByUserId - ==> Parameters: 2c91340c6135fb79016135fb79e60000(String)
+2019-04-28 14:09:49.622 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [2c91340c6135fb79016135fb79e60000]
+2019-04-28 14:09:49.622 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2019-04-28 14:09:49.622 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [2c91340c6135fb79016135fb79e60000]
+2019-04-28 14:09:49.622 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2019-04-28 14:09:49.629 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 6.73038 millis. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 14:09:49.629 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 6.73038 millis. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 14:09:49.632 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2019-04-28 14:09:49.635 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2019-04-28 14:09:49.635 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2019-04-28 14:09:49.635 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2019-04-28 14:09:49.649 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [390, 1507bfd3f798976eb4e, 2c91340c6135fb79016135fb79e60000, 1507bfd3f798976eb4e, 14, 0, null, null]
+2019-04-28 14:09:49.650 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [390, 1507bfd3f798976eb4e, 2c91340c6135fb79016135fb79e60000, 1507bfd3f798976eb4e, 14, 0, null, null]
+2019-04-28 14:09:49.652 [main] DEBUG push.deviceDao.findDeviceByUserId - <==      Total: 1
+2019-04-28 14:09:49.652 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2019-04-28 14:09:49.652 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2019-04-28 14:09:49.653 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2019-04-28 14:09:49.653 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2019-04-28 14:09:49.653 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@612e21b9]
+2019-04-28 14:09:49.654 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@612e21b9]
+2019-04-28 14:09:49.654 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@612e21b9]
+2019-04-28 14:09:49.654 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@612e21b9]
+2019-04-28 14:09:49.660 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2019-04-28 14:09:49.660 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2019-04-28 14:09:49.660 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2019-04-28 14:09:49.660 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2019-04-28 14:09:49.677 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2019-04-28 14:09:49.677 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2019-04-28 14:09:59.751 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 14:09:59.932 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 14:09:59.934 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 14:09:59.935 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 14:10:26.871 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 14:10:26.871 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 14:10:26.871 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 14:10:26.871 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 14:10:26.872 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 14:10:26.872 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 14:10:26.873 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2019-04-28 14:10:26.873 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2019-04-28 14:11:47.333 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-04-28 14:11:48.285 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 14:11:48.285 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 14:11:48.358 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 14:11:48.359 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 14:11:48.561 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 14:11:48.672 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 14:11:48.759 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 14:11:48.759 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 14:11:48.830 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 14:11:48.830 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 14:11:48.864 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 14:11:48.880 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 14:11:49.343 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 取餐成功消息,par:{"userId":"2c91340c6135fb79016135fb79e60000","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 14:11:49.348 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 发送推送申请成功推送,par:{"userId":"2c91340c6135fb79016135fb79e60000","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 14:12:06.101 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 14:12:06.101 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 14:12:06.112 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 14:12:06.112 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 14:12:06.124 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2019-04-28 14:12:06.138 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@612e21b9]
+2019-04-28 14:12:06.147 [main] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@13d9261f] will be managed by Spring
+2019-04-28 14:12:06.153 [main] DEBUG push.deviceDao.findDeviceByUserId - ==>  Preparing: select id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode from t_device where user_id = ? limit 1 
+2019-04-28 14:12:06.174 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 14:12:06.175 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 14:12:06.188 [main] DEBUG push.deviceDao.findDeviceByUserId - ==> Parameters: 2c91340c6135fb79016135fb79e60000(String)
+2019-04-28 14:12:06.190 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [2c91340c6135fb79016135fb79e60000]
+2019-04-28 14:12:06.190 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2019-04-28 14:12:06.190 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [2c91340c6135fb79016135fb79e60000]
+2019-04-28 14:12:06.190 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2019-04-28 14:12:06.196 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 6.503961 millis. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 14:12:06.197 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 6.503961 millis. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 14:12:06.201 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2019-04-28 14:12:06.204 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2019-04-28 14:12:06.204 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2019-04-28 14:12:06.205 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2019-04-28 14:12:06.220 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [390, 1507bfd3f798976eb4e, 2c91340c6135fb79016135fb79e60000, 1507bfd3f798976eb4e, 14, 0, null, null]
+2019-04-28 14:12:06.221 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [390, 1507bfd3f798976eb4e, 2c91340c6135fb79016135fb79e60000, 1507bfd3f798976eb4e, 14, 0, null, null]
+2019-04-28 14:12:06.225 [main] DEBUG push.deviceDao.findDeviceByUserId - <==      Total: 1
+2019-04-28 14:12:06.225 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2019-04-28 14:12:06.226 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2019-04-28 14:12:06.226 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2019-04-28 14:12:06.226 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2019-04-28 14:12:06.227 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@612e21b9]
+2019-04-28 14:12:06.227 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@612e21b9]
+2019-04-28 14:12:06.227 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@612e21b9]
+2019-04-28 14:12:06.227 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@612e21b9]
+2019-04-28 14:12:06.233 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2019-04-28 14:12:06.234 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2019-04-28 14:12:06.234 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2019-04-28 14:12:06.235 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2019-04-28 14:12:06.253 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2019-04-28 14:12:06.253 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2019-04-28 14:12:09.898 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 14:12:10.133 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 14:12:10.135 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 14:12:10.137 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 14:12:14.415 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Send request - POST https://api.jpush.cn/v3/push
+2019-04-28 14:12:14.415 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Request Content - {"platform":["android"],"audience":{"registration_id":["1507bfd3f798976eb4e"]},"message":{"title":"取餐成功提醒","msg_content":"客官您好，您的餐品已成功取出，祝您用餐愉快！","extras":{"voiceAlert":"客官您好，您的餐品已成功取出，祝您用餐愉快！","messageType":"1"}},"options":{"sendno":711548868,"apns_production":false}}
+2019-04-28 14:12:14.774 [main] DEBUG cn.jiguang.common.resp.ResponseWrapper - JPush API Rate Limiting params - quota:600, remaining:599, reset:60
+2019-04-28 14:12:14.775 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Succeed to get response OK - responseCode:200
+2019-04-28 14:12:14.775 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Response Content - {"sendno":"711548868","msg_id":"67554002840262087"}
+2019-04-28 14:12:14.789 [main] INFO  c.t.services.push.jiguang.JiguangUserPushHandle - Got result - {"msg_id":67554002840262087,"sendno":711548868,"statusCode":0}
+2019-04-28 14:12:15.967 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 14:12:15.968 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 14:12:15.968 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 14:12:15.968 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 14:12:15.970 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 14:12:15.970 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 14:12:15.970 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2019-04-28 14:12:15.970 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2019-04-28 14:22:37.598 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-04-28 14:22:38.396 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 14:22:38.396 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 14:22:38.473 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 14:22:38.473 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 14:22:38.629 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 14:22:38.725 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 14:22:38.807 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 14:22:38.808 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 14:22:38.863 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 14:22:38.863 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 14:22:38.895 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 14:22:38.917 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 14:22:39.316 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 取餐成功消息,par:{"userId":"2c91340c61088e880161089f5563000a","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 14:22:39.319 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 发送推送申请成功推送,par:{"userId":"2c91340c61088e880161089f5563000a","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 14:22:39.334 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 14:22:39.334 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 14:22:39.344 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 14:22:39.344 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 14:22:39.367 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2019-04-28 14:22:39.378 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3676ac27]
+2019-04-28 14:22:39.385 [main] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@aec50a1] will be managed by Spring
+2019-04-28 14:22:39.390 [main] DEBUG push.deviceDao.findDeviceByUserId - ==>  Preparing: select id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode from t_device where user_id = ? limit 1 
+2019-04-28 14:22:39.409 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 14:22:39.409 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 14:22:39.423 [main] DEBUG push.deviceDao.findDeviceByUserId - ==> Parameters: 2c91340c61088e880161089f5563000a(String)
+2019-04-28 14:22:39.424 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [2c91340c61088e880161089f5563000a]
+2019-04-28 14:22:39.424 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2019-04-28 14:22:39.425 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [2c91340c61088e880161089f5563000a]
+2019-04-28 14:22:39.425 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2019-04-28 14:22:39.432 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 7.247845 millis. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 14:22:39.432 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 7.247845 millis. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 14:22:39.435 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2019-04-28 14:22:39.438 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2019-04-28 14:22:39.438 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2019-04-28 14:22:39.438 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2019-04-28 14:22:39.451 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [393, 120c83f7606fed6c85c, 2c91340c61088e880161089f5563000a, 120c83f7606fed6c85c, 14, 0, null, null]
+2019-04-28 14:22:39.451 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [393, 120c83f7606fed6c85c, 2c91340c61088e880161089f5563000a, 120c83f7606fed6c85c, 14, 0, null, null]
+2019-04-28 14:22:39.454 [main] DEBUG push.deviceDao.findDeviceByUserId - <==      Total: 1
+2019-04-28 14:22:39.455 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2019-04-28 14:22:39.455 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2019-04-28 14:22:39.455 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2019-04-28 14:22:39.455 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2019-04-28 14:22:39.456 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3676ac27]
+2019-04-28 14:22:39.456 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3676ac27]
+2019-04-28 14:22:39.456 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3676ac27]
+2019-04-28 14:22:39.456 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3676ac27]
+2019-04-28 14:22:39.462 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2019-04-28 14:22:39.463 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2019-04-28 14:22:39.463 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2019-04-28 14:22:39.463 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2019-04-28 14:22:39.480 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2019-04-28 14:22:39.480 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2019-04-28 14:22:39.496 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 14:22:39.693 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 14:22:39.696 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 14:22:39.698 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 14:22:39.754 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Send request - POST https://api.jpush.cn/v3/push
+2019-04-28 14:22:39.754 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Request Content - {"platform":["android"],"audience":{"registration_id":["120c83f7606fed6c85c"]},"message":{"title":"取餐成功提醒","msg_content":"客官您好，您的餐品已成功取出，祝您用餐愉快！","extras":{"voiceAlert":"客官您好，您的餐品已成功取出，祝您用餐愉快！","messageType":"1"}},"options":{"sendno":1326790541,"apns_production":false}}
+2019-04-28 14:22:40.456 [main] DEBUG cn.jiguang.common.resp.ResponseWrapper - JPush API Rate Limiting params - quota:600, remaining:599, reset:60
+2019-04-28 14:22:40.457 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Succeed to get response OK - responseCode:200
+2019-04-28 14:22:40.457 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Response Content - {"sendno":"1326790541","msg_id":"54043203957456779"}
+2019-04-28 14:22:40.474 [main] INFO  c.t.services.push.jiguang.JiguangUserPushHandle - Got result - {"msg_id":54043203957456779,"sendno":1326790541,"statusCode":0}
+2019-04-28 14:22:40.501 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 14:22:40.501 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 14:22:40.501 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 14:22:40.502 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 14:22:40.503 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 14:22:40.503 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 14:22:40.503 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2019-04-28 14:22:40.503 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2019-04-28 14:25:06.123 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-04-28 14:25:06.824 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 14:25:06.824 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 14:25:06.877 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 14:25:06.877 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 14:25:07.047 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 14:25:07.136 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 14:25:07.203 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 14:25:07.203 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 14:25:07.262 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 14:25:07.263 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 14:25:07.301 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 14:25:07.321 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 14:25:07.677 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 取餐成功消息,par:{"userId":"2c91340c61088e880161089f5563000a","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 14:25:07.682 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 发送推送申请成功推送,par:{"userId":"2c91340c61088e880161089f5563000a","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 14:25:07.698 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 14:25:07.699 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 14:25:07.713 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 14:25:07.713 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 14:25:07.740 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2019-04-28 14:25:07.752 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3676ac27]
+2019-04-28 14:25:07.761 [main] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@aec50a1] will be managed by Spring
+2019-04-28 14:25:07.768 [main] DEBUG push.deviceDao.findDeviceByUserId - ==>  Preparing: select id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode from t_device where user_id = ? limit 1 
+2019-04-28 14:25:07.790 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 14:25:07.790 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 14:25:07.807 [main] DEBUG push.deviceDao.findDeviceByUserId - ==> Parameters: 2c91340c61088e880161089f5563000a(String)
+2019-04-28 14:25:07.808 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [2c91340c61088e880161089f5563000a]
+2019-04-28 14:25:07.809 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2019-04-28 14:25:07.809 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [2c91340c61088e880161089f5563000a]
+2019-04-28 14:25:07.809 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2019-04-28 14:25:07.815 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 6.220324 millis. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 14:25:07.815 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 6.220324 millis. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 14:25:07.819 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2019-04-28 14:25:07.822 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2019-04-28 14:25:07.822 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2019-04-28 14:25:07.823 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2019-04-28 14:25:07.837 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [393, 120c83f7606fed6c85c, 2c91340c61088e880161089f5563000a, 120c83f7606fed6c85c, 14, 0, null, null]
+2019-04-28 14:25:07.838 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [393, 120c83f7606fed6c85c, 2c91340c61088e880161089f5563000a, 120c83f7606fed6c85c, 14, 0, null, null]
+2019-04-28 14:25:07.841 [main] DEBUG push.deviceDao.findDeviceByUserId - <==      Total: 1
+2019-04-28 14:25:07.841 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2019-04-28 14:25:07.841 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2019-04-28 14:25:07.842 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2019-04-28 14:25:07.842 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2019-04-28 14:25:07.842 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3676ac27]
+2019-04-28 14:25:07.843 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3676ac27]
+2019-04-28 14:25:07.843 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3676ac27]
+2019-04-28 14:25:07.843 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3676ac27]
+2019-04-28 14:25:07.848 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2019-04-28 14:25:07.848 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2019-04-28 14:25:07.849 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2019-04-28 14:25:07.849 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2019-04-28 14:25:07.865 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2019-04-28 14:25:07.865 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2019-04-28 14:25:07.880 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 14:25:08.121 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 14:25:08.124 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 14:25:08.126 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 14:25:08.192 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Send request - POST https://api.jpush.cn/v3/push
+2019-04-28 14:25:08.192 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Request Content - {"platform":["android"],"audience":{"registration_id":["120c83f7606fed6c85c"]},"message":{"title":"取餐成功提醒","msg_content":"客官您好，您的餐品已成功取出，祝您用餐愉快！","extras":{"voiceAlert":"客官您好，您的餐品已成功取出，祝您用餐愉快！","messageType":"1"}},"options":{"sendno":1470810045,"apns_production":false}}
+2019-04-28 14:25:08.346 [main] DEBUG cn.jiguang.common.resp.ResponseWrapper - JPush API Rate Limiting params - quota:600, remaining:599, reset:60
+2019-04-28 14:25:08.346 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Succeed to get response OK - responseCode:200
+2019-04-28 14:25:08.346 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Response Content - {"sendno":"1470810045","msg_id":"67554002840737611"}
+2019-04-28 14:25:08.362 [main] INFO  c.t.services.push.jiguang.JiguangUserPushHandle - Got result - {"msg_id":67554002840737611,"sendno":1470810045,"statusCode":0}
+2019-04-28 14:25:08.390 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 14:25:08.391 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 14:25:08.391 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 14:25:08.391 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 14:25:08.392 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 14:25:08.392 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 14:25:08.392 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2019-04-28 14:25:08.392 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2019-04-28 14:25:16.224 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-04-28 14:25:17.018 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 14:25:17.018 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2019-04-28 14:25:17.082 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 14:25:17.082 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2019-04-28 14:25:17.224 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 14:25:17.299 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 14:25:17.373 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 14:25:17.373 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2019-04-28 14:25:17.429 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 14:25:17.429 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2019-04-28 14:25:17.455 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-04-28 14:25:17.475 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2019-04-28 14:25:17.805 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 取餐成功消息,par:{"userId":"2c91340c61088e880161089f5563000a","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 14:25:17.808 [main] INFO  com.taisf.services.device.proxy.PushServiceProxy - 发送推送申请成功推送,par:{"userId":"2c91340c61088e880161089f5563000a","token":null,"messageType":null,"pushType":null,"voiceAlert":null}
+2019-04-28 14:25:17.820 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 14:25:17.820 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2019-04-28 14:25:18.037 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 14:25:18.037 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2019-04-28 14:25:18.063 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2019-04-28 14:25:18.075 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3676ac27]
+2019-04-28 14:25:18.082 [main] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@aec50a1] will be managed by Spring
+2019-04-28 14:25:18.087 [main] DEBUG push.deviceDao.findDeviceByUserId - ==>  Preparing: select id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode from t_device where user_id = ? limit 1 
+2019-04-28 14:25:18.104 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 14:25:18.104 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 14:25:18.118 [main] DEBUG push.deviceDao.findDeviceByUserId - ==> Parameters: 2c91340c61088e880161089f5563000a(String)
+2019-04-28 14:25:18.119 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [2c91340c61088e880161089f5563000a]
+2019-04-28 14:25:18.119 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2019-04-28 14:25:18.119 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [2c91340c61088e880161089f5563000a]
+2019-04-28 14:25:18.119 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2019-04-28 14:25:18.124 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 5.587518 millis. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 14:25:18.125 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 5.587518 millis. 
+select
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where user_id = ?
+    limit 1
+2019-04-28 14:25:18.128 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2019-04-28 14:25:18.130 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2019-04-28 14:25:18.130 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2019-04-28 14:25:18.130 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2019-04-28 14:25:18.142 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [393, 120c83f7606fed6c85c, 2c91340c61088e880161089f5563000a, 120c83f7606fed6c85c, 14, 0, null, null]
+2019-04-28 14:25:18.142 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [393, 120c83f7606fed6c85c, 2c91340c61088e880161089f5563000a, 120c83f7606fed6c85c, 14, 0, null, null]
+2019-04-28 14:25:18.144 [main] DEBUG push.deviceDao.findDeviceByUserId - <==      Total: 1
+2019-04-28 14:25:18.144 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2019-04-28 14:25:18.144 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2019-04-28 14:25:18.145 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2019-04-28 14:25:18.145 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2019-04-28 14:25:18.145 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3676ac27]
+2019-04-28 14:25:18.145 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3676ac27]
+2019-04-28 14:25:18.145 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3676ac27]
+2019-04-28 14:25:18.145 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3676ac27]
+2019-04-28 14:25:18.151 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2019-04-28 14:25:18.152 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2019-04-28 14:25:18.152 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2019-04-28 14:25:18.152 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2019-04-28 14:25:18.169 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2019-04-28 14:25:18.169 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2019-04-28 14:25:18.181 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 14:25:18.352 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 14:25:18.354 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 14:25:18.355 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2019-04-28 14:25:18.396 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Send request - POST https://api.jpush.cn/v3/push
+2019-04-28 14:25:18.396 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Request Content - {"platform":["android"],"audience":{"registration_id":["120c83f7606fed6c85c"]},"message":{"title":"取餐成功提醒","msg_content":"客官您好，您的餐品已成功取出，祝您用餐愉快！","extras":{"voiceAlert":"客官您好，您的餐品已成功取出，祝您用餐愉快！","messageType":"1"}},"options":{"sendno":276164711,"apns_production":false}}
+2019-04-28 14:25:18.528 [main] DEBUG cn.jiguang.common.resp.ResponseWrapper - JPush API Rate Limiting params - quota:600, remaining:598, reset:50
+2019-04-28 14:25:18.528 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Succeed to get response OK - responseCode:200
+2019-04-28 14:25:18.528 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Response Content - {"sendno":"276164711","msg_id":"29273411108068493"}
+2019-04-28 14:25:18.542 [main] INFO  c.t.services.push.jiguang.JiguangUserPushHandle - Got result - {"msg_id":29273411108068493,"sendno":276164711,"statusCode":0}
+2019-04-28 14:25:18.569 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 14:25:18.569 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2019-04-28 14:25:18.569 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 14:25:18.569 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2019-04-28 14:25:18.570 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 14:25:18.570 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2019-04-28 14:25:18.571 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2019-04-28 14:25:18.571 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed

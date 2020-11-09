@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="check.orderStatsDao.">
+
+
+
+    <select id="getEnterpriseOrderStats" parameterType="com.taisf.services.order.dto.EnterpriseStatsRequest"
+            resultType="com.taisf.services.enterprise.vo.EnterpriseOrderStatsVO">
+        SELECT
+        p.enterprise_name as enterpriseName,
+        ll.enterpriseCode,
+        ll.extNum,
+        ll.noExtNum,
+        ll.faceNum,
+        ll.allNum,
+        ll.payMoney,
+        ll.payBalance
+        FROM
+        (
+        SELECT
+        tmp.enterprise_code AS enterpriseCode,
+        SUM( extNum ) AS extNum,
+        SUM( noExtNum ) AS noExtNum,
+        SUM( faceNum ) AS faceNum,
+        SUM( allNum ) AS allNum,
+        SUM( payMoney ) AS payMoney,
+        SUM( payBalance ) AS payBalance
+        FROM
+        (
+        SELECT
+        t.enterprise_code,
+        CASE
+          WHEN t.order_type IN ( 21, 31 ) THEN
+        1 ELSE 0
+        END AS extNum,
+
+        CASE
+          WHEN t.order_type IN ( 20, 30 ) THEN
+        1 ELSE 0
+        END AS noExtNum,
+
+        CASE
+        WHEN t.order_type IN ( 40, 41 ) THEN
+        1 ELSE 0
+        END AS faceNum,
+
+
+        1 AS allNum,
+
+        CASE
+        WHEN m.pay_type = 3 THEN
+        m.total_fee ELSE 0
+        END AS payBalance,
+
+        CASE
+        WHEN m.pay_type != 3 THEN
+        m.total_fee ELSE 0
+        END AS payMoney
+
+
+        FROM
+        t_order t
+        INNER JOIN t_pay_record m ON t.order_sn = m.order_sn
+        WHERE
+        t.enterprise_code IS NOT NULL
+
+        <if test="supplierCode != null and supplierCode != '' ">
+            and t.supplier_code = #{supplierCode,jdbcType=VARCHAR}
+        </if>
+
+
+        <if test="enterpriseCode != null and enterpriseCode != '' ">
+            and t.enterprise_code = #{enterpriseCode,jdbcType=VARCHAR}
+        </if>
+
+        <if test="startStr != null and startStr != '' ">
+            and t.create_time <![CDATA[  >= ]]>#{startStr,jdbcType=VARCHAR}
+        </if>
+        <if test="endStr != null and endStr != '' ">
+            and t.create_time <![CDATA[  <= ]]> #{endStr,jdbcType=VARCHAR}
+        </if>
+        ) tmp
+        GROUP BY
+        tmp.enterprise_code
+        ) ll
+        LEFT JOIN t_enterprise p ON ll.enterpriseCode = p.enterprise_code
+    </select>
+
+</mapper>

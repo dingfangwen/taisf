@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="device.deviceLinkDao" >
+
+
+  <resultMap type="com.taisf.services.device.entity.DeviceLinkEntity" id="BaseResultMap">
+    <result property="id" column="id" jdbcType="INTEGER"/>
+    <result property="orderSn" column="order_sn" jdbcType="VARCHAR"/>
+    <result property="cellSn" column="cell_sn" jdbcType="VARCHAR"/>
+    <result property="deviceId" column="device_Id" jdbcType="VARCHAR"/>
+    <result property="buffetFid" column="buffet_fid" jdbcType="VARCHAR"/>
+    <result property="linkStatus" column="link_status" jdbcType="INTEGER"/>
+    <result property="applyTime" column="apply_time" jdbcType="TIMESTAMP"/>
+    <result property="releaseTime" column="release_time" jdbcType="TIMESTAMP"/>
+    <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+  </resultMap>
+
+
+  <sql id="Base_Column_List" >
+     id, order_sn, cell_sn, device_Id, buffet_fid, link_status, apply_time, release_time, create_time, update_time
+  </sql>
+
+
+
+
+
+  <!--查询单个-->
+  <select id="findDeviceLinkOccupyByDeviceId" resultMap="BaseResultMap">
+
+    select
+    <include refid="Base_Column_List" />
+    from t_device_link
+    where device_Id = #{deviceId}
+    and link_status = 1
+  </select>
+
+
+
+  <!--查询单个-->
+  <select id="findOneDeviceByOrderSn" resultMap="BaseResultMap">
+
+    select
+        <include refid="Base_Column_List" />
+    from t_device_link
+    where order_sn = #{orderSn}
+
+  </select>
+
+
+  <!--查询单个-->
+  <select id="findOneDeviceLink" resultMap="BaseResultMap">
+
+    select
+
+    <include refid="Base_Column_List" />
+
+    from t_device_link
+
+    where id = #{id}
+
+    </select>
+
+
+  <!-- 新增关系表 -->
+  <insert id="saveDeviceLink" parameterType="com.taisf.services.device.entity.DeviceLinkEntity">
+
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+
+    insert into t_device_link
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+
+      <if test="orderSn != null and orderSn != ''">
+        order_sn ,
+      </if>
+      <if test="cellSn != null">
+        cell_sn,
+      </if>
+      <if test="deviceId != null and deviceId != ''">
+        device_Id,
+      </if>
+      <if test="buffetFid != null and buffetFid != ''">
+        buffet_fid,
+      </if>
+      <if test="linkStatus != null">
+        link_status,
+      </if>
+      <if test="applyTime != null">
+        apply_time,
+      </if>
+      <if test="releaseTime != null">
+        release_time,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+
+
+      <if test="orderSn != null and orderSn != ''">
+        #{orderSn},
+      </if>
+      <if test="cellSn != null  and cellSn != '' ">
+        #{cellSn},
+      </if>
+      <if test="deviceId != null and deviceId != ''">
+        #{deviceId},
+      </if>
+      <if test="buffetFid != null and buffetFid != ''">
+        #{buffetFid},
+      </if>
+      <if test="linkStatus != null">
+        #{linkStatus},
+      </if>
+      <if test="applyTime != null">
+        #{applyTime},
+      </if>
+      <if test="releaseTime != null">
+        #{releaseTime},
+      </if>
+      <if test="createTime != null">
+        #{createTime},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime},
+      </if>
+
+    </trim>
+  </insert>
+
+
+
+  <!--通过主键修改数据-->
+  <update id="updateDeviceLink">
+    update t_device_link
+    <set>
+
+      <if test="cellSn != null">
+        cell_sn = #{cellSn},
+      </if>
+      <if test="deviceId != null and deviceId != ''">
+        device_Id = #{deviceId},
+      </if>
+      <if test="buffetFid != null and buffetFid != ''">
+        buffet_fid = #{buffetFid},
+      </if>
+      <if test="linkStatus != null">
+        link_status = #{linkStatus},
+      </if>
+      <if test="applyTime != null">
+        apply_time = #{applyTime},
+      </if>
+      <if test="releaseTime != null">
+        release_time = #{releaseTime},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime},
+      </if>
+    </set>
+    where   order_sn = #{orderSn}
+
+  </update>
+
+
+</mapper>

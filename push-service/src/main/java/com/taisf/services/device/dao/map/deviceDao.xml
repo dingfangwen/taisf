@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="push.deviceDao" >
+  <resultMap id="BaseResultMap" type="com.taisf.services.device.entity.DeviceEntity" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="reg_id" property="regId" jdbcType="VARCHAR" />
+    <result column="user_id" property="userId" jdbcType="VARCHAR" />
+    <result column="device_token" property="deviceToken" jdbcType="VARCHAR" />
+    <result column="push_type" property="pushType" jdbcType="INTEGER" />
+    <result column="device_type" property="deviceType" jdbcType="VARCHAR" />
+    <result column="version" property="version" jdbcType="VARCHAR" />
+    <result column="applicationCode" property="applicationcode" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+  </sql>
+  <select id="findDeviceByRegId" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_device
+    where reg_id = #{regId,jdbcType=VARCHAR}
+  </select>
+
+  <select id="findDeviceByUserId" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from t_device
+    where user_id = #{userId,jdbcType=VARCHAR}
+    limit 1
+  </select>
+
+  <select id="listDeviceByUserId" resultMap="BaseResultMap" parameterType="java.util.List" >
+    select
+    <include refid="Base_Column_List" />
+    from t_device
+    where user_id IN
+    <foreach collection="list" item="userId" index="index"
+             open="(" close=")" separator=",">
+      #{userId}
+    </foreach>
+  </select>
+
+  <select id="listDeviceByPushType" resultMap="BaseResultMap" parameterType="java.lang.String" >
+     select
+    d.id, d.reg_id, d.user_id, d.device_token, d.push_type, d.device_type, d.version,d.applicationCode
+    from t_device d
+		where d.push_type = #{pushType,jdbcType=VARCHAR}
+		and  not exists(select n.customer_id from t_user_notice n where n.msg_type = 1 AND n.is_open = 0 and n.customer_id = d.user_id)
+  </select>
+
+
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_device
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.taisf.services.device.entity.DeviceEntity" >
+    insert into t_device (id, reg_id, user_id, 
+      device_token, push_type, device_type, 
+      version, applicationCode)
+    values (#{id,jdbcType=INTEGER}, #{regId,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR}, 
+      #{deviceToken,jdbcType=VARCHAR}, #{pushType,jdbcType=INTEGER}, #{deviceType,jdbcType=VARCHAR}, 
+      #{version,jdbcType=VARCHAR}, #{applicationcode,jdbcType=VARCHAR})
+  </insert>
+
+
+  <insert id="replaceDevice" parameterType="com.taisf.services.device.entity.DeviceEntity" >
+    replace into t_device
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="regId != null" >
+        reg_id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="deviceToken != null" >
+        device_token,
+      </if>
+      <if test="pushType != null" >
+        push_type,
+      </if>
+      <if test="deviceType != null" >
+        device_type,
+      </if>
+      <if test="version != null" >
+        version,
+      </if>
+      <if test="applicationcode != null" >
+        applicationCode,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="regId != null" >
+        #{regId,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="deviceToken != null" >
+        #{deviceToken,jdbcType=VARCHAR},
+      </if>
+      <if test="pushType != null" >
+        #{pushType,jdbcType=INTEGER},
+      </if>
+      <if test="deviceType != null" >
+        #{deviceType,jdbcType=VARCHAR},
+      </if>
+      <if test="version != null" >
+        #{version,jdbcType=VARCHAR},
+      </if>
+      <if test="applicationcode != null" >
+        #{applicationcode,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+
+  <insert id="addDevice" parameterType="com.taisf.services.device.entity.DeviceEntity" >
+    insert into t_device
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="regId != null" >
+        reg_id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="deviceToken != null" >
+        device_token,
+      </if>
+      <if test="pushType != null" >
+        push_type,
+      </if>
+      <if test="deviceType != null" >
+        device_type,
+      </if>
+      <if test="version != null" >
+        version,
+      </if>
+      <if test="applicationcode != null" >
+        applicationCode,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="regId != null" >
+        #{regId,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="deviceToken != null" >
+        #{deviceToken,jdbcType=VARCHAR},
+      </if>
+      <if test="pushType != null" >
+        #{pushType,jdbcType=INTEGER},
+      </if>
+      <if test="deviceType != null" >
+        #{deviceType,jdbcType=VARCHAR},
+      </if>
+      <if test="version != null" >
+        #{version,jdbcType=VARCHAR},
+      </if>
+      <if test="applicationcode != null" >
+        #{applicationcode,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByRegId" parameterType="com.taisf.services.device.entity.DeviceEntity" >
+    update t_device
+    <set >
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="deviceToken != null" >
+        device_token = #{deviceToken,jdbcType=VARCHAR},
+      </if>
+      <if test="pushType != null" >
+        push_type = #{pushType,jdbcType=INTEGER},
+      </if>
+      <if test="deviceType != null" >
+        device_type = #{deviceType,jdbcType=VARCHAR},
+      </if>
+      <if test="version != null" >
+        version = #{version,jdbcType=VARCHAR},
+      </if>
+      <if test="applicationcode != null" >
+        applicationCode = #{applicationcode,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where reg_id = #{regId,jdbcType=VARCHAR}
+  </update>
+  <!--解除用户和设备的绑定-->
+  <update id="unBindUserId" parameterType="com.taisf.services.device.entity.DeviceEntity" >
+    update t_device
+    set user_id = NULL
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </update>
+</mapper>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="supplier.supplierContactsDao.">
+
+  <resultMap id="BaseResultMap" type="com.taisf.services.supplier.entity.SupplierContactsEntity">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="fid" jdbcType="VARCHAR" property="fid" />
+    <result column="supplier_code" jdbcType="VARCHAR" property="supplierCode" />
+    <result column="con_name" jdbcType="VARCHAR" property="conName" />
+    <result column="con_mail" jdbcType="VARCHAR" property="conMail" />
+    <result column="con_tel" jdbcType="VARCHAR" property="conTel" />
+    <result column="con_mobile" jdbcType="VARCHAR" property="conMobile" />
+    <result column="qq_no" jdbcType="VARCHAR" property="qqNo" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, fid, supplier_code, con_name, con_mail, con_tel, con_mobile, qq_no
+  </sql>
+
+
+  <select id="getSupplierContactsByCode" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_supplier_contacts
+    where supplier_code = #{supplierCode,jdbcType=VARCHAR}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_supplier_contacts
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+
+  <insert id="saveSupplierContacts" parameterType="com.taisf.services.supplier.entity.SupplierContactsEntity">
+    insert into t_supplier_contacts
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+
+      <if test="fid != null">
+        fid,
+      </if>
+      <if test="supplierCode != null">
+        supplier_code,
+      </if>
+      <if test="conName != null">
+        con_name,
+      </if>
+      <if test="conMail != null">
+        con_mail,
+      </if>
+      <if test="conTel != null">
+        con_tel,
+      </if>
+      <if test="conMobile != null">
+        con_mobile,
+      </if>
+      <if test="qqNo != null">
+        qq_no,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+
+      <if test="fid != null">
+        #{fid,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierCode != null">
+        #{supplierCode,jdbcType=VARCHAR},
+      </if>
+      <if test="conName != null">
+        #{conName,jdbcType=VARCHAR},
+      </if>
+      <if test="conMail != null">
+        #{conMail,jdbcType=VARCHAR},
+      </if>
+      <if test="conTel != null">
+        #{conTel,jdbcType=VARCHAR},
+      </if>
+      <if test="conMobile != null">
+        #{conMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="qqNo != null">
+        #{qqNo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+
+  <update id="updateSupplierContacts" parameterType="com.taisf.services.supplier.entity.SupplierContactsEntity">
+    update t_supplier_contacts
+    <set>
+
+      <if test="supplierCode != null">
+        supplier_code = #{supplierCode,jdbcType=VARCHAR},
+      </if>
+      <if test="conName != null">
+        con_name = #{conName,jdbcType=VARCHAR},
+      </if>
+      <if test="conMail != null">
+        con_mail = #{conMail,jdbcType=VARCHAR},
+      </if>
+      <if test="conTel != null">
+        con_tel = #{conTel,jdbcType=VARCHAR},
+      </if>
+      <if test="conMobile != null">
+        con_mobile = #{conMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="qqNo != null">
+        qq_no = #{qqNo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where fid = #{fid,jdbcType=VARCHAR}
+  </update>
+
+</mapper>

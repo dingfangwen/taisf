@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="payment.payLockDao" >
+
+  
+  <resultMap id="BaseResultMap" type="com.jk.services.payment.entity.PayLockEntity" >
+    <result column="product_code" property="productCode" jdbcType="VARCHAR" />
+    <result column="biz_id" property="bizId" jdbcType="VARCHAR" />
+  </resultMap>
+
+  <insert id="insert" parameterType="com.jk.services.payment.entity.PayLockEntity" >
+    insert into t_pay_lock (product_code, biz_id)
+    values (#{productCode}, #{bizId})
+  </insert>
+
+
+  <delete id="delete" parameterType="com.jk.services.payment.entity.PayLockEntity">
+  	delete from t_pay_lock where product_code=#{productCode} and biz_id =#{bizId}
+  </delete>
+</mapper>

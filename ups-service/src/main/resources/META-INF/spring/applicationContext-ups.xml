@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
+
+	<context:component-scan base-package="com.taisf" />
+	<context:component-scan base-package="com.jk" />
+
+    <context:property-placeholder location="classpath*:*.properties" ignore-unresolvable="true" />
+
+	<!-- 启用 aspectj 动 态代理 -->
+	<aop:aspectj-autoproxy proxy-target-class="true" />
+	<!--数据源配置 -->
+
+    <!--数据源配置 -->
+    <bean id="ups.druid" abstract="true">
+        <!-- 配置初始化大小、最小、最大 -->
+        <property name="initialSize" value="${druid.initialSize}"/>
+        <property name="minIdle" value="${druid.minIdle}"/>
+        <property name="maxActive" value="${druid.maxActive}"/>
+
+        <!-- 配置获取连接等待超时的时间 -->
+        <property name="maxWait" value="${druid.maxWait}"/>
+        <!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+        <property name="timeBetweenEvictionRunsMillis" value="${druid.timeBetweenEvictionRunsMillis}" />
+
+        <!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+        <property name="minEvictableIdleTimeMillis" value="${druid.minEvictableIdleTimeMillis}" />
+
+        <property name="testWhileIdle" value="${druid.testWhileIdle}" />
+        <property name="testOnBorrow" value="${druid.testOnBorrow}" />
+        <property name="testOnReturn" value="${druid.testOnReturn}" />
+
+        <!-- log4j 或者 slf4j, 根据具体项目所用的log依赖选择 -->
+        <property name="filters" value="slf4j"/>
+
+
+        <property name="proxyFilters">
+            <list>
+                <ref bean="logFilter" />
+            </list>
+        </property>
+
+    </bean>
+
+
+    <bean id="logFilter" class="com.alibaba.druid.filter.logging.Slf4jLogFilter">
+        <property name="statementExecutableSqlLogEnable" value="false" />
+    </bean>
+
+    <bean id="ups.datasource.M" parent="ups.druid"
+          class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+        <property name="driverClassName" value="${druid.jdbc.mysql.driverClassName}"/>
+        <!-- 基本属性 url、user、password -->
+        <property name="url" value="${jdbc.ups.url.master}"/>
+        <property name="username" value="${jdbc.ups.username.master}"/>
+        <property name="password" value="${jdbc.ups.password.master}"/>
+        <property name="validationQuery" value="${druid.mysql.validationQuery}" />
+    </bean>
+
+    <bean id="ups.datasource.S" parent="ups.druid"
+          class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+        <property name="driverClassName" value="${druid.jdbc.mysql.driverClassName}"/>
+        <!-- 基本属性 url、user、password -->
+        <property name="url" value="${jdbc.ups.url.slave}"/>
+        <property name="username" value="${jdbc.ups.username.slave}"/>
+        <property name="password" value="${jdbc.ups.password.slave}"/>
+        <property name="validationQuery" value="${druid.mysql.validationQuery}" />
+    </bean>
+	
+	
+	
+	<bean id="ups.sqlSessionFactory.M" class="org.mybatis.spring.SqlSessionFactoryBean">
+    	<property name="dataSource" ref="ups.datasource.M"/>
+    	<property name="mapperLocations" value="classpath*:com/taisf/services/*/dao/map/*.xml"/>
+        <property name="configLocation" value="classpath:mybatis-config.xml"></property>
+    </bean>
+    
+     <bean id="ups.sqlSessionFactory.S" class="org.mybatis.spring.SqlSessionFactoryBean">
+    	<property name="dataSource" ref="ups.datasource.S"/>
+    	<property name="mapperLocations" value="classpath*:com/taisf/services/*/dao/map/*.xml"/>
+        <property name="configLocation" value="classpath:mybatis-config.xml"></property>
+    </bean>
+    
+    
+     <bean id="ups.writeSqlSessionTemplate.M" class="org.mybatis.spring.SqlSessionTemplate" scope="prototype">
+        <constructor-arg index="0" ref="ups.sqlSessionFactory.M"/>
+    </bean>
+    
+     <bean id="ups.writeSqlSessionTemplate.S" class="org.mybatis.spring.SqlSessionTemplate" scope="prototype">
+        <constructor-arg index="0" ref="ups.sqlSessionFactory.S"/>
+    </bean>
+    
+    <bean id="ups.MybatisDaoContext" class="com.jk.framework.dao.base.MybatisDaoContext">
+        <property name="writeSqlSessionTemplate" ref="ups.writeSqlSessionTemplate.M"></property>
+        <property name="readSqlSessionTemplate" ref="ups.writeSqlSessionTemplate.S"></property>
+    </bean>
+
+	<bean id="ups.transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="ups.datasource.M" />
+	</bean>
+
+     <tx:advice id="ups.txAdvice" transaction-manager="ups.transactionManager">
+		<tx:attributes>
+			<tx:method name="save*" propagation="REQUIRED" />
+			<tx:method name="add*" propagation="REQUIRED" />
+			<tx:method name="create*" propagation="REQUIRED" />
+			<tx:method name="insert*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="merge*" propagation="REQUIRED" />
+			<tx:method name="del*" propagation="REQUIRED" />
+			<tx:method name="remove*" propagation="REQUIRED" />
+			<tx:method name="get*" read-only="true" />
+            <tx:method name="list*" read-only="true" />
+			<tx:method name="find*" read-only="true" />
+		</tx:attributes>
+	</tx:advice>
+
+	<aop:config expose-proxy="true">
+		<!-- 只对业务逻辑层实施事务 -->
+		<aop:pointcut id="ups.txPointcut" expression="execution(* com.taisf.services.*.service..*.*(..))" />
+		<aop:advisor advice-ref="ups.txAdvice" pointcut-ref="ups.txPointcut" />
+	</aop:config>
+
+
+</beans>

@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="order.orderInfoDao">
+
+    <resultMap id="BaseResultMap" type="com.taisf.services.order.vo.OrderInfoVO">
+        <!-- map -->
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="order_sn" jdbcType="VARCHAR" property="orderSn"/>
+        <result column="title" jdbcType="VARCHAR" property="title"/>
+        <result column="province_code" jdbcType="VARCHAR" property="provinceCode"/>
+        <result column="area_code" jdbcType="VARCHAR" property="areaCode"/>
+        <result column="city_code" jdbcType="VARCHAR" property="cityCode"/>
+        <result column="address" jdbcType="VARCHAR" property="address"/>
+        <result column="order_source" jdbcType="TINYINT" property="orderSource"/>
+        <result column="order_status" jdbcType="TINYINT" property="orderStatus"/>
+        <result column="accounts_status" jdbcType="TINYINT" property="accountsStatus"/>
+        <result column="pay_status" jdbcType="TINYINT" property="payStatus"/>
+        <result column="eva_status" jdbcType="TINYINT" property="evaStatus"/>
+        <result column="order_type" jdbcType="TINYINT" property="orderType"/>
+        <result column="business_uid" jdbcType="VARCHAR" property="businessUid"/>
+        <result column="user_uid" jdbcType="VARCHAR" property="userUid"/>
+        <result column="user_tel" jdbcType="VARCHAR" property="userTel"/>
+        <result column="user_name" jdbcType="VARCHAR" property="userName"/>
+        <result column="user_code" jdbcType="VARCHAR" property="userCode"/>
+        <result column="pay_time" jdbcType="TIMESTAMP" property="payTime"/>
+        <result column="send_time" jdbcType="TIMESTAMP" property="sendTime"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="last_modify_date" jdbcType="TIMESTAMP" property="lastModifyDate"/>
+        <result column="mark" jdbcType="VARCHAR" property="mark"/>
+
+        <result column="is_self" property="isSelf" jdbcType="INTEGER"/>
+        <result column="sum_money" property="sumMoney" jdbcType="INTEGER"/>
+        <result column="coupon_money" property="couponMoney" jdbcType="INTEGER"/>
+        <result column="discount_money" property="discountMoney" jdbcType="INTEGER"/>
+        <result column="red_money" property="redMoney" jdbcType="INTEGER"/>
+        <result column="need_pay" property="needPay" jdbcType="INTEGER"/>
+        <result column="pay_balance" property="payBalance" jdbcType="INTEGER"/>
+        <result column="carry_money" property="carryMoney" jdbcType="INTEGER"/>
+        <result column="supplier_name" property="supplierName" jdbcType="VARCHAR"/>
+        <result column="enterprise_code" property="enterpriseCode" jdbcType="VARCHAR"/>
+        <result column="enterprise_name" property="enterpriseName" jdbcType="VARCHAR"/>
+        <result column="buffet_fid" property="buffetFid" jdbcType="VARCHAR"/>
+        <result column="cell_sn" property="cellSn" jdbcType="VARCHAR"/>
+
+        <result column="order_json" jdbcType="VARCHAR" property="orderJson" />
+
+    </resultMap>
+
+
+    <sql id="Base_Column_List">
+        <!--  -->
+        t.id, t.order_sn,t.title, t.province_code,t.area_code, t.city_code,t.address, t.order_source,t.eva_status,
+        t.order_status, t.accounts_status,
+        t.pay_status,t.order_type, t.business_uid, t.user_uid, t.user_tel, t.user_name,t.user_code,
+        t.send_time, t.pay_time,t.create_time, t.last_modify_date, t.mark, t.order_json,
+        m.sum_money, m.coupon_money, m.discount_money,m.red_money, m.need_pay, m.pay_money, m.pay_balance, m.carry_money
+
+    </sql>
+
+    <!-- 获取订单详情 -->
+    <select id="getOrderInfoByOrderSn" resultMap="BaseResultMap" parameterType="java.lang.String">
+        SELECT
+        <include refid="Base_Column_List"/>,p.enterprise_name,t.is_self, b.buffet_fid,b.cell_sn
+        FROM t_order t
+        INNER join t_order_money m on t.order_sn = m.order_sn
+        LEFT JOIN t_enterprise p on p.enterprise_code = t.enterprise_code
+        LEFT JOIN t_order_buffet b on  t.order_sn = b.order_sn
+        WHERE t.order_sn = #{orderSn,jdbcType=VARCHAR}
+        limit 1
+    </select>
+
+    <!-- 获取订单列表的信息 -->
+    <select id="getOrderInfoWaitingList" resultMap="BaseResultMap" parameterType="java.lang.String">
+        SELECT
+        <include refid="Base_Column_List"/>,p.enterprise_name
+        FROM t_order t
+        INNER join t_order_money m on t.order_sn = m.order_sn
+        LEFT JOIN t_enterprise p on p.enterprise_code = t.enterprise_code
+        WHERE t.user_uid = #{userUid,jdbcType=VARCHAR}
+        AND(
+        t.order_status in (60,40) OR ( t.order_status = 50 AND t.is_self = 1)
+        )
+        ORDER BY t.id DESC
+    </select>
+
+
+
+    <!-- 获取订单列表的信息 -->
+    <select id="getOrderInfoPageCurrent" resultMap="BaseResultMap" parameterType="com.taisf.services.order.dto.OrderInfoRequest">
+        SELECT
+        <include refid="Base_Column_List"/>,t.is_self, b.buffet_fid,b.cell_sn
+        FROM t_order t
+        INNER join t_order_money m on t.order_sn = m.order_sn
+        LEFT JOIN t_order_buffet b on  t.order_sn = b.order_sn
+        WHERE 1= 1
+
+        <if test="userUid != null and userUid != '' ">
+            and t.user_uid = #{userUid,jdbcType=VARCHAR}
+            and m.uid = #{userUid,jdbcType=VARCHAR}
+        </if>
+
+        <if test="knightType != null and knightType == 0 ">
+            and t.order_type in (20,30)
+        </if>
+
+        <if test="knightType != null and knightType == 1 ">
+            and t.order_type in (40,41)
+            and t.order_status = 70
+        </if>
+
+
+        <if test="knightUid != null and knightUid != '' ">
+            and t.knight_uid = #{knightUid,jdbcType=VARCHAR}
+        </if>
+        <if test="enterpriseCode != null and enterpriseCode != '' ">
+            and t.enterprise_code = #{enterpriseCode,jdbcType=VARCHAR}
+        </if>
+
+        ORDER BY t.id DESC
+
+    </select>
+
+
+
+    <!-- 获取订单列表的信息 -->
+    <select id="getOrderInfo" resultMap="BaseResultMap" parameterType="com.taisf.services.order.dto.OrderInfoRequest">
+        SELECT
+        <include refid="Base_Column_List"/>,p.enterprise_name,t.is_self, b.buffet_fid,b.cell_sn
+        FROM t_order t
+        INNER join t_order_money m on t.order_sn = m.order_sn
+        LEFT JOIN t_enterprise p on p.enterprise_code = t.enterprise_code
+        LEFT JOIN t_order_buffet b on  t.order_sn = b.order_sn
+        WHERE 1= 1
+
+        <if test="userUid != null and userUid != '' ">
+            and t.user_uid = #{userUid,jdbcType=VARCHAR}
+        </if>
+
+        <if test="knightType != null and knightType == 0 ">
+            and t.order_type in (20,30)
+        </if>
+
+        <if test="knightType != null and knightType == 1 ">
+            and t.order_type in (40,41)
+            and t.order_status = 70
+        </if>
+
+
+        <if test="knightUid != null and knightUid != '' ">
+            and t.knight_uid = #{knightUid,jdbcType=VARCHAR}
+        </if>
+        <if test="enterpriseCode != null and enterpriseCode != '' ">
+            and t.enterprise_code = #{enterpriseCode,jdbcType=VARCHAR}
+        </if>
+
+        ORDER BY t.id DESC
+
+    </select>
+
+
+    <select id="pageListOrder" resultMap="BaseResultMap" parameterType="com.taisf.services.order.dto.OrderInfoRequest">
+        SELECT
+        <include refid="Base_Column_List"/>
+        ,supplier_name,e.enterprise_code,e.enterprise_name,t.is_self, b.buffet_fid,b.cell_sn
+        FROM t_order t
+        INNER join t_order_money m on t.order_sn = m.order_sn
+        LEFT JOIN t_supplier s ON s.supplier_code = t.business_uid
+        LEFT JOIN t_enterprise e ON e.enterprise_code = t.enterprise_code
+        LEFT JOIN t_order_buffet b on  t.order_sn = b.order_sn
+        WHERE 1=1 AND t.supplier_code = #{bizCode,jdbcType=VARCHAR}
+        <if test="userUid != null and userUid != '' ">
+            and t.user_uid = #{userUid,jdbcType=VARCHAR}
+        </if>
+        <if test="openTime != null and openTime != '' ">
+            <![CDATA[
+				and t.create_time >= #{openTime}
+			]]>
+        </if>
+        <if test="tillTime != null and tillTime != '' ">
+            <![CDATA[
+				and t.create_time <= #{tillTime}
+			]]>
+        </if>
+
+        <if test="userTel != null and userTel != '' ">
+            and t.user_tel like concat('%',#{userTel},'%')
+        </if>
+        <if test="orderType != null">
+            and t.order_type = #{orderType,jdbcType=INTEGER}
+        </if>
+        <if test="isSelf != null">
+            and t.is_self = #{isSelf,jdbcType=INTEGER}
+        </if>
+        <if test="supplierName != null and supplierName != ''">
+            and s.supplier_name LIKE  concat('%',#{supplierName,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="enterpriseCode != null and enterpriseCode != ''">
+            AND  e.enterprise_code = #{enterpriseCode,jdbcType=VARCHAR}
+        </if>
+        <if test="orderStatus != null">
+            and t.order_status = #{orderStatus,jdbcType=INTEGER}
+        </if>
+        ORDER BY t.id DESC
+    </select>
+
+
+
+    <select id="enterpriseOrderDistributionList" parameterType="com.taisf.services.enterprise.dto.EnterpriseListRequest"
+            resultType="com.taisf.services.order.vo.OrderSendStatsVo">
+
+        SELECT
+            tmp.address_fid as addressFid,
+            tmp.order_type as orderType,
+            tmp.orderNum,
+            tmp.create_time AS createTime,
+            adr.enterprise_code as enterpriseCode,
+            adr.address,
+            adr.con_tel as conTel,
+            adr.con_name as conName,
+            ent.enterprise_name as enterpriseName
+        FROM
+            (
+                SELECT
+                    t.address_fid,
+                    t.order_type,
+                    t.create_time,
+                    COUNT(1) AS orderNum
+                FROM
+                    (
+                    SELECT
+                        address_fid,
+                        order_type,
+                        create_time
+                    FROM
+                        t_order
+                    WHERE
+                        order_status = 50
+                        AND enterprise_code != ""
+                        AND address_fid IS NOT NULL
+                        AND is_self = 0
+                    ) t
+                GROUP BY
+                    t.address_fid,
+                    t.order_type
+            )tmp
+            LEFT JOIN t_enterprise_address adr ON tmp.address_fid = adr.fid
+            LEFT JOIN t_enterprise ent ON adr.enterprise_code = ent.enterprise_code
+    </select>
+
+    <update id="sendByEnterpriseCode" parameterType="com.taisf.services.order.entity.OrderEntity">
+        UPDATE  t_order SET order_status = #{orderStatus},send_time = now()
+        WHERE  enterprise_code = #{enterpriseCode}
+        AND order_status = 50 and is_self = 0
+        <if test="addressFid != null">
+            and  address_fid = #{addressFid,jdbcType=VARCHAR}
+        </if>
+        <if test="orderType != null">
+            and order_type = #{orderType,jdbcType=INTEGER}
+        </if>
+    </update>
+
+
+    <select id="findListByEnterpriseCode" parameterType="com.taisf.services.order.dto.OrderInfoRequest"
+            resultMap="BaseResultMap">
+        SELECT
+        t.id, t.order_sn,t.title, t.province_code,t.area_code, t.city_code,t.address, t.order_source,t.eva_status,
+        t.order_status, t.accounts_status,
+        t.pay_status,t.order_type, t.business_uid, t.user_uid, t.user_tel, t.user_name,t.user_code,
+        t.send_time, t.pay_time,t.create_time, t.last_modify_date, t.mark
+        FROM t_order t
+        WHERE t.enterprise_code = #{enterpriseCode}  AND t.is_self = 0
+        <if test="orderStatus != null">
+            AND t.order_status = #{orderStatus}
+        </if>
+        <if test="orderStatus == null">
+            AND t.order_status in (60,70)
+        </if>
+        <if test="openTime != null and openTime != '' ">
+            <![CDATA[
+				AND t.create_time >= #{openTime}
+			]]>
+        </if>
+        <if test="tillTime != null and tillTime != '' ">
+            <![CDATA[
+				AND t.create_time <= #{tillTime}
+			]]>
+        </if>
+        <if test="addressFid != null">
+            and t.address_fid = #{addressFid,jdbcType=VARCHAR}
+        </if>
+        <if test="orderType != null">
+            and t.order_type = #{orderType,jdbcType=INTEGER}
+        </if>
+
+        <if test="orderStatus != null">
+            ORDER BY t.address DESC
+        </if>
+
+        <if test="orderStatus == null">
+            ORDER BY t.send_time DESC
+        </if>
+
+
+    </select>
+    <resultMap id="ListMap" type="com.taisf.services.order.vo.OrderListVo">
+        <result column="enterprise_code" property="enterpriseCode" jdbcType="VARCHAR"/>
+        <result column="enterprise_name" jdbcType="VARCHAR" property="enterpriseName"/>
+        <result column="orderType" jdbcType="INTEGER" property="orderType"/>
+        <result column="countNum" jdbcType="INTEGER" property="countNum"/>
+        <result column="successNum" jdbcType="INTEGER" property="successNum"/>
+        <result column="user_name" jdbcType="VARCHAR" property="userName"/>
+        <result column="user_tel" jdbcType="VARCHAR" property="userTel"/>
+    </resultMap>
+    <!-- 配送记录 -->
+    <select id="findPageLsit" parameterType="com.taisf.services.enterprise.dto.EnterpriseListRequest"
+            resultMap="ListMap">
+        SELECT e.enterprise_code, e.enterprise_name,orderType,COUNT(1) AS countNum,SUM(orderStatus)
+        successNum,user_name,user_tel
+        FROM(
+        SELECT * ,
+        CASE WHEN t.order_type = 20 OR t.order_type = 21 THEN 1
+        WHEN t.order_type = 30 OR t.order_type = 31 THEN 2
+        ELSE 0 END AS orderType,
+        CASE WHEN t.order_status = 70 THEN 1
+        ELSE 0 END AS orderStatus
+        FROM t_order t) od LEFT JOIN t_enterprise e ON od.enterprise_co  de ''= e.enterprise_code
+        WHERE orderType !=0 and od.supplier_code = #{supplierCode,jdbcType=VARCHAR}
+        <if test="openTime != null and openTime != '' ">
+            <![CDATA[
+				AND od.create_time >= #{openTime}
+			]]>
+        </if>
+        <if test="tillTime != null and tillTime != '' ">
+            <![CDATA[
+				AND od.create_time <= #{tillTime}
+			]]>
+        </if>
+        GROUP BY od.enterprise_code,od.orderType
+    </select>
+
+
+
+
+
+    <select id="getSupOrderStats" parameterType="com.taisf.services.order.dto.SupStatsRequest"
+            resultType="com.taisf.services.enterprise.vo.SupOrderStatsVO">
+        SELECT
+        p.supplier_name as supplierName,
+        ll.supplierCode,
+        ll.orderNum,
+        ll.faceNum,
+        ll.knightNum,
+        ll.allNum,
+        ll.payMoney,
+        ll.payBalance
+        FROM
+        (
+        SELECT
+        tmp.supplier_code AS supplierCode,
+        SUM( orderNum ) AS orderNum,
+        SUM( faceNum ) AS faceNum,
+        SUM( knightNum ) AS knightNum,
+        SUM( allNum ) AS allNum,
+        SUM( payMoney ) AS payMoney,
+        SUM( payBalance ) AS payBalance
+        FROM
+        (
+        SELECT
+        t.supplier_code,
+
+        CASE
+        WHEN t.face_type = 0 THEN
+        1 ELSE 0
+        END AS orderNum,
+
+        CASE
+        WHEN t.face_type = 1 THEN
+        1 ELSE 0
+        END AS faceNum,
+
+        CASE
+        WHEN t.face_type = 2 THEN
+        1 ELSE 0
+        END AS knightNum,
+
+        1 AS allNum,
+
+        m.pay_balance AS payBalance,
+
+        m.pay_money AS payMoney
+
+
+        FROM
+        t_order t
+        INNER JOIN t_order_money m ON t.order_sn = m.order_sn
+        WHERE
+        t.supplier_code IS NOT NULL   AND t.order_status IN (50,60,70)
+
+        <if test="supplierCode != null and supplierCode != '' ">
+            and t.supplier_code = #{supplierCode,jdbcType=VARCHAR}
+        </if>
+
+
+        <if test="startStr != null and startStr != '' ">
+            and t.create_time <![CDATA[  >= ]]>#{startStr,jdbcType=VARCHAR}
+        </if>
+        <if test="endStr != null and endStr != '' ">
+            and t.create_time <![CDATA[  <= ]]> #{endStr,jdbcType=VARCHAR}
+        </if>
+        ) tmp
+        GROUP BY
+        tmp.supplier_code
+        ) ll
+        LEFT JOIN t_supplier p ON ll.supplierCode = p.supplier_code
+    </select>
+
+
+
+
+    <select id="getEnterpriseOrderStats" parameterType="com.taisf.services.order.dto.EnterpriseStatsRequest"
+            resultType="com.taisf.services.enterprise.vo.EnterpriseOrderStatsVO">
+        SELECT
+        p.enterprise_name as enterpriseName,
+        p.enterprise_type as enterpriseType,
+        ll.enterpriseCode,
+        ll.orderNum,
+        ll.faceNum,
+        ll.knightNum,
+        ll.allNum,
+        ll.payMoney,
+        ll.payBalance
+        FROM
+        (
+        SELECT
+        tmp.enterprise_code AS enterpriseCode,
+        SUM( orderNum ) AS orderNum,
+        SUM( faceNum ) AS faceNum,
+        SUM( knightNum ) AS knightNum,
+        SUM( allNum ) AS allNum,
+        SUM( payMoney ) AS payMoney,
+        SUM( payBalance ) AS payBalance
+        FROM
+        (
+        SELECT
+        t.enterprise_code,
+
+        CASE
+          WHEN t.face_type = 0 THEN
+        1 ELSE 0
+        END AS orderNum,
+
+        CASE
+        WHEN t.face_type = 1 THEN
+        1 ELSE 0
+        END AS faceNum,
+
+        CASE
+        WHEN t.face_type = 2 THEN
+        1 ELSE 0
+        END AS knightNum,
+
+        1 AS allNum,
+
+        m.pay_balance AS payBalance,
+
+        m.pay_money AS payMoney
+
+
+        FROM
+        t_order t
+        INNER JOIN t_order_money m ON t.order_sn = m.order_sn
+        WHERE
+        t.enterprise_code IS NOT NULL  AND t.order_status IN (50,60,70)
+
+        <if test="supplierCode != null and supplierCode != '' ">
+            and t.supplier_code = #{supplierCode,jdbcType=VARCHAR}
+        </if>
+
+
+        <if test="enterpriseCode != null and enterpriseCode != '' ">
+            and t.enterprise_code = #{enterpriseCode,jdbcType=VARCHAR}
+        </if>
+
+        <if test="startStr != null and startStr != '' ">
+            and t.create_time <![CDATA[  >= ]]>#{startStr,jdbcType=VARCHAR}
+        </if>
+        <if test="endStr != null and endStr != '' ">
+            and t.create_time <![CDATA[  <= ]]> #{endStr,jdbcType=VARCHAR}
+        </if>
+        ) tmp
+        GROUP BY
+        tmp.enterprise_code
+        ) ll
+        LEFT JOIN t_enterprise p ON ll.enterpriseCode = p.enterprise_code
+    </select>
+    <select id="getOrderListPageByEnterprisCode" resultMap="BaseResultMap"
+            parameterType="com.taisf.services.order.dto.OrderInfoRequest">
+        SELECT
+        <include refid="Base_Column_List"/>,p.enterprise_name
+        FROM t_order t
+        INNER join t_order_money m on t.order_sn = m.order_sn
+        LEFT JOIN t_enterprise p on p.enterprise_code = t.enterprise_code
+        WHERE 1= 1
+        <if test="enterpriseCode != null and enterpriseCode != '' ">
+            and t.enterprise_code = #{enterpriseCode,jdbcType=VARCHAR}
+        </if>
+        <if test="orderStatus != null">
+            and t.order_status = #{orderStatus}
+        </if>
+        <if test="userName != null and userName != '' ">
+            and t.user_name = #{userName,jdbcType=VARCHAR}
+        </if>
+        <if test="userTel != null and userTel != '' ">
+            and t.user_tel = #{userTel,jdbcType=VARCHAR}
+        </if>
+        <if test="openTime != null and openTime != '' ">
+            <![CDATA[
+				and t.create_time >= #{openTime}
+			]]>
+        </if>
+        <if test="tillTime != null and tillTime != '' ">
+            <![CDATA[
+				and t.create_time <= #{tillTime}
+			]]>
+        </if>
+        ORDER BY t.id DESC
+    </select>
+
+    <resultMap id="ExcelMap" type="com.taisf.services.order.vo.OrderExcelVO">
+        <result column="user_tel" jdbcType="VARCHAR" property="userTel"/>
+        <result column="user_name" jdbcType="VARCHAR" property="userName"/>
+        <result column="address" jdbcType="VARCHAR" property="address"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="order_type" jdbcType="TINYINT" property="orderType"/>
+        <result column="order_sn" jdbcType="VARCHAR" property="orderSn"/>
+        <result column="sum_money" jdbcType="INTEGER" property="sumMoney"/>
+
+        <result column="enterprise_name" property="enterpriseName" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="listOrderExcel" resultMap="ExcelMap" parameterType="com.taisf.services.order.dto.OrderInfoRequest">
+        SELECT
+        t.user_name,t.user_tel,t.address,t.create_time,t.order_type,t.order_sn,m.sum_money,e.enterprise_name
+        FROM t_order t
+        INNER join t_order_money m on t.order_sn = m.order_sn
+        LEFT JOIN t_supplier s ON s.supplier_code = t.business_uid
+        LEFT JOIN t_enterprise e ON e.enterprise_code = t.enterprise_code
+        WHERE 1=1 AND t.supplier_code = #{bizCode,jdbcType=VARCHAR}
+        <if test="userUid != null and userUid != '' ">
+            and t.user_uid = #{userUid,jdbcType=VARCHAR}
+        </if>
+        <if test="openTime != null and openTime != '' ">
+            <![CDATA[
+				and t.create_time >= #{openTime}
+			]]>
+        </if>
+        <if test="tillTime != null and tillTime != '' ">
+            <![CDATA[
+				and t.create_time <= #{tillTime}
+			]]>
+        </if>
+
+        <if test="userTel != null and userTel != '' ">
+            and t.user_tel like concat('%',#{userTel},'%')
+        </if>
+        <if test="orderType != null">
+            and t.order_type = #{orderType,jdbcType=INTEGER}
+        </if>
+        <if test="isSelf != null">
+            and t.is_self = #{isSelf,jdbcType=INTEGER}
+        </if>
+        <if test="supplierName != null and supplierName != ''">
+            and s.supplier_name LIKE  concat('%',#{supplierName,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="orderStatus != null">
+            and t.order_status = #{orderStatus,jdbcType=INTEGER}
+        </if>
+        ORDER BY t.id DESC
+    </select>
+</mapper>

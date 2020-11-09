@@ -1,0 +1,88 @@
+2018-01-12 15:01:01.434 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-01-12 15:01:02.518 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-01-12 15:01:02.518 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-01-12 15:01:03.120 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-01-12 15:01:03.121 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-01-12 15:01:03.553 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-01-12 15:01:03.632 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/roleDao.xml]'
+2018-01-12 15:01:03.646 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/roleResDao.xml]'
+2018-01-12 15:01:03.667 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/employeeDao.xml]'
+2018-01-12 15:01:03.692 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/resourceDao.xml]'
+2018-01-12 15:01:03.708 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/employeeRoleDao.xml]'
+2018-01-12 15:01:03.800 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-01-12 15:01:03.800 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-01-12 15:01:03.876 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-01-12 15:01:03.877 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-01-12 15:01:03.909 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-01-12 15:01:03.921 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/roleDao.xml]'
+2018-01-12 15:01:03.930 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/roleResDao.xml]'
+2018-01-12 15:01:03.945 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/employeeDao.xml]'
+2018-01-12 15:01:03.959 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/resourceDao.xml]'
+2018-01-12 15:01:03.969 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/employeeRoleDao.xml]'
+2018-01-12 15:01:04.273 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2018-01-12 15:01:04.284 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6928f576] was not registered for synchronization because synchronization is not active
+2018-01-12 15:01:04.297 [main] DEBUG druid.sql.Connection - {conn-110002} pool-connect
+2018-01-12 15:01:04.297 [main] DEBUG druid.sql.Connection - {conn-110002} pool-connect
+2018-01-12 15:01:04.298 [main] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@64f857e7] will not be managed by Spring
+2018-01-12 15:01:04.304 [main] DEBUG ups.employeeDao.findEmployeeByUid - ==>  Preparing: select id, user_id,user_pwd, emp_code, emp_name, emp_sex, emp_mail, emp_mobile, emp_valid, depart_name, create_date from t_sys_employee where emp_valid = 0 AND user_id = ? 
+2018-01-12 15:01:04.323 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120000} created. 
+select
+		 
+		id, user_id,user_pwd, emp_code, emp_name, emp_sex, emp_mail, emp_mobile,
+		emp_valid, depart_name, create_date
+	 
+		from t_sys_employee
+		where emp_valid = 0
+		AND user_id = ?
+2018-01-12 15:01:04.324 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120000} created. 
+select
+		 
+		id, user_id,user_pwd, emp_code, emp_name, emp_sex, emp_mail, emp_mobile,
+		emp_valid, depart_name, create_date
+	 
+		from t_sys_employee
+		where emp_valid = 0
+		AND user_id = ?
+2018-01-12 15:01:04.337 [main] DEBUG ups.employeeDao.findEmployeeByUid - ==> Parameters: 132(String)
+2018-01-12 15:01:04.338 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120000} Parameters : [132]
+2018-01-12 15:01:04.338 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120000} Types : [VARCHAR]
+2018-01-12 15:01:04.338 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120000} Parameters : [132]
+2018-01-12 15:01:04.338 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120000} Types : [VARCHAR]
+2018-01-12 15:01:04.347 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120000} executed. 9.419978 millis. 
+select
+		 
+		id, user_id,user_pwd, emp_code, emp_name, emp_sex, emp_mail, emp_mobile,
+		emp_valid, depart_name, create_date
+	 
+		from t_sys_employee
+		where emp_valid = 0
+		AND user_id = ?
+2018-01-12 15:01:04.348 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120000} executed. 9.419978 millis. 
+select
+		 
+		id, user_id,user_pwd, emp_code, emp_name, emp_sex, emp_mail, emp_mobile,
+		emp_valid, depart_name, create_date
+	 
+		from t_sys_employee
+		where emp_valid = 0
+		AND user_id = ?
+2018-01-12 15:01:04.351 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120000, rs-150000} open
+2018-01-12 15:01:04.353 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120000, rs-150000} Header: [id, user_id, user_pwd, emp_code, emp_name, emp_sex, emp_mail, emp_mobile, emp_valid, depart_name, create_date]
+2018-01-12 15:01:04.354 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120000, rs-150000} open
+2018-01-12 15:01:04.354 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120000, rs-150000} Header: [id, user_id, user_pwd, emp_code, emp_name, emp_sex, emp_mail, emp_mobile, emp_valid, depart_name, create_date]
+2018-01-12 15:01:04.365 [main] DEBUG ups.employeeDao.findEmployeeByUid - <==      Total: 0
+2018-01-12 15:01:04.366 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120000, rs-150000} closed
+2018-01-12 15:01:04.366 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120000, rs-150000} closed
+2018-01-12 15:01:04.366 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120000} closed
+2018-01-12 15:01:04.367 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120000} closed
+2018-01-12 15:01:04.367 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6928f576]
+2018-01-12 15:01:04.368 [main] DEBUG druid.sql.Connection - {conn-110002} pool-recycle
+2018-01-12 15:01:04.368 [main] DEBUG druid.sql.Connection - {conn-110002} pool-recycle
+2018-01-12 15:01:04.538 [Thread-3] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-01-12 15:01:04.538 [Thread-3] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-01-12 15:01:04.539 [Thread-3] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-01-12 15:01:04.539 [Thread-3] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-01-12 15:01:04.540 [Thread-3] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-01-12 15:01:04.540 [Thread-3] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-01-12 15:01:04.540 [Thread-3] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-01-12 15:01:04.540 [Thread-3] DEBUG druid.sql.Connection - {conn-10002} closed

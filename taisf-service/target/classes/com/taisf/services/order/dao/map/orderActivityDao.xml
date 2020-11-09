@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="order.activityDao" >
+  <resultMap id="BaseResultMap" type="com.taisf.services.order.entity.OrderActivityEntity" >
+    <!-- 基本map   -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="order_sn" property="orderSn" jdbcType="VARCHAR" />
+    <result column="ac_code" property="acCode" jdbcType="VARCHAR" />
+    <result column="ac_name" property="acName" jdbcType="VARCHAR" />
+    <result column="ac_money" property="acMoney" jdbcType="INTEGER" />
+    <result column="ac_type" property="acType" jdbcType="INTEGER" />
+    <result column="ac_status" property="acStatus" jdbcType="INTEGER" />
+  </resultMap>
+  
+  
+  <sql id="Base_Column_List" >
+    <!--
+     基本列 字段
+    -->
+    a.id, a.order_sn, a.ac_code, a.ac_name, a.ac_money, a.ac_type, a.ac_status
+  </sql>
+  
+  
+  <select id="getActivityByOrderSn" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    <!--  根据条件查询  -->
+    select 
+    <include refid="Base_Column_List" />
+    from t_order_activity a
+    where a.order_sn = #{orderSn,jdbcType=VARCHAR}
+  </select>
+
+  
+  
+  <insert id="saveOrderActivity" parameterType="com.taisf.services.order.entity.OrderActivityEntity" >
+    <!--
+      新增    订单、优惠活动记录
+    -->
+    insert into t_order_activity
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="orderSn != null" >
+        order_sn,
+      </if>
+      <if test="acCode != null" >
+        ac_code,
+      </if>
+      <if test="acName != null" >
+        ac_name,
+      </if>
+      <if test="acMoney != null" >
+        ac_money,
+      </if>
+        <if test="acType != null" >
+            ac_type,
+        </if>
+        <if test="acStatus != null" >
+            ac_status,
+        </if>
+
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+
+      <if test="orderSn != null" >
+        #{orderSn,jdbcType=VARCHAR},
+      </if>
+      <if test="acCode != null" >
+        #{acCode,jdbcType=VARCHAR},
+      </if>
+      <if test="acName != null" >
+        #{acName,jdbcType=VARCHAR},
+      </if>
+      <if test="acMoney != null" >
+        #{acMoney,jdbcType=INTEGER},
+      </if>
+        <if test="acType != null" >
+            #{acType,jdbcType=INTEGER},
+        </if>
+        <if test="acStatus != null" >
+            #{acStatus,jdbcType=INTEGER},
+        </if>
+
+    </trim>
+  </insert>
+
+</mapper>

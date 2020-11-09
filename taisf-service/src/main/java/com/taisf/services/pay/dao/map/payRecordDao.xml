@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="pay.payRecordDao" >
+
+
+  <resultMap id="BaseResultMap" type="com.taisf.services.pay.entity.PayRecordEntity" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="order_sn" property="orderSn" jdbcType="VARCHAR" />
+    <result column="record_type" property="recordType" jdbcType="INTEGER" />
+    <result column="pay_type" property="payType" jdbcType="INTEGER" />
+    <result column="record_uid" property="recordUid" jdbcType="VARCHAR" />
+    <result column="total_fee" property="totalFee" jdbcType="INTEGER" />
+    <result column="need_money" property="needMoney" jdbcType="INTEGER" />
+    <result column="trade_no" property="tradeNo" jdbcType="VARCHAR" />
+    <result column="pay_code" property="payCode" jdbcType="VARCHAR" />
+    <result column="pay_time" property="payTime" jdbcType="TIMESTAMP" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+
+  <sql id="Base_Column_List" >
+    id, order_sn, pay_type, record_uid, total_fee, need_money, trade_no, pay_code,
+    pay_time, create_time, update_time
+  </sql>
+
+  <select id="getPayRecordBySn" resultMap="BaseResultMap" parameterType="java.util.Map" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_pay_record
+    where  order_sn = #{orderSn,jdbcType=VARCHAR}
+  </select>
+  <select id="getPayRecordBySnList" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_pay_record
+    where  order_sn in
+    <foreach collection="list" item="orderSn" separator="," open="(" close=")">
+      #{orderSn,jdbcType=VARCHAR}
+    </foreach>
+  </select>
+
+
+
+
+  <select id="getUserCostToday" resultType="java.lang.Long" parameterType="java.util.Map" >
+    SELECT
+
+    IFNULL(SUM( total_fee), 0)
+    FROM
+      t_pay_record t
+    WHERE  record_uid = #{userId,jdbcType=VARCHAR}
+    <if test="start != null ">
+      and t.create_time <![CDATA[  >= ]]>#{start,jdbcType=TIMESTAMP}
+    </if>
+    <if test="end != null ">
+      and t.create_time <![CDATA[  <= ]]> #{end,jdbcType=TIMESTAMP}
+    </if>
+  </select>
+
+
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_pay_record
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+
+  <insert id="savePayRecord"   parameterType="com.taisf.services.pay.entity.PayRecordEntity" >
+    insert into t_pay_record
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="orderSn != null" >
+        order_sn,
+      </if>
+
+      <if test="payType != null" >
+        pay_type,
+      </if>
+      <if test="recordUid != null" >
+        record_uid,
+      </if>
+      <if test="totalFee != null" >
+        total_fee,
+      </if>
+      <if test="needMoney != null" >
+        need_money,
+      </if>
+      <if test="tradeNo != null" >
+        trade_no,
+      </if>
+      <if test="payCode != null" >
+        pay_code,
+      </if>
+      <if test="payTime != null" >
+        pay_time,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+
+      <if test="orderSn != null" >
+        #{orderSn,jdbcType=VARCHAR},
+      </if>
+
+      <if test="payType != null" >
+        #{payType,jdbcType=INTEGER},
+      </if>
+      <if test="recordUid != null" >
+        #{recordUid,jdbcType=VARCHAR},
+      </if>
+      <if test="totalFee != null" >
+        #{totalFee,jdbcType=INTEGER},
+      </if>
+      <if test="needMoney != null" >
+        #{needMoney,jdbcType=INTEGER},
+      </if>
+      <if test="tradeNo != null" >
+        #{tradeNo,jdbcType=VARCHAR},
+      </if>
+      <if test="payCode != null" >
+        #{payCode,jdbcType=VARCHAR},
+      </if>
+      <if test="payTime != null" >
+        #{payTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+
+    </trim>
+  </insert>
+
+
+  <update id="updatePayRecord" parameterType="com.taisf.services.pay.entity.PayRecordEntity" >
+    update t_pay_record
+    <set >
+      <if test="orderSn != null" >
+        order_sn = #{orderSn,jdbcType=VARCHAR},
+      </if>
+
+      <if test="payType != null" >
+        pay_type = #{payType,jdbcType=INTEGER},
+      </if>
+      <if test="recordUid != null" >
+        record_uid = #{recordUid,jdbcType=VARCHAR},
+      </if>
+      <if test="totalFee != null" >
+        total_fee = #{totalFee,jdbcType=INTEGER},
+      </if>
+      <if test="needMoney != null" >
+        need_money = #{needMoney,jdbcType=INTEGER},
+      </if>
+      <if test="tradeNo != null" >
+        trade_no = #{tradeNo,jdbcType=VARCHAR},
+      </if>
+      <if test="payCode != null" >
+        pay_code = #{payCode,jdbcType=VARCHAR},
+      </if>
+      <if test="payTime != null" >
+        pay_time = #{payTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+
+    </set>
+    where  order_sn = #{orderSn,jdbcType=VARCHAR}
+    AND record_type = #{recordType,jdbcType=INTEGER}
+  </update>
+
+</mapper>

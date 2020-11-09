@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="supplier.supplierPackageDao">
+
+
+  <resultMap id="BaseResultMap" type="com.taisf.services.supplier.entity.SupplierPackageEntity">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="week" jdbcType="INTEGER" property="week" />
+    <result column="supplier_code" jdbcType="VARCHAR" property="supplierCode" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="package_pic" jdbcType="VARCHAR" property="packagePic" />
+    <result column="package_status" jdbcType="SMALLINT" property="packageStatus" />
+    <result column="package_price" jdbcType="INTEGER" property="packagePrice" />
+    <result column="big_code" jdbcType="INTEGER" property="bigCode" />
+    <result column="small_code" jdbcType="INTEGER" property="smallCode" />
+    <result column="su_code" jdbcType="INTEGER" property="suCode" />
+    <result column="tang_code" jdbcType="INTEGER" property="tangCode" />
+    <result column="drink_code" jdbcType="INTEGER" property="drinkCode" />
+    <result column="food_code" jdbcType="INTEGER" property="foodCode" />
+    <result column="fruit_code" jdbcType="INTEGER" property="fruitCode" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="for_lunch" jdbcType="INTEGER" property="forLunch" />
+    <result column="for_dinner" jdbcType="INTEGER" property="forDinner" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    id, week,supplier_code, title, package_pic, package_status,package_price, big_code, small_code, su_code,
+    tang_code, drink_code, food_code, fruit_code, create_time,for_lunch,for_dinner
+  </sql>
+
+  <select id="getById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_supplier_product_package
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+
+
+
+  <select id="getSupplierPackageByCodeAndWeek" parameterType="java.util.Map" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_supplier_product_package
+    where supplier_code = #{supplierCode,jdbcType=VARCHAR}
+    AND week = #{week,jdbcType=INTEGER}
+  </select>
+
+  <select id="getSupplierPackageByCode" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_supplier_product_package
+    where supplier_code = #{supplierCode,jdbcType=VARCHAR}
+  </select>
+
+  <select id="pageListSupplierProduct" parameterType="com.taisf.services.supplier.dto.SupplierProductRequest" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_supplier_product_package
+    where 1=1
+    <if test="title != null and title != ''">
+      and title = #{title,jdbcType=VARCHAR}
+    </if>
+    <if test="supplierCode != null">
+      and supplier_code = #{supplierCode,jdbcType=VARCHAR}
+    </if>
+    <if test="lunchDinner == 1">
+      and for_lunch = 1
+    </if>
+    <if test="lunchDinner == 2">
+      and for_dinner = 1
+    </if>
+    <if test="week != null">
+      and week = #{week,jdbcType=INTEGER}
+    </if>
+
+
+  </select>
+
+
+  <select id="getSupplierPackageByList" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_supplier_product_package
+    where id in <foreach collection="productIds" item="item" index="index"
+                                open="(" separator="," close=")">#{item}</foreach>
+  </select>
+
+
+
+
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_supplier_product_package
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+
+  <insert id="saveSupplierPackage" parameterType="com.taisf.services.supplier.entity.SupplierPackageEntity">
+    insert into t_supplier_product_package
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="week != null">
+        week,
+      </if>
+      <if test="supplierCode != null">
+        supplier_code,
+      </if>
+      <if test="title != null">
+        title,
+      </if>
+      <if test="packagePic != null">
+        package_pic,
+      </if>
+      <if test="packageStatus != null">
+        package_status,
+      </if>
+
+      <if test="packagePrice != null">
+        package_price,
+      </if>
+
+
+      <if test="bigCode != null">
+        big_code,
+      </if>
+      <if test="smallCode != null">
+        small_code,
+      </if>
+      <if test="suCode != null">
+        su_code,
+      </if>
+      <if test="tangCode != null">
+        tang_code,
+      </if>
+      <if test="drinkCode != null">
+        drink_code,
+      </if>
+      <if test="foodCode != null">
+        food_code,
+      </if>
+      <if test="fruitCode != null">
+        fruit_code,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="forLunch != null">
+        for_lunch,
+      </if>
+      <if test="forDinner != null">
+        for_dinner,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+
+      <if test="week != null">
+        #{week,jdbcType=INTEGER},
+      </if>
+
+      <if test="supplierCode != null">
+        #{supplierCode,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="packagePic != null">
+        #{packagePic,jdbcType=VARCHAR},
+      </if>
+      <if test="packageStatus != null">
+        #{packageStatus,jdbcType=SMALLINT},
+      </if>
+      <if test="packagePrice != null">
+        #{packagePrice,jdbcType=INTEGER},
+      </if>
+
+      <if test="bigCode != null">
+        #{bigCode,jdbcType=INTEGER},
+      </if>
+      <if test="smallCode != null">
+        #{smallCode,jdbcType=INTEGER},
+      </if>
+      <if test="suCode != null">
+        #{suCode,jdbcType=INTEGER},
+      </if>
+      <if test="tangCode != null">
+        #{tangCode,jdbcType=INTEGER},
+      </if>
+      <if test="drinkCode != null">
+        #{drinkCode,jdbcType=INTEGER},
+      </if>
+      <if test="foodCode != null">
+        #{foodCode,jdbcType=INTEGER},
+      </if>
+      <if test="fruitCode != null">
+        #{fruitCode,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="forLunch != null">
+        #{forLunch,jdbcType=INTEGER},
+      </if>
+      <if test="forDinner != null">
+        #{forDinner,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+
+
+  <update id="updateSupplierPackage" parameterType="com.taisf.services.supplier.entity.SupplierPackageEntity">
+    update t_supplier_product_package
+    <set>
+
+      <if test="title != null">
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="packagePic != null">
+        package_pic = #{packagePic,jdbcType=VARCHAR},
+      </if>
+      <if test="packageStatus != null">
+        package_status = #{packageStatus,jdbcType=SMALLINT},
+      </if>
+      <if test="packagePrice != null">
+        package_price = #{packagePrice,jdbcType=INTEGER},
+      </if>
+      <if test="bigCode != null">
+        big_code = #{bigCode,jdbcType=INTEGER},
+      </if>
+      <if test="smallCode != null">
+        small_code = #{smallCode,jdbcType=INTEGER},
+      </if>
+      <if test="suCode != null">
+        su_code = #{suCode,jdbcType=INTEGER},
+      </if>
+      <if test="tangCode != null">
+        tang_code = #{tangCode,jdbcType=INTEGER},
+      </if>
+      <if test="drinkCode != null">
+        drink_code = #{drinkCode,jdbcType=INTEGER},
+      </if>
+      <if test="foodCode != null">
+        food_code = #{foodCode,jdbcType=INTEGER},
+      </if>
+      <if test="fruitCode != null">
+        fruit_code = #{fruitCode,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where   supplier_code = #{supplierCode,jdbcType=VARCHAR}
+  </update>
+
+  <update id="updateSupplierPackageById" parameterType="com.taisf.services.supplier.entity.SupplierPackageEntity">
+    update t_supplier_product_package
+    <set>
+
+      <if test="title != null">
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="packagePic != null">
+        package_pic = #{packagePic,jdbcType=VARCHAR},
+      </if>
+      <if test="packageStatus != null">
+        package_status = #{packageStatus,jdbcType=SMALLINT},
+      </if>
+      <if test="packagePrice != null">
+        package_price = #{packagePrice,jdbcType=INTEGER},
+      </if>
+      <if test="bigCode != null">
+        big_code = #{bigCode,jdbcType=INTEGER},
+      </if>
+      <if test="smallCode != null">
+        small_code = #{smallCode,jdbcType=INTEGER},
+      </if>
+      <if test="suCode != null">
+        su_code = #{suCode,jdbcType=INTEGER},
+      </if>
+      <if test="tangCode != null">
+        tang_code = #{tangCode,jdbcType=INTEGER},
+      </if>
+      <if test="drinkCode != null">
+        drink_code = #{drinkCode,jdbcType=INTEGER},
+      </if>
+      <if test="foodCode != null">
+        food_code = #{foodCode,jdbcType=INTEGER},
+      </if>
+      <if test="fruitCode != null">
+        fruit_code = #{fruitCode,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="forLunch != null">
+        for_lunch = #{forLunch,jdbcType=INTEGER},
+      </if>
+      <if test="forDinner != null">
+        for_dinner = #{forDinner,jdbcType=INTEGER},
+      </if>
+    </set>
+    where   id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

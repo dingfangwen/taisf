@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="buffet.buffetDao" >
+
+
+  
+  <resultMap id="BaseResultMap" type="com.taisf.services.buffet.entity.BuffetEntity" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="fid" property="fid" jdbcType="VARCHAR" />
+    <result column="supplier_code" property="supplierCode" jdbcType="VARCHAR" />
+    <result column="config_code" property="configCode" jdbcType="VARCHAR" />
+
+    <result column="device_Id" property="deviceId" jdbcType="VARCHAR" />
+    <result column="cell_num" property="cellNum" jdbcType="INTEGER" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="province_code" property="provinceCode" jdbcType="VARCHAR" />
+    <result column="city_code" property="cityCode" jdbcType="VARCHAR" />
+    <result column="county_code" property="countyCode" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+
+      <result column="province_name" property="provinceName" jdbcType="VARCHAR" />
+      <result column="city_name" property="cityName" jdbcType="VARCHAR" />
+      <result column="county_name" property="countyName" jdbcType="VARCHAR" />
+
+  </resultMap>
+
+
+  <sql id="Base_Column_List" >
+    id, fid,supplier_code, config_code, cell_num, address, province_code, city_code, county_code, status, create_time,device_Id,
+    update_time,province_name,city_name,county_name
+  </sql>
+
+
+  <select id="getBuffetByFid" resultMap="BaseResultMap" parameterType="com.taisf.services.buffet.dto.BuffetInfoRequest" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_buffet
+    where fid = #{buffetFid,jdbcType=VARCHAR}
+
+    limit 1
+  </select>
+  <select id="getBuffetByDeviceId" resultMap="BaseResultMap" parameterType="com.taisf.services.buffet.dto.BuffetInfoRequest" >
+    select
+    <include refid="Base_Column_List" />
+    from t_buffet
+    where device_Id = #{deviceId,jdbcType=VARCHAR}
+    limit 1
+  </select>
+  <select id="pageListBuffet" resultMap="BaseResultMap" parameterType="com.taisf.services.buffet.dto.BuffetInfoRequest" >
+    select
+    <include refid="Base_Column_List" />
+    from t_buffet
+    where 1=1
+   <if test="buffetFid != null and buffetFid != ''">
+    and fid =#{buffetFid}
+    </if>
+    <if test="provinceCode != null and provinceCode != ''">
+      and province_code =#{provinceCode}
+    </if>
+    <if test="cityCode != null and cityCode != ''">
+      and city_code =#{cityCode}
+    </if>
+    <if test="deviceId != null and deviceId != ''">
+      and device_Id =#{deviceId}
+    </if>
+    <if test="cellNum != null and cellNum != ''">
+      and cell_num =#{cellNum}
+    </if>
+    <if test="status != null and status != ''">
+      and status =#{status}
+    </if>
+    <if test="supplierCode != null and supplierCode != ''">
+      and supplier_code =#{supplierCode}
+    </if>
+
+  </select>
+
+
+  <insert id="saveBuffet" parameterType="com.taisf.services.buffet.entity.BuffetEntity" >
+    insert into t_buffet
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+
+      <if test="fid != null" >
+        fid,
+      </if>
+
+      <if test="supplierCode != null" >
+        supplier_code,
+      </if>
+      <if test="deviceId != null" >
+        device_Id,
+      </if>
+
+
+      <if test="cellNum != null" >
+        cell_num,
+      </if>
+      <if test="address != null" >
+        address,
+      </if>
+      <if test="provinceCode != null" >
+        province_code,
+      </if>
+      <if test="cityCode != null" >
+        city_code,
+      </if>
+      <if test="countyCode != null" >
+        county_code,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="provinceName != null" >
+          province_name,
+      </if>
+      <if test="cityName != null" >
+          city_name,
+      </if>
+      <if test="countyName != null" >
+          county_name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+
+      <if test="fid != null" >
+        #{fid,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierCode != null" >
+        #{supplierCode,jdbcType=VARCHAR},
+      </if>
+      <if test="deviceId != null" >
+        #{deviceId,jdbcType=VARCHAR},
+      </if>
+      <if test="cellNum != null" >
+        #{cellNum,jdbcType=INTEGER},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="provinceCode != null" >
+        #{provinceCode,jdbcType=VARCHAR},
+      </if>
+      <if test="cityCode != null" >
+        #{cityCode,jdbcType=VARCHAR},
+      </if>
+      <if test="countyCode != null" >
+        #{countyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="provinceName != null" >
+        #{provinceName},
+      </if>
+      <if test="cityName != null" >
+        #{cityName},
+      </if>
+      <if test="countyName != null" >
+        #{countyName},
+      </if>
+    </trim>
+  </insert>
+
+  <update id="updateByPrimaryKeySelective" parameterType="com.taisf.services.buffet.entity.BuffetEntity" >
+    update t_buffet
+    <set >
+      <if test="fid != null" >
+        fid = #{fid,jdbcType=VARCHAR},
+      </if>
+
+      <if test="supplierCode != null" >
+        supplier_code = #{supplierCode,jdbcType=VARCHAR},
+      </if>
+      <if test="deviceId != null" >
+        device_Id = #{deviceId,jdbcType=VARCHAR},
+      </if>
+
+      <if test="cellNum != null" >
+        cell_num = #{cellNum,jdbcType=INTEGER},
+      </if>
+      <if test="address != null" >
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="provinceCode != null" >
+        province_code = #{provinceCode,jdbcType=VARCHAR},
+      </if>
+      <if test="cityCode != null" >
+        city_code = #{cityCode,jdbcType=VARCHAR},
+      </if>
+      <if test="countyCode != null" >
+        county_code = #{countyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="provinceName != null" >
+          province_name = #{provinceName,jdbcType=VARCHAR},
+      </if>
+      <if test="cityName != null" >
+          city_name = #{cityName,jdbcType=VARCHAR},
+      </if>
+      <if test="countyName != null" >
+          county_name = #{countyName,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+</mapper>

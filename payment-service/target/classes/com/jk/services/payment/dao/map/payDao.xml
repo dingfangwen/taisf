@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="payment.payDao" >
+
+  <resultMap id="BaseResultMap" type="com.jk.services.payment.entity.PayEntity" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="product_code" property="productCode" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="VARCHAR" />
+    <result column="account_id" property="accountId" jdbcType="INTEGER" />
+    <result column="code" property="code" jdbcType="VARCHAR" />
+    <result column="biz_id" property="bizId" jdbcType="VARCHAR" />
+    <result column="content" property="content" jdbcType="VARCHAR" />
+    <result column="biz_time" property="bizTime" jdbcType="TIMESTAMP" />
+    <result column="return_url" property="returnUrl" jdbcType="VARCHAR" />
+    <result column="notify_url" property="notifyUrl" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="status_desc" property="statusDesc" jdbcType="VARCHAR" />
+    <result column="amount" property="amount" jdbcType="DECIMAL" />
+    <result column="req_id" property="reqId" jdbcType="VARCHAR" />
+    <result column="res_id" property="resId" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+
+  <sql id="Base_Column_List" >
+    id, product_code, type,account_id, code, biz_id,content,biz_time,return_url,notify_url, status, status_desc, amount,
+    req_id, res_id, create_time, 
+    update_time
+  </sql>
+  <select id="selectById" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_pay
+    where id = #{id}
+  </select>
+
+
+    <select id="selectByInfoHasPayBySerialNo" resultMap="BaseResultMap"   parameterType="java.lang.String" >
+        select
+        <include refid="Base_Column_List" />
+        from t_pay
+        where res_id = #{orgInSerialNo}
+        and type = '01'
+        ORDER by id ASC
+        limit 1
+    </select>
+
+
+    <select id="selectByInfoWithoutMoney" resultMap="BaseResultMap"  parameterType="com.jk.services.payment.entity.PayInfo" >
+        select
+        <include refid="Base_Column_List" />
+        from t_pay
+        where product_code = #{productCode}
+        and code = #{code}
+        and biz_id = #{bizId}
+    </select>
+
+  <select id="selectByInfo" resultMap="BaseResultMap"  parameterType="com.jk.services.payment.entity.PayInfo" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_pay
+    where product_code = #{productCode}
+	    and code = #{code}
+	    and biz_id = #{bizId}
+	    and amount = #{amount}
+  </select>
+  
+  <select id="selectByResIdAndBizId" resultMap="BaseResultMap"  parameterType="Map" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_pay
+    where 
+	    type = '01'
+          <if test="bizId != null" >
+              and biz_id = #{bizId}
+          </if>
+	    and res_id =#{resId}
+  </select>
+  
+  <select id="queryNotifyUrlList" resultType="String"  parameterType="MAP" >
+    select 
+    	notify_url
+    from t_pay
+	where status in('0','40000')
+	and notify_url is not null
+	group by notify_url
+  </select>
+
+
+  <select id="queryBankListByCode" resultType="com.jk.services.payment.entity.PayInfo"  parameterType="MAP" >
+   SELECT
+	    p.id payId,
+	    p.biz_id bizId,
+	    a.partner,
+	    a.partner_key partnerKey,
+	    a.password,
+	    p.id batchNo,
+	    p.product_code productCode,
+	    a.account,
+	    a.ca_filename caFileName,
+   		a.ca_password caPassword,
+   		d.out_serial_no as orgInSerialNo
+	FROM
+	    t_pay p,
+	    t_pay_detail d,
+	    t_pay_account a
+	WHERE
+	    p.id = d.pay_id
+	AND p.product_code = a.product_code
+	AND p.account_id = a.id
+	AND p.status IN('0','10000','20000','30000','40000')
+    AND p.code = #{code}
+  </select>
+  
+  <select id="queryNotifyList" resultType="com.jk.services.payment.entity.ReturnPay"  parameterType="MAP" >
+    SELECT
+	    p.id,
+	    p.biz_id bizId,
+	    p.biz_time bizTime,
+	    p.content,
+	    p.product_code productCode,
+	    d.amount,
+	    p.code,
+	    p.return_url returnUrl,
+	    p.notify_url notifyUrl,
+	    p.status,
+	    p.status_desc  statusDesc,
+	    d.in_serial_no serialNo,
+	    a.code_key     codeKey
+	FROM
+	    t_pay p,
+	    t_pay_detail d,
+	    t_pay_account a
+	WHERE
+	    p.id = d.pay_id
+	AND p.product_code = a.product_code
+	AND p.account_id = a.id
+	AND p.status IN('0',
+	                '40000')
+	 <if test="notifyUrl != null" >
+     AND   p.notify_url = #{notifyUrl}
+      </if>  
+     <if test="payId != null" >
+     AND   p.id = #{payId}
+      </if>                
+  </select>
+  <insert id="insert" parameterType="com.jk.services.payment.entity.PayEntity" useGeneratedKeys="true" keyProperty="id" >
+    insert into t_pay (product_code, type,account_id, code, biz_id,content, biz_time,return_url,notify_url, status,
+      status_desc, amount, req_id, res_id, create_time, update_time)
+    values (#{productCode}, #{type},#{accountId}, #{code}, #{bizId}, #{content}, #{bizTime}, #{returnUrl},#{notifyUrl}, #{status},
+      #{statusDesc}, #{amount}, #{reqId}, #{resId}, now(), #{updateTime})
+  </insert>
+  <update id="update" parameterType="com.jk.services.payment.entity.PayEntity" >
+    update t_pay
+    <set >
+        update_time = now(),
+      <if test="productCode != null" >
+        product_code = #{productCode},
+      </if>
+      <if test="type != null" >
+        type = #{type},
+      </if>
+      <if test="code != null" >
+        code = #{code},
+      </if>
+      <if test="bizId != null" >
+        biz_id = #{bizId},
+      </if>
+      <if test="content != null" >
+        content = #{content},
+      </if>
+      <if test="bizTime != null" >
+        biz_time = #{bizTime},
+      </if>
+      <if test="returnUrl != null" >
+        return_url = #{returnUrl},
+      </if>
+      <if test="status != null" >
+        status = #{status},
+      </if>
+      <if test="statusDesc != null" >
+        status_desc = #{statusDesc},
+      </if>
+      <if test="amount != null" >
+        amount = #{amount},
+      </if>
+      <if test="reqId != null" >
+        req_id = #{reqId},
+      </if>
+      <if test="resId != null" >
+        res_id = #{resId},
+      </if>
+    </set>
+    where id = #{id}
+  </update>
+</mapper>

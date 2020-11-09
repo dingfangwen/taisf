@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="ups.employeeDao">
+	<resultMap id="BaseResultMap"
+		type="com.taisf.services.ups.entity.EmployeeEntity">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="user_id" property="userId" jdbcType="VARCHAR" />
+		<result column="user_pwd" property="userPwd" jdbcType="VARCHAR" />
+		<result column="emp_code" property="empCode" jdbcType="VARCHAR" />
+		<result column="emp_name" property="empName" jdbcType="VARCHAR" />
+		<result column="emp_sex" property="empSex" jdbcType="INTEGER" />
+		<result column="emp_mail" property="empMail" jdbcType="VARCHAR" />
+		<result column="emp_mobile" property="empMobile" jdbcType="VARCHAR" />
+		<result column="emp_valid" property="empValid" jdbcType="TINYINT" />
+		<result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+		<result column="depart_name" property="departName" jdbcType="VARCHAR" />
+		<result column="emp_biz" property="empBiz" jdbcType="VARCHAR" />
+
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id, user_id,user_pwd, emp_code, emp_name, emp_sex, emp_mail, emp_mobile,
+		emp_valid, depart_name, create_date,emp_biz
+	</sql>
+
+	<sql id="Base_Column_List_alias">
+		e.id, e.user_id,e.user_pwd, e.emp_code, e.emp_name, e.emp_sex, e.emp_mail, e.emp_mobile,
+		e.emp_valid, e.depart_name, e.create_date
+	</sql>
+
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		from t_sys_employee
+		where id = #{id,jdbcType=VARCHAR} ;
+	</select>
+
+
+	<!-- 查询员工信息 -->
+	
+    <select id="findEmployeeByName" parameterType="java.lang.String"
+            resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from t_sys_employee
+        where  emp_valid = 0
+        and emp_name LIKE CONCAT('%', #{empName,jdbcType=VARCHAR}, '%')
+        limit 20
+    </select>
+
+	<!-- 查询员工信息 -->
+	<select id="findEmployeeByUid" parameterType="java.lang.String"
+		resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from t_sys_employee
+		where emp_valid = 0
+		AND user_id = #{uid,jdbcType=VARCHAR}
+	</select>
+
+	<resultMap id="EmployeeVoMap" type="com.taisf.services.ups.vo.EmployeeVo">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="user_id" property="userId" jdbcType="VARCHAR" />
+		<result column="user_pwd" property="userPwd" jdbcType="VARCHAR" />
+		<result column="emp_code" property="empCode" jdbcType="VARCHAR" />
+		<result column="emp_name" property="empName" jdbcType="VARCHAR" />
+		<result column="emp_sex" property="empSex" jdbcType="INTEGER" />
+		<result column="emp_mail" property="empMail" jdbcType="VARCHAR" />
+		<result column="emp_mobile" property="empMobile" jdbcType="VARCHAR" />
+		<result column="emp_valid" property="empValid" jdbcType="TINYINT" />
+		<result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+		<result column="depart_name" property="departName" jdbcType="VARCHAR" />
+
+	</resultMap>
+	<!-- 查询员工信息 包含角色信息 -->
+	<select id="findEmployeeVoByUid" parameterType="java.lang.String"
+		resultMap="EmployeeVoMap">
+		select
+		<include refid="Base_Column_List" />
+		from t_sys_employee
+		where emp_valid = 0
+		AND user_id = #{uid,jdbcType=VARCHAR}
+	</select>
+
+	<!-- 查询员工信息 -->
+	<select id="findEmployeeByMail" parameterType="java.lang.String"
+		resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from t_sys_employee
+		where emp_valid = 0
+		AND emp_mail = #{empMail,jdbcType=VARCHAR}
+	</select>
+
+	<select id="findAllDoctor" resultMap="BaseResultMap">
+		select
+		DISTINCT <include refid="Base_Column_List_alias" />
+		from t_sys_employee e
+		where e.emp_valid=0
+		/*inner join t_sys_employee_role er on er.user_id=e.user_id
+		inner join t_sys_role r on r.fid=er.role_fid
+		where r.role_name='医生'*/
+	</select>
+
+	<!-- 查询员工信息 -->
+	<select id="findEmployeeList" parameterType="com.taisf.services.ups.dto.EmployeeRequest"
+		resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from t_sys_employee
+		where emp_valid = 0
+		<if test="supplierCode != null">
+			and emp_biz = #{supplierCode,jdbcType=VARCHAR}
+		</if>
+		<if test="empMail != null and empMail != ''">
+			and emp_mail LIKE CONCAT('%', #{empMail,jdbcType=VARCHAR}, '%')
+		</if>
+		<if test="empName != null and empName != ''">
+			and emp_name LIKE CONCAT('%', #{empName,jdbcType=VARCHAR}, '%')
+		</if>
+		<if test="empMobile != null and empMobile != ''">
+			and emp_mobile LIKE CONCAT('%', #{empMobile,jdbcType=VARCHAR}, '%')
+		</if>
+	</select>
+
+	<!-- 插入后台用户角色关系表 -->
+	<insert id="insertUserRole" parameterType="map">
+		INSERT INTO t_sys_employee_role (user_id,role_fid)
+		VALUES(#{userId,jdbcType=VARCHAR},#{roleFid,jdbcType=VARCHAR})
+	</insert>
+
+	<!-- 同步员工 -->
+	<insert id="insertSelective" parameterType="com.taisf.services.ups.entity.EmployeeEntity">
+		insert into t_sys_employee
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+
+			<if test="userId != null">
+				user_id,
+			</if>
+
+			<if test="userPwd != null">
+				user_pwd,
+			</if>
+
+			<if test="empCode != null">
+				emp_code,
+			</if>
+			<if test="empName != null">
+				emp_name,
+			</if>
+			<if test="empSex != null">
+				emp_sex,
+			</if>
+			<if test="empMail != null">
+				emp_mail,
+			</if>
+			<if test="empMobile != null">
+				emp_mobile,
+			</if>
+			<if test="empValid != null">
+				emp_valid,
+			</if>
+
+			<if test="departName != null">
+				depart_name,
+			</if>
+
+			<if test="createDate != null">
+				create_date,
+			</if>
+
+			<if test="hospitalId != null">
+				hospital_id,
+			</if>
+			<if test="departmentId != null">
+				department_id,
+			</if>
+			<if test="userRole != null">
+				user_role,
+			</if>
+			<if test="empBiz != null">
+				emp_biz,
+			</if>
+
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+
+			<if test="userId != null">
+				#{userId,jdbcType=VARCHAR},
+			</if>
+			<if test="userPwd != null">
+				#{userPwd,jdbcType=VARCHAR},
+			</if>
+
+			<if test="empCode != null">
+				#{empCode,jdbcType=VARCHAR},
+			</if>
+			<if test="empName != null">
+				#{empName,jdbcType=VARCHAR},
+			</if>
+			<if test="empSex != null">
+				#{empSex,jdbcType=INTEGER},
+			</if>
+			<if test="empMail != null">
+				#{empMail,jdbcType=VARCHAR},
+			</if>
+			<if test="empMobile != null">
+				#{empMobile,jdbcType=VARCHAR},
+			</if>
+			<if test="empValid != null">
+				#{empValid,jdbcType=TINYINT},
+			</if>
+
+			<if test="departName != null">
+				#{departName,jdbcType=VARCHAR},
+			</if>
+
+			<if test="createDate != null">
+				#{createDate,jdbcType=TIMESTAMP},
+			</if>
+
+
+			<if test="hospitalId != null">
+				#{hospitalId,jdbcType=VARCHAR},
+			</if>
+			<if test="departmentId != null">
+				#{departmentId,jdbcType=VARCHAR},
+			</if>
+			<if test="userRole != null">
+				#{userRole,jdbcType=INTEGER},
+			</if>
+			<if test="empBiz != null">
+				#{empBiz,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+
+	<!-- 更新同步员工数据 -->
+	<update id="changePwd" parameterType="java.util.Map">
+		update t_sys_employee
+		SET user_pwd = #{pwd,jdbcType=VARCHAR}
+		where user_id = #{userId,jdbcType=VARCHAR}
+	</update>
+
+
+	<!-- 更新同步员工数据 -->
+	<update id="updateByfid" parameterType="com.taisf.services.ups.entity.EmployeeEntity">
+		update t_sys_employee
+		<set>
+			<if test="empCode != null">
+				emp_code = #{empCode,jdbcType=VARCHAR},
+			</if>
+			<if test="empName != null">
+				emp_name = #{empName,jdbcType=VARCHAR},
+			</if>
+			<if test="empSex != null">
+				emp_sex = #{empSex,jdbcType=INTEGER},
+			</if>
+			<if test="empMail != null">
+				emp_mail = #{empMail,jdbcType=VARCHAR},
+			</if>
+			<if test="empMobile != null">
+				emp_mobile = #{empMobile,jdbcType=VARCHAR},
+			</if>
+			<if test="empValid != null">
+				emp_valid = #{empValid,jdbcType=TINYINT},
+			</if>
+
+			<if test="departName != null">
+				depart_name = #{departName,jdbcType=VARCHAR},
+			</if>
+		</set>
+		where user_id = #{userId,jdbcType=VARCHAR}
+	</update>
+
+
+	<!-- 根据科室Id查询员工信息 -->
+	<select id="findEmployeeByDepartId" parameterType="java.lang.String"
+			resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from t_sys_employee
+		where emp_valid = 0
+		AND department_id = #{departmentId,jdbcType=VARCHAR}
+	</select>
+</mapper>

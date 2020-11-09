@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="device.deviceConfigDao" >
+
+
+  <resultMap type="com.taisf.services.device.entity.DeviceConfigEntity" id="BaseResultMap">
+    <result property="id" column="id" jdbcType="INTEGER"/>
+    <result property="configSn" column="config_sn" jdbcType="VARCHAR"/>
+    <result property="serverUrl" column="server_url" jdbcType="VARCHAR"/>
+    <result property="appId" column="app_id" jdbcType="VARCHAR"/>
+    <result property="appSecret" column="app_secret" jdbcType="VARCHAR"/>
+  </resultMap>
+
+
+  <sql id="Base_Column_List" >
+     id, config_sn, server_url, app_id, app_secret
+  </sql>
+
+  <!--查询单个-->
+  <select id="getDeviceConfigByCode" resultMap="BaseResultMap">
+
+    select
+
+    <include refid="Base_Column_List" />
+
+    from t_device_config
+
+    where config_sn = #{code}
+
+    </select>
+
+
+
+</mapper>

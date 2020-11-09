@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="enterprise.enterpriseConfigDao">
+
+
+  <resultMap id="BaseResultMap" type="com.taisf.services.enterprise.entity.EnterpriseConfigEntity">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="enterprise_code" jdbcType="VARCHAR" property="enterpriseCode" />
+    <result column="boss_price" jdbcType="INTEGER" property="bossPrice" />
+    <result column="emp_price" jdbcType="INTEGER" property="empPrice" />
+    <result column="for_lunch" jdbcType="INTEGER" property="forLunch" />
+    <result column="lunch_start" jdbcType="VARCHAR" property="lunchStart" />
+    <result column="lunch_end" jdbcType="VARCHAR" property="lunchEnd" />
+    <result column="for_dinner" jdbcType="INTEGER" property="forDinner" />
+    <result column="dinner_start" jdbcType="VARCHAR" property="dinnerStart" />
+    <result column="dinner_end" jdbcType="VARCHAR" property="dinnerEnd" />
+  </resultMap>
+
+
+  <sql id="Base_Column_List">
+    id, enterprise_code, boss_price, emp_price, for_lunch, lunch_start,
+    lunch_end, for_dinner, dinner_start, dinner_end
+  </sql>
+
+
+  <select id="getEnterpriseConfigByCode" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_enterprise_config
+    where enterprise_code = #{enterpriseCode,jdbcType=VARCHAR}
+    limit 1
+  </select>
+
+
+  <insert id="saveEnterpriseConfig" parameterType="com.taisf.services.enterprise.entity.EnterpriseConfigEntity">
+    insert into t_enterprise_config
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+
+      <if test="enterpriseCode != null">
+        enterprise_code,
+      </if>
+      <if test="bossPrice != null">
+        boss_price,
+      </if>
+
+      <if test="empPrice != null">
+        emp_price,
+      </if>
+
+      <if test="forLunch != null">
+        for_lunch,
+      </if>
+      <if test="lunchStart != null">
+        lunch_start,
+      </if>
+      <if test="lunchEnd != null">
+        lunch_end,
+      </if>
+      <if test="forDinner != null">
+        for_dinner,
+      </if>
+      <if test="dinnerStart != null">
+        dinner_start,
+      </if>
+      <if test="dinnerEnd != null">
+        dinner_end,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+
+      <if test="enterpriseCode != null">
+        #{enterpriseCode,jdbcType=VARCHAR},
+      </if>
+      <if test="bossPrice != null">
+        #{bossPrice,jdbcType=INTEGER},
+      </if>
+
+      <if test="empPrice != null">
+        #{empPrice,jdbcType=INTEGER},
+      </if>
+
+      <if test="forLunch != null">
+        #{forLunch,jdbcType=INTEGER},
+      </if>
+      <if test="lunchStart != null">
+        #{lunchStart,jdbcType=VARCHAR},
+      </if>
+      <if test="lunchEnd != null">
+        #{lunchEnd,jdbcType=VARCHAR},
+      </if>
+      <if test="forDinner != null">
+        #{forDinner,jdbcType=INTEGER},
+      </if>
+      <if test="dinnerStart != null">
+        #{dinnerStart,jdbcType=VARCHAR},
+      </if>
+      <if test="dinnerEnd != null">
+        #{dinnerEnd,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+
+
+  <update id="updateEnterpriseConfig" parameterType="com.taisf.services.enterprise.entity.EnterpriseConfigEntity">
+    update t_enterprise_config
+    <set>
+      <if test="enterpriseCode != null">
+        enterprise_code = #{enterpriseCode,jdbcType=VARCHAR},
+      </if>
+      <if test="bossPrice != null">
+        boss_price = #{bossPrice,jdbcType=INTEGER},
+      </if>
+      <if test="empPrice != null">
+        emp_price = #{empPrice,jdbcType=INTEGER},
+      </if>
+      <if test="forLunch != null">
+        for_lunch = #{forLunch,jdbcType=INTEGER},
+      </if>
+      <if test="lunchStart != null">
+        lunch_start = #{lunchStart,jdbcType=VARCHAR},
+      </if>
+      <if test="lunchEnd != null">
+        lunch_end = #{lunchEnd,jdbcType=VARCHAR},
+      </if>
+      <if test="forDinner != null">
+        for_dinner = #{forDinner,jdbcType=INTEGER},
+      </if>
+      <if test="dinnerStart != null">
+        dinner_start = #{dinnerStart,jdbcType=VARCHAR},
+      </if>
+      <if test="dinnerEnd != null">
+        dinner_end = #{dinnerEnd,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <update id="updateConfigByEnterpriseCode" parameterType="com.taisf.services.enterprise.entity.EnterpriseConfigEntity">
+    update t_enterprise_config
+    <set>
+      <if test="enterpriseCode != null">
+        enterprise_code = #{enterpriseCode,jdbcType=VARCHAR},
+      </if>
+      <if test="bossPrice != null">
+        boss_price = #{bossPrice,jdbcType=INTEGER},
+      </if>
+      <if test="empPrice != null">
+        emp_price = #{empPrice,jdbcType=INTEGER},
+      </if>
+      <if test="forLunch != null">
+        for_lunch = #{forLunch,jdbcType=INTEGER},
+      </if>
+      <if test="lunchStart != null">
+        lunch_start = #{lunchStart,jdbcType=VARCHAR},
+      </if>
+      <if test="lunchEnd != null">
+        lunch_end = #{lunchEnd,jdbcType=VARCHAR},
+      </if>
+      <if test="forDinner != null">
+        for_dinner = #{forDinner,jdbcType=INTEGER},
+      </if>
+      <if test="dinnerStart != null">
+        dinner_start = #{dinnerStart,jdbcType=VARCHAR},
+      </if>
+      <if test="dinnerEnd != null">
+        dinner_end = #{dinnerEnd,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where enterprise_code = #{enterpriseCode,jdbcType=INTEGER}
+  </update>
+
+</mapper>

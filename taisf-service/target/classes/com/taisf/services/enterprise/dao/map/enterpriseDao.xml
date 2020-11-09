@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="enterprise.enterpriseDao">
+
+
+  <resultMap id="BaseResultMap" type="com.taisf.services.enterprise.entity.EnterpriseEntity">
+    <id column="id" jdbcType="INTEGER" property="id" />
+
+    <result column="supplier_code" jdbcType="VARCHAR" property="supplierCode" />
+    <result column="enterprise_code" jdbcType="VARCHAR" property="enterpriseCode" />
+    <result column="enterprise_name" jdbcType="VARCHAR" property="enterpriseName" />
+    <result column="enterprise_tel" jdbcType="VARCHAR" property="enterpriseTel" />
+    <result column="enterprise_type" jdbcType="INTEGER" property="enterpriseType" />
+    <result column="enterprise_status" jdbcType="INTEGER" property="enterpriseStatus" />
+    <result column="manger" jdbcType="VARCHAR" property="manger" />
+    <result column="province_code" jdbcType="VARCHAR" property="provinceCode" />
+    <result column="province_name" jdbcType="VARCHAR" property="provinceName" />
+    <result column="city_code" jdbcType="VARCHAR" property="cityCode" />
+    <result column="city_name" jdbcType="VARCHAR" property="cityName" />
+    <result column="area_code" jdbcType="VARCHAR" property="areaCode" />
+    <result column="area_name" jdbcType="VARCHAR" property="areaName" />
+    <result column="street" jdbcType="VARCHAR" property="street" />
+    <result column="open_time" jdbcType="TIMESTAMP" property="openTime" />
+    <result column="till_time" jdbcType="TIMESTAMP" property="tillTime" />
+    <result column="contact_name" jdbcType="VARCHAR" property="contactName" />
+    <result column="contact_mail" jdbcType="VARCHAR" property="contactMail" />
+    <result column="contact_mobile" jdbcType="VARCHAR" property="contactMobile" />
+    <result column="contact_tel" jdbcType="VARCHAR" property="contactTel" />
+    <result column="contact_tencent" jdbcType="VARCHAR" property="contactTencent" />
+    <result column="is_open" jdbcType="INTEGER" property="isOpen" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="last_modify_date" jdbcType="TIMESTAMP" property="lastModifyDate" />
+  </resultMap>
+  
+  <resultMap id="BaseResultMapExt" type="com.taisf.services.enterprise.vo.EnterpriseExtVO" extends="BaseResultMap" >
+    <result column="for_lunch" property="forLunch" jdbcType="INTEGER" />
+    <result column="for_dinner" property="forDinner" jdbcType="INTEGER" />
+  </resultMap>
+
+
+  <sql id="Base_Column_List">
+    id, enterprise_code,supplier_code,enterprise_name, enterprise_tel, enterprise_type,enterprise_status, manger, province_code, province_name,
+    city_code, city_name, area_code, area_name, street, open_time, till_time, contact_name, contact_mail, contact_mobile, contact_tel, contact_tencent,
+    create_time, last_modify_date,is_open
+  </sql>
+
+  <select id="getEnterpriseByPage" parameterType="com.taisf.services.enterprise.dto.EnterprisePageRequest" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_enterprise
+    where 1=1
+
+    <if test="supplierCode != null and supplierCode != '' ">
+      and supplier_code =  #{supplierCode,jdbcType=VARCHAR}
+    </if>
+
+
+    <if test="enterpriseCode != null and enterpriseCode != '' ">
+     and  enterprise_code = #{enterpriseCode,jdbcType=VARCHAR}
+    </if>
+    <if test="enterpriseStatus != null ">
+      and  enterprise_status = #{enterpriseStatus,jdbcType=INTEGER}
+    </if>
+
+  </select>
+
+
+  <select id="getEnterpriseByCode" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_enterprise
+    where enterprise_code = #{enterpriseCode,jdbcType=VARCHAR}
+    limit 1
+  </select>
+  
+  <select id="getEnterpriseById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_enterprise
+    where id = #{id,jdbcType=INTEGER}
+    limit 1
+  </select>
+
+  <select id="pageListAndManger" parameterType="com.taisf.services.enterprise.dto.EnterpriseListRequest" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_enterprise
+    where 1 = 1
+    <if test="manger != null and manger != ''">
+      AND  manger = #{manger,jdbcType=VARCHAR}
+    </if>
+
+    <if test="enterpriseName != null and enterpriseName != ''">
+    AND  enterprise_name LIKE '%${enterpriseName}%'
+    </if>
+    <if test="enterpriseCode != null and enterpriseCode != ''">
+      AND  enterprise_code = #{enterpriseCode,jdbcType=VARCHAR}
+    </if>
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_enterprise
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+
+
+  <insert id="saveEnterprise" useGeneratedKeys="true" keyProperty="id" parameterType="com.taisf.services.enterprise.entity.EnterpriseEntity">
+    insert into t_enterprise
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="supplierCode != null">
+        supplier_code,
+      </if>
+
+      <if test="enterpriseCode != null">
+        enterprise_code,
+      </if>
+      <if test="enterpriseName != null">
+        enterprise_name,
+      </if>
+      <if test="enterpriseTel != null">
+        enterprise_tel,
+      </if>
+      <if test="enterpriseType != null">
+        enterprise_type,
+      </if>
+      <if test="enterpriseStatus != null">
+        enterprise_status,
+      </if>
+      <if test="manger != null">
+        manger,
+      </if>
+      <if test="provinceCode != null">
+        province_code,
+      </if>
+      <if test="provinceName != null">
+        province_name,
+      </if>
+      <if test="cityCode != null">
+        city_code,
+      </if>
+      <if test="cityName != null">
+        city_name,
+      </if>
+      <if test="areaCode != null">
+        area_code,
+      </if>
+      <if test="areaName != null">
+        area_name,
+      </if>
+      <if test="street != null">
+        street,
+      </if>
+      <if test="openTime != null">
+        open_time,
+      </if>
+      <if test="tillTime != null">
+        till_time,
+      </if>
+      <if test="contactName != null">
+        contact_name,
+      </if>
+      <if test="contactMail != null">
+        contact_mail,
+      </if>
+      <if test="contactMobile != null">
+        contact_mobile,
+      </if>
+      <if test="contactTel != null">
+        contact_tel,
+      </if>
+      <if test="contactTencent != null">
+        contact_tencent,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="lastModifyDate != null">
+        last_modify_date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+
+
+      <if test="supplierCode != null">
+        #{supplierCode,jdbcType=VARCHAR},
+      </if>
+
+      <if test="enterpriseCode != null">
+        #{enterpriseCode,jdbcType=VARCHAR},
+      </if>
+      <if test="enterpriseName != null">
+        #{enterpriseName,jdbcType=VARCHAR},
+      </if>
+      <if test="enterpriseTel != null">
+        #{enterpriseTel,jdbcType=VARCHAR},
+      </if>
+      <if test="enterpriseType != null">
+        #{enterpriseType,jdbcType=INTEGER},
+      </if>
+      <if test="enterpriseStatus != null">
+        #{enterpriseStatus,jdbcType=INTEGER},
+      </if>
+      <if test="manger != null">
+        #{manger,jdbcType=VARCHAR},
+      </if>
+      <if test="provinceCode != null">
+        #{provinceCode,jdbcType=VARCHAR},
+      </if>
+      <if test="provinceName != null">
+        #{provinceName,jdbcType=VARCHAR},
+      </if>
+      <if test="cityCode != null">
+        #{cityCode,jdbcType=VARCHAR},
+      </if>
+      <if test="cityName != null">
+        #{cityName,jdbcType=VARCHAR},
+      </if>
+      <if test="areaCode != null">
+        #{areaCode,jdbcType=VARCHAR},
+      </if>
+      <if test="areaName != null">
+        #{areaName,jdbcType=VARCHAR},
+      </if>
+      <if test="street != null">
+        #{street,jdbcType=VARCHAR},
+      </if>
+      <if test="openTime != null">
+        #{openTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tillTime != null">
+        #{tillTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="contactName != null">
+        #{contactName,jdbcType=VARCHAR},
+      </if>
+      <if test="contactMail != null">
+        #{contactMail,jdbcType=VARCHAR},
+      </if>
+      <if test="contactMobile != null">
+        #{contactMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="contactTel != null">
+        #{contactTel,jdbcType=VARCHAR},
+      </if>
+      <if test="contactTencent != null">
+        #{contactTencent,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastModifyDate != null">
+        #{lastModifyDate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+
+
+  <update id="updateEnterprise" parameterType="com.taisf.services.enterprise.entity.EnterpriseEntity">
+    update t_enterprise
+    <set>
+
+      <if test="supplierCode != null">
+        supplier_code = #{supplierCode,jdbcType=VARCHAR},
+      </if>
+
+      <if test="enterpriseName != null">
+        enterprise_name = #{enterpriseName,jdbcType=VARCHAR},
+      </if>
+      <if test="enterpriseTel != null">
+        enterprise_tel = #{enterpriseTel,jdbcType=VARCHAR},
+      </if>
+      <if test="enterpriseType != null">
+        enterprise_type = #{enterpriseType,jdbcType=INTEGER},
+      </if>
+
+      <if test="enterpriseStatus != null">
+        enterprise_status = #{enterpriseStatus,jdbcType=INTEGER},
+      </if>
+      <if test="manger != null">
+        manger = #{manger,jdbcType=VARCHAR},
+      </if>
+      <if test="provinceCode != null">
+        province_code = #{provinceCode,jdbcType=VARCHAR},
+      </if>
+      <if test="provinceName != null">
+        province_name = #{provinceName,jdbcType=VARCHAR},
+      </if>
+      <if test="cityCode != null">
+        city_code = #{cityCode,jdbcType=VARCHAR},
+      </if>
+      <if test="cityName != null">
+        city_name = #{cityName,jdbcType=VARCHAR},
+      </if>
+      <if test="areaCode != null">
+        area_code = #{areaCode,jdbcType=VARCHAR},
+      </if>
+      <if test="areaName != null">
+        area_name = #{areaName,jdbcType=VARCHAR},
+      </if>
+      <if test="street != null">
+        street = #{street,jdbcType=VARCHAR},
+      </if>
+      <if test="openTime != null">
+        open_time = #{openTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tillTime != null">
+        till_time = #{tillTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="contactName != null">
+        contact_name = #{contactName,jdbcType=VARCHAR},
+      </if>
+      <if test="contactMail != null">
+        contact_mail = #{contactMail,jdbcType=VARCHAR},
+      </if>
+      <if test="contactMobile != null">
+        contact_mobile = #{contactMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="contactTel != null">
+        contact_tel = #{contactTel,jdbcType=VARCHAR},
+      </if>
+      <if test="contactTencent != null">
+        contact_tencent = #{contactTencent,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastModifyDate != null">
+        last_modify_date = #{lastModifyDate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+
+
+
+  <select id="taskByOrder"  resultMap="BaseResultMap" parameterType="java.lang.String">
+    SELECT o.enterprise_code,e.enterprise_name
+    FROM t_order o
+    INNER JOIN t_enterprise e ON e.enterprise_code = o.enterprise_code
+    WHERE
+    o.supplier_code =   #{supplierCode,jdbcType=VARCHAR}
+    AND TO_DAYS( now() ) - TO_DAYS(o.create_time) = 0
+    AND o.order_status = 50
+    GROUP BY o.enterprise_code
+
+  </select>
+
+
+  <select id="findAll"  resultMap="BaseResultMap">
+      SELECT o.enterprise_code,e.enterprise_name
+      FROM t_order o
+      INNER JOIN t_enterprise e ON e.enterprise_code = o.enterprise_code
+      WHERE TO_DAYS( now() ) - TO_DAYS(o.create_time) = 0
+      AND o.order_status = 50
+      GROUP BY o.enterprise_code
+
+  </select>
+  
+  <select id="getEnterpriseExtByPage" resultMap="BaseResultMapExt" parameterType="com.taisf.services.enterprise.dto.EnterpriseListRequest">
+    select e.*,c.for_lunch,c.for_dinner
+    from t_enterprise e
+    LEFT JOIN t_enterprise_config c on e.enterprise_code=c.enterprise_code
+    where 1=1
+
+    <if test="supplierCode != null and supplierCode != '' ">
+      and supplier_code = #{supplierCode,jdbcType=VARCHAR}
+    </if>
+
+
+    <if test="enterpriseCode != null and enterpriseCode != '' ">
+     and e.enterprise_code = #{enterpriseCode,jdbcType=VARCHAR}
+    </if>
+    <if test="enterpriseName != null and enterpriseName != '' ">
+     and e.enterprise_name like CONCAT('%',#{enterpriseName, jdbcType=VARCHAR},'%')
+    </if>
+    <if test="manger != null and manger != '' ">
+		and e.manger = #{manger, jdbcType=INTEGER}
+	</if>
+    <if test="openTime != null and openTime != '' ">
+   		<![CDATA[
+			and e.open_time >= #{openTime, jdbcType=TIMESTAMP}
+		]]>	
+	</if>
+	<if test="tillTime != null and tillTime != '' ">
+		<![CDATA[
+			and e.till_time <= #{tillTime, jdbcType=TIMESTAMP}
+		]]>
+	</if>
+	<if test="enterpriseType != null and enterpriseType != '' ">
+		and enterprise_type = #{enterpriseType, jdbcType=INTEGER}
+	</if>
+  </select>
+  
+  <update id="expiredEnterprise">
+    update t_enterprise set enterprise_status=2 where enterprise_status=1
+    <![CDATA[
+    	and till_time <= now()
+	]]>
+  </update>
+
+  <select id="findAllEnterprise"  resultMap="BaseResultMap">
+    SELECT <include refid="Base_Column_List" />
+    FROM t_enterprise
+    WHERE 1=1
+    <if test="supplierCode != null and supplierCode != '' ">
+      and supplier_code = #{supplierCode, jdbcType=VARCHAR}
+    </if>
+  </select>
+
+</mapper>

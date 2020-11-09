@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="base.areaRegionDao" >
+  <resultMap id="BaseResultMap" type="com.taisf.services.base.entity.AreaRegionEntity" >
+    <id column="code" property="code" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="parent_code" property="parentCode" jdbcType="INTEGER" />
+    <result column="level" property="level" jdbcType="SMALLINT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    code, name, parent_code, level
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_base_area_region
+    where code = #{code,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_base_area_region
+    where code = #{code,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.taisf.services.base.entity.AreaRegionEntity" >
+    insert into t_base_area_region (code, name, parent_code, 
+      level)
+    values (#{code,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{parentCode,jdbcType=INTEGER}, 
+      #{level,jdbcType=SMALLINT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.taisf.services.base.entity.AreaRegionEntity" >
+    insert into t_base_area_region
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="code != null" >
+        code,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="parentCode != null" >
+        parent_code,
+      </if>
+      <if test="level != null" >
+        level,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="code != null" >
+        #{code,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="parentCode != null" >
+        #{parentCode,jdbcType=INTEGER},
+      </if>
+      <if test="level != null" >
+        #{level,jdbcType=SMALLINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.taisf.services.base.entity.AreaRegionEntity" >
+    update t_base_area_region
+    <set >
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="parentCode != null" >
+        parent_code = #{parentCode,jdbcType=INTEGER},
+      </if>
+      <if test="level != null" >
+        level = #{level,jdbcType=SMALLINT},
+      </if>
+    </set>
+    where code = #{code,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.taisf.services.base.entity.AreaRegionEntity" >
+    update t_base_area_region
+    set name = #{name,jdbcType=VARCHAR},
+      parent_code = #{parentCode,jdbcType=INTEGER},
+      level = #{level,jdbcType=SMALLINT}
+    where code = #{code,jdbcType=INTEGER}
+  </update>
+  <!-- 根据类型 查出所有省份     的集合   -->
+  <select id="findAllAreaRegion" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  	select 
+  	<include refid="Base_Column_List" />
+  	from t_base_area_region
+  	where level= #{level,jdbcType=SMALLINT}
+  </select>
+  <!-- 根据code 查询区域信息  -->
+  <select id="findAreaRegionBycode" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  	select 
+  	<include refid="Base_Column_List" />
+  	from t_base_area_region
+  	where code= #{code,jdbcType=INTEGER}
+  </select>
+  <!-- 根据parent_code 查询 子区域 -->
+  <select id="findAllByparentcode" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  	select 
+  	<include refid="Base_Column_List" />
+  	from t_base_area_region
+  	where parent_code= #{parentCode,jdbcType=SMALLINT}
+  </select>
+</mapper>

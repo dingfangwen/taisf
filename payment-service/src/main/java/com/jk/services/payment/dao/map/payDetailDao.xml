@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="payment.payDetailDao" >
+  
+  <resultMap id="BaseResultMap" type="com.jk.services.payment.entity.PayDetailEntity" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+     <result column="pay_id" property="payId" jdbcType="INTEGER" />
+    <result column="biz_id" property="bizId" jdbcType="VARCHAR" />
+    <result column="biz_name" property="bizName" jdbcType="VARCHAR" />
+    <result column="amount" property="amount" jdbcType="DECIMAL" />
+    <result column="out_serial_no" property="outSerialNo" jdbcType="VARCHAR" />
+    <result column="in_serial_no" property="inSerialNo" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="status_desc" property="statusDesc" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, pay_id, biz_id, biz_name, amount,out_serial_no,  in_serial_no, status, status_desc,remark, create_time,
+    update_time
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_pay_detail
+    where id = #{id}
+  </select>
+
+  <select id="selectByPayId" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    from t_pay_detail
+    where pay_id = #{payId}
+  </select>
+
+  <insert id="insert" parameterType="com.jk.services.payment.entity.PayDetailEntity" useGeneratedKeys="true" keyProperty="id">
+     insert into t_pay_detail (pay_id, biz_id, biz_name, amount, out_serial_no, in_serial_no, status, status_desc,
+     remark, create_time, update_time)
+    values (#{payId}, #{bizId}, #{bizName}, #{amount},  #{outSerialNo}, #{inSerialNo}, #{status}, #{statusDesc},
+     #{remark}, now(), #{updateTime})
+  </insert>
+  <update id="update" parameterType="com.jk.services.payment.entity.PayDetailEntity" >
+    update t_pay_detail
+    <set >
+      update_time = now(),
+      <if test="bizId != null" >
+        biz_id = #{bizId},
+      </if>
+      <if test="bizName != null" >
+        biz_name = #{bizName},
+      </if>
+      <if test="amount != null" >
+        amount = #{amount},
+      </if>
+
+      <if test="outSerialNo != null" >
+        out_serial_no = #{outSerialNo},
+      </if>
+      <if test="inSerialNo != null" >
+        in_serial_no = #{inSerialNo},
+      </if>
+      <if test="status != null" >
+        status = #{status},
+      </if>
+      <if test="statusDesc != null" >
+        status_desc = #{statusDesc},
+      </if>
+    </set>
+    where  1 = 1
+   	 <if test="payId != null" >
+       and  pay_id = #{payId}
+      </if>
+      <if test="id != null" >
+       and id = #{id}
+      </if>	
+  </update>
+</mapper>

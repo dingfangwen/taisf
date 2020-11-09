@@ -1,0 +1,1600 @@
+2018-05-24 14:32:32.178 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-05-24 14:32:35.596 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 14:32:35.596 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 14:32:38.438 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 14:32:38.439 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 14:32:39.319 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 14:32:39.451 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 14:32:40.946 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 14:32:40.946 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 14:32:43.636 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 14:32:43.636 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 14:32:44.417 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 14:32:44.434 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 14:33:05.123 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2018-05-24 14:33:05.124 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2018-05-24 14:33:05.166 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2018-05-24 14:33:05.169 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2018-05-24 14:33:08.536 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2018-05-24 14:33:08.619 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@51b35e4e]
+2018-05-24 14:33:08.667 [main] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@c2e3264] will be managed by Spring
+2018-05-24 14:33:08.760 [main] DEBUG push.deviceDao.findDeviceByRegId - ==>  Preparing: select id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode from t_device where reg_id = ? 
+2018-05-24 14:33:08.811 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select 
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where reg_id = ?
+2018-05-24 14:33:08.812 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select 
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where reg_id = ?
+2018-05-24 14:33:09.082 [main] DEBUG push.deviceDao.findDeviceByRegId - ==> Parameters: regId=(String)
+2018-05-24 14:33:09.086 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [regId=]
+2018-05-24 14:33:09.087 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2018-05-24 14:33:09.087 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [regId=]
+2018-05-24 14:33:09.088 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2018-05-24 14:33:09.350 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 263.682672 millis. 
+select 
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where reg_id = ?
+2018-05-24 14:33:09.351 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 263.682672 millis. 
+select 
+     
+    id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode
+   
+    from t_device
+    where reg_id = ?
+2018-05-24 14:33:09.361 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2018-05-24 14:33:09.368 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2018-05-24 14:33:09.369 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2018-05-24 14:33:09.370 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, reg_id, user_id, device_token, push_type, device_type, version, applicationCode]
+2018-05-24 14:33:09.572 [main] DEBUG push.deviceDao.findDeviceByRegId - <==      Total: 0
+2018-05-24 14:33:09.573 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2018-05-24 14:33:09.573 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2018-05-24 14:33:09.574 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2018-05-24 14:33:09.575 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2018-05-24 14:33:09.576 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@51b35e4e]
+2018-05-24 14:33:19.815 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@51b35e4e] from current transaction
+2018-05-24 14:33:19.933 [main] DEBUG push.deviceDao.addDevice - ==>  Preparing: insert into t_device ( reg_id, user_id, device_token, push_type, device_type ) values ( ?, ?, ?, ?, ? ) 
+2018-05-24 14:33:19.942 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20001} created. 
+insert into t_device
+     ( reg_id,
+      
+      
+        user_id,
+      
+      
+        device_token,
+      
+      
+        push_type,
+      
+      
+        device_type ) 
+     values ( ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ? )
+2018-05-24 14:33:19.943 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20001} created. 
+insert into t_device
+     ( reg_id,
+      
+      
+        user_id,
+      
+      
+        device_token,
+      
+      
+        push_type,
+      
+      
+        device_type ) 
+     values ( ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ? )
+2018-05-24 14:33:19.949 [main] DEBUG push.deviceDao.addDevice - ==> Parameters: regId=(String), 111(String), 2c91cb36634f8ba501635c90c723000c&(String), 4(Integer), huawei(String)
+2018-05-24 14:33:19.950 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20001} Parameters : [regId=, 111, 2c91cb36634f8ba501635c90c723000c&, 4, huawei]
+2018-05-24 14:33:19.950 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20001} Types : [VARCHAR, VARCHAR, VARCHAR, INTEGER, VARCHAR]
+2018-05-24 14:33:19.951 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20001} Parameters : [regId=, 111, 2c91cb36634f8ba501635c90c723000c&, 4, huawei]
+2018-05-24 14:33:19.952 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20001} Types : [VARCHAR, VARCHAR, VARCHAR, INTEGER, VARCHAR]
+2018-05-24 14:33:20.357 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20001} executed. 407.073965 millis. 
+insert into t_device
+     ( reg_id,
+      
+      
+        user_id,
+      
+      
+        device_token,
+      
+      
+        push_type,
+      
+      
+        device_type ) 
+     values ( ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ? )
+2018-05-24 14:33:20.358 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20001} executed. 407.073965 millis. 
+insert into t_device
+     ( reg_id,
+      
+      
+        user_id,
+      
+      
+        device_token,
+      
+      
+        push_type,
+      
+      
+        device_type ) 
+     values ( ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ? )
+2018-05-24 14:33:20.359 [main] DEBUG push.deviceDao.addDevice - <==    Updates: 1
+2018-05-24 14:33:20.360 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20001} closed
+2018-05-24 14:33:20.361 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20001} closed
+2018-05-24 14:33:20.362 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@51b35e4e]
+2018-05-24 14:33:25.414 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@51b35e4e]
+2018-05-24 14:33:25.415 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@51b35e4e]
+2018-05-24 14:33:25.415 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@51b35e4e]
+2018-05-24 14:33:25.616 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2018-05-24 14:33:25.616 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2018-05-24 14:33:25.617 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2018-05-24 14:33:25.617 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2018-05-24 14:33:26.118 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2018-05-24 14:33:26.119 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2018-05-24 14:33:26.403 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 14:33:26.404 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 14:33:26.404 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 14:33:26.404 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 14:33:26.407 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 14:33:26.407 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 14:33:26.408 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 14:33:26.409 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 15:07:16.224 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-05-24 15:07:19.035 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 15:07:19.035 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 15:07:22.119 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 15:07:22.119 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 15:07:22.829 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 15:07:22.973 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 15:07:24.196 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 15:07:24.196 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 15:07:25.666 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 15:07:25.667 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 15:07:26.109 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 15:07:26.125 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 15:07:26.495 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2018-05-24 15:07:26.496 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2018-05-24 15:07:26.502 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2018-05-24 15:07:26.502 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2018-05-24 15:07:26.701 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2018-05-24 15:07:26.721 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60fa3495]
+2018-05-24 15:07:26.775 [main] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@493dfb8e] will be managed by Spring
+2018-05-24 15:07:26.782 [main] DEBUG push.deviceDao.replaceDevice - ==>  Preparing: replace into t_device ( reg_id, user_id, device_token, push_type, device_type ) values ( ?, ?, ?, ?, ? ) 
+2018-05-24 15:07:26.823 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+replace into t_device
+     ( reg_id,
+      
+      
+        user_id,
+      
+      
+        device_token,
+      
+      
+        push_type,
+      
+      
+        device_type ) 
+     values ( ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ? )
+2018-05-24 15:07:26.823 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+replace into t_device
+     ( reg_id,
+      
+      
+        user_id,
+      
+      
+        device_token,
+      
+      
+        push_type,
+      
+      
+        device_type ) 
+     values ( ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ? )
+2018-05-24 15:07:26.840 [main] DEBUG push.deviceDao.replaceDevice - ==> Parameters: regId=(String), 111(String), 2c91cb36634f8ba501635c90c723000c&(String), 4(Integer), huawei(String)
+2018-05-24 15:07:26.841 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [regId=, 111, 2c91cb36634f8ba501635c90c723000c&, 4, huawei]
+2018-05-24 15:07:26.841 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, INTEGER, VARCHAR]
+2018-05-24 15:07:26.841 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [regId=, 111, 2c91cb36634f8ba501635c90c723000c&, 4, huawei]
+2018-05-24 15:07:26.841 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, INTEGER, VARCHAR]
+2018-05-24 15:07:27.187 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 346.437404 millis. 
+replace into t_device
+     ( reg_id,
+      
+      
+        user_id,
+      
+      
+        device_token,
+      
+      
+        push_type,
+      
+      
+        device_type ) 
+     values ( ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ? )
+2018-05-24 15:07:27.188 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 346.437404 millis. 
+replace into t_device
+     ( reg_id,
+      
+      
+        user_id,
+      
+      
+        device_token,
+      
+      
+        push_type,
+      
+      
+        device_type ) 
+     values ( ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ? )
+2018-05-24 15:07:27.188 [main] DEBUG push.deviceDao.replaceDevice - <==    Updates: 2
+2018-05-24 15:07:27.188 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2018-05-24 15:07:27.188 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2018-05-24 15:07:27.188 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60fa3495]
+2018-05-24 15:07:27.189 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60fa3495]
+2018-05-24 15:07:27.190 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60fa3495]
+2018-05-24 15:07:27.191 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60fa3495]
+2018-05-24 15:07:27.400 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2018-05-24 15:07:27.401 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2018-05-24 15:07:27.401 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2018-05-24 15:07:27.401 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2018-05-24 15:07:27.714 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2018-05-24 15:07:27.714 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2018-05-24 15:07:27.947 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 15:07:27.947 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 15:07:27.949 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 15:07:27.949 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 15:07:27.951 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 15:07:27.952 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 15:07:27.953 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 15:07:27.954 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 15:07:57.625 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-05-24 15:07:59.249 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 15:07:59.250 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 15:08:00.477 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 15:08:00.477 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 15:08:00.940 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 15:08:01.011 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 15:08:01.948 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 15:08:01.948 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 15:08:03.418 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 15:08:03.419 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 15:08:03.840 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 15:08:03.858 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 15:08:04.079 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2018-05-24 15:08:04.080 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2018-05-24 15:08:04.093 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2018-05-24 15:08:04.093 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2018-05-24 15:08:04.281 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2018-05-24 15:08:04.293 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60fa3495]
+2018-05-24 15:08:04.332 [main] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@493dfb8e] will be managed by Spring
+2018-05-24 15:08:04.337 [main] DEBUG push.deviceDao.replaceDevice - ==>  Preparing: replace into t_device ( reg_id, user_id, device_token, push_type, device_type ) values ( ?, ?, ?, ?, ? ) 
+2018-05-24 15:08:04.362 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+replace into t_device
+     ( reg_id,
+      
+      
+        user_id,
+      
+      
+        device_token,
+      
+      
+        push_type,
+      
+      
+        device_type ) 
+     values ( ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ? )
+2018-05-24 15:08:04.362 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+replace into t_device
+     ( reg_id,
+      
+      
+        user_id,
+      
+      
+        device_token,
+      
+      
+        push_type,
+      
+      
+        device_type ) 
+     values ( ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ? )
+2018-05-24 15:08:04.378 [main] DEBUG push.deviceDao.replaceDevice - ==> Parameters: regId=(String), 111(String), 2c91cb36634f8ba501635c90c723000c&(String), 4(Integer), huawei(String)
+2018-05-24 15:08:04.378 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [regId=, 111, 2c91cb36634f8ba501635c90c723000c&, 4, huawei]
+2018-05-24 15:08:04.378 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, INTEGER, VARCHAR]
+2018-05-24 15:08:04.379 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [regId=, 111, 2c91cb36634f8ba501635c90c723000c&, 4, huawei]
+2018-05-24 15:08:04.379 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, INTEGER, VARCHAR]
+2018-05-24 15:08:04.611 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 232.464431 millis. 
+replace into t_device
+     ( reg_id,
+      
+      
+        user_id,
+      
+      
+        device_token,
+      
+      
+        push_type,
+      
+      
+        device_type ) 
+     values ( ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ? )
+2018-05-24 15:08:04.611 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 232.464431 millis. 
+replace into t_device
+     ( reg_id,
+      
+      
+        user_id,
+      
+      
+        device_token,
+      
+      
+        push_type,
+      
+      
+        device_type ) 
+     values ( ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ? )
+2018-05-24 15:08:04.612 [main] DEBUG push.deviceDao.replaceDevice - <==    Updates: 2
+2018-05-24 15:08:04.614 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2018-05-24 15:08:04.615 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2018-05-24 15:08:04.616 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60fa3495]
+2018-05-24 15:08:04.617 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60fa3495]
+2018-05-24 15:08:04.617 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60fa3495]
+2018-05-24 15:08:04.617 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60fa3495]
+2018-05-24 15:08:04.797 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2018-05-24 15:08:04.797 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2018-05-24 15:08:04.797 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2018-05-24 15:08:04.797 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2018-05-24 15:08:05.104 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2018-05-24 15:08:05.104 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2018-05-24 15:08:05.305 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 15:08:05.305 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 15:08:05.305 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 15:08:05.305 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 15:08:05.307 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 15:08:05.307 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 15:08:05.308 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 15:08:05.308 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 15:23:29.907 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-05-24 15:23:31.920 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 15:23:31.920 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 15:23:32.341 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 15:23:32.341 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 15:23:32.641 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 15:23:32.780 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 15:23:33.205 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 15:23:33.205 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 15:23:33.625 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 15:23:33.626 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 15:23:33.751 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 15:23:33.775 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 15:23:34.225 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2018-05-24 15:23:34.225 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2018-05-24 15:23:34.230 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2018-05-24 15:23:34.231 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2018-05-24 15:23:34.331 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2018-05-24 15:23:34.357 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60fa3495]
+2018-05-24 15:23:34.401 [main] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@493dfb8e] will be managed by Spring
+2018-05-24 15:23:34.405 [main] DEBUG push.deviceDao.replaceDevice - ==>  Preparing: replace into t_device ( reg_id, user_id, device_token, push_type, device_type ) values ( ?, ?, ?, ?, ? ) 
+2018-05-24 15:23:34.422 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+replace into t_device
+     ( reg_id,
+      
+      
+        user_id,
+      
+      
+        device_token,
+      
+      
+        push_type,
+      
+      
+        device_type ) 
+     values ( ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ? )
+2018-05-24 15:23:34.422 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+replace into t_device
+     ( reg_id,
+      
+      
+        user_id,
+      
+      
+        device_token,
+      
+      
+        push_type,
+      
+      
+        device_type ) 
+     values ( ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ? )
+2018-05-24 15:23:34.434 [main] DEBUG push.deviceDao.replaceDevice - ==> Parameters: regId=(String), 2c91340c5ffd23350160019b29cc000f(String), 2c91cb36634f8ba501635c90c723000c&(String), 4(Integer), huawei(String)
+2018-05-24 15:23:34.435 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [regId=, 2c91340c5ffd23350160019b29cc000f, 2c91cb36634f8ba501635c90c723000c&, 4, huawei]
+2018-05-24 15:23:34.435 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, INTEGER, VARCHAR]
+2018-05-24 15:23:34.435 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [regId=, 2c91340c5ffd23350160019b29cc000f, 2c91cb36634f8ba501635c90c723000c&, 4, huawei]
+2018-05-24 15:23:34.436 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, INTEGER, VARCHAR]
+2018-05-24 15:23:34.526 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 90.237924 millis. 
+replace into t_device
+     ( reg_id,
+      
+      
+        user_id,
+      
+      
+        device_token,
+      
+      
+        push_type,
+      
+      
+        device_type ) 
+     values ( ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ? )
+2018-05-24 15:23:34.528 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 90.237924 millis. 
+replace into t_device
+     ( reg_id,
+      
+      
+        user_id,
+      
+      
+        device_token,
+      
+      
+        push_type,
+      
+      
+        device_type ) 
+     values ( ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ? )
+2018-05-24 15:23:34.530 [main] DEBUG push.deviceDao.replaceDevice - <==    Updates: 3
+2018-05-24 15:23:34.531 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2018-05-24 15:23:34.531 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2018-05-24 15:23:34.532 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60fa3495]
+2018-05-24 15:23:34.534 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60fa3495]
+2018-05-24 15:23:34.534 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60fa3495]
+2018-05-24 15:23:34.534 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60fa3495]
+2018-05-24 15:23:34.574 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2018-05-24 15:23:34.575 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2018-05-24 15:23:34.575 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2018-05-24 15:23:34.575 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2018-05-24 15:23:34.642 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2018-05-24 15:23:34.643 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2018-05-24 15:23:35.001 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 15:23:35.001 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 15:23:35.002 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 15:23:35.002 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 15:23:35.006 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 15:23:35.007 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 15:23:35.008 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 15:23:35.008 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 15:24:27.327 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-05-24 15:24:28.329 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 15:24:28.329 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 15:24:28.755 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 15:24:28.756 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 15:24:29.122 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 15:24:29.236 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 15:24:29.706 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 15:24:29.706 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 15:24:30.245 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 15:24:30.245 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 15:24:30.370 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 15:24:30.400 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 15:24:30.714 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2018-05-24 15:24:30.715 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2018-05-24 15:24:30.720 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2018-05-24 15:24:30.720 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2018-05-24 15:24:30.826 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2018-05-24 15:24:30.846 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60fa3495]
+2018-05-24 15:24:30.900 [main] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@493dfb8e] will be managed by Spring
+2018-05-24 15:24:30.907 [main] DEBUG push.deviceDao.replaceDevice - ==>  Preparing: replace into t_device ( reg_id, user_id, device_token, push_type, device_type ) values ( ?, ?, ?, ?, ? ) 
+2018-05-24 15:24:30.932 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+replace into t_device
+     ( reg_id,
+      
+      
+        user_id,
+      
+      
+        device_token,
+      
+      
+        push_type,
+      
+      
+        device_type ) 
+     values ( ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ? )
+2018-05-24 15:24:30.933 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+replace into t_device
+     ( reg_id,
+      
+      
+        user_id,
+      
+      
+        device_token,
+      
+      
+        push_type,
+      
+      
+        device_type ) 
+     values ( ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ? )
+2018-05-24 15:24:30.953 [main] DEBUG push.deviceDao.replaceDevice - ==> Parameters: regId=(String), 2c91340c5ffd23350160019b29cc000f(String), 2c91cb36634f8ba501635c90c723000c&(String), 4(Integer), huawei(String)
+2018-05-24 15:24:30.954 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [regId=, 2c91340c5ffd23350160019b29cc000f, 2c91cb36634f8ba501635c90c723000c&, 4, huawei]
+2018-05-24 15:24:30.954 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, INTEGER, VARCHAR]
+2018-05-24 15:24:30.954 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [regId=, 2c91340c5ffd23350160019b29cc000f, 2c91cb36634f8ba501635c90c723000c&, 4, huawei]
+2018-05-24 15:24:30.954 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, INTEGER, VARCHAR]
+2018-05-24 15:24:31.115 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 161.513884 millis. 
+replace into t_device
+     ( reg_id,
+      
+      
+        user_id,
+      
+      
+        device_token,
+      
+      
+        push_type,
+      
+      
+        device_type ) 
+     values ( ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ? )
+2018-05-24 15:24:31.116 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 161.513884 millis. 
+replace into t_device
+     ( reg_id,
+      
+      
+        user_id,
+      
+      
+        device_token,
+      
+      
+        push_type,
+      
+      
+        device_type ) 
+     values ( ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ? )
+2018-05-24 15:24:31.116 [main] DEBUG push.deviceDao.replaceDevice - <==    Updates: 2
+2018-05-24 15:24:31.117 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2018-05-24 15:24:31.117 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2018-05-24 15:24:31.117 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60fa3495]
+2018-05-24 15:24:31.117 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60fa3495]
+2018-05-24 15:24:31.117 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60fa3495]
+2018-05-24 15:24:31.118 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60fa3495]
+2018-05-24 15:24:31.197 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2018-05-24 15:24:31.198 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2018-05-24 15:24:31.198 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2018-05-24 15:24:31.198 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2018-05-24 15:24:31.364 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2018-05-24 15:24:31.367 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2018-05-24 15:24:31.706 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 15:24:31.706 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 15:24:31.707 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 15:24:31.707 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 15:24:31.708 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 15:24:31.708 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 15:24:31.709 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 15:24:31.709 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 15:25:28.395 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-05-24 15:25:29.983 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 15:25:29.984 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 15:25:31.236 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 15:25:31.236 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 15:25:31.722 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 15:25:31.810 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 15:25:32.876 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 15:25:32.876 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 15:25:34.508 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 15:25:34.508 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 15:25:35.021 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 15:25:35.039 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 15:25:35.273 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2018-05-24 15:25:35.274 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2018-05-24 15:25:35.290 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2018-05-24 15:25:35.291 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2018-05-24 15:25:35.505 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2018-05-24 15:25:35.517 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60fa3495]
+2018-05-24 15:25:35.563 [main] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@493dfb8e] will be managed by Spring
+2018-05-24 15:25:35.569 [main] DEBUG push.deviceDao.replaceDevice - ==>  Preparing: replace into t_device ( reg_id, user_id, device_token, push_type, device_type ) values ( ?, ?, ?, ?, ? ) 
+2018-05-24 15:25:35.607 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+replace into t_device
+     ( reg_id,
+      
+      
+        user_id,
+      
+      
+        device_token,
+      
+      
+        push_type,
+      
+      
+        device_type ) 
+     values ( ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ? )
+2018-05-24 15:25:35.607 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+replace into t_device
+     ( reg_id,
+      
+      
+        user_id,
+      
+      
+        device_token,
+      
+      
+        push_type,
+      
+      
+        device_type ) 
+     values ( ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ? )
+2018-05-24 15:25:35.642 [main] DEBUG push.deviceDao.replaceDevice - ==> Parameters: regId=(String), 2c91340c5ffd23350160019b29cc000f(String), 2c91cb36634f8ba501635c90c723000c&(String), 4(Integer), huawei(String)
+2018-05-24 15:25:35.645 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [regId=, 2c91340c5ffd23350160019b29cc000f, 2c91cb36634f8ba501635c90c723000c&, 4, huawei]
+2018-05-24 15:25:35.645 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, INTEGER, VARCHAR]
+2018-05-24 15:25:35.645 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [regId=, 2c91340c5ffd23350160019b29cc000f, 2c91cb36634f8ba501635c90c723000c&, 4, huawei]
+2018-05-24 15:25:35.645 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, INTEGER, VARCHAR]
+2018-05-24 15:25:35.967 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 322.043824 millis. 
+replace into t_device
+     ( reg_id,
+      
+      
+        user_id,
+      
+      
+        device_token,
+      
+      
+        push_type,
+      
+      
+        device_type ) 
+     values ( ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ? )
+2018-05-24 15:25:35.967 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 322.043824 millis. 
+replace into t_device
+     ( reg_id,
+      
+      
+        user_id,
+      
+      
+        device_token,
+      
+      
+        push_type,
+      
+      
+        device_type ) 
+     values ( ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ? )
+2018-05-24 15:25:35.967 [main] DEBUG push.deviceDao.replaceDevice - <==    Updates: 2
+2018-05-24 15:25:35.967 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2018-05-24 15:25:35.967 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2018-05-24 15:25:35.967 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60fa3495]
+2018-05-24 15:25:35.968 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60fa3495]
+2018-05-24 15:25:35.968 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60fa3495]
+2018-05-24 15:25:35.968 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60fa3495]
+2018-05-24 15:25:36.156 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2018-05-24 15:25:36.156 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2018-05-24 15:25:36.157 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2018-05-24 15:25:36.157 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2018-05-24 15:25:36.539 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2018-05-24 15:25:36.551 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2018-05-24 15:25:36.762 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 15:25:36.762 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 15:25:36.763 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 15:25:36.763 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 15:25:36.765 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 15:25:36.765 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 15:25:36.766 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 15:25:36.766 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 15:30:01.771 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-05-24 15:30:04.523 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 15:30:04.524 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 15:30:05.899 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 15:30:05.899 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 15:30:06.398 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 15:30:06.523 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 15:30:07.178 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 15:30:07.178 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 15:30:08.283 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 15:30:08.283 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 15:30:08.628 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 15:30:08.650 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 15:30:08.879 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2018-05-24 15:30:08.880 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2018-05-24 15:30:08.893 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2018-05-24 15:30:08.894 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit false
+2018-05-24 15:30:09.033 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2018-05-24 15:30:09.045 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60fa3495]
+2018-05-24 15:30:09.083 [main] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@493dfb8e] will be managed by Spring
+2018-05-24 15:30:09.088 [main] DEBUG push.deviceDao.replaceDevice - ==>  Preparing: replace into t_device ( reg_id, user_id, device_token, push_type, device_type ) values ( ?, ?, ?, ?, ? ) 
+2018-05-24 15:30:09.108 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+replace into t_device
+     ( reg_id,
+      
+      
+        user_id,
+      
+      
+        device_token,
+      
+      
+        push_type,
+      
+      
+        device_type ) 
+     values ( ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ? )
+2018-05-24 15:30:09.108 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+replace into t_device
+     ( reg_id,
+      
+      
+        user_id,
+      
+      
+        device_token,
+      
+      
+        push_type,
+      
+      
+        device_type ) 
+     values ( ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ? )
+2018-05-24 15:30:09.121 [main] DEBUG push.deviceDao.replaceDevice - ==> Parameters: regId=(String), 2c91340c5ffd23350160019b29cc000f(String), 2c91cb36634f8ba501635c90c723000c&(String), 4(Integer), huawei(String)
+2018-05-24 15:30:09.122 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [regId=, 2c91340c5ffd23350160019b29cc000f, 2c91cb36634f8ba501635c90c723000c&, 4, huawei]
+2018-05-24 15:30:09.122 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, INTEGER, VARCHAR]
+2018-05-24 15:30:09.122 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [regId=, 2c91340c5ffd23350160019b29cc000f, 2c91cb36634f8ba501635c90c723000c&, 4, huawei]
+2018-05-24 15:30:09.122 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, INTEGER, VARCHAR]
+2018-05-24 15:30:09.361 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 239.123462 millis. 
+replace into t_device
+     ( reg_id,
+      
+      
+        user_id,
+      
+      
+        device_token,
+      
+      
+        push_type,
+      
+      
+        device_type ) 
+     values ( ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ? )
+2018-05-24 15:30:09.361 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 239.123462 millis. 
+replace into t_device
+     ( reg_id,
+      
+      
+        user_id,
+      
+      
+        device_token,
+      
+      
+        push_type,
+      
+      
+        device_type ) 
+     values ( ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ?,
+      
+      
+        ? )
+2018-05-24 15:30:09.361 [main] DEBUG push.deviceDao.replaceDevice - <==    Updates: 2
+2018-05-24 15:30:09.362 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2018-05-24 15:30:09.362 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2018-05-24 15:30:09.362 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60fa3495]
+2018-05-24 15:30:09.362 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60fa3495]
+2018-05-24 15:30:09.362 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60fa3495]
+2018-05-24 15:30:09.362 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60fa3495]
+2018-05-24 15:30:09.450 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2018-05-24 15:30:09.452 [main] DEBUG druid.sql.Connection - {conn-10002} commited
+2018-05-24 15:30:09.453 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2018-05-24 15:30:09.453 [main] DEBUG druid.sql.Connection - {conn-10002} setAutoCommit true
+2018-05-24 15:30:09.624 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2018-05-24 15:30:09.624 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2018-05-24 15:30:09.885 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 15:30:09.886 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 15:30:09.888 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 15:30:09.888 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 15:30:09.890 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 15:30:09.890 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 15:30:09.891 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 15:30:09.891 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 16:24:20.168 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-05-24 16:24:21.394 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 16:24:21.394 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 16:24:21.592 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 16:24:21.592 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 16:24:21.872 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 16:24:21.965 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 16:24:22.107 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 16:24:22.107 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 16:24:22.289 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 16:24:22.289 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 16:24:22.346 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 16:24:22.362 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 16:24:22.610 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2018-05-24 16:24:22.809 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2018-05-24 16:24:22.811 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2018-05-24 16:24:22.813 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2018-05-24 16:24:22.870 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Send request - POST https://api.jpush.cn/v3/push
+2018-05-24 16:24:22.870 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Request Content - {"platform":["android"],"audience":{"registration_id":["1a0018970a8b36725ca"]},"message":{"title":"title","msg_content":"content","extras":{"voiceAlert":"支付宝到账2亿元","messageType":"1","money":"money","phone":"phone","name":"name"}},"options":{"sendno":565816654,"apns_production":false}}
+2018-05-24 16:24:23.371 [main] DEBUG cn.jiguang.common.resp.ResponseWrapper - JPush API Rate Limiting params - quota:600, remaining:599, reset:60
+2018-05-24 16:24:23.371 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Succeed to get response OK - responseCode:200
+2018-05-24 16:24:23.371 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Response Content - {"sendno":"565816654","msg_id":"2717692736"}
+2018-05-24 16:24:23.386 [main] INFO  com.taisf.services.push.jiguang.JiguangPushHandle - Got result - {"msg_id":2717692736,"sendno":565816654,"statusCode":0}
+2018-05-24 16:24:23.633 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 16:24:23.633 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 16:24:23.634 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 16:24:23.634 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 16:24:23.635 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 16:24:23.635 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 16:24:23.636 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 16:24:23.636 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 17:10:52.864 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-05-24 17:10:53.909 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 17:10:53.909 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 17:10:54.054 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 17:10:54.054 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 17:10:54.308 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 17:10:54.390 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 17:10:54.532 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 17:10:54.533 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 17:10:54.674 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 17:10:54.674 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 17:10:54.743 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 17:10:54.767 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 17:10:55.032 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2018-05-24 17:10:55.261 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2018-05-24 17:10:55.263 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2018-05-24 17:10:55.265 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2018-05-24 17:10:55.322 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Send request - POST https://api.jpush.cn/v3/push
+2018-05-24 17:10:55.323 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Request Content - {"platform":["android"],"audience":{"registration_id":["19f477076fedd33a0860ccb5559996575bbf2d5b6dd25f3e0586451ef8dbae70"]},"message":{"title":"title","msg_content":"content","extras":{"voiceAlert":"支付宝到账2亿元","messageType":"1","money":"money","phone":"phone","name":"name"}},"options":{"sendno":307058218,"apns_production":false}}
+2018-05-24 17:10:55.723 [main] DEBUG cn.jiguang.common.resp.ResponseWrapper - JPush API Rate Limiting params - quota:600, remaining:599, reset:60
+2018-05-24 17:10:55.723 [main] WARN  cn.jiguang.common.connection.NativeHttpClient - Got error response - responseCode:400, responseContent:{"error":{"code":1003,"message":"The registration_id 19f477076fedd33a0860ccb5559996575bbf2d5b6dd25f3e0586451ef8dbae70 is invalid!"}}
+2018-05-24 17:10:55.723 [main] ERROR cn.jiguang.common.connection.NativeHttpClient - Your request params is invalid. Please check them according to error message.
+2018-05-24 17:10:55.739 [main] ERROR com.taisf.services.push.jiguang.JiguangPushHandle - Should review the error, and fix the request
+cn.jiguang.common.resp.APIRequestException: {"error":{"code":1003,"message":"The registration_id 19f477076fedd33a0860ccb5559996575bbf2d5b6dd25f3e0586451ef8dbae70 is invalid!"}}
+	at cn.jiguang.common.connection.NativeHttpClient._doRequest(NativeHttpClient.java:235) ~[jiguang-common-1.0.7.jar:na]
+	at cn.jiguang.common.connection.NativeHttpClient.doRequest(NativeHttpClient.java:99) ~[jiguang-common-1.0.7.jar:na]
+	at cn.jiguang.common.connection.NativeHttpClient.sendPost(NativeHttpClient.java:86) ~[jiguang-common-1.0.7.jar:na]
+	at cn.jpush.api.push.PushClient.sendPush(PushClient.java:163) ~[jpush-client-3.3.0.jar:na]
+	at cn.jpush.api.JPushClient.sendPush(JPushClient.java:195) ~[jpush-client-3.3.0.jar:na]
+	at com.taisf.services.push.jiguang.JiguangPushHandle.sendPush(JiguangPushHandle.java:62) ~[classes/:na]
+	at com.taisf.services.push.test.jiguang.handle.JiguangPushHandleTest.sendPushTest(JiguangPushHandleTest.java:83) [test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_131]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_131]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_131]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_131]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:45) [junit-4.10.jar:na]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15) [junit-4.10.jar:na]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:42) [junit-4.10.jar:na]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:254) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:157) [junit-4.10.jar:na]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:51) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:237) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+2018-05-24 17:10:55.740 [main] INFO  com.taisf.services.push.jiguang.JiguangPushHandle - HTTP Status: 400
+2018-05-24 17:10:55.741 [main] INFO  com.taisf.services.push.jiguang.JiguangPushHandle - Error Code: 1003
+2018-05-24 17:10:55.741 [main] INFO  com.taisf.services.push.jiguang.JiguangPushHandle - Error Message: The registration_id 19f477076fedd33a0860ccb5559996575bbf2d5b6dd25f3e0586451ef8dbae70 is invalid!
+2018-05-24 17:10:56.007 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 17:10:56.008 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 17:10:56.008 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 17:10:56.009 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 17:10:56.010 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 17:10:56.011 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 17:10:56.011 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 17:10:56.011 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 17:11:34.635 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-05-24 17:11:39.138 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 17:11:39.138 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 17:11:39.286 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 17:11:39.286 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 17:11:39.538 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 17:11:39.640 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 17:11:39.814 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 17:11:39.814 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 17:11:39.993 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 17:11:39.993 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 17:11:40.054 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 17:11:40.077 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 17:11:40.769 [main] DEBUG com.notnoop.apns.internal.Utilities - close java.io.FileInputStream@402f80f5
+2018-05-24 17:11:41.264 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - sendMessage Message(Id=1; Token=ACCE32E45931E804AF7E7B1DC971C71C6F1D8A6EA5347072CD7ED3512D4DCC3A; Payload={"customContent":{"voiceAlert":"支付宝到账一亿元","messageType":"1","money":"money","phone":"phone","name":"name"},"aps":{"badge":1,"alert":{"loc-args":[],"body":"content","title":"title"},"sound":"default","mutable-content":"1"}}) fromBuffer: false
+2018-05-24 17:11:42.666 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Connected new socket 75b3673[SSL_NULL_WITH_NULL_NULL: Socket[addr=gateway.sandbox.push.apple.com/17.188.166.23,port=2195,localport=62978]]
+2018-05-24 17:11:42.667 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Launching Monitoring Thread for socket 75b3673[SSL_NULL_WITH_NULL_NULL: Socket[addr=gateway.sandbox.push.apple.com/17.188.166.23,port=2195,localport=62978]]
+2018-05-24 17:11:42.668 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Made a new connection to APNS
+2018-05-24 17:11:42.669 [MonitoringThread-1] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Started monitoring thread
+2018-05-24 17:11:43.602 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - draining buffer
+2018-05-24 17:11:43.625 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 17:11:43.626 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 17:11:43.627 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 17:11:43.628 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 17:11:43.630 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 17:11:43.630 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 17:11:43.631 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 17:11:43.632 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 17:13:21.589 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-05-24 17:13:22.398 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 17:13:22.399 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 17:13:22.535 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 17:13:22.535 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 17:13:22.720 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 17:13:22.807 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 17:13:23.005 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 17:13:23.006 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 17:13:23.126 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 17:13:23.126 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 17:13:23.174 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 17:13:23.193 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 17:13:23.817 [main] DEBUG com.notnoop.apns.internal.Utilities - close java.io.FileInputStream@402f80f5
+2018-05-24 17:13:24.311 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - sendMessage Message(Id=1; Token=2ED9377F661EB9B6F8FA10A7DDB06B488892EF718856E912798A4A9C0CE2C33F; Payload={"customContent":{"voiceAlert":"支付宝到账一亿元","messageType":"1","money":"money","phone":"phone","name":"name"},"aps":{"badge":1,"alert":{"loc-args":[],"body":"content","title":"title"},"sound":"default","mutable-content":"1"}}) fromBuffer: false
+2018-05-24 17:13:24.636 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Connected new socket 75b3673[SSL_NULL_WITH_NULL_NULL: Socket[addr=gateway.sandbox.push.apple.com/17.188.166.23,port=2195,localport=63095]]
+2018-05-24 17:13:24.637 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Launching Monitoring Thread for socket 75b3673[SSL_NULL_WITH_NULL_NULL: Socket[addr=gateway.sandbox.push.apple.com/17.188.166.23,port=2195,localport=63095]]
+2018-05-24 17:13:24.638 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Made a new connection to APNS
+2018-05-24 17:13:24.638 [MonitoringThread-1] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Started monitoring thread
+2018-05-24 17:13:25.599 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - draining buffer
+2018-05-24 17:13:25.613 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 17:13:25.614 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 17:13:25.614 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 17:13:25.614 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 17:13:25.615 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 17:13:25.615 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 17:13:25.615 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 17:13:25.650 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 17:13:39.871 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-05-24 17:13:40.916 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 17:13:40.916 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 17:13:41.085 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 17:13:41.086 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 17:13:41.282 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 17:13:41.365 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 17:13:41.566 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 17:13:41.567 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 17:13:41.706 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 17:13:41.706 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 17:13:41.779 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 17:13:41.802 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 17:13:42.519 [main] DEBUG com.notnoop.apns.internal.Utilities - close java.io.FileInputStream@402f80f5
+2018-05-24 17:13:43.238 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - sendMessage Message(Id=1; Token=2ED9377F661EB9B6F8FA10A7DDB06B488892EF718856E912798A4A9C0CE2C33F; Payload={"customContent":{"voiceAlert":"支付宝到账一亿元","messageType":"1","money":"money","phone":"phone","name":"name"},"aps":{"badge":1,"alert":{"loc-args":[],"body":"content","title":"title"},"sound":"default","mutable-content":"1"}}) fromBuffer: false
+2018-05-24 17:13:43.567 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Connected new socket 75b3673[SSL_NULL_WITH_NULL_NULL: Socket[addr=gateway.sandbox.push.apple.com/17.188.165.216,port=2195,localport=63122]]
+2018-05-24 17:13:43.567 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Launching Monitoring Thread for socket 75b3673[SSL_NULL_WITH_NULL_NULL: Socket[addr=gateway.sandbox.push.apple.com/17.188.165.216,port=2195,localport=63122]]
+2018-05-24 17:13:43.572 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Made a new connection to APNS
+2018-05-24 17:13:43.572 [MonitoringThread-1] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Started monitoring thread
+2018-05-24 17:13:44.516 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - draining buffer
+2018-05-24 17:13:44.533 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 17:13:44.533 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 17:13:44.534 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 17:13:44.534 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 17:13:44.536 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 17:13:44.536 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 17:13:44.536 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 17:13:44.537 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 17:14:04.258 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-05-24 17:14:05.220 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 17:14:05.220 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 17:14:05.368 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 17:14:05.369 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 17:14:05.600 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 17:14:05.684 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 17:14:05.891 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 17:14:05.891 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 17:14:06.026 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 17:14:06.026 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 17:14:06.074 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 17:14:06.096 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 17:14:22.633 [main] DEBUG com.notnoop.apns.internal.Utilities - close java.io.FileInputStream@a92be4f
+2018-05-24 17:14:23.111 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - sendMessage Message(Id=1; Token=2ED9377F661EB9B6F8FA10A7DDB06B488892EF718856E912798A4A9C0CE2C33F; Payload={"customContent":{"voiceAlert":"支付宝到账一亿元","messageType":"1","money":"money","phone":"phone","name":"name"},"aps":{"badge":1,"alert":{"loc-args":[],"body":"content","title":"title"},"sound":"default","mutable-content":"1"}}) fromBuffer: false
+2018-05-24 17:14:23.506 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Connected new socket 7209ffb5[SSL_NULL_WITH_NULL_NULL: Socket[addr=gateway.sandbox.push.apple.com/17.188.165.212,port=2195,localport=63173]]
+2018-05-24 17:14:23.507 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Launching Monitoring Thread for socket 7209ffb5[SSL_NULL_WITH_NULL_NULL: Socket[addr=gateway.sandbox.push.apple.com/17.188.165.212,port=2195,localport=63173]]
+2018-05-24 17:14:23.508 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Made a new connection to APNS
+2018-05-24 17:14:23.524 [MonitoringThread-1] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Started monitoring thread
+2018-05-24 17:14:24.513 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - draining buffer
+2018-05-24 17:14:24.536 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 17:14:24.537 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 17:14:24.537 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 17:14:24.537 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 17:14:24.539 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 17:14:24.539 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 17:14:24.539 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 17:14:24.539 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 17:19:28.810 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-05-24 17:19:29.697 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 17:19:29.697 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 17:19:30.013 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 17:19:30.013 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 17:19:30.188 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 17:19:30.277 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 17:19:30.453 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 17:19:30.453 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 17:19:30.563 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 17:19:30.563 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 17:19:30.611 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 17:19:30.630 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 17:19:31.274 [main] DEBUG com.notnoop.apns.internal.Utilities - close java.io.FileInputStream@402f80f5
+2018-05-24 17:19:31.770 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - sendMessage Message(Id=1; Token=2ED9377F661EB9B6F8FA10A7DDB06B488892EF718856E912798A4A9C0CE2C33F; Payload={"customContent":{"voiceAlert":"支付宝到账一亿元","messageType":"1","money":"money","phone":"phone","name":"name"},"aps":{"badge":1,"alert":{"loc-args":[],"body":"content","title":"title"},"sound":"default","mutable-content":"1"}}) fromBuffer: false
+2018-05-24 17:19:32.616 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Connected new socket 75b3673[SSL_NULL_WITH_NULL_NULL: Socket[addr=gateway.sandbox.push.apple.com/17.188.166.23,port=2195,localport=63455]]
+2018-05-24 17:19:32.616 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Launching Monitoring Thread for socket 75b3673[SSL_NULL_WITH_NULL_NULL: Socket[addr=gateway.sandbox.push.apple.com/17.188.166.23,port=2195,localport=63455]]
+2018-05-24 17:19:32.618 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Made a new connection to APNS
+2018-05-24 17:19:32.618 [MonitoringThread-1] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Started monitoring thread
+2018-05-24 17:19:33.546 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - draining buffer
+2018-05-24 17:19:33.563 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 17:19:33.563 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 17:19:33.564 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 17:19:33.565 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 17:19:33.566 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 17:19:33.566 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 17:19:33.567 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 17:19:33.567 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 17:32:58.642 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-05-24 17:33:00.853 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 17:33:00.854 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 17:33:01.886 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 17:33:01.887 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 17:33:02.367 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 17:33:02.495 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 17:33:03.223 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 17:33:03.224 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 17:33:04.296 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 17:33:04.297 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 17:33:04.662 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 17:33:04.682 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 17:33:05.252 [main] DEBUG com.notnoop.apns.internal.Utilities - close java.io.FileInputStream@402f80f5
+2018-05-24 17:33:05.684 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - sendMessage Message(Id=1; Token=2ED9377F661EB9B6F8FA10A7DDB06B488892EF718856E912798A4A9C0CE2C33F; Payload={"customContent":{"voiceAlert":"支付宝到账一亿元","messageType":"1","money":"money","phone":"phone","name":"name"},"aps":{"badge":1,"alert":{"loc-args":[],"body":"content","title":"title"},"sound":"default","mutable-content":"1"}}) fromBuffer: false
+2018-05-24 17:33:06.888 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Connected new socket 75b3673[SSL_NULL_WITH_NULL_NULL: Socket[addr=gateway.sandbox.push.apple.com/17.188.136.189,port=2195,localport=64020]]
+2018-05-24 17:33:06.898 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Launching Monitoring Thread for socket 75b3673[SSL_NULL_WITH_NULL_NULL: Socket[addr=gateway.sandbox.push.apple.com/17.188.136.189,port=2195,localport=64020]]
+2018-05-24 17:33:06.900 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Made a new connection to APNS
+2018-05-24 17:33:06.900 [MonitoringThread-1] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Started monitoring thread
+2018-05-24 17:33:08.835 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - draining buffer
+2018-05-24 17:33:08.854 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 17:33:08.854 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 17:33:08.855 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 17:33:08.855 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 17:33:08.856 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 17:33:08.857 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 17:33:08.857 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 17:33:08.857 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 17:33:46.135 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-05-24 17:33:47.115 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 17:33:47.115 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 17:33:47.385 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 17:33:47.385 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 17:33:47.685 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 17:33:47.788 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 17:33:48.117 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 17:33:48.117 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 17:33:48.267 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 17:33:48.268 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 17:33:48.316 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 17:33:48.339 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 17:33:49.115 [main] DEBUG com.notnoop.apns.internal.Utilities - close java.io.FileInputStream@402f80f5
+2018-05-24 17:33:49.717 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - sendMessage Message(Id=1; Token=2ED9377F661EB9B6F8FA10A7DDB06B488892EF718856E912798A4A9C0CE2C33F; Payload={"customContent":{"voiceAlert":"支付宝到账一亿元","messageType":"1","money":"money","phone":"phone","name":"name"},"aps":{"badge":1,"alert":{"loc-args":[],"body":"content","title":"title"},"sound":"default","mutable-content":"1"}}) fromBuffer: false
+2018-05-24 17:33:50.089 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Connected new socket 75b3673[SSL_NULL_WITH_NULL_NULL: Socket[addr=gateway.sandbox.push.apple.com/17.188.137.190,port=2195,localport=64080]]
+2018-05-24 17:33:50.089 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Launching Monitoring Thread for socket 75b3673[SSL_NULL_WITH_NULL_NULL: Socket[addr=gateway.sandbox.push.apple.com/17.188.137.190,port=2195,localport=64080]]
+2018-05-24 17:33:50.091 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Made a new connection to APNS
+2018-05-24 17:33:50.091 [MonitoringThread-1] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Started monitoring thread
+2018-05-24 17:33:51.314 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - draining buffer
+2018-05-24 17:33:51.332 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 17:33:51.332 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 17:33:51.333 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 17:33:51.333 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 17:33:51.335 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 17:33:51.335 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 17:33:51.335 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 17:33:51.335 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 17:41:40.062 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-05-24 17:41:41.612 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 17:41:41.612 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 17:41:42.820 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 17:41:42.821 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 17:41:43.290 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 17:41:43.380 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 17:41:44.191 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 17:41:44.191 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 17:41:45.610 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 17:41:45.611 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 17:41:46.036 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 17:41:46.052 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 17:41:46.659 [main] DEBUG com.notnoop.apns.internal.Utilities - close java.io.FileInputStream@402f80f5
+2018-05-24 17:41:47.175 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - sendMessage Message(Id=1; Token=65D57CD41927BB0DEF02D4A895B6338D3910319E802D3E0366331281E24B5C78; Payload={"customContent":{"voiceAlert":"支付宝到账一亿元","messageType":"1","money":"money","phone":"phone","name":"name"},"aps":{"badge":1,"alert":{"loc-args":[],"body":"content","title":"title"},"sound":"default","mutable-content":"1"}}) fromBuffer: false
+2018-05-24 17:41:48.062 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Connected new socket 75b3673[SSL_NULL_WITH_NULL_NULL: Socket[addr=gateway.sandbox.push.apple.com/17.188.136.189,port=2195,localport=64424]]
+2018-05-24 17:41:48.062 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Launching Monitoring Thread for socket 75b3673[SSL_NULL_WITH_NULL_NULL: Socket[addr=gateway.sandbox.push.apple.com/17.188.136.189,port=2195,localport=64424]]
+2018-05-24 17:41:48.063 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Made a new connection to APNS
+2018-05-24 17:41:48.063 [MonitoringThread-1] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Started monitoring thread
+2018-05-24 17:41:49.383 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - draining buffer
+2018-05-24 17:41:49.405 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 17:41:49.406 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 17:41:49.406 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 17:41:49.407 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 17:41:49.410 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 17:41:49.411 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 17:41:49.414 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 17:41:49.415 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 17:43:47.736 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-05-24 17:43:49.835 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 17:43:49.835 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 17:43:52.123 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 17:43:52.123 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 17:43:52.955 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 17:43:53.066 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 17:43:54.353 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 17:43:54.354 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 17:43:56.152 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 17:43:56.153 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 17:43:56.746 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 17:43:56.778 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 17:43:57.347 [main] DEBUG com.notnoop.apns.internal.Utilities - close java.io.FileInputStream@402f80f5
+2018-05-24 17:43:57.928 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - sendMessage Message(Id=1; Token=65D57CD41927BB0DEF02D4A895B6338D3910319E802D3E0366331281E24B5C78; Payload={"customContent":{"voiceAlert":"支付宝到账一亿元","messageType":"1","money":"money","phone":"phone","name":"name"},"aps":{"badge":1,"alert":{"loc-args":[],"body":"content","title":"title"},"sound":"default","mutable-content":"1"}}) fromBuffer: false
+2018-05-24 17:43:58.677 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Connected new socket 75b3673[SSL_NULL_WITH_NULL_NULL: Socket[addr=gateway.sandbox.push.apple.com/17.188.166.22,port=2195,localport=64532]]
+2018-05-24 17:43:58.678 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Launching Monitoring Thread for socket 75b3673[SSL_NULL_WITH_NULL_NULL: Socket[addr=gateway.sandbox.push.apple.com/17.188.166.22,port=2195,localport=64532]]
+2018-05-24 17:43:58.682 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Made a new connection to APNS
+2018-05-24 17:43:58.682 [MonitoringThread-1] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Started monitoring thread
+2018-05-24 17:44:00.143 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - draining buffer
+2018-05-24 17:44:00.156 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 17:44:00.156 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 17:44:00.157 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 17:44:00.157 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 17:44:00.159 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 17:44:00.159 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 17:44:00.160 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 17:44:00.161 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 17:52:28.137 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-05-24 17:52:30.074 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 17:52:30.074 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 17:52:31.424 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 17:52:31.425 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 17:52:31.907 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 17:52:32.017 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 17:52:32.880 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 17:52:32.880 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 17:52:34.230 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 17:52:34.231 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 17:52:34.861 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 17:52:34.879 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 17:52:35.487 [main] DEBUG com.notnoop.apns.internal.Utilities - close java.io.FileInputStream@402f80f5
+2018-05-24 17:52:35.506 [main] DEBUG com.notnoop.apns.internal.Utilities - close java.io.FileInputStream@372b0d86
+2018-05-24 17:52:36.031 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - sendMessage Message(Id=1; Token=65D57CD41927BB0DEF02D4A895B6338D3910319E802D3E0366331281E24B5C78; Payload={"customContent":{"voiceAlert":"支付宝到账一亿元","messageType":"1","money":"money","phone":"phone","name":"name"},"aps":{"badge":1,"alert":{"loc-args":[],"body":"content","title":"title"},"sound":"default","mutable-content":"1"}}) fromBuffer: false
+2018-05-24 17:52:37.292 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Connected new socket d1a10ac[SSL_NULL_WITH_NULL_NULL: Socket[addr=gateway.push.apple.com/17.188.144.171,port=2195,localport=64855]]
+2018-05-24 17:52:37.303 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Launching Monitoring Thread for socket d1a10ac[SSL_NULL_WITH_NULL_NULL: Socket[addr=gateway.push.apple.com/17.188.144.171,port=2195,localport=64855]]
+2018-05-24 17:52:37.306 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Made a new connection to APNS
+2018-05-24 17:52:37.306 [MonitoringThread-1] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Started monitoring thread
+2018-05-24 17:52:38.701 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - draining buffer
+2018-05-24 17:52:38.718 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 17:52:38.719 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 17:52:38.719 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 17:52:38.720 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 17:52:38.721 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 17:52:38.722 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 17:52:38.723 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 17:52:38.724 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 17:53:06.263 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-05-24 17:53:07.221 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 17:53:07.221 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 17:53:07.411 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 17:53:07.411 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 17:53:07.585 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 17:53:07.668 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 17:53:07.791 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 17:53:07.791 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 17:53:07.931 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 17:53:07.931 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 17:53:07.981 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 17:53:08.000 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 17:53:08.607 [main] DEBUG com.notnoop.apns.internal.Utilities - close java.io.FileInputStream@5ed190be
+2018-05-24 17:53:08.619 [main] DEBUG com.notnoop.apns.internal.Utilities - close java.io.FileInputStream@372b0d86
+2018-05-24 17:53:09.050 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - sendMessage Message(Id=1; Token=ADA61922F79282840C92492AC186AF620C2831AAFA4919566A4C2DD46322DF1D; Payload={"customContent":{"voiceAlert":"支付宝到账一亿元","messageType":"1","money":"money","phone":"phone","name":"name"},"aps":{"badge":1,"alert":{"loc-args":[],"body":"content","title":"title"},"sound":"default","mutable-content":"1"}}) fromBuffer: false
+2018-05-24 17:53:09.453 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Connected new socket d1a10ac[SSL_NULL_WITH_NULL_NULL: Socket[addr=gateway.push.apple.com/17.188.157.154,port=2195,localport=64893]]
+2018-05-24 17:53:09.453 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Launching Monitoring Thread for socket d1a10ac[SSL_NULL_WITH_NULL_NULL: Socket[addr=gateway.push.apple.com/17.188.157.154,port=2195,localport=64893]]
+2018-05-24 17:53:09.455 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Made a new connection to APNS
+2018-05-24 17:53:09.455 [MonitoringThread-1] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - Started monitoring thread
+2018-05-24 17:53:10.543 [main] DEBUG com.notnoop.apns.internal.ApnsConnectionImpl - draining buffer
+2018-05-24 17:53:10.559 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 17:53:10.559 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 17:53:10.560 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 17:53:10.560 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 17:53:10.562 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 17:53:10.562 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 17:53:10.562 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 17:53:10.562 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 18:04:28.207 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-05-24 18:04:29.248 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 18:04:29.248 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-05-24 18:04:29.434 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 18:04:29.434 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-05-24 18:04:29.636 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 18:04:29.723 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 18:04:29.862 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 18:04:29.862 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-05-24 18:04:30.012 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 18:04:30.012 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-05-24 18:04:30.060 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-05-24 18:04:30.097 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-05-24 18:04:30.350 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2018-05-24 18:04:30.570 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2018-05-24 18:04:30.574 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2018-05-24 18:04:30.575 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2018-05-24 18:04:30.634 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Send request - POST https://api.jpush.cn/v3/push
+2018-05-24 18:04:30.634 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Request Content - {"platform":["android"],"audience":{"registration_id":["1a0018970a8b36725ca"]},"message":{"title":"title","msg_content":"content","extras":{"voiceAlert":"支付宝到账2亿元","messageType":"1","money":"money","phone":"phone","name":"name"}},"options":{"sendno":2106064165,"apns_production":false}}
+2018-05-24 18:04:31.953 [main] DEBUG cn.jiguang.common.resp.ResponseWrapper - JPush API Rate Limiting params - quota:600, remaining:599, reset:60
+2018-05-24 18:04:31.953 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Succeed to get response OK - responseCode:200
+2018-05-24 18:04:31.953 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Response Content - {"sendno":"2106064165","msg_id":"2728214401"}
+2018-05-24 18:04:31.968 [main] INFO  com.taisf.services.push.jiguang.JiguangPushHandle - Got result - {"msg_id":2728214401,"sendno":2106064165,"statusCode":0}
+2018-05-24 18:04:32.144 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 18:04:32.144 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-05-24 18:04:32.145 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 18:04:32.145 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-05-24 18:04:32.148 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 18:04:32.149 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-05-24 18:04:32.149 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-05-24 18:04:32.149 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed

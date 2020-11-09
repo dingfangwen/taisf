@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="basedata.upgradeDao" >
+
+  <resultMap id="BaseResultMap" type="com.taisf.services.base.entity.UpgradeEntity" >
+    <result column="version_code" property="versionCode" jdbcType="INTEGER" />
+    <result column="version_name" property="versionName" jdbcType="VARCHAR" />
+    <result column="url" property="url" jdbcType="VARCHAR" />
+    <result column="md5file" property="md5file" jdbcType="VARCHAR" />
+    <result column="description" property="description" jdbcType="VARCHAR" />
+    <result column="is_force" property="isForce" jdbcType="INTEGER" />
+    <result column="specific_edition" property="specificEdition" jdbcType="INTEGER" />
+    <result column="min_version" property="minVersion" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    version_code, version_name, url, md5file, description, is_force,
+    specific_edition, channel, min_version
+  </sql>
+
+
+
+  <select id="getVersion" resultMap="BaseResultMap"  parameterType="com.jk.framework.base.head.Header">
+    select
+    <include refid="Base_Column_List" />
+    from t_base_upgrade
+    where app_name = #{applicationCode,jdbcType=VARCHAR}
+    and
+    (
+    channel =  #{channelId,jdbcType=VARCHAR}
+    or channel = 0
+    )
+    and source = #{source,jdbcType=VARCHAR}
+    and version_status = 1
+    order by id desc limit 1
+  </select>
+
+
+</mapper>

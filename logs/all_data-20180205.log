@@ -1,0 +1,664 @@
+2018-02-05 16:51:55.409 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-02-05 16:51:56.933 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-02-05 16:51:56.933 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-02-05 16:51:57.002 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-02-05 16:51:57.003 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-02-05 16:51:57.253 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-02-05 16:51:57.365 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderMoney.xml]'
+2018-02-05 16:51:57.388 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderBase.xml]'
+2018-02-05 16:51:57.401 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderPay.xml]'
+2018-02-05 16:51:57.422 [main] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-02-05 16:51:57.422 [main] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-02-05 16:51:57.422 [main] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-02-05 16:51:57.422 [main] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-02-05 16:51:57.436 [main] ERROR o.springframework.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@644c78d4] to prepare test instance [com.taisf.services.test.order.dao.OrderInfoDaoTest@532a02d9]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:91) ~[spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:74) ~[spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:169) ~[spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:109) ~[spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212) ~[spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:199) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:251) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:253) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:157) [junit-4.10.jar:na]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:51) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:237) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'order.cartServiceProxy': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'order.cartManagerImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'order.cartDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected com.jk.framework.dao.base.MybatisDaoContext com.taisf.services.common.dao.BaseDao.mybatisDaoContext; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taisf.MybatisDaoContext' defined in class path resource [META-INF/spring/applicationContext-taisf.xml]: Cannot resolve reference to bean 'taisf.writeSqlSessionTemplate.M' while setting bean property 'writeSqlSessionTemplate'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taisf.writeSqlSessionTemplate.M' defined in class path resource [META-INF/spring/applicationContext-taisf.xml]: Cannot resolve reference to bean 'taisf.sqlSessionFactory.M' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taisf.sqlSessionFactory.M' defined in class path resource [META-INF/spring/applicationContext-taisf.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderInfoDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias ''.  Cause: java.lang.ClassNotFoundException: Cannot find class: 
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:308) ~[spring-context-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1204) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:229) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:725) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757) ~[spring-context-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480) ~[spring-context-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:132) ~[spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:59) ~[spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108) ~[spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:260) ~[spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:63) ~[spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:83) ~[spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'order.cartManagerImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'order.cartDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected com.jk.framework.dao.base.MybatisDaoContext com.taisf.services.common.dao.BaseDao.mybatisDaoContext; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taisf.MybatisDaoContext' defined in class path resource [META-INF/spring/applicationContext-taisf.xml]: Cannot resolve reference to bean 'taisf.writeSqlSessionTemplate.M' while setting bean property 'writeSqlSessionTemplate'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taisf.writeSqlSessionTemplate.M' defined in class path resource [META-INF/spring/applicationContext-taisf.xml]: Cannot resolve reference to bean 'taisf.sqlSessionFactory.M' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taisf.sqlSessionFactory.M' defined in class path resource [META-INF/spring/applicationContext-taisf.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderInfoDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias ''.  Cause: java.lang.ClassNotFoundException: Cannot find class: 
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:308) ~[spring-context-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1204) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:229) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:198) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:446) ~[spring-context-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:420) ~[spring-context-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:545) ~[spring-context-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:155) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:305) ~[spring-context-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	... 40 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'order.cartDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected com.jk.framework.dao.base.MybatisDaoContext com.taisf.services.common.dao.BaseDao.mybatisDaoContext; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taisf.MybatisDaoContext' defined in class path resource [META-INF/spring/applicationContext-taisf.xml]: Cannot resolve reference to bean 'taisf.writeSqlSessionTemplate.M' while setting bean property 'writeSqlSessionTemplate'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taisf.writeSqlSessionTemplate.M' defined in class path resource [META-INF/spring/applicationContext-taisf.xml]: Cannot resolve reference to bean 'taisf.sqlSessionFactory.M' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taisf.sqlSessionFactory.M' defined in class path resource [META-INF/spring/applicationContext-taisf.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderInfoDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias ''.  Cause: java.lang.ClassNotFoundException: Cannot find class: 
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:326) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1204) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:229) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:198) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:446) ~[spring-context-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:420) ~[spring-context-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:545) ~[spring-context-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:155) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:305) ~[spring-context-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	... 53 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected com.jk.framework.dao.base.MybatisDaoContext com.taisf.services.common.dao.BaseDao.mybatisDaoContext; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taisf.MybatisDaoContext' defined in class path resource [META-INF/spring/applicationContext-taisf.xml]: Cannot resolve reference to bean 'taisf.writeSqlSessionTemplate.M' while setting bean property 'writeSqlSessionTemplate'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taisf.writeSqlSessionTemplate.M' defined in class path resource [META-INF/spring/applicationContext-taisf.xml]: Cannot resolve reference to bean 'taisf.sqlSessionFactory.M' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taisf.sqlSessionFactory.M' defined in class path resource [META-INF/spring/applicationContext-taisf.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderInfoDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias ''.  Cause: java.lang.ClassNotFoundException: Cannot find class: 
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:542) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:323) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	... 66 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taisf.MybatisDaoContext' defined in class path resource [META-INF/spring/applicationContext-taisf.xml]: Cannot resolve reference to bean 'taisf.writeSqlSessionTemplate.M' while setting bean property 'writeSqlSessionTemplate'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taisf.writeSqlSessionTemplate.M' defined in class path resource [META-INF/spring/applicationContext-taisf.xml]: Cannot resolve reference to bean 'taisf.sqlSessionFactory.M' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taisf.sqlSessionFactory.M' defined in class path resource [META-INF/spring/applicationContext-taisf.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderInfoDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias ''.  Cause: java.lang.ClassNotFoundException: Cannot find class: 
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:336) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1471) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1216) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:229) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1081) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1006) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:904) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:514) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	... 68 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taisf.writeSqlSessionTemplate.M' defined in class path resource [META-INF/spring/applicationContext-taisf.xml]: Cannot resolve reference to bean 'taisf.sqlSessionFactory.M' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taisf.sqlSessionFactory.M' defined in class path resource [META-INF/spring/applicationContext-taisf.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderInfoDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias ''.  Cause: java.lang.ClassNotFoundException: Cannot find class: 
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:336) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:636) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:140) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1133) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1036) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:505) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:328) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	... 81 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taisf.sqlSessionFactory.M' defined in class path resource [META-INF/spring/applicationContext-taisf.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderInfoDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias ''.  Cause: java.lang.ClassNotFoundException: Cannot find class: 
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1568) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:540) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:229) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:328) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	... 91 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderInfoDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias ''.  Cause: java.lang.ClassNotFoundException: Cannot find class: 
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:466) ~[mybatis-spring-1.2.2.jar:1.2.2]
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:340) ~[mybatis-spring-1.2.2.jar:1.2.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1627) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1564) ~[spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	... 98 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias ''.  Cause: java.lang.ClassNotFoundException: Cannot find class: 
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:120) ~[mybatis-3.2.7.jar:3.2.7]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:92) ~[mybatis-3.2.7.jar:3.2.7]
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:464) ~[mybatis-spring-1.2.2.jar:1.2.2]
+	... 101 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias ''.  Cause: java.lang.ClassNotFoundException: Cannot find class: 
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:103) ~[mybatis-3.2.7.jar:3.2.7]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:264) ~[mybatis-3.2.7.jar:3.2.7]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:251) ~[mybatis-3.2.7.jar:3.2.7]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:243) ~[mybatis-3.2.7.jar:3.2.7]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:116) ~[mybatis-3.2.7.jar:3.2.7]
+	... 103 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias ''.  Cause: java.lang.ClassNotFoundException: Cannot find class: 
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:117) ~[mybatis-3.2.7.jar:3.2.7]
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:130) ~[mybatis-3.2.7.jar:3.2.7]
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:101) ~[mybatis-3.2.7.jar:3.2.7]
+	... 107 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: 
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:190) ~[mybatis-3.2.7.jar:3.2.7]
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89) ~[mybatis-3.2.7.jar:3.2.7]
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:256) ~[mybatis-3.2.7.jar:3.2.7]
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:113) ~[mybatis-3.2.7.jar:3.2.7]
+	... 109 common frames omitted
+2018-02-05 16:55:47.284 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-02-05 16:55:48.320 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-02-05 16:55:48.321 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-02-05 16:55:48.388 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-02-05 16:55:48.388 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-02-05 16:55:48.572 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-02-05 16:55:48.644 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderMoney.xml]'
+2018-02-05 16:55:48.668 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderBase.xml]'
+2018-02-05 16:55:48.679 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderPay.xml]'
+2018-02-05 16:55:48.704 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderInfoDao.xml]'
+2018-02-05 16:55:48.718 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderProductDao.xml]'
+2018-02-05 16:55:48.728 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderActivityDao.xml]'
+2018-02-05 16:55:48.738 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderLogDao.xml]'
+2018-02-05 16:55:48.748 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/cartDao.xml]'
+2018-02-05 16:55:48.758 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseContactsDao.xml]'
+2018-02-05 16:55:48.770 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseDayDao.xml]'
+2018-02-05 16:55:48.793 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseDao.xml]'
+2018-02-05 16:55:48.804 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseConfigDao.xml]'
+2018-02-05 16:55:48.818 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseAddressDao.xml]'
+2018-02-05 16:55:48.827 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseFinanceDao.xml]'
+2018-02-05 16:55:48.839 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/pay/dao/map/payRecordDao.xml]'
+2018-02-05 16:55:48.852 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/loginTokenDao.xml]'
+2018-02-05 16:55:48.873 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/userDao.xml]'
+2018-02-05 16:55:48.883 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/userAddressDao.xml]'
+2018-02-05 16:55:48.892 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/accountLogDao.xml]'
+2018-02-05 16:55:48.906 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/userAccountDao.xml]'
+2018-02-05 16:55:48.918 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/product/dao/map/ProductDao.xml]'
+2018-02-05 16:55:48.932 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierPackageDao.xml]'
+2018-02-05 16:55:48.939 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierContactsDao.xml]'
+2018-02-05 16:55:48.956 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierProductDao.xml]'
+2018-02-05 16:55:48.968 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierFinanceDao.xml]'
+2018-02-05 16:55:48.981 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierDao.xml]'
+2018-02-05 16:55:48.993 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierExtDao.xml]'
+2018-02-05 16:55:49.008 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/recharge/dao/map/rechargeDao.xml]'
+2018-02-05 16:55:49.019 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/recharge/dao/map/rechargeLogDao.xml]'
+2018-02-05 16:55:49.028 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/refund/dao/map/refundLogDao.xml]'
+2018-02-05 16:55:49.045 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/refund/dao/map/refundDao.xml]'
+2018-02-05 16:55:49.055 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/base/dao/map/upGradeDao.xml]'
+2018-02-05 16:55:49.068 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/base/dao/map/areaRegionDao.xml]'
+2018-02-05 16:55:49.081 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/roleDao.xml]'
+2018-02-05 16:55:49.094 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/roleResDao.xml]'
+2018-02-05 16:55:49.113 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/employeeDao.xml]'
+2018-02-05 16:55:49.137 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/resourceDao.xml]'
+2018-02-05 16:55:49.152 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/employeeRoleDao.xml]'
+2018-02-05 16:55:49.247 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-02-05 16:55:49.248 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-02-05 16:55:49.309 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-02-05 16:55:49.309 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-02-05 16:55:49.349 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-02-05 16:55:49.358 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderMoney.xml]'
+2018-02-05 16:55:49.370 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderBase.xml]'
+2018-02-05 16:55:49.377 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderPay.xml]'
+2018-02-05 16:55:49.392 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderInfoDao.xml]'
+2018-02-05 16:55:49.402 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderProductDao.xml]'
+2018-02-05 16:55:49.409 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderActivityDao.xml]'
+2018-02-05 16:55:49.416 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderLogDao.xml]'
+2018-02-05 16:55:49.437 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/cartDao.xml]'
+2018-02-05 16:55:49.443 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseContactsDao.xml]'
+2018-02-05 16:55:49.448 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseDayDao.xml]'
+2018-02-05 16:55:49.456 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseDao.xml]'
+2018-02-05 16:55:49.460 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseConfigDao.xml]'
+2018-02-05 16:55:49.465 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseAddressDao.xml]'
+2018-02-05 16:55:49.470 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseFinanceDao.xml]'
+2018-02-05 16:55:49.474 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/pay/dao/map/payRecordDao.xml]'
+2018-02-05 16:55:49.480 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/loginTokenDao.xml]'
+2018-02-05 16:55:49.491 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/userDao.xml]'
+2018-02-05 16:55:49.497 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/userAddressDao.xml]'
+2018-02-05 16:55:49.502 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/accountLogDao.xml]'
+2018-02-05 16:55:49.509 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/userAccountDao.xml]'
+2018-02-05 16:55:49.514 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/product/dao/map/ProductDao.xml]'
+2018-02-05 16:55:49.520 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierPackageDao.xml]'
+2018-02-05 16:55:49.524 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierContactsDao.xml]'
+2018-02-05 16:55:49.531 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierProductDao.xml]'
+2018-02-05 16:55:49.537 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierFinanceDao.xml]'
+2018-02-05 16:55:49.542 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierDao.xml]'
+2018-02-05 16:55:49.548 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierExtDao.xml]'
+2018-02-05 16:55:49.556 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/recharge/dao/map/rechargeDao.xml]'
+2018-02-05 16:55:49.561 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/recharge/dao/map/rechargeLogDao.xml]'
+2018-02-05 16:55:49.566 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/refund/dao/map/refundLogDao.xml]'
+2018-02-05 16:55:49.573 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/refund/dao/map/refundDao.xml]'
+2018-02-05 16:55:49.578 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/base/dao/map/upGradeDao.xml]'
+2018-02-05 16:55:49.584 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/base/dao/map/areaRegionDao.xml]'
+2018-02-05 16:55:49.590 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/roleDao.xml]'
+2018-02-05 16:55:49.596 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/roleResDao.xml]'
+2018-02-05 16:55:49.605 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/employeeDao.xml]'
+2018-02-05 16:55:49.614 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/resourceDao.xml]'
+2018-02-05 16:55:49.619 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/employeeRoleDao.xml]'
+2018-02-05 16:55:49.751 [main] DEBUG druid.sql.Connection - {conn-210001} connected
+2018-02-05 16:55:49.752 [main] DEBUG druid.sql.Connection - {conn-210001} connected
+2018-02-05 16:55:49.829 [main] DEBUG druid.sql.Connection - {conn-210002} connected
+2018-02-05 16:55:49.829 [main] DEBUG druid.sql.Connection - {conn-210002} connected
+2018-02-05 16:55:49.864 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-02-05 16:55:49.870 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderMoney.xml]'
+2018-02-05 16:55:49.879 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderBase.xml]'
+2018-02-05 16:55:49.884 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderPay.xml]'
+2018-02-05 16:55:49.890 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderInfoDao.xml]'
+2018-02-05 16:55:49.895 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderProductDao.xml]'
+2018-02-05 16:55:49.899 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderActivityDao.xml]'
+2018-02-05 16:55:49.903 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderLogDao.xml]'
+2018-02-05 16:55:49.908 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/cartDao.xml]'
+2018-02-05 16:55:49.914 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseContactsDao.xml]'
+2018-02-05 16:55:49.919 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseDayDao.xml]'
+2018-02-05 16:55:49.927 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseDao.xml]'
+2018-02-05 16:55:49.931 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseConfigDao.xml]'
+2018-02-05 16:55:49.936 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseAddressDao.xml]'
+2018-02-05 16:55:49.940 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseFinanceDao.xml]'
+2018-02-05 16:55:49.945 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/pay/dao/map/payRecordDao.xml]'
+2018-02-05 16:55:49.950 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/loginTokenDao.xml]'
+2018-02-05 16:55:49.957 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/userDao.xml]'
+2018-02-05 16:55:49.961 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/userAddressDao.xml]'
+2018-02-05 16:55:49.966 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/accountLogDao.xml]'
+2018-02-05 16:55:49.974 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/userAccountDao.xml]'
+2018-02-05 16:55:49.980 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/product/dao/map/ProductDao.xml]'
+2018-02-05 16:55:50.001 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierPackageDao.xml]'
+2018-02-05 16:55:50.007 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierContactsDao.xml]'
+2018-02-05 16:55:50.015 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierProductDao.xml]'
+2018-02-05 16:55:50.021 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierFinanceDao.xml]'
+2018-02-05 16:55:50.027 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierDao.xml]'
+2018-02-05 16:55:50.032 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierExtDao.xml]'
+2018-02-05 16:55:50.039 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/recharge/dao/map/rechargeDao.xml]'
+2018-02-05 16:55:50.044 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/recharge/dao/map/rechargeLogDao.xml]'
+2018-02-05 16:55:50.049 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/refund/dao/map/refundLogDao.xml]'
+2018-02-05 16:55:50.055 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/refund/dao/map/refundDao.xml]'
+2018-02-05 16:55:50.060 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/base/dao/map/upGradeDao.xml]'
+2018-02-05 16:55:50.066 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/base/dao/map/areaRegionDao.xml]'
+2018-02-05 16:55:50.072 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/roleDao.xml]'
+2018-02-05 16:55:50.078 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/roleResDao.xml]'
+2018-02-05 16:55:50.084 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/employeeDao.xml]'
+2018-02-05 16:55:50.093 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/resourceDao.xml]'
+2018-02-05 16:55:50.098 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/employeeRoleDao.xml]'
+2018-02-05 16:55:50.151 [main] DEBUG druid.sql.Connection - {conn-310001} connected
+2018-02-05 16:55:50.151 [main] DEBUG druid.sql.Connection - {conn-310001} connected
+2018-02-05 16:55:50.220 [main] DEBUG druid.sql.Connection - {conn-310002} connected
+2018-02-05 16:55:50.220 [main] DEBUG druid.sql.Connection - {conn-310002} connected
+2018-02-05 16:55:50.250 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-02-05 16:55:50.255 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderMoney.xml]'
+2018-02-05 16:55:50.261 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderBase.xml]'
+2018-02-05 16:55:50.266 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderPay.xml]'
+2018-02-05 16:55:50.273 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderInfoDao.xml]'
+2018-02-05 16:55:50.277 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderProductDao.xml]'
+2018-02-05 16:55:50.280 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderActivityDao.xml]'
+2018-02-05 16:55:50.284 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderLogDao.xml]'
+2018-02-05 16:55:50.289 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/cartDao.xml]'
+2018-02-05 16:55:50.293 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseContactsDao.xml]'
+2018-02-05 16:55:50.298 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseDayDao.xml]'
+2018-02-05 16:55:50.304 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseDao.xml]'
+2018-02-05 16:55:50.308 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseConfigDao.xml]'
+2018-02-05 16:55:50.313 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseAddressDao.xml]'
+2018-02-05 16:55:50.318 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseFinanceDao.xml]'
+2018-02-05 16:55:50.322 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/pay/dao/map/payRecordDao.xml]'
+2018-02-05 16:55:50.327 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/loginTokenDao.xml]'
+2018-02-05 16:55:50.333 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/userDao.xml]'
+2018-02-05 16:55:50.337 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/userAddressDao.xml]'
+2018-02-05 16:55:50.340 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/accountLogDao.xml]'
+2018-02-05 16:55:50.345 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/userAccountDao.xml]'
+2018-02-05 16:55:50.349 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/product/dao/map/ProductDao.xml]'
+2018-02-05 16:55:50.354 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierPackageDao.xml]'
+2018-02-05 16:55:50.357 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierContactsDao.xml]'
+2018-02-05 16:55:50.362 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierProductDao.xml]'
+2018-02-05 16:55:50.366 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierFinanceDao.xml]'
+2018-02-05 16:55:50.370 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierDao.xml]'
+2018-02-05 16:55:50.374 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierExtDao.xml]'
+2018-02-05 16:55:50.378 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/recharge/dao/map/rechargeDao.xml]'
+2018-02-05 16:55:50.381 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/recharge/dao/map/rechargeLogDao.xml]'
+2018-02-05 16:55:50.384 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/refund/dao/map/refundLogDao.xml]'
+2018-02-05 16:55:50.389 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/refund/dao/map/refundDao.xml]'
+2018-02-05 16:55:50.393 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/base/dao/map/upGradeDao.xml]'
+2018-02-05 16:55:50.397 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/base/dao/map/areaRegionDao.xml]'
+2018-02-05 16:55:50.400 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/roleDao.xml]'
+2018-02-05 16:55:50.405 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/roleResDao.xml]'
+2018-02-05 16:55:50.411 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/employeeDao.xml]'
+2018-02-05 16:55:50.418 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/resourceDao.xml]'
+2018-02-05 16:55:50.424 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/employeeRoleDao.xml]'
+2018-02-05 16:55:50.974 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2018-02-05 16:55:50.989 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c42b421] was not registered for synchronization because synchronization is not active
+2018-02-05 16:55:51.011 [main] DEBUG druid.sql.Connection - {conn-110002} pool-connect
+2018-02-05 16:55:51.011 [main] DEBUG druid.sql.Connection - {conn-110002} pool-connect
+2018-02-05 16:55:51.011 [main] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@3c2772d1] will not be managed by Spring
+2018-02-05 16:55:51.017 [main] DEBUG order.orderInfoDao.enterpriseOrderDistributionList - ==>  Preparing: SELECT tmp.address_fid as addressFid, tmp.order_type as orderType, tmp.orderNum, adr.enterprise_code as enterpriseCode, adr.address, adr.con_tel as conTel, adr.con_name as conName, ent.enterprise_name as enterpriseName FROM ( SELECT t.address_fid, t.order_type, COUNT(1) AS orderNum FROM ( SELECT address_fid, order_type FROM t_order WHERE order_status = 50 AND enterprise_code != "" AND address_fid IS NOT NULL ) t GROUP BY t.address_fid, t.order_type )tmp LEFT JOIN t_enterprise_address adr ON tmp.address_fid = adr.fid LEFT JOIN t_enterprise ent ON adr.enterprise_code = ent.enterprise_code limit ? 
+2018-02-05 16:55:51.041 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120000} created. 
+SELECT
+            tmp.address_fid as addressFid,
+            tmp.order_type as orderType,
+            tmp.orderNum,
+            adr.enterprise_code as enterpriseCode,
+            adr.address,
+            adr.con_tel as conTel,
+            adr.con_name as conName,
+            ent.enterprise_name as enterpriseName
+        FROM
+            (
+                SELECT
+                    t.address_fid,
+                    t.order_type,
+                    COUNT(1) AS orderNum
+                FROM
+                    (
+                    SELECT
+                        address_fid,
+                        order_type
+                    FROM
+                        t_order
+                    WHERE
+                        order_status = 50
+                        AND enterprise_code != ""
+                        AND address_fid IS NOT NULL
+                    ) t
+                GROUP BY
+                    t.address_fid,
+                    t.order_type
+            )tmp
+            LEFT JOIN t_enterprise_address adr ON tmp.address_fid = adr.fid
+            LEFT JOIN t_enterprise ent ON adr.enterprise_code = ent.enterprise_code limit ?
+2018-02-05 16:55:51.041 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120000} created. 
+SELECT
+            tmp.address_fid as addressFid,
+            tmp.order_type as orderType,
+            tmp.orderNum,
+            adr.enterprise_code as enterpriseCode,
+            adr.address,
+            adr.con_tel as conTel,
+            adr.con_name as conName,
+            ent.enterprise_name as enterpriseName
+        FROM
+            (
+                SELECT
+                    t.address_fid,
+                    t.order_type,
+                    COUNT(1) AS orderNum
+                FROM
+                    (
+                    SELECT
+                        address_fid,
+                        order_type
+                    FROM
+                        t_order
+                    WHERE
+                        order_status = 50
+                        AND enterprise_code != ""
+                        AND address_fid IS NOT NULL
+                    ) t
+                GROUP BY
+                    t.address_fid,
+                    t.order_type
+            )tmp
+            LEFT JOIN t_enterprise_address adr ON tmp.address_fid = adr.fid
+            LEFT JOIN t_enterprise ent ON adr.enterprise_code = ent.enterprise_code limit ?
+2018-02-05 16:55:51.060 [main] DEBUG order.orderInfoDao.enterpriseOrderDistributionList - ==> Parameters: 50(Integer)
+2018-02-05 16:55:51.061 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120000} Parameters : [50]
+2018-02-05 16:55:51.062 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120000} Types : [INTEGER]
+2018-02-05 16:55:51.062 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120000} Parameters : [50]
+2018-02-05 16:55:51.062 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120000} Types : [INTEGER]
+2018-02-05 16:55:51.068 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120000} executed. 6.538181 millis. 
+SELECT
+            tmp.address_fid as addressFid,
+            tmp.order_type as orderType,
+            tmp.orderNum,
+            adr.enterprise_code as enterpriseCode,
+            adr.address,
+            adr.con_tel as conTel,
+            adr.con_name as conName,
+            ent.enterprise_name as enterpriseName
+        FROM
+            (
+                SELECT
+                    t.address_fid,
+                    t.order_type,
+                    COUNT(1) AS orderNum
+                FROM
+                    (
+                    SELECT
+                        address_fid,
+                        order_type
+                    FROM
+                        t_order
+                    WHERE
+                        order_status = 50
+                        AND enterprise_code != ""
+                        AND address_fid IS NOT NULL
+                    ) t
+                GROUP BY
+                    t.address_fid,
+                    t.order_type
+            )tmp
+            LEFT JOIN t_enterprise_address adr ON tmp.address_fid = adr.fid
+            LEFT JOIN t_enterprise ent ON adr.enterprise_code = ent.enterprise_code limit ?
+2018-02-05 16:55:51.068 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120000} executed. 6.538181 millis. 
+SELECT
+            tmp.address_fid as addressFid,
+            tmp.order_type as orderType,
+            tmp.orderNum,
+            adr.enterprise_code as enterpriseCode,
+            adr.address,
+            adr.con_tel as conTel,
+            adr.con_name as conName,
+            ent.enterprise_name as enterpriseName
+        FROM
+            (
+                SELECT
+                    t.address_fid,
+                    t.order_type,
+                    COUNT(1) AS orderNum
+                FROM
+                    (
+                    SELECT
+                        address_fid,
+                        order_type
+                    FROM
+                        t_order
+                    WHERE
+                        order_status = 50
+                        AND enterprise_code != ""
+                        AND address_fid IS NOT NULL
+                    ) t
+                GROUP BY
+                    t.address_fid,
+                    t.order_type
+            )tmp
+            LEFT JOIN t_enterprise_address adr ON tmp.address_fid = adr.fid
+            LEFT JOIN t_enterprise ent ON adr.enterprise_code = ent.enterprise_code limit ?
+2018-02-05 16:55:51.073 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120000, rs-150000} open
+2018-02-05 16:55:51.076 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120000, rs-150000} Header: [address_fid, order_type, orderNum, enterprise_code, address, con_tel, con_name, enterprise_name]
+2018-02-05 16:55:51.076 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120000, rs-150000} open
+2018-02-05 16:55:51.076 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120000, rs-150000} Header: [address_fid, order_type, orderNum, enterprise_code, address, con_tel, con_name, enterprise_name]
+2018-02-05 16:55:51.096 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120000, rs-150000} Result: [2c91340c611e01e901611e01e9d80000, 20, 1, qpg001, 外高桥保税区日京路106号2楼, 18964304840, 青苹果餐厅, 青苹果餐厅]
+2018-02-05 16:55:51.096 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120000, rs-150000} Result: [2c91340c611e01e901611e01e9d80000, 20, 1, qpg001, 外高桥保税区日京路106号2楼, 18964304840, 青苹果餐厅, 青苹果餐厅]
+2018-02-05 16:55:51.099 [main] DEBUG order.orderInfoDao.enterpriseOrderDistributionList - <==      Total: 1
+2018-02-05 16:55:51.099 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120000, rs-150000} closed
+2018-02-05 16:55:51.099 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120000, rs-150000} closed
+2018-02-05 16:55:51.100 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120000} closed
+2018-02-05 16:55:51.100 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120000} closed
+2018-02-05 16:55:51.102 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120001} created. 
+select count(1) from (SELECT
+            tmp.address_fid as addressFid,
+            tmp.order_type as orderType,
+            tmp.orderNum,
+            adr.enterprise_code as enterpriseCode,
+            adr.address,
+            adr.con_tel as conTel,
+            adr.con_name as conName,
+            ent.enterprise_name as enterpriseName
+        FROM
+            (
+                SELECT
+                    t.address_fid,
+                    t.order_type,
+                    COUNT(1) AS orderNum
+                FROM
+                    (
+                    SELECT
+                        address_fid,
+                        order_type
+                    FROM
+                        t_order
+                    WHERE
+                        order_status = 50
+                        AND enterprise_code != ""
+                        AND address_fid IS NOT NULL
+                    ) t
+                GROUP BY
+                    t.address_fid,
+                    t.order_type
+            )tmp
+            LEFT JOIN t_enterprise_address adr ON tmp.address_fid = adr.fid
+            LEFT JOIN t_enterprise ent ON adr.enterprise_code = ent.enterprise_code) tmp_count
+2018-02-05 16:55:51.102 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120001} created. 
+select count(1) from (SELECT
+            tmp.address_fid as addressFid,
+            tmp.order_type as orderType,
+            tmp.orderNum,
+            adr.enterprise_code as enterpriseCode,
+            adr.address,
+            adr.con_tel as conTel,
+            adr.con_name as conName,
+            ent.enterprise_name as enterpriseName
+        FROM
+            (
+                SELECT
+                    t.address_fid,
+                    t.order_type,
+                    COUNT(1) AS orderNum
+                FROM
+                    (
+                    SELECT
+                        address_fid,
+                        order_type
+                    FROM
+                        t_order
+                    WHERE
+                        order_status = 50
+                        AND enterprise_code != ""
+                        AND address_fid IS NOT NULL
+                    ) t
+                GROUP BY
+                    t.address_fid,
+                    t.order_type
+            )tmp
+            LEFT JOIN t_enterprise_address adr ON tmp.address_fid = adr.fid
+            LEFT JOIN t_enterprise ent ON adr.enterprise_code = ent.enterprise_code) tmp_count
+2018-02-05 16:55:51.103 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120001} Parameters : []
+2018-02-05 16:55:51.103 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120001} Types : []
+2018-02-05 16:55:51.103 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120001} Parameters : []
+2018-02-05 16:55:51.103 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120001} Types : []
+2018-02-05 16:55:51.109 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120001, rs-150001} query executed. 6.084254 millis. 
+select count(1) from (SELECT
+            tmp.address_fid as addressFid,
+            tmp.order_type as orderType,
+            tmp.orderNum,
+            adr.enterprise_code as enterpriseCode,
+            adr.address,
+            adr.con_tel as conTel,
+            adr.con_name as conName,
+            ent.enterprise_name as enterpriseName
+        FROM
+            (
+                SELECT
+                    t.address_fid,
+                    t.order_type,
+                    COUNT(1) AS orderNum
+                FROM
+                    (
+                    SELECT
+                        address_fid,
+                        order_type
+                    FROM
+                        t_order
+                    WHERE
+                        order_status = 50
+                        AND enterprise_code != ""
+                        AND address_fid IS NOT NULL
+                    ) t
+                GROUP BY
+                    t.address_fid,
+                    t.order_type
+            )tmp
+            LEFT JOIN t_enterprise_address adr ON tmp.address_fid = adr.fid
+            LEFT JOIN t_enterprise ent ON adr.enterprise_code = ent.enterprise_code) tmp_count
+2018-02-05 16:55:51.109 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} open
+2018-02-05 16:55:51.109 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Header: [count(1)]
+2018-02-05 16:55:51.109 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120001, rs-150001} query executed. 6.084254 millis. 
+select count(1) from (SELECT
+            tmp.address_fid as addressFid,
+            tmp.order_type as orderType,
+            tmp.orderNum,
+            adr.enterprise_code as enterpriseCode,
+            adr.address,
+            adr.con_tel as conTel,
+            adr.con_name as conName,
+            ent.enterprise_name as enterpriseName
+        FROM
+            (
+                SELECT
+                    t.address_fid,
+                    t.order_type,
+                    COUNT(1) AS orderNum
+                FROM
+                    (
+                    SELECT
+                        address_fid,
+                        order_type
+                    FROM
+                        t_order
+                    WHERE
+                        order_status = 50
+                        AND enterprise_code != ""
+                        AND address_fid IS NOT NULL
+                    ) t
+                GROUP BY
+                    t.address_fid,
+                    t.order_type
+            )tmp
+            LEFT JOIN t_enterprise_address adr ON tmp.address_fid = adr.fid
+            LEFT JOIN t_enterprise ent ON adr.enterprise_code = ent.enterprise_code) tmp_count
+2018-02-05 16:55:51.110 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} open
+2018-02-05 16:55:51.110 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Header: [count(1)]
+2018-02-05 16:55:51.110 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [1]
+2018-02-05 16:55:51.110 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [1]
+2018-02-05 16:55:51.112 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c42b421]
+2018-02-05 16:55:51.113 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} closed
+2018-02-05 16:55:51.113 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} closed
+2018-02-05 16:55:51.113 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120001} closed
+2018-02-05 16:55:51.113 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120001} closed
+2018-02-05 16:55:51.113 [main] DEBUG druid.sql.Connection - {conn-110002} pool-recycle
+2018-02-05 16:55:51.113 [main] DEBUG druid.sql.Connection - {conn-110002} pool-recycle
+2018-02-05 16:55:51.423 [Thread-3] DEBUG druid.sql.Connection - {conn-310001} closed
+2018-02-05 16:55:51.423 [Thread-3] DEBUG druid.sql.Connection - {conn-310001} closed
+2018-02-05 16:55:51.424 [Thread-3] DEBUG druid.sql.Connection - {conn-310002} closed
+2018-02-05 16:55:51.424 [Thread-3] DEBUG druid.sql.Connection - {conn-310002} closed
+2018-02-05 16:55:51.425 [Thread-3] DEBUG druid.sql.Connection - {conn-210001} closed
+2018-02-05 16:55:51.426 [Thread-3] DEBUG druid.sql.Connection - {conn-210001} closed
+2018-02-05 16:55:51.426 [Thread-3] DEBUG druid.sql.Connection - {conn-210002} closed
+2018-02-05 16:55:51.426 [Thread-3] DEBUG druid.sql.Connection - {conn-210002} closed
+2018-02-05 16:55:51.427 [Thread-3] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-02-05 16:55:51.427 [Thread-3] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-02-05 16:55:51.428 [Thread-3] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-02-05 16:55:51.428 [Thread-3] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-02-05 16:55:51.429 [Thread-3] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-02-05 16:55:51.429 [Thread-3] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-02-05 16:55:51.429 [Thread-3] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-02-05 16:55:51.429 [Thread-3] DEBUG druid.sql.Connection - {conn-10002} closed

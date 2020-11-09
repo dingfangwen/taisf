@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="user.accountUserDao" >
+
+
+  <resultMap id="BaseResultMap" type="com.taisf.services.user.entity.UserAccountEntity" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="VARCHAR" />
+    <result column="account_password" property="accountPassword" jdbcType="VARCHAR" />
+
+    <result column="account_status" property="accountStatus" jdbcType="INTEGER" />
+    <result column="draw_balance" property="drawBalance" jdbcType="INTEGER" />
+    <result column="draw_not_balance" property="drawNotBalance" jdbcType="INTEGER" />
+    <result column="freeze_money" property="freezeMoney" jdbcType="INTEGER" />
+    <result column="user_integral" property="userIntegral" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="is_del" property="isDel" jdbcType="SMALLINT" />
+  </resultMap>
+
+
+  <sql id="Base_Column_List" >
+    id, user_id,account_password, account_status, draw_balance, draw_not_balance, freeze_money, user_integral,
+     create_time, update_time, is_del
+  </sql>
+
+
+  <!-- 改变当前余额信息 -->
+  <update id="changeUserBalance" parameterType="java.util.Map" >
+    update t_user_account
+    SET draw_balance = draw_balance  +  #{money,jdbcType=INTEGER}
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </update>
+
+
+  <!-- 冻结当前金额 -->
+  <update id="fillUserBalance" parameterType="java.util.Map" >
+    update t_user_account
+    SET draw_balance = draw_balance  +  #{money,jdbcType=INTEGER}
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </update>
+
+
+
+
+  <select id="getEnterpriseAccountByList" resultType="com.taisf.services.enterprise.vo.EnterpriseAccountVO" parameterType="java.util.Map" >
+    select
+    u.enterprise_code as enterpriseCode,
+    sum(t.draw_balance) as allBalance
+
+    from  t_user u
+    inner join   t_user_account  t on u.user_uid = t.user_id
+
+    where u.enterprise_code in
+    <foreach collection="enterpriseCodeList" item="item" index="index"
+             open="(" separator="," close=")">#{item}</foreach>
+    group by u.enterprise_code
+  </select>
+
+
+
+  <select id="getUserAccountByList" resultMap="BaseResultMap" parameterType="java.util.Map" >
+    select
+    <include refid="Base_Column_List" />
+    from t_user_account
+    where user_id in
+    <foreach collection="userIdList" item="item" index="index"
+             open="(" separator="," close=")">#{item}</foreach>
+
+  </select>
+
+
+
+
+  <select id="getAccountUserByUid" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from t_user_account
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </select>
+
+
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_user_account
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+
+  <!--- 保存当前的账户信息 -->
+  <insert id="saveAccountUser" parameterType="com.taisf.services.user.entity.UserAccountEntity" >
+    insert ignore into t_user_account
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="accountStatus != null" >
+        account_status,
+      </if>
+      <if test="drawBalance != null" >
+        draw_balance,
+      </if>
+      <if test="drawNotBalance != null" >
+        draw_not_balance,
+      </if>
+      <if test="freezeMoney != null" >
+        freeze_money,
+      </if>
+      <if test="userIntegral != null" >
+        user_integral,
+      </if>
+
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="isDel != null" >
+        is_del,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+
+      <if test="userId != null" >
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="accountStatus != null" >
+        #{accountStatus,jdbcType=INTEGER},
+      </if>
+      <if test="drawBalance != null" >
+        #{drawBalance,jdbcType=INTEGER},
+      </if>
+      <if test="drawNotBalance != null" >
+        #{drawNotBalance,jdbcType=INTEGER},
+      </if>
+      <if test="freezeMoney != null" >
+        #{freezeMoney,jdbcType=INTEGER},
+      </if>
+      <if test="userIntegral != null" >
+        #{userIntegral,jdbcType=INTEGER},
+      </if>
+
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isDel != null" >
+        #{isDel,jdbcType=SMALLINT},
+      </if>
+    </trim>
+  </insert>
+
+
+
+
+
+  <!-- 更新账户密码 -->
+  <update id="updateAccountPassword" parameterType="java.util.Map" >
+    update t_user_account
+    SET account_password =  #{accountPassword,jdbcType=VARCHAR}
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </update>
+
+
+  <!-- 冻结当前金额 -->
+  <update id="frozenUserBalance" parameterType="java.util.Map" >
+    update t_user_account
+
+    SET draw_balance = draw_balance -  #{money,jdbcType=INTEGER},
+        freeze_money = freeze_money +  #{money,jdbcType=INTEGER}
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </update>
+
+
+  <update id="updateAccountUser" parameterType="com.taisf.services.user.entity.UserAccountEntity" >
+    update t_user_account
+    <set >
+
+      <if test="accountStatus != null" >
+        account_status = #{accountStatus,jdbcType=INTEGER},
+      </if>
+      <if test="drawBalance != null" >
+        draw_balance = #{drawBalance,jdbcType=INTEGER},
+      </if>
+      <if test="drawNotBalance != null" >
+        draw_not_balance = #{drawNotBalance,jdbcType=INTEGER},
+      </if>
+      <if test="freezeMoney != null" >
+        freeze_money = #{freezeMoney,jdbcType=INTEGER},
+      </if>
+      <if test="userIntegral != null" >
+        user_integral = #{userIntegral,jdbcType=INTEGER},
+      </if>
+
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isDel != null" >
+        is_del = #{isDel,jdbcType=SMALLINT},
+      </if>
+    </set>
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </update>
+
+
+
+</mapper>

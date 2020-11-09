@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="supplier.supplierExtDao">
+
+  <resultMap id="BaseResultMap" type="com.taisf.services.supplier.entity.SupplierExtEntity">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="supplier_code" jdbcType="VARCHAR" property="supplierCode" />
+    <result column="qualification_url" jdbcType="VARCHAR" property="qualificationUrl" />
+    <result column="qualification_time" jdbcType="TIMESTAMP" property="qualificationTime" />
+    <result column="license_url" jdbcType="VARCHAR" property="licenseUrl" />
+    <result column="productivity_url" jdbcType="VARCHAR" property="productivityUrl" />
+    <result column="business_url" jdbcType="VARCHAR" property="businessUrl" />
+    <result column="truck_url" jdbcType="VARCHAR" property="truckUrl" />
+    <result column="scale_url" jdbcType="VARCHAR" property="scaleUrl" />
+    <result column="consumer_url" jdbcType="VARCHAR" property="consumerUrl" />
+  </resultMap>
+
+
+  <sql id="Base_Column_List">
+    id, supplier_code, qualification_url, qualification_time, license_url, productivity_url, 
+    business_url, truck_url, scale_url, consumer_url
+  </sql>
+
+
+  <select id="getSupplierExtByCode" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_supplier_ext
+    where supplier_code = #{supplierCode,jdbcType=INTEGER}
+  </select>
+
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_supplier_ext
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+
+
+  <insert id="saveSupplierExt" parameterType="com.taisf.services.supplier.entity.SupplierExtEntity">
+    insert into t_supplier_ext
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+
+      <if test="supplierCode != null">
+        supplier_code,
+      </if>
+      <if test="qualificationUrl != null">
+        qualification_url,
+      </if>
+      <if test="qualificationTime != null">
+        qualification_time,
+      </if>
+      <if test="licenseUrl != null">
+        license_url,
+      </if>
+      <if test="productivityUrl != null">
+        productivity_url,
+      </if>
+      <if test="businessUrl != null">
+        business_url,
+      </if>
+      <if test="truckUrl != null">
+        truck_url,
+      </if>
+      <if test="scaleUrl != null">
+        scale_url,
+      </if>
+      <if test="consumerUrl != null">
+        consumer_url,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+
+      <if test="supplierCode != null">
+        #{supplierCode,jdbcType=VARCHAR},
+      </if>
+      <if test="qualificationUrl != null">
+        #{qualificationUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="qualificationTime != null">
+        #{qualificationTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="licenseUrl != null">
+        #{licenseUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="productivityUrl != null">
+        #{productivityUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="businessUrl != null">
+        #{businessUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="truckUrl != null">
+        #{truckUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="scaleUrl != null">
+        #{scaleUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="consumerUrl != null">
+        #{consumerUrl,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+
+  <update id="updateSupplierExt" parameterType="com.taisf.services.supplier.entity.SupplierExtEntity">
+    update t_supplier_ext
+    <set>
+
+      <if test="qualificationUrl != null">
+        qualification_url = #{qualificationUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="qualificationTime != null">
+        qualification_time = #{qualificationTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="licenseUrl != null">
+        license_url = #{licenseUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="productivityUrl != null">
+        productivity_url = #{productivityUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="businessUrl != null">
+        business_url = #{businessUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="truckUrl != null">
+        truck_url = #{truckUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="scaleUrl != null">
+        scale_url = #{scaleUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="consumerUrl != null">
+        consumer_url = #{consumerUrl,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where  supplier_code = #{supplierCode,jdbcType=VARCHAR}
+  </update>
+
+</mapper>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ~ Copyright (c) 2016. Copyright (c) 2016. jianke.com. -->
+
+<configuration scan="true" scanPeriod="6000 seconds"
+	debug="false">
+
+	<contextName>com.jk</contextName>
+
+	<property name="log.base" value="../logs" />
+
+
+	<!-- 代码中需显示使用日志：输出正常的业务逻辑日志 -->
+	<appender name="errorAppender"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<Encoding>UTF-8</Encoding>
+		<File>${log.base}/minsu_error.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log.base}/jk_biz-%d{yyyyMMdd}.log</fileNamePattern>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<!--格式化输出,%d:日期;%thread:线程名;%-5level：级别,从左显示5个字符宽度;%msg:日志消息;%n:换行符 -->
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} -
+				%msg%n</pattern>
+		</layout>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter"><!-- 只打印错误日志 -->
+			<level>ERROR</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+	</appender>
+
+
+
+	<!-- 所有日志 -->
+	<appender name="allAppender"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<Encoding>UTF-8</Encoding>
+		<File>${log.base}/all_data.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log.base}/all_data-%d{yyyyMMdd}.log</fileNamePattern>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<!--格式化输出,%d:日期;%thread:线程名;%-5level：级别,从左显示5个字符宽度;%msg:日志消息;%n:换行符 -->
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} -
+				%msg%n</pattern>
+		</layout>
+	</appender>
+
+	<logger name="org.springframework" level="ERROR" />
+	<logger name="com.fasterxml" level="ERROR" />
+	<logger name="com.alibaba.dubbo" level="ERROR" />
+	<logger name="con.jk.framework" level="info" />
+	<logger name="com.jk" level="INFO" addtivity="true" />
+
+
+	<root level="ERROR">
+		<appender-ref ref="allAppender" />
+		<appender-ref ref="errorAppender" />
+	</root>
+
+	<!-- 控制台输出 -->
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<!-- 日志输出编码 -->
+		<Encoding>UTF-8</Encoding>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符 -->
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} -
+				%msg%n
+			</pattern>
+		</layout>
+	</appender>
+
+	<root level="DEBUG">
+		<appender-ref ref="STDOUT" />
+	</root>
+
+</configuration>
+
+
+
+
+

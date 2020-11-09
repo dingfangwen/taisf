@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="stock.stockWeekDao" >
+
+
+  <resultMap id="BaseResultMap" type="com.taisf.services.stock.entity.StockWeekEntity" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="supplier_code" property="supplierCode" jdbcType="VARCHAR" />
+    <result column="order_sn" property="orderSn" jdbcType="VARCHAR" />
+    <result column="week_sn" property="weekSn" jdbcType="VARCHAR" />
+    <result column="week" property="week" jdbcType="INTEGER" />
+    <result column="product_code" property="productCode" jdbcType="INTEGER" />
+    <result column="supplier_product_type" property="supplierProductType" jdbcType="INTEGER" />
+    <result column="order_type" property="orderType" jdbcType="INTEGER" />
+    <result column="product_num" property="productNum" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+  <sql id="Base_Column_List" >
+    id, supplier_code, order_sn, week_sn, week, product_code, supplier_product_type, 
+    order_type, product_num, create_time, update_time
+  </sql>
+
+  <select id="getStockWeekByList" resultType="com.taisf.services.stock.vo.StockHasVO" parameterType="java.util.Map" >
+    select
+      product_code as productCode,
+      supplier_product_type as supplierProductType,
+      sum(product_num) as productNum
+    from (
+      select id, supplier_code, order_sn, week_sn, week, product_code, supplier_product_type,
+        order_type, product_num, create_time, update_time
+      from t_stock_week
+      where week_sn = #{weekSn,jdbcType=VARCHAR}
+        and week = #{week,jdbcType=INTEGER}
+        and supplier_code = #{supplierCode,jdbcType=VARCHAR}
+        and order_type = #{orderType,jdbcType=INTEGER}
+        and  product_code in
+        <foreach collection="productIds" item="item" index="index"
+                 open="(" separator="," close=")">#{item}</foreach>
+
+    )tmp
+    group by product_code,supplier_product_type
+
+  </select>
+
+
+
+
+
+
+  <insert id="saveStockWeek" parameterType="com.taisf.services.stock.entity.StockWeekEntity" >
+
+    insert into t_stock_week
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="supplierCode != null" >
+        supplier_code,
+      </if>
+      <if test="orderSn != null" >
+        order_sn,
+      </if>
+
+      <if test="stockType != null" >
+        stock_type,
+      </if>
+
+
+      <if test="weekSn != null" >
+        week_sn,
+      </if>
+      <if test="week != null" >
+        week,
+      </if>
+      <if test="productCode != null" >
+        product_code,
+      </if>
+      <if test="supplierProductType != null" >
+        supplier_product_type,
+      </if>
+      <if test="orderType != null" >
+        order_type,
+      </if>
+      <if test="productNum != null" >
+        product_num,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+
+      <if test="supplierCode != null" >
+        #{supplierCode,jdbcType=VARCHAR},
+      </if>
+      <if test="orderSn != null" >
+        #{orderSn,jdbcType=VARCHAR},
+      </if>
+
+      <if test="stockType != null" >
+        #{stockType,jdbcType=INTEGER},
+      </if>
+
+      <if test="weekSn != null" >
+        #{weekSn,jdbcType=VARCHAR},
+      </if>
+      <if test="week != null" >
+        #{week,jdbcType=INTEGER},
+      </if>
+      <if test="productCode != null" >
+        #{productCode,jdbcType=INTEGER},
+      </if>
+      <if test="supplierProductType != null" >
+        #{supplierProductType,jdbcType=INTEGER},
+      </if>
+      <if test="orderType != null" >
+        #{orderType,jdbcType=INTEGER},
+      </if>
+      <if test="productNum != null" >
+        #{productNum,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.taisf.services.stock.entity.StockWeekEntity" >
+    update t_stock_week
+    <set >
+      <if test="supplierCode != null" >
+        supplier_code = #{supplierCode,jdbcType=VARCHAR},
+      </if>
+      <if test="orderSn != null" >
+        order_sn = #{orderSn,jdbcType=VARCHAR},
+      </if>
+      <if test="weekSn != null" >
+        week_sn = #{weekSn,jdbcType=VARCHAR},
+      </if>
+      <if test="week != null" >
+        week = #{week,jdbcType=INTEGER},
+      </if>
+      <if test="productCode != null" >
+        product_code = #{productCode,jdbcType=INTEGER},
+      </if>
+      <if test="supplierProductType != null" >
+        supplier_product_type = #{supplierProductType,jdbcType=INTEGER},
+      </if>
+      <if test="orderType != null" >
+        order_type = #{orderType,jdbcType=INTEGER},
+      </if>
+      <if test="productNum != null" >
+        product_num = #{productNum,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+</mapper>

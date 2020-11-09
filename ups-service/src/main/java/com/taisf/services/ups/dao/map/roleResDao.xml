@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="ups.roleResDao">
+	<resultMap id="BaseResultMap"
+		type="com.taisf.services.ups.entity.RoleResourceEntity">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="role_fid" property="roleFid" jdbcType="VARCHAR" />
+		<result column="resource_fid" property="resourceFid" jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		rr.id, rr.role_fid, rr.resource_fid
+	</sql>
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		from t_sys_role_resource rr
+		where rr.id = #{id,jdbcType=INTEGER}
+	</select>
+	<select id="selectByRoleFid" resultMap="BaseResultMap"
+		parameterType="java.lang.String">
+		select
+		<include refid="Base_Column_List" />
+		from t_sys_role_resource rr
+		where rr.role_fid = #{roleFid,jdbcType=VARCHAR}
+	</select>
+
+
+	<!-- 清空角色id下所有资源 -->
+	<delete id="delRoleResourcesByFid" parameterType="java.util.Map">
+		delete from t_sys_role_resource
+		where role_fid = #{roleFid,jdbcType=VARCHAR}
+	</delete>
+
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+		delete from t_sys_role_resource
+		where id = #{id,jdbcType=INTEGER}
+	</delete>
+
+
+	<!-- save the info afi -->
+	<insert id="saveRoleResource" parameterType="com.taisf.services.ups.entity.RoleResourceEntity">
+		insert into t_sys_role_resource (role_fid, resource_fid
+		)
+		values (#{roleFid,jdbcType=VARCHAR}, #{resourceFid,jdbcType=VARCHAR}
+		)
+	</insert>
+
+
+	<insert id="insert" parameterType="com.taisf.services.ups.entity.RoleResourceEntity">
+		insert into t_sys_role_resource (id, role_fid, resource_fid
+		)
+		values (#{id,jdbcType=INTEGER}, #{roleFid,jdbcType=VARCHAR},
+		#{resourceFid,jdbcType=VARCHAR}
+		)
+	</insert>
+
+	<insert id="insertSelective" parameterType="com.taisf.services.ups.entity.RoleResourceEntity">
+		insert into t_sys_role_resource
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="roleFid != null">
+				role_fid,
+			</if>
+			<if test="resourceFid != null">
+				resource_fid,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=INTEGER},
+			</if>
+			<if test="roleFid != null">
+				#{roleFid,jdbcType=VARCHAR},
+			</if>
+			<if test="resourceFid != null">
+				#{resourceFid,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective" parameterType="com.taisf.services.ups.entity.RoleResourceEntity">
+		update t_sys_role_resource
+		<set>
+			<if test="roleFid != null">
+				role_fid = #{roleFid,jdbcType=VARCHAR},
+			</if>
+			<if test="resourceFid != null">
+				resource_fid = #{resourceFid,jdbcType=VARCHAR},
+			</if>
+		</set>
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="com.taisf.services.ups.entity.RoleResourceEntity">
+		update t_sys_role_resource
+		set role_fid = #{roleFid,jdbcType=VARCHAR},
+		resource_fid = #{resourceFid,jdbcType=VARCHAR}
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+</mapper>

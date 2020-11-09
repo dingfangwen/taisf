@@ -1,0 +1,332 @@
+2020-03-01 11:29:34.810 [main] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2020-03-01 11:29:34.821 [main] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2020-03-01 11:29:34.823 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://openapi.58auv.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2020-03-01 11:29:34.838 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {}->http://openapi.58auv.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2020-03-01 11:29:34.840 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://openapi.58auv.com:80
+2020-03-01 11:29:34.858 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connecting to openapi.58auv.com/120.24.87.222:80
+2020-03-01 11:29:34.861 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.2.235:59697<->120.24.87.222:80
+2020-03-01 11:29:34.861 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /gateway.do HTTP/1.1
+2020-03-01 11:29:34.862 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+2020-03-01 11:29:34.862 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+2020-03-01 11:29:34.865 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> POST /gateway.do HTTP/1.1
+2020-03-01 11:29:34.866 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Length: 260
+2020-03-01 11:29:34.866 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+2020-03-01 11:29:34.866 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Host: openapi.58auv.com
+2020-03-01 11:29:34.866 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Connection: Keep-Alive
+2020-03-01 11:29:34.866 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)
+2020-03-01 11:29:34.866 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2020-03-01 11:29:34.866 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "POST /gateway.do HTTP/1.1[\r][\n]"
+2020-03-01 11:29:34.867 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Length: 260[\r][\n]"
+2020-03-01 11:29:34.867 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Type: application/x-www-form-urlencoded; charset=UTF-8[\r][\n]"
+2020-03-01 11:29:34.867 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Host: openapi.58auv.com[\r][\n]"
+2020-03-01 11:29:34.867 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2020-03-01 11:29:34.867 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)[\r][\n]"
+2020-03-01 11:29:34.867 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2020-03-01 11:29:34.867 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "[\r][\n]"
+2020-03-01 11:29:34.867 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "method=device.cells.ops&appId=66491&digest=A21368AD5F3D6C1E36DBDC904C4352A7&bizData=%7B%22opList%22%3A%5B%7B%22cellNo%22%3A%221%22%2C%22ops%22%3A%5B%22DOOR_OPEN%22%5D%7D%5D%2C%22deviceId%22%3A%22TestAndroid_3%22%7D&version=1.0&timestamp=2019-12-17+21%3A00%3A00"
+2020-03-01 11:29:34.964 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "HTTP/1.1 200 [\r][\n]"
+2020-03-01 11:29:34.964 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Server:   [\r][\n]"
+2020-03-01 11:29:34.964 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Date: Sun, 01 Mar 2020 03:29:34 GMT[\r][\n]"
+2020-03-01 11:29:34.964 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Type: application/json;charset=utf-8[\r][\n]"
+2020-03-01 11:29:34.964 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Length: 75[\r][\n]"
+2020-03-01 11:29:34.964 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+2020-03-01 11:29:34.964 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Pragma: no-cache[\r][\n]"
+2020-03-01 11:29:34.964 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+2020-03-01 11:29:34.965 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "{"code":403,"msg":"[0xe9][0x9d][0x9e][0xe6][0xb3][0x95][0xe8][0xaf][0xb7][0xe6][0xb1][0x82]","success":false,"timestamp":1583033374945}"
+2020-03-01 11:29:34.967 [main] DEBUG org.apache.http.headers - http-outgoing-0 << HTTP/1.1 200 
+2020-03-01 11:29:34.968 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Server:   
+2020-03-01 11:29:34.968 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Date: Sun, 01 Mar 2020 03:29:34 GMT
+2020-03-01 11:29:34.968 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Type: application/json;charset=utf-8
+2020-03-01 11:29:34.968 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Length: 75
+2020-03-01 11:29:34.968 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Connection: keep-alive
+2020-03-01 11:29:34.968 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Pragma: no-cache
+2020-03-01 11:29:34.974 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+2020-03-01 11:29:34.978 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 0][route: {}->http://openapi.58auv.com:80] can be kept alive indefinitely
+2020-03-01 11:29:34.978 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {}->http://openapi.58auv.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2020-03-01 11:29:34.979 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Cancelling request execution
+2020-03-01 11:29:34.985 [main] INFO  com.jk.framework.common.utils.CloseableHttpUtil - time:613ms,API:http://openapi.58auv.com/gateway.do,parMap:{"method":"device.cells.ops","appId":"66491","digest":"A21368AD5F3D6C1E36DBDC904C4352A7","bizData":"{\"opList\":[{\"cellNo\":\"1\",\"ops\":[\"DOOR_OPEN\"]}],\"deviceId\":\"TestAndroid_3\"}","version":"1.0","timestamp":"2019-12-17 21:00:00"},headerMap:null
+2020-03-01 11:30:55.730 [main] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2020-03-01 11:30:55.746 [main] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2020-03-01 11:30:55.748 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://openapi.58auv.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2020-03-01 11:30:55.766 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {}->http://openapi.58auv.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2020-03-01 11:30:55.769 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://openapi.58auv.com:80
+2020-03-01 11:30:56.172 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connecting to openapi.58auv.com/120.24.87.222:80
+2020-03-01 11:30:56.177 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.2.235:59923<->120.24.87.222:80
+2020-03-01 11:30:56.177 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /gateway.do HTTP/1.1
+2020-03-01 11:30:56.178 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+2020-03-01 11:30:56.179 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+2020-03-01 11:30:56.183 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> POST /gateway.do HTTP/1.1
+2020-03-01 11:30:56.183 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Length: 260
+2020-03-01 11:30:56.184 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+2020-03-01 11:30:56.184 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Host: openapi.58auv.com
+2020-03-01 11:30:56.184 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Connection: Keep-Alive
+2020-03-01 11:30:56.184 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)
+2020-03-01 11:30:56.184 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2020-03-01 11:30:56.185 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "POST /gateway.do HTTP/1.1[\r][\n]"
+2020-03-01 11:30:56.185 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Length: 260[\r][\n]"
+2020-03-01 11:30:56.185 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Type: application/x-www-form-urlencoded; charset=UTF-8[\r][\n]"
+2020-03-01 11:30:56.185 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Host: openapi.58auv.com[\r][\n]"
+2020-03-01 11:30:56.185 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2020-03-01 11:30:56.185 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)[\r][\n]"
+2020-03-01 11:30:56.185 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2020-03-01 11:30:56.186 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "[\r][\n]"
+2020-03-01 11:30:56.186 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "method=device.cells.ops&appId=66491&digest=A21368AD5F3D6C1E36DBDC904C4352A7&bizData=%7B%22opList%22%3A%5B%7B%22cellNo%22%3A%221%22%2C%22ops%22%3A%5B%22DOOR_OPEN%22%5D%7D%5D%2C%22deviceId%22%3A%22TestAndroid_3%22%7D&version=1.0&timestamp=2019-12-17+21%3A00%3A00"
+2020-03-01 11:30:56.279 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "HTTP/1.1 200 [\r][\n]"
+2020-03-01 11:30:56.279 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Server:   [\r][\n]"
+2020-03-01 11:30:56.279 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Date: Sun, 01 Mar 2020 03:30:56 GMT[\r][\n]"
+2020-03-01 11:30:56.279 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Type: application/json;charset=utf-8[\r][\n]"
+2020-03-01 11:30:56.279 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Length: 75[\r][\n]"
+2020-03-01 11:30:56.279 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+2020-03-01 11:30:56.280 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Pragma: no-cache[\r][\n]"
+2020-03-01 11:30:56.280 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+2020-03-01 11:30:56.280 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "{"code":403,"msg":"[0xe9][0x9d][0x9e][0xe6][0xb3][0x95][0xe8][0xaf][0xb7][0xe6][0xb1][0x82]","success":false,"timestamp":1583033456260}"
+2020-03-01 11:30:56.284 [main] DEBUG org.apache.http.headers - http-outgoing-0 << HTTP/1.1 200 
+2020-03-01 11:30:56.284 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Server:   
+2020-03-01 11:30:56.284 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Date: Sun, 01 Mar 2020 03:30:56 GMT
+2020-03-01 11:30:56.284 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Type: application/json;charset=utf-8
+2020-03-01 11:30:56.284 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Length: 75
+2020-03-01 11:30:56.284 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Connection: keep-alive
+2020-03-01 11:30:56.284 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Pragma: no-cache
+2020-03-01 11:30:56.289 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+2020-03-01 11:30:56.293 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 0][route: {}->http://openapi.58auv.com:80] can be kept alive indefinitely
+2020-03-01 11:30:56.293 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {}->http://openapi.58auv.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2020-03-01 11:30:56.293 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Cancelling request execution
+2020-03-01 11:30:56.301 [main] INFO  com.jk.framework.common.utils.CloseableHttpUtil - time:1066ms,API:http://openapi.58auv.com/gateway.do,parMap:{"method":"device.cells.ops","appId":"66491","digest":"A21368AD5F3D6C1E36DBDC904C4352A7","bizData":"{\"opList\":[{\"cellNo\":\"1\",\"ops\":[\"DOOR_OPEN\"]}],\"deviceId\":\"TestAndroid_3\"}","version":"1.0","timestamp":"2019-12-17 21:00:00"},headerMap:null
+2020-03-01 11:32:58.445 [main] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2020-03-01 11:32:58.458 [main] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2020-03-01 11:32:58.460 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://openapi.58auv.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2020-03-01 11:32:58.477 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {}->http://openapi.58auv.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2020-03-01 11:32:58.478 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://openapi.58auv.com:80
+2020-03-01 11:32:58.492 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connecting to openapi.58auv.com/120.24.87.222:80
+2020-03-01 11:32:58.494 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.2.235:60243<->120.24.87.222:80
+2020-03-01 11:32:58.495 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /gateway.do HTTP/1.1
+2020-03-01 11:32:58.495 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+2020-03-01 11:32:58.495 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+2020-03-01 11:32:58.497 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> POST /gateway.do HTTP/1.1
+2020-03-01 11:32:58.498 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Length: 260
+2020-03-01 11:32:58.498 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+2020-03-01 11:32:58.498 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Host: openapi.58auv.com
+2020-03-01 11:32:58.498 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Connection: Keep-Alive
+2020-03-01 11:32:58.498 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)
+2020-03-01 11:32:58.498 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2020-03-01 11:32:58.498 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "POST /gateway.do HTTP/1.1[\r][\n]"
+2020-03-01 11:32:58.499 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Length: 260[\r][\n]"
+2020-03-01 11:32:58.499 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Type: application/x-www-form-urlencoded; charset=UTF-8[\r][\n]"
+2020-03-01 11:32:58.499 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Host: openapi.58auv.com[\r][\n]"
+2020-03-01 11:32:58.499 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2020-03-01 11:32:58.499 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)[\r][\n]"
+2020-03-01 11:32:58.499 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2020-03-01 11:32:58.499 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "[\r][\n]"
+2020-03-01 11:32:58.499 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "method=device.cells.ops&appId=66491&digest=CEDCF6D8BA99C267FDA51C73A88DD4B4&bizData=%7B%22opList%22%3A%5B%7B%22cellNo%22%3A%221%22%2C%22ops%22%3A%5B%22DOOR_OPEN%22%5D%7D%5D%2C%22deviceId%22%3A%22TestAndroid_3%22%7D&version=1.0&timestamp=2019-12-17+21%3A00%3A00"
+2020-03-01 11:32:58.597 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "HTTP/1.1 200 [\r][\n]"
+2020-03-01 11:32:58.598 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Server:   [\r][\n]"
+2020-03-01 11:32:58.598 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Date: Sun, 01 Mar 2020 03:32:58 GMT[\r][\n]"
+2020-03-01 11:32:58.598 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Type: application/json;charset=utf-8[\r][\n]"
+2020-03-01 11:32:58.598 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Length: 75[\r][\n]"
+2020-03-01 11:32:58.598 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+2020-03-01 11:32:58.598 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Pragma: no-cache[\r][\n]"
+2020-03-01 11:32:58.598 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+2020-03-01 11:32:58.598 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "{"code":403,"msg":"[0xe9][0x9d][0x9e][0xe6][0xb3][0x95][0xe8][0xaf][0xb7][0xe6][0xb1][0x82]","success":false,"timestamp":1583033578577}"
+2020-03-01 11:32:58.601 [main] DEBUG org.apache.http.headers - http-outgoing-0 << HTTP/1.1 200 
+2020-03-01 11:32:58.601 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Server:   
+2020-03-01 11:32:58.601 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Date: Sun, 01 Mar 2020 03:32:58 GMT
+2020-03-01 11:32:58.601 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Type: application/json;charset=utf-8
+2020-03-01 11:32:58.601 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Length: 75
+2020-03-01 11:32:58.601 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Connection: keep-alive
+2020-03-01 11:32:58.601 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Pragma: no-cache
+2020-03-01 11:32:58.605 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+2020-03-01 11:32:58.609 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 0][route: {}->http://openapi.58auv.com:80] can be kept alive indefinitely
+2020-03-01 11:32:58.609 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {}->http://openapi.58auv.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2020-03-01 11:32:58.609 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Cancelling request execution
+2020-03-01 11:32:58.614 [main] INFO  com.jk.framework.common.utils.CloseableHttpUtil - time:627ms,API:http://openapi.58auv.com/gateway.do,parMap:{"method":"device.cells.ops","appId":"66491","digest":"CEDCF6D8BA99C267FDA51C73A88DD4B4","bizData":"{\"opList\":[{\"cellNo\":\"1\",\"ops\":[\"DOOR_OPEN\"]}],\"deviceId\":\"TestAndroid_3\"}","version":"1.0","timestamp":"2019-12-17 21:00:00"},headerMap:null
+2020-03-01 11:51:54.021 [main] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2020-03-01 11:51:54.039 [main] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2020-03-01 11:51:54.041 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://openapi.58auv.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2020-03-01 11:51:54.065 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {}->http://openapi.58auv.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2020-03-01 11:51:54.067 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://openapi.58auv.com:80
+2020-03-01 11:51:54.128 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connecting to openapi.58auv.com/120.24.87.222:80
+2020-03-01 11:51:54.131 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.2.235:63368<->120.24.87.222:80
+2020-03-01 11:51:54.132 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /gateway.do HTTP/1.1
+2020-03-01 11:51:54.132 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+2020-03-01 11:51:54.135 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+2020-03-01 11:51:54.138 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> POST /gateway.do HTTP/1.1
+2020-03-01 11:51:54.139 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Length: 260
+2020-03-01 11:51:54.139 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+2020-03-01 11:51:54.139 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Host: openapi.58auv.com
+2020-03-01 11:51:54.139 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Connection: Keep-Alive
+2020-03-01 11:51:54.139 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)
+2020-03-01 11:51:54.139 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2020-03-01 11:51:54.140 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "POST /gateway.do HTTP/1.1[\r][\n]"
+2020-03-01 11:51:54.140 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Length: 260[\r][\n]"
+2020-03-01 11:51:54.140 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Type: application/x-www-form-urlencoded; charset=UTF-8[\r][\n]"
+2020-03-01 11:51:54.140 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Host: openapi.58auv.com[\r][\n]"
+2020-03-01 11:51:54.140 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2020-03-01 11:51:54.140 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)[\r][\n]"
+2020-03-01 11:51:54.140 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2020-03-01 11:51:54.140 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "[\r][\n]"
+2020-03-01 11:51:54.140 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "method=device.cells.ops&appId=66491&digest=4d3b7b1ebdb5846a8803629a069645ff&bizData=%7B%22opList%22%3A%5B%7B%22cellNo%22%3A%221%22%2C%22ops%22%3A%5B%22DOOR_OPEN%22%5D%7D%5D%2C%22deviceId%22%3A%22TestAndroid_3%22%7D&version=1.0&timestamp=2019-12-17+21%3A00%3A00"
+2020-03-01 11:51:54.235 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "HTTP/1.1 200 [\r][\n]"
+2020-03-01 11:51:54.235 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Server:   [\r][\n]"
+2020-03-01 11:51:54.235 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Date: Sun, 01 Mar 2020 03:51:54 GMT[\r][\n]"
+2020-03-01 11:51:54.235 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2020-03-01 11:51:54.235 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Transfer-Encoding: chunked[\r][\n]"
+2020-03-01 11:51:54.236 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+2020-03-01 11:51:54.236 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+2020-03-01 11:51:54.236 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "68[\r][\n]"
+2020-03-01 11:51:54.236 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "{"resultObject":null,"code":100001007,"msg":"[0xe8][0xae][0xbe][0xe5][0xa4][0x87][0xe4][0xb8][0x8d][0xe5][0x9c][0xa8][0xe7][0xba][0xbf]","success":false,"timestamp":1583034714213}[\r][\n]"
+2020-03-01 11:51:54.239 [main] DEBUG org.apache.http.headers - http-outgoing-0 << HTTP/1.1 200 
+2020-03-01 11:51:54.239 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Server:   
+2020-03-01 11:51:54.239 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Date: Sun, 01 Mar 2020 03:51:54 GMT
+2020-03-01 11:51:54.239 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Type: application/json;charset=UTF-8
+2020-03-01 11:51:54.239 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Transfer-Encoding: chunked
+2020-03-01 11:51:54.239 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Connection: keep-alive
+2020-03-01 11:51:54.250 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+2020-03-01 11:51:54.253 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "0[\r][\n]"
+2020-03-01 11:51:54.253 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+2020-03-01 11:51:54.253 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 0][route: {}->http://openapi.58auv.com:80] can be kept alive indefinitely
+2020-03-01 11:51:54.253 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {}->http://openapi.58auv.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2020-03-01 11:51:54.253 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Cancelling request execution
+2020-03-01 11:51:54.259 [main] INFO  com.jk.framework.common.utils.CloseableHttpUtil - time:682ms,API:http://openapi.58auv.com/gateway.do,parMap:{"method":"device.cells.ops","appId":"66491","digest":"4d3b7b1ebdb5846a8803629a069645ff","bizData":"{\"opList\":[{\"cellNo\":\"1\",\"ops\":[\"DOOR_OPEN\"]}],\"deviceId\":\"TestAndroid_3\"}","version":"1.0","timestamp":"2019-12-17 21:00:00"},headerMap:null
+2020-03-01 12:07:01.273 [main] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2020-03-01 12:07:01.334 [main] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2020-03-01 12:07:01.336 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://openapi.58auv.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2020-03-01 12:07:01.355 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {}->http://openapi.58auv.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2020-03-01 12:07:01.357 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://openapi.58auv.com:80
+2020-03-01 12:07:01.448 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connecting to openapi.58auv.com/120.24.87.222:80
+2020-03-01 12:07:01.451 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.2.235:49537<->120.24.87.222:80
+2020-03-01 12:07:01.452 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /gateway.do HTTP/1.1
+2020-03-01 12:07:01.452 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+2020-03-01 12:07:01.453 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+2020-03-01 12:07:01.455 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> POST /gateway.do HTTP/1.1
+2020-03-01 12:07:01.456 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Length: 260
+2020-03-01 12:07:01.456 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+2020-03-01 12:07:01.456 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Host: openapi.58auv.com
+2020-03-01 12:07:01.456 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Connection: Keep-Alive
+2020-03-01 12:07:01.456 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)
+2020-03-01 12:07:01.456 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2020-03-01 12:07:01.457 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "POST /gateway.do HTTP/1.1[\r][\n]"
+2020-03-01 12:07:01.457 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Length: 260[\r][\n]"
+2020-03-01 12:07:01.457 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Type: application/x-www-form-urlencoded; charset=UTF-8[\r][\n]"
+2020-03-01 12:07:01.457 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Host: openapi.58auv.com[\r][\n]"
+2020-03-01 12:07:01.457 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2020-03-01 12:07:01.457 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)[\r][\n]"
+2020-03-01 12:07:01.457 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2020-03-01 12:07:01.457 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "[\r][\n]"
+2020-03-01 12:07:01.457 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "method=device.cells.ops&appId=66491&digest=4d3b7b1ebdb5846a8803629a069645ff&bizData=%7B%22opList%22%3A%5B%7B%22cellNo%22%3A%221%22%2C%22ops%22%3A%5B%22DOOR_OPEN%22%5D%7D%5D%2C%22deviceId%22%3A%22TestAndroid_3%22%7D&version=1.0&timestamp=2019-12-17+21%3A00%3A00"
+2020-03-01 12:07:01.558 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "HTTP/1.1 200 [\r][\n]"
+2020-03-01 12:07:01.558 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Server:   [\r][\n]"
+2020-03-01 12:07:01.558 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Date: Sun, 01 Mar 2020 04:07:01 GMT[\r][\n]"
+2020-03-01 12:07:01.558 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2020-03-01 12:07:01.558 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Transfer-Encoding: chunked[\r][\n]"
+2020-03-01 12:07:01.559 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+2020-03-01 12:07:01.561 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+2020-03-01 12:07:01.562 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "68[\r][\n]"
+2020-03-01 12:07:01.562 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "{"resultObject":null,"code":100001007,"msg":"[0xe8][0xae][0xbe][0xe5][0xa4][0x87][0xe4][0xb8][0x8d][0xe5][0x9c][0xa8][0xe7][0xba][0xbf]","success":false,"timestamp":1583035621535}[\r][\n]"
+2020-03-01 12:07:01.564 [main] DEBUG org.apache.http.headers - http-outgoing-0 << HTTP/1.1 200 
+2020-03-01 12:07:01.564 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Server:   
+2020-03-01 12:07:01.564 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Date: Sun, 01 Mar 2020 04:07:01 GMT
+2020-03-01 12:07:01.564 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Type: application/json;charset=UTF-8
+2020-03-01 12:07:01.564 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Transfer-Encoding: chunked
+2020-03-01 12:07:01.564 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Connection: keep-alive
+2020-03-01 12:07:01.568 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+2020-03-01 12:07:01.576 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "0[\r][\n]"
+2020-03-01 12:07:01.576 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+2020-03-01 12:07:01.576 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 0][route: {}->http://openapi.58auv.com:80] can be kept alive indefinitely
+2020-03-01 12:07:01.576 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {}->http://openapi.58auv.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2020-03-01 12:07:01.576 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Cancelling request execution
+2020-03-01 12:07:01.585 [main] INFO  com.jk.framework.common.utils.CloseableHttpUtil - time:707ms,API:http://openapi.58auv.com/gateway.do,parMap:{"method":"device.cells.ops","appId":"66491","digest":"4d3b7b1ebdb5846a8803629a069645ff","bizData":"{\"opList\":[{\"cellNo\":\"1\",\"ops\":[\"DOOR_OPEN\"]}],\"deviceId\":\"TestAndroid_3\"}","version":"1.0","timestamp":"2019-12-17 21:00:00"},headerMap:null
+2020-03-01 12:07:20.108 [main] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2020-03-01 12:07:20.160 [main] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2020-03-01 12:07:20.161 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://openapi.58auv.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2020-03-01 12:07:20.173 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {}->http://openapi.58auv.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2020-03-01 12:07:20.175 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://openapi.58auv.com:80
+2020-03-01 12:07:20.189 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connecting to openapi.58auv.com/120.24.87.222:80
+2020-03-01 12:07:20.194 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.2.235:49588<->120.24.87.222:80
+2020-03-01 12:07:20.194 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /gateway.do HTTP/1.1
+2020-03-01 12:07:20.194 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+2020-03-01 12:07:20.195 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+2020-03-01 12:07:20.197 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> POST /gateway.do HTTP/1.1
+2020-03-01 12:07:20.197 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Length: 260
+2020-03-01 12:07:20.197 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+2020-03-01 12:07:20.197 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Host: openapi.58auv.com
+2020-03-01 12:07:20.197 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Connection: Keep-Alive
+2020-03-01 12:07:20.197 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)
+2020-03-01 12:07:20.197 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2020-03-01 12:07:20.198 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "POST /gateway.do HTTP/1.1[\r][\n]"
+2020-03-01 12:07:20.198 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Length: 260[\r][\n]"
+2020-03-01 12:07:20.198 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Type: application/x-www-form-urlencoded; charset=UTF-8[\r][\n]"
+2020-03-01 12:07:20.198 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Host: openapi.58auv.com[\r][\n]"
+2020-03-01 12:07:20.198 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2020-03-01 12:07:20.198 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)[\r][\n]"
+2020-03-01 12:07:20.198 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2020-03-01 12:07:20.198 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "[\r][\n]"
+2020-03-01 12:07:20.198 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "method=device.cells.ops&appId=66491&digest=4D3B7B1EBDB5846A8803629A069645FF&bizData=%7B%22opList%22%3A%5B%7B%22cellNo%22%3A%221%22%2C%22ops%22%3A%5B%22DOOR_OPEN%22%5D%7D%5D%2C%22deviceId%22%3A%22TestAndroid_3%22%7D&version=1.0&timestamp=2019-12-17+21%3A00%3A00"
+2020-03-01 12:07:20.292 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "HTTP/1.1 200 [\r][\n]"
+2020-03-01 12:07:20.292 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Server:   [\r][\n]"
+2020-03-01 12:07:20.293 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Date: Sun, 01 Mar 2020 04:07:20 GMT[\r][\n]"
+2020-03-01 12:07:20.293 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Type: application/json;charset=utf-8[\r][\n]"
+2020-03-01 12:07:20.293 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Length: 75[\r][\n]"
+2020-03-01 12:07:20.293 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+2020-03-01 12:07:20.295 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Pragma: no-cache[\r][\n]"
+2020-03-01 12:07:20.295 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+2020-03-01 12:07:20.296 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "{"code":403,"msg":"[0xe9][0x9d][0x9e][0xe6][0xb3][0x95][0xe8][0xaf][0xb7][0xe6][0xb1][0x82]","success":false,"timestamp":1583035640269}"
+2020-03-01 12:07:20.298 [main] DEBUG org.apache.http.headers - http-outgoing-0 << HTTP/1.1 200 
+2020-03-01 12:07:20.298 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Server:   
+2020-03-01 12:07:20.298 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Date: Sun, 01 Mar 2020 04:07:20 GMT
+2020-03-01 12:07:20.298 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Type: application/json;charset=utf-8
+2020-03-01 12:07:20.298 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Length: 75
+2020-03-01 12:07:20.298 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Connection: keep-alive
+2020-03-01 12:07:20.298 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Pragma: no-cache
+2020-03-01 12:07:20.301 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+2020-03-01 12:07:20.305 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 0][route: {}->http://openapi.58auv.com:80] can be kept alive indefinitely
+2020-03-01 12:07:20.306 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {}->http://openapi.58auv.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2020-03-01 12:07:20.306 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Cancelling request execution
+2020-03-01 12:07:20.311 [main] INFO  com.jk.framework.common.utils.CloseableHttpUtil - time:615ms,API:http://openapi.58auv.com/gateway.do,parMap:{"method":"device.cells.ops","appId":"66491","digest":"4D3B7B1EBDB5846A8803629A069645FF","bizData":"{\"opList\":[{\"cellNo\":\"1\",\"ops\":[\"DOOR_OPEN\"]}],\"deviceId\":\"TestAndroid_3\"}","version":"1.0","timestamp":"2019-12-17 21:00:00"},headerMap:null
+2020-03-01 12:08:54.070 [main] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2020-03-01 12:08:54.133 [main] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2020-03-01 12:08:54.135 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://openapi.58auv.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2020-03-01 12:08:54.155 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {}->http://openapi.58auv.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2020-03-01 12:08:54.157 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://openapi.58auv.com:80
+2020-03-01 12:08:54.219 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connecting to openapi.58auv.com/120.24.87.222:80
+2020-03-01 12:08:54.222 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.2.235:49846<->120.24.87.222:80
+2020-03-01 12:08:54.223 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /gateway.do HTTP/1.1
+2020-03-01 12:08:54.223 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+2020-03-01 12:08:54.224 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+2020-03-01 12:08:54.227 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> POST /gateway.do HTTP/1.1
+2020-03-01 12:08:54.227 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Length: 260
+2020-03-01 12:08:54.227 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+2020-03-01 12:08:54.227 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Host: openapi.58auv.com
+2020-03-01 12:08:54.227 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Connection: Keep-Alive
+2020-03-01 12:08:54.228 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)
+2020-03-01 12:08:54.228 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2020-03-01 12:08:54.228 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "POST /gateway.do HTTP/1.1[\r][\n]"
+2020-03-01 12:08:54.228 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Length: 260[\r][\n]"
+2020-03-01 12:08:54.228 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Type: application/x-www-form-urlencoded; charset=UTF-8[\r][\n]"
+2020-03-01 12:08:54.228 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Host: openapi.58auv.com[\r][\n]"
+2020-03-01 12:08:54.228 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2020-03-01 12:08:54.229 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)[\r][\n]"
+2020-03-01 12:08:54.229 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2020-03-01 12:08:54.229 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "[\r][\n]"
+2020-03-01 12:08:54.229 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "method=device.cells.ops&appId=66491&digest=4d3b7b1ebdb5846a8803629a069645ff&bizData=%7B%22opList%22%3A%5B%7B%22cellNo%22%3A%221%22%2C%22ops%22%3A%5B%22DOOR_OPEN%22%5D%7D%5D%2C%22deviceId%22%3A%22TestAndroid_3%22%7D&version=1.0&timestamp=2019-12-17+21%3A00%3A00"
+2020-03-01 12:08:54.363 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "HTTP/1.1 200 [\r][\n]"
+2020-03-01 12:08:54.364 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Server:   [\r][\n]"
+2020-03-01 12:08:54.364 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Date: Sun, 01 Mar 2020 04:08:54 GMT[\r][\n]"
+2020-03-01 12:08:54.364 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2020-03-01 12:08:54.364 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Transfer-Encoding: chunked[\r][\n]"
+2020-03-01 12:08:54.364 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+2020-03-01 12:08:54.364 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+2020-03-01 12:08:54.364 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "68[\r][\n]"
+2020-03-01 12:08:54.364 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "{"resultObject":null,"code":100001007,"msg":"[0xe8][0xae][0xbe][0xe5][0xa4][0x87][0xe4][0xb8][0x8d][0xe5][0x9c][0xa8][0xe7][0xba][0xbf]","success":false,"timestamp":1583035734326}[\r][\n]"
+2020-03-01 12:08:54.367 [main] DEBUG org.apache.http.headers - http-outgoing-0 << HTTP/1.1 200 
+2020-03-01 12:08:54.367 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Server:   
+2020-03-01 12:08:54.367 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Date: Sun, 01 Mar 2020 04:08:54 GMT
+2020-03-01 12:08:54.367 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Type: application/json;charset=UTF-8
+2020-03-01 12:08:54.367 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Transfer-Encoding: chunked
+2020-03-01 12:08:54.367 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Connection: keep-alive
+2020-03-01 12:08:54.373 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+2020-03-01 12:08:54.376 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "0[\r][\n]"
+2020-03-01 12:08:54.376 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+2020-03-01 12:08:54.377 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 0][route: {}->http://openapi.58auv.com:80] can be kept alive indefinitely
+2020-03-01 12:08:54.377 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {}->http://openapi.58auv.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2020-03-01 12:08:54.377 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Cancelling request execution
+2020-03-01 12:08:54.383 [main] INFO  com.jk.framework.common.utils.CloseableHttpUtil - time:738ms,API:http://openapi.58auv.com/gateway.do,parMap:{"method":"device.cells.ops","appId":"66491","digest":"4d3b7b1ebdb5846a8803629a069645ff","bizData":"{\"opList\":[{\"cellNo\":\"1\",\"ops\":[\"DOOR_OPEN\"]}],\"deviceId\":\"TestAndroid_3\"}","version":"1.0","timestamp":"2019-12-17 21:00:00"},headerMap:null

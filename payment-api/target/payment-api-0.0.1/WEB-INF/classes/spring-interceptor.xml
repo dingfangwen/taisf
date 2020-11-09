@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+
+    <!--输出格式转换-->
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <bean class="com.jk.api.dependency.common.converter.MessageConverter"/>
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                <property name="supportedMediaTypes">
+                    <list>
+                        <value>text/plain;charset=UTF-8</value>
+                        <value>text/html;charset=UTF-8</value>
+                        <value>application/json;charset=UTF-8</value>
+                    </list>
+                </property>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+
+
+    <mvc:interceptors>
+        <bean class="com.jk.api.dependency.common.collector.ParamCollector" />
+        <!--<bean class="com.taisf.api.common.collector.ParamCollector" />-->
+
+        <!--<mvc:interceptor>-->
+            <!--<mvc:mapping path="/**" />-->
+            <!--<bean class="com.jk.api.dependency.common.interceptor.InitGlobalParamsInterceptor" >-->
+                <!--&lt;!&ndash;<property name="staticResourceUrl" value="${static.resource.url}"/>&ndash;&gt;-->
+                <!--&lt;!&ndash;<property name="jsVersion" value="${js.version}"/>&ndash;&gt;-->
+            <!--</bean>-->
+        <!--</mvc:interceptor>-->
+
+    </mvc:interceptors>
+
+        
+</beans>

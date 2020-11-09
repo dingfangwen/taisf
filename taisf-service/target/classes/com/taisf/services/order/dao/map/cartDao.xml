@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="order.cartDao">
+
+    <resultMap id="BaseResultMap" type="com.taisf.services.order.entity.CartEntity">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="business_uid" jdbcType="VARCHAR" property="businessUid" />
+        <result column="user_uid" jdbcType="VARCHAR" property="userUid" />
+        <result column="supplier_product_type" jdbcType="INTEGER" property="supplierProductType" />
+        <result column="product_code" jdbcType="INTEGER" property="productCode" />
+        <result column="product_num" jdbcType="VARCHAR" property="productNum" />
+        <result column="product_price" jdbcType="INTEGER" property="productPrice" />
+    </resultMap>
+
+
+    <sql id="Base_Column_List">
+        id,business_uid, user_uid, product_code, supplier_product_type, product_num,create_time
+    </sql>
+
+
+
+
+    <delete id="delUserCart" parameterType="java.util.Map">
+        delete from t_cart
+        where  user_uid = #{userUid,jdbcType=VARCHAR}
+        AND business_uid = #{businessUid,jdbcType=VARCHAR}
+    </delete>
+
+
+
+    <delete id="delCart" parameterType="java.util.Map">
+        delete from t_cart
+        where id = #{id,jdbcType=INTEGER}
+    </delete>
+
+
+
+    <select id="getCartByProduct" parameterType="com.taisf.services.order.dto.CartBaseRequest" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from t_cart
+        where user_uid = #{userUid,jdbcType=VARCHAR}
+        AND business_uid = #{businessUid,jdbcType=VARCHAR}
+        AND supplier_product_type = #{supplierProductType,jdbcType=VARCHAR}
+        AND product_code = #{productCode,jdbcType=VARCHAR}
+        limit 1
+    </select>
+
+
+
+
+    <select id="getCartByUserId" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from t_cart
+        where user_uid = #{userUid,jdbcType=VARCHAR} AND business_uid = #{businessUid,jdbcType=VARCHAR}
+    </select>
+
+
+    <!-- 新增购物车 -->
+    <insert id="saveCart" parameterType="com.taisf.services.order.entity.CartEntity">
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+
+        insert into t_cart
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+
+            <if test="businessUid != null">
+                business_uid,
+            </if>
+            <if test="userUid != null">
+                user_uid,
+            </if>
+            <if test="supplierProductType != null">
+                supplier_product_type,
+            </if>
+            <if test="productCode != null">
+                product_code,
+            </if>
+
+            <if test="productNum != null">
+                product_num,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+
+
+            <if test="businessUid != null">
+                #{businessUid,jdbcType=VARCHAR},
+            </if>
+            <if test="userUid != null">
+                #{userUid,jdbcType=VARCHAR},
+            </if>
+
+            <if test="supplierProductType != null">
+                #{supplierProductType,jdbcType=INTEGER},
+            </if>
+            <if test="productCode != null">
+                #{productCode,jdbcType=INTEGER},
+            </if>
+
+            <if test="productNum != null">
+                #{productNum,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+
+
+    <!-- 更新购物车-->
+    <update id="updateCart" parameterType="com.taisf.services.order.entity.CartEntity">
+        update t_cart
+        <set>
+            <if test="businessUid != null">
+                business_uid = #{businessUid,jdbcType=VARCHAR},
+            </if>
+            <if test="userUid != null">
+                user_uid =  #{userUid,jdbcType=VARCHAR},
+            </if>
+
+            <if test="supplierProductType != null">
+                supplier_product_type =  #{supplierProductType,jdbcType=INTEGER},
+            </if>
+            <if test="productCode != null">
+                product_code =  #{productCode,jdbcType=INTEGER},
+            </if>
+
+            <if test="productNum != null">
+                product_num = #{productNum,jdbcType=INTEGER},
+            </if>
+        </set>
+        WHERE   id = #{id,jdbcType=INTEGER}
+    </update>
+
+
+
+
+</mapper>

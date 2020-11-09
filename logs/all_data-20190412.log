@@ -1,0 +1,1042 @@
+2019-04-12 13:03:53.024 [main] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2019-04-12 13:03:53.125 [main] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2019-04-12 13:03:53.130 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2019-04-12 13:03:53.177 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:03:53.180 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://sandbox.iplitz.com:80
+2019-04-12 13:03:53.726 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connecting to sandbox.iplitz.com/116.62.137.37:80
+2019-04-12 13:03:53.761 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.36.130:51409<->116.62.137.37:80
+2019-04-12 13:03:53.762 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /api/open/digest/get HTTP/1.1
+2019-04-12 13:03:53.762 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+2019-04-12 13:03:53.763 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+2019-04-12 13:03:53.773 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> POST /api/open/digest/get HTTP/1.1
+2019-04-12 13:03:53.773 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Type: application/json
+2019-04-12 13:03:53.773 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Length: 249
+2019-04-12 13:03:53.774 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Host: sandbox.iplitz.com
+2019-04-12 13:03:53.774 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Connection: Keep-Alive
+2019-04-12 13:03:53.774 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)
+2019-04-12 13:03:53.774 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2019-04-12 13:03:53.775 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "POST /api/open/digest/get HTTP/1.1[\r][\n]"
+2019-04-12 13:03:53.776 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Type: application/json[\r][\n]"
+2019-04-12 13:03:53.776 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Length: 249[\r][\n]"
+2019-04-12 13:03:53.776 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Host: sandbox.iplitz.com[\r][\n]"
+2019-04-12 13:03:53.776 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2019-04-12 13:03:53.776 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)[\r][\n]"
+2019-04-12 13:03:53.776 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2019-04-12 13:03:53.777 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "[\r][\n]"
+2019-04-12 13:03:53.777 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "{"uri":"/api/open/device/status","responseClass":"com.taisf.services.link.command.response.LinkGetDeviceStatusResponse","AppId":"aef9400912e14c8db42201b42c075cab","Timestamp":1555045432006,"Digest":null,"DeviceId":"1f088093eb117f8520da8e7758bc3e8e"}"
+2019-04-12 13:03:53.865 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+2019-04-12 13:03:53.866 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Server: nginx[\r][\n]"
+2019-04-12 13:03:53.866 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Date: Fri, 12 Apr 2019 05:03:53 GMT[\r][\n]"
+2019-04-12 13:03:53.866 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2019-04-12 13:03:53.866 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Length: 94[\r][\n]"
+2019-04-12 13:03:53.866 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+2019-04-12 13:03:53.866 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Set-Cookie: JSESSIONID=3E1588EB33E283104D66CC566899C69D; Path=/; HttpOnly[\r][\n]"
+2019-04-12 13:03:53.867 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Origin: *[\r][\n]"
+2019-04-12 13:03:53.867 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:03:53.867 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:03:53.867 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization[\r][\n]"
+2019-04-12 13:03:53.867 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+2019-04-12 13:03:53.867 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "{"Data":"91B6EECD750B72DC459D02186722F74B","Success":true,"Code":0,"Msg":"[0xe8][0x8e][0xb7][0xe5][0x8f][0x96][0xe7][0xad][0xbe][0xe5][0x90][0x8d][0xe6][0x88][0x90][0xe5][0x8a][0x9f]"}"
+2019-04-12 13:03:53.872 [main] DEBUG org.apache.http.headers - http-outgoing-0 << HTTP/1.1 200 OK
+2019-04-12 13:03:53.873 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Server: nginx
+2019-04-12 13:03:53.874 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Date: Fri, 12 Apr 2019 05:03:53 GMT
+2019-04-12 13:03:53.874 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Type: application/json;charset=UTF-8
+2019-04-12 13:03:53.875 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Length: 94
+2019-04-12 13:03:53.875 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Connection: keep-alive
+2019-04-12 13:03:53.875 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Set-Cookie: JSESSIONID=3E1588EB33E283104D66CC566899C69D; Path=/; HttpOnly
+2019-04-12 13:03:53.875 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Origin: *
+2019-04-12 13:03:53.875 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:03:53.876 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:03:53.876 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+2019-04-12 13:03:53.886 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+2019-04-12 13:03:53.898 [main] DEBUG o.a.http.client.protocol.ResponseProcessCookies - Cookie accepted [JSESSIONID="3E1588EB33E283104D66CC566899C69D", version:0, domain:sandbox.iplitz.com, path:/, expiry:null]
+2019-04-12 13:03:53.903 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 0][route: {}->http://sandbox.iplitz.com:80] can be kept alive indefinitely
+2019-04-12 13:03:53.904 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {}->http://sandbox.iplitz.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:03:53.904 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Cancelling request execution
+2019-04-12 13:03:53.908 [main] INFO  com.jk.framework.common.utils.CloseableHttpUtil - time:1590ms,API:http://sandbox.iplitz.com/api/open/digest/get,parMap:{"uri":"/api/open/device/status","responseClass":"com.taisf.services.link.command.response.LinkGetDeviceStatusResponse","AppId":"aef9400912e14c8db42201b42c075cab","Timestamp":1555045432006,"Digest":null,"DeviceId":"1f088093eb117f8520da8e7758bc3e8e"},headerMap:null
+2019-04-12 13:03:53.999 [main] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2019-04-12 13:03:53.999 [main] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2019-04-12 13:03:53.999 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2019-04-12 13:03:54.001 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 1][route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:03:54.006 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://sandbox.iplitz.com:80
+2019-04-12 13:03:54.010 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connecting to sandbox.iplitz.com/116.62.137.37:80
+2019-04-12 13:03:54.373 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.36.130:51410<->116.62.137.37:80
+2019-04-12 13:03:54.374 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /api/open/device/status HTTP/1.1
+2019-04-12 13:03:54.374 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+2019-04-12 13:03:54.374 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+2019-04-12 13:03:54.374 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> POST /api/open/device/status HTTP/1.1
+2019-04-12 13:03:54.374 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Content-Type: application/json
+2019-04-12 13:03:54.374 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Content-Length: 279
+2019-04-12 13:03:54.375 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Host: sandbox.iplitz.com
+2019-04-12 13:03:54.375 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Connection: Keep-Alive
+2019-04-12 13:03:54.375 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)
+2019-04-12 13:03:54.375 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Accept-Encoding: gzip,deflate
+2019-04-12 13:03:54.375 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "POST /api/open/device/status HTTP/1.1[\r][\n]"
+2019-04-12 13:03:54.375 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Content-Type: application/json[\r][\n]"
+2019-04-12 13:03:54.375 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Content-Length: 279[\r][\n]"
+2019-04-12 13:03:54.375 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Host: sandbox.iplitz.com[\r][\n]"
+2019-04-12 13:03:54.375 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+2019-04-12 13:03:54.375 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)[\r][\n]"
+2019-04-12 13:03:54.375 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2019-04-12 13:03:54.375 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "[\r][\n]"
+2019-04-12 13:03:54.375 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "{"uri":"/api/open/device/status","responseClass":"com.taisf.services.link.command.response.LinkGetDeviceStatusResponse","AppId":"aef9400912e14c8db42201b42c075cab","Timestamp":1555045432006,"Digest":"91B6EECD750B72DC459D02186722F74B","DeviceId":"1f088093eb117f8520da8e7758bc3e8e"}"
+2019-04-12 13:03:54.803 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "HTTP/1.1 200 OK[\r][\n]"
+2019-04-12 13:03:54.804 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Server: nginx[\r][\n]"
+2019-04-12 13:03:54.805 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Date: Fri, 12 Apr 2019 05:03:54 GMT[\r][\n]"
+2019-04-12 13:03:54.806 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2019-04-12 13:03:54.807 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Transfer-Encoding: chunked[\r][\n]"
+2019-04-12 13:03:54.808 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Connection: keep-alive[\r][\n]"
+2019-04-12 13:03:54.808 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Vary: Accept-Encoding[\r][\n]"
+2019-04-12 13:03:54.808 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Set-Cookie: JSESSIONID=3A2095FF72BFEA89BE693D1E61980052; Path=/; HttpOnly[\r][\n]"
+2019-04-12 13:03:54.808 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Origin: *[\r][\n]"
+2019-04-12 13:03:54.808 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:03:54.808 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:03:54.809 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization[\r][\n]"
+2019-04-12 13:03:54.809 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Content-Encoding: gzip[\r][\n]"
+2019-04-12 13:03:54.809 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "[\r][\n]"
+2019-04-12 13:03:54.809 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "39e[\r][\n]"
+2019-04-12 13:03:54.809 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "[0x1f][0x8b][0x8][0x0][0x0][0x0][0x0][0x0][0x0][0x3][0xad][0x97][0xcd][0x8a]$E[0x10][0x80][0xdf][0xa5][0xce]}[0xc8][0x88][0x8c][0xc8][0x9f][0xb9][0xe9][0xce]e[0x11][0xf5][0xb0]x[0x12][0xf][0x19]?)[0xc2][0xc2],[0xd3]3.2[0xcc]][0x4]A[0xf0][0xba][0xe0][0xd5]g[0x10][0xc4][0x97]q[0xd7][0xd7]0j\[0xdc][0xda][0xe3][0xd4]T[0x1f][0xba][0xab][0x9a][0xec][0xea][0xaf]"#[0xe2][0x8b][0xba][[0x9e]][0x99]/[0x17][0xe9][0xb4]\[0x8e][0x9b][0xb1]\[0xdc]-/n[0xc6][0xcd][0xed]y[0xb9][0x80][0xd3][0xfb][0xc3]K?[0xeb]r[0xb1][0xbc]}[0xf3][0xfb]?[0xfc][0xb5][0x9c][0x96]O^[0xbd]zn[0xf1][0xc5][0xf0][0xd9])[0xa5][0xe][0xe8]@[0xda]L[0x8]1A[0xbc]k[0xaa][0xac]Cb[0xe9][0xa5][0xff][0x9d][0xfa][0xc3]j[0x98][0xa9][0xb5][0xd4][0xb3][0xb]@[0x9d][0x8d]1[0xd9]h^+7[0xd1][0xec][0xcd]c[0xf5]3[0xf9]2[0xfe][0xf8][0xeb][0xbb][0x87][0xa3][0xf5]W[0xc1][0xb0][0x1e]~q[0xb5]^[0xe0][0xfd][0x8a][\r][0xdf][0xe3].[0xff][0x80][0xc1]2[0xa5][0x92]v[0x95],[0x94][0x19][0x85][0xad][0xa6][0xe4][0x1d][0xb4]b[0xad][0x11][0x8a][0xd3][0xf2][0x99][0xbf]~}u[0xbd].[0x8e][0x93]/[0xaf][0xcd][0xaf]?[0xfd][0xe1][0xbf][0x93][0xaf][0xce][0xfe][0xff][0xbf][0xdf][0x9f]>`[0xe2][0x6][0x13][0xf][0xc1][0xac]E[[0x93]V@J[0xa5]Z[0xb5][0xf]"[0xee]V[0x8d][0xa7]dl[0xbc][0xb]3o0[0xf3]![0x98][0xc1][0x88]}N[0xc8][0x1d][\n]"
+2019-04-12 13:03:54.810 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "[0xe5][0xaa]2[0xe2][0xb4][0x16][0x12][0x87][\n]"
+2019-04-12 13:03:54.810 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "[0xde][0xfa].L[0xda]`[0xd2]![0x98][0x96]$[0xfb][0xe0][0x2][0xd4]&[0x11][0x15][0xf1]f[0xad]s[0xd7][0xce][0x9]k[0xaa][0xbb]0y[0x83][0xb9][0xee][0xc7][0x9a][0xa8]O[0xcb]M2r[0xd2][0x99][0x88]\[0x89][0xd9][0x9a]M[0x1d][0xd3]8#@[0xa7][0xba]n[0xd9][0xe3]s[0xb3]l0[0xcb]![0x98][0xa8][0xb5]6[0x8c][0x1a]o=*[0xa9]Q3[0xa2][0xd9],[0x8f][0xd8][0xf0]^y[0xee][0xc2][0xac][0x1b][0xcc]u?[0x9e][0x1e]M,[0xae][0xa5]8+3R2ol[0xce][0xd6][0xa3][0xc6][0xa1][0xcf]h][0xbb]0[0xdb][0x6][0xb3][0x1d][0x82]9[0x8b][0x9b]'[0x19][0x4]5Q.y[0xc0][0xb4]6[0x1b]([0x8e][0xae][0xdc][0xf7]5[0xa4][0xbe][0xc1]\o[0xf4][0xe9][0xd1][0xac][0xb3][0xf4][0x9][0xde]G[0xb7]L#*|Dx![0xa1][0x99]hU\[0x9b][0xfd][0xe3]s[0x13]B;[0x1f][0xfa]{:[0x4]t`+Sk6[0xc8]D-[0xba]|[0x9e][0x96][0x91][0xa6]C6[0x91][0xb9]/[0x9e][0xf0][0x91][0x88][0x8e]1[0x11][0xc][0xf6][0xd8][0xf4][0xe2]b[0xd1][0x97][0xaa][0x8b]S[0x1a]j[0x12][0x7])e[0xd4]}[0x11][0xc5]mD[0x8f]q[0x91][0xb7][0xc8][0xcb][0x8a]m"5[0x9a][0x94][0x9b][0x82]4[0xcf][0x91][\n]"
+2019-04-12 13:03:54.810 [main] DEBUG org.apache.http.wire - http-outgoing-1 << ")q[0xd4][0xd3]>[0xd0][0xad][0x8c][0xe0][0x18][0x1b][0xf9][0x88][0xd2]f2[0xc9][0x15]([0xda]{[0xb7][0xc1]}[0xe6]ns:[0x1a][0xec][0x4][0xdd][0xea][0x8][0x8e][0xf1]QMV[0x18]G[0x4][0x92][0x95]R[0xe9][0x8d]%p[0x8b]4[0x0][0xa7][0xb8][0x81]}[0x11][0xdd][\n]"
+2019-04-12 13:03:54.811 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "[0x9][0x8e]1[0x92]y[0x99]Q[0xeb][0xa9]`[0xed]Tj[0x19]Vz|[0xa4][0xcc]-z[0x93][0xad]>[0xd9]Q[0xf5][%[0xc1]1N*F[0xa2]:([0x86][0x8f]A6kS[0xb1]x[0x8d]R[0x8a][0xce][0x9e][0xc7]>[0xd0][0xad][0x94][0xe0][0x18]+[0xcd][0x12][0xb1]K[0x9][0xb][0xd5]A[0x18]#q[0xcc]!Tr[0xc][0xd2]$[0xa8]s[0x9f][0xe3]a[0xab]%8[0xc6]K[0x94]ZBd[0x10][0x94][0x18][0x94][0xb1][0xb6]0[0xa8]O[0xe5]H[0x7][0x1e]2[0xf7]Y[0x1e][0xb6]b[0x82]c[0xcc][0xd4][0x11]][0xfa][0x18]6qR[0x80][\r][0x91][0x18]J[0xd1]#U9E[0xeb][0xda][0xb5][0xf5][0xb8]5[0x13][0x1e]c&[0x15][0xa2].[0x92]9+S[0xf7]([0xa6][0x1c][0xf]AVb[0x86][0x1e][0x11][0xe8]}3=n[0xcd][0x84][0xc7][0x98][0xc9][0x87]B [0xc9]4KTxt[0xce]$1[0xeb][0x19][0xd5][0x10][0xe9]\[0xa3][0xf1][0xf8][0xaa][0xc7][0xad][0x99][0xf0][0x18]3[0xa5]H[0xce]Ie[0xcd][0xd3][0xd8]z[0xb4][0x1][0x9c]A[0xdd]si[0xd1]V[0x1f][0xac][0xb2][0x3]tk&<[0xc6]L[0xad]B[0x8f][0xb9][0x4]Rt#[0xca]^[0x87][0xc4][0xf3]GNBC[0xd9][0xb9][0xae]V[0xd9][0x1][0xba]5[0x13][0x1e]d&[0x94][0xc][0x84][0x5]5[0xaf][0x1d]J[0x1b]X8i[0xf0][0xba][0xf5]E[0xf5][0x11][0xd3][0xd3]7[0xf7][0xa7][0xe5][0xf3][0xf3][0xb7][0xf1][0xe0][0xfc][0xee][0xd7][0x9f][0xff][0xfe][0xf3][0xcd][0xbb][0x1f]y[0xfb][0xd3]oq[0xa3]/n[0xe3]:[0xe7]x[0xce][0xbf][0xb9][0xbe][0xf5][0xfb][0x1][0xff]L^%[0x81][0x10][0x0][0x0][\r][\n]"
+2019-04-12 13:03:54.811 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "0[\r][\n]"
+2019-04-12 13:03:54.811 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "[\r][\n]"
+2019-04-12 13:03:54.811 [main] DEBUG org.apache.http.headers - http-outgoing-1 << HTTP/1.1 200 OK
+2019-04-12 13:03:54.811 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Server: nginx
+2019-04-12 13:03:54.811 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Date: Fri, 12 Apr 2019 05:03:54 GMT
+2019-04-12 13:03:54.811 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Content-Type: application/json;charset=UTF-8
+2019-04-12 13:03:54.811 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Transfer-Encoding: chunked
+2019-04-12 13:03:54.811 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Connection: keep-alive
+2019-04-12 13:03:54.812 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Vary: Accept-Encoding
+2019-04-12 13:03:54.812 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Set-Cookie: JSESSIONID=3A2095FF72BFEA89BE693D1E61980052; Path=/; HttpOnly
+2019-04-12 13:03:54.812 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Origin: *
+2019-04-12 13:03:54.812 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:03:54.812 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:03:54.812 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+2019-04-12 13:03:54.812 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Content-Encoding: gzip
+2019-04-12 13:03:54.815 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+2019-04-12 13:03:54.816 [main] DEBUG o.a.http.client.protocol.ResponseProcessCookies - Cookie accepted [JSESSIONID="3A2095FF72BFEA89BE693D1E61980052", version:0, domain:sandbox.iplitz.com, path:/, expiry:null]
+2019-04-12 13:03:54.827 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 1][route: {}->http://sandbox.iplitz.com:80] can be kept alive indefinitely
+2019-04-12 13:03:54.828 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 1][route: {}->http://sandbox.iplitz.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:03:54.828 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Cancelling request execution
+2019-04-12 13:03:54.828 [main] INFO  com.jk.framework.common.utils.CloseableHttpUtil - time:838ms,API:http://sandbox.iplitz.com/api/open/device/status,parMap:{"uri":"/api/open/device/status","responseClass":"com.taisf.services.link.command.response.LinkGetDeviceStatusResponse","AppId":"aef9400912e14c8db42201b42c075cab","Timestamp":1555045432006,"Digest":"91B6EECD750B72DC459D02186722F74B","DeviceId":"1f088093eb117f8520da8e7758bc3e8e"},headerMap:null
+2019-04-12 13:04:26.297 [main] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2019-04-12 13:04:26.306 [main] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2019-04-12 13:04:26.308 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2019-04-12 13:04:26.360 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:04:26.362 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://sandbox.iplitz.com:80
+2019-04-12 13:04:26.367 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connecting to sandbox.iplitz.com/116.62.137.37:80
+2019-04-12 13:04:26.396 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.36.130:51424<->116.62.137.37:80
+2019-04-12 13:04:26.396 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /api/open/digest/get HTTP/1.1
+2019-04-12 13:04:26.396 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+2019-04-12 13:04:26.397 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+2019-04-12 13:04:26.400 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> POST /api/open/digest/get HTTP/1.1
+2019-04-12 13:04:26.400 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Type: application/json
+2019-04-12 13:04:26.400 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Length: 160
+2019-04-12 13:04:26.400 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Host: sandbox.iplitz.com
+2019-04-12 13:04:26.401 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Connection: Keep-Alive
+2019-04-12 13:04:26.401 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)
+2019-04-12 13:04:26.401 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2019-04-12 13:04:26.401 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "POST /api/open/digest/get HTTP/1.1[\r][\n]"
+2019-04-12 13:04:26.402 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Type: application/json[\r][\n]"
+2019-04-12 13:04:26.403 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Length: 160[\r][\n]"
+2019-04-12 13:04:26.404 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Host: sandbox.iplitz.com[\r][\n]"
+2019-04-12 13:04:26.405 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2019-04-12 13:04:26.405 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)[\r][\n]"
+2019-04-12 13:04:26.405 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2019-04-12 13:04:26.406 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "[\r][\n]"
+2019-04-12 13:04:26.406 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "{"AppId":"aef9400912e14c8db42201b42c075cab","OutOrderId":"18911123563","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","ApplyNum":"1","Timestamp":"1555045465623"}"
+2019-04-12 13:04:26.437 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+2019-04-12 13:04:26.437 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Server: nginx[\r][\n]"
+2019-04-12 13:04:26.437 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Date: Fri, 12 Apr 2019 05:04:26 GMT[\r][\n]"
+2019-04-12 13:04:26.437 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2019-04-12 13:04:26.437 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Length: 94[\r][\n]"
+2019-04-12 13:04:26.437 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+2019-04-12 13:04:26.437 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Set-Cookie: JSESSIONID=F6B50ACA4F9D4DB9AA4DAE0D206D426E; Path=/; HttpOnly[\r][\n]"
+2019-04-12 13:04:26.437 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Origin: *[\r][\n]"
+2019-04-12 13:04:26.438 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:04:26.438 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:04:26.438 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization[\r][\n]"
+2019-04-12 13:04:26.438 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+2019-04-12 13:04:26.438 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "{"Data":"0223FDDAFE6EF712E292C0FEFC650CF9","Success":true,"Code":0,"Msg":"[0xe8][0x8e][0xb7][0xe5][0x8f][0x96][0xe7][0xad][0xbe][0xe5][0x90][0x8d][0xe6][0x88][0x90][0xe5][0x8a][0x9f]"}"
+2019-04-12 13:04:26.440 [main] DEBUG org.apache.http.headers - http-outgoing-0 << HTTP/1.1 200 OK
+2019-04-12 13:04:26.440 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Server: nginx
+2019-04-12 13:04:26.440 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Date: Fri, 12 Apr 2019 05:04:26 GMT
+2019-04-12 13:04:26.440 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Type: application/json;charset=UTF-8
+2019-04-12 13:04:26.441 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Length: 94
+2019-04-12 13:04:26.441 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Connection: keep-alive
+2019-04-12 13:04:26.441 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Set-Cookie: JSESSIONID=F6B50ACA4F9D4DB9AA4DAE0D206D426E; Path=/; HttpOnly
+2019-04-12 13:04:26.441 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Origin: *
+2019-04-12 13:04:26.441 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:04:26.441 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:04:26.441 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+2019-04-12 13:04:26.445 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+2019-04-12 13:04:26.451 [main] DEBUG o.a.http.client.protocol.ResponseProcessCookies - Cookie accepted [JSESSIONID="F6B50ACA4F9D4DB9AA4DAE0D206D426E", version:0, domain:sandbox.iplitz.com, path:/, expiry:null]
+2019-04-12 13:04:26.454 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 0][route: {}->http://sandbox.iplitz.com:80] can be kept alive indefinitely
+2019-04-12 13:04:26.455 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {}->http://sandbox.iplitz.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:04:26.455 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Cancelling request execution
+2019-04-12 13:04:26.456 [main] INFO  com.jk.framework.common.utils.CloseableHttpUtil - time:564ms,API:http://sandbox.iplitz.com/api/open/digest/get,parMap:{"AppId":"aef9400912e14c8db42201b42c075cab","OutOrderId":"18911123563","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","ApplyNum":"1","Timestamp":"1555045465623"},headerMap:null
+2019-04-12 13:04:26.489 [main] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2019-04-12 13:04:26.490 [main] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2019-04-12 13:04:26.490 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2019-04-12 13:04:26.490 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 1][route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:04:26.490 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://sandbox.iplitz.com:80
+2019-04-12 13:04:26.491 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connecting to sandbox.iplitz.com/116.62.137.37:80
+2019-04-12 13:04:26.745 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.36.130:51425<->116.62.137.37:80
+2019-04-12 13:04:26.746 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /api/open/applycell HTTP/1.1
+2019-04-12 13:04:26.746 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+2019-04-12 13:04:26.746 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+2019-04-12 13:04:26.746 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> POST /api/open/applycell HTTP/1.1
+2019-04-12 13:04:26.746 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Content-Type: application/json
+2019-04-12 13:04:26.746 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Content-Length: 204
+2019-04-12 13:04:26.746 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Host: sandbox.iplitz.com
+2019-04-12 13:04:26.746 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Connection: Keep-Alive
+2019-04-12 13:04:26.746 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)
+2019-04-12 13:04:26.747 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Accept-Encoding: gzip,deflate
+2019-04-12 13:04:26.747 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "POST /api/open/applycell HTTP/1.1[\r][\n]"
+2019-04-12 13:04:26.747 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Content-Type: application/json[\r][\n]"
+2019-04-12 13:04:26.747 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Content-Length: 204[\r][\n]"
+2019-04-12 13:04:26.747 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Host: sandbox.iplitz.com[\r][\n]"
+2019-04-12 13:04:26.747 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+2019-04-12 13:04:26.747 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)[\r][\n]"
+2019-04-12 13:04:26.747 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2019-04-12 13:04:26.747 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "[\r][\n]"
+2019-04-12 13:04:26.747 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "{"AppId":"aef9400912e14c8db42201b42c075cab","OutOrderId":"18911123563","Digest":"0223FDDAFE6EF712E292C0FEFC650CF9","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","ApplyNum":"1","Timestamp":"1555045465623"}"
+2019-04-12 13:04:27.400 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "HTTP/1.1 200 OK[\r][\n]"
+2019-04-12 13:04:27.400 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Server: nginx[\r][\n]"
+2019-04-12 13:04:27.400 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Date: Fri, 12 Apr 2019 05:04:27 GMT[\r][\n]"
+2019-04-12 13:04:27.400 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2019-04-12 13:04:27.400 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Content-Length: 235[\r][\n]"
+2019-04-12 13:04:27.401 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Connection: keep-alive[\r][\n]"
+2019-04-12 13:04:27.401 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Set-Cookie: JSESSIONID=C865F8A9B247D1E17C081CD130DB01E0; Path=/; HttpOnly[\r][\n]"
+2019-04-12 13:04:27.401 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Origin: *[\r][\n]"
+2019-04-12 13:04:27.401 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:04:27.401 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:04:27.401 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization[\r][\n]"
+2019-04-12 13:04:27.401 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "[\r][\n]"
+2019-04-12 13:04:27.401 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "{"AppId":"aef9400912e14c8db42201b42c075cab","Data":{"OutOrderId":"18911123563","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","BusinessId":"063988B18ED34175B10FE531FB009DB4","CellNos":["2"]},"Success":true,"Code":0,"Msg":"[0xe7][0x94][0xb3][0xe8][0xaf][0xb7][0xe6][0x88][0x90][0xe5][0x8a][0x9f]"}"
+2019-04-12 13:04:27.401 [main] DEBUG org.apache.http.headers - http-outgoing-1 << HTTP/1.1 200 OK
+2019-04-12 13:04:27.401 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Server: nginx
+2019-04-12 13:04:27.401 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Date: Fri, 12 Apr 2019 05:04:27 GMT
+2019-04-12 13:04:27.401 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Content-Type: application/json;charset=UTF-8
+2019-04-12 13:04:27.401 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Content-Length: 235
+2019-04-12 13:04:27.401 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Connection: keep-alive
+2019-04-12 13:04:27.402 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Set-Cookie: JSESSIONID=C865F8A9B247D1E17C081CD130DB01E0; Path=/; HttpOnly
+2019-04-12 13:04:27.402 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Origin: *
+2019-04-12 13:04:27.402 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:04:27.402 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:04:27.402 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+2019-04-12 13:04:27.402 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+2019-04-12 13:04:27.402 [main] DEBUG o.a.http.client.protocol.ResponseProcessCookies - Cookie accepted [JSESSIONID="C865F8A9B247D1E17C081CD130DB01E0", version:0, domain:sandbox.iplitz.com, path:/, expiry:null]
+2019-04-12 13:04:27.402 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 1][route: {}->http://sandbox.iplitz.com:80] can be kept alive indefinitely
+2019-04-12 13:04:27.403 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 1][route: {}->http://sandbox.iplitz.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:04:27.403 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Cancelling request execution
+2019-04-12 13:04:27.403 [main] INFO  com.jk.framework.common.utils.CloseableHttpUtil - time:917ms,API:http://sandbox.iplitz.com//api/open/applycell,parMap:{"AppId":"aef9400912e14c8db42201b42c075cab","OutOrderId":"18911123563","Digest":"0223FDDAFE6EF712E292C0FEFC650CF9","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","ApplyNum":"1","Timestamp":"1555045465623"},headerMap:null
+2019-04-12 13:07:06.314 [main] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2019-04-12 13:07:06.325 [main] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2019-04-12 13:07:06.326 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2019-04-12 13:07:06.377 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:07:06.378 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://sandbox.iplitz.com:80
+2019-04-12 13:07:06.382 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connecting to sandbox.iplitz.com/116.62.137.37:80
+2019-04-12 13:07:06.442 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.36.130:51462<->116.62.137.37:80
+2019-04-12 13:07:06.443 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /api/open/digest/get HTTP/1.1
+2019-04-12 13:07:06.443 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+2019-04-12 13:07:06.444 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+2019-04-12 13:07:06.448 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> POST /api/open/digest/get HTTP/1.1
+2019-04-12 13:07:06.449 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Type: application/json
+2019-04-12 13:07:06.449 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Length: 145
+2019-04-12 13:07:06.449 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Host: sandbox.iplitz.com
+2019-04-12 13:07:06.449 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Connection: Keep-Alive
+2019-04-12 13:07:06.449 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)
+2019-04-12 13:07:06.449 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2019-04-12 13:07:06.450 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "POST /api/open/digest/get HTTP/1.1[\r][\n]"
+2019-04-12 13:07:06.450 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Type: application/json[\r][\n]"
+2019-04-12 13:07:06.450 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Length: 145[\r][\n]"
+2019-04-12 13:07:06.450 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Host: sandbox.iplitz.com[\r][\n]"
+2019-04-12 13:07:06.450 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2019-04-12 13:07:06.450 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)[\r][\n]"
+2019-04-12 13:07:06.450 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2019-04-12 13:07:06.450 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "[\r][\n]"
+2019-04-12 13:07:06.450 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "{"AppId":"aef9400912e14c8db42201b42c075cab","OutOrderId":"18911123563","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","Timestamp":"1555045625617"}"
+2019-04-12 13:07:06.531 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+2019-04-12 13:07:06.532 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Server: nginx[\r][\n]"
+2019-04-12 13:07:06.532 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Date: Fri, 12 Apr 2019 05:07:06 GMT[\r][\n]"
+2019-04-12 13:07:06.532 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2019-04-12 13:07:06.532 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Length: 94[\r][\n]"
+2019-04-12 13:07:06.532 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+2019-04-12 13:07:06.532 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Set-Cookie: JSESSIONID=27CD028A9E33802024E5BA8A101D5D45; Path=/; HttpOnly[\r][\n]"
+2019-04-12 13:07:06.532 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Origin: *[\r][\n]"
+2019-04-12 13:07:06.532 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:07:06.532 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:07:06.532 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization[\r][\n]"
+2019-04-12 13:07:06.532 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+2019-04-12 13:07:06.532 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "{"Data":"6A3DB69AA2BE8C4B144F4ED221B8FD7D","Success":true,"Code":0,"Msg":"[0xe8][0x8e][0xb7][0xe5][0x8f][0x96][0xe7][0xad][0xbe][0xe5][0x90][0x8d][0xe6][0x88][0x90][0xe5][0x8a][0x9f]"}"
+2019-04-12 13:07:06.535 [main] DEBUG org.apache.http.headers - http-outgoing-0 << HTTP/1.1 200 OK
+2019-04-12 13:07:06.535 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Server: nginx
+2019-04-12 13:07:06.535 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Date: Fri, 12 Apr 2019 05:07:06 GMT
+2019-04-12 13:07:06.535 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Type: application/json;charset=UTF-8
+2019-04-12 13:07:06.535 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Length: 94
+2019-04-12 13:07:06.535 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Connection: keep-alive
+2019-04-12 13:07:06.535 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Set-Cookie: JSESSIONID=27CD028A9E33802024E5BA8A101D5D45; Path=/; HttpOnly
+2019-04-12 13:07:06.535 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Origin: *
+2019-04-12 13:07:06.535 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:07:06.536 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:07:06.536 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+2019-04-12 13:07:06.539 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+2019-04-12 13:07:06.543 [main] DEBUG o.a.http.client.protocol.ResponseProcessCookies - Cookie accepted [JSESSIONID="27CD028A9E33802024E5BA8A101D5D45", version:0, domain:sandbox.iplitz.com, path:/, expiry:null]
+2019-04-12 13:07:06.544 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 0][route: {}->http://sandbox.iplitz.com:80] can be kept alive indefinitely
+2019-04-12 13:07:06.545 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {}->http://sandbox.iplitz.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:07:06.545 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Cancelling request execution
+2019-04-12 13:07:06.545 [main] INFO  com.jk.framework.common.utils.CloseableHttpUtil - time:640ms,API:http://sandbox.iplitz.com/api/open/digest/get,parMap:{"AppId":"aef9400912e14c8db42201b42c075cab","OutOrderId":"18911123563","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","Timestamp":"1555045625617"},headerMap:null
+2019-04-12 13:07:06.578 [main] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2019-04-12 13:07:06.579 [main] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2019-04-12 13:07:06.579 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2019-04-12 13:07:06.579 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 1][route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:07:06.579 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://sandbox.iplitz.com:80
+2019-04-12 13:07:06.579 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connecting to sandbox.iplitz.com/116.62.137.37:80
+2019-04-12 13:07:06.827 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.36.130:51463<->116.62.137.37:80
+2019-04-12 13:07:06.828 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /api/open/opencell HTTP/1.1
+2019-04-12 13:07:06.828 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+2019-04-12 13:07:06.828 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+2019-04-12 13:07:06.829 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> POST /api/open/opencell HTTP/1.1
+2019-04-12 13:07:06.829 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Content-Type: application/json
+2019-04-12 13:07:06.829 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Content-Length: 189
+2019-04-12 13:07:06.829 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Host: sandbox.iplitz.com
+2019-04-12 13:07:06.829 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Connection: Keep-Alive
+2019-04-12 13:07:06.829 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)
+2019-04-12 13:07:06.829 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Accept-Encoding: gzip,deflate
+2019-04-12 13:07:06.829 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "POST /api/open/opencell HTTP/1.1[\r][\n]"
+2019-04-12 13:07:06.829 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Content-Type: application/json[\r][\n]"
+2019-04-12 13:07:06.829 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Content-Length: 189[\r][\n]"
+2019-04-12 13:07:06.829 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Host: sandbox.iplitz.com[\r][\n]"
+2019-04-12 13:07:06.829 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+2019-04-12 13:07:06.829 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)[\r][\n]"
+2019-04-12 13:07:06.829 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2019-04-12 13:07:06.829 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "[\r][\n]"
+2019-04-12 13:07:06.830 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "{"AppId":"aef9400912e14c8db42201b42c075cab","OutOrderId":"18911123563","Digest":"6A3DB69AA2BE8C4B144F4ED221B8FD7D","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","Timestamp":"1555045625617"}"
+2019-04-12 13:07:07.702 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "HTTP/1.1 200 OK[\r][\n]"
+2019-04-12 13:07:07.702 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Server: nginx[\r][\n]"
+2019-04-12 13:07:07.702 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Date: Fri, 12 Apr 2019 05:07:07 GMT[\r][\n]"
+2019-04-12 13:07:07.702 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2019-04-12 13:07:07.702 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Content-Length: 239[\r][\n]"
+2019-04-12 13:07:07.702 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Connection: keep-alive[\r][\n]"
+2019-04-12 13:07:07.703 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Set-Cookie: JSESSIONID=8DE2721EDE277F2B659440D6DB15D1AE; Path=/; HttpOnly[\r][\n]"
+2019-04-12 13:07:07.703 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Origin: *[\r][\n]"
+2019-04-12 13:07:07.703 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:07:07.703 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:07:07.703 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization[\r][\n]"
+2019-04-12 13:07:07.703 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "[\r][\n]"
+2019-04-12 13:07:07.703 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "{"AppId":"aef9400912e14c8db42201b42c075cab","Data":{"AppId":"aef9400912e14c8db42201b42c075cab","Cells":[{"CellNo":"2","OutOrderId":"18911123563"}],"DeviceId":"1f088093eb117f8520da8e7758bc3e8e"},"Success":true,"Code":0,"Msg":"[0xe5][0xbc][0x80][0xe5][0x90][0xaf][0xe6][0x88][0x90][0xe5][0x8a][0x9f]"}"
+2019-04-12 13:07:07.703 [main] DEBUG org.apache.http.headers - http-outgoing-1 << HTTP/1.1 200 OK
+2019-04-12 13:07:07.703 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Server: nginx
+2019-04-12 13:07:07.704 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Date: Fri, 12 Apr 2019 05:07:07 GMT
+2019-04-12 13:07:07.704 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Content-Type: application/json;charset=UTF-8
+2019-04-12 13:07:07.704 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Content-Length: 239
+2019-04-12 13:07:07.704 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Connection: keep-alive
+2019-04-12 13:07:07.704 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Set-Cookie: JSESSIONID=8DE2721EDE277F2B659440D6DB15D1AE; Path=/; HttpOnly
+2019-04-12 13:07:07.704 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Origin: *
+2019-04-12 13:07:07.704 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:07:07.704 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:07:07.704 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+2019-04-12 13:07:07.704 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+2019-04-12 13:07:07.704 [main] DEBUG o.a.http.client.protocol.ResponseProcessCookies - Cookie accepted [JSESSIONID="8DE2721EDE277F2B659440D6DB15D1AE", version:0, domain:sandbox.iplitz.com, path:/, expiry:null]
+2019-04-12 13:07:07.705 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 1][route: {}->http://sandbox.iplitz.com:80] can be kept alive indefinitely
+2019-04-12 13:07:07.705 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 1][route: {}->http://sandbox.iplitz.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:07:07.705 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Cancelling request execution
+2019-04-12 13:07:07.705 [main] INFO  com.jk.framework.common.utils.CloseableHttpUtil - time:1129ms,API:http://sandbox.iplitz.com/api/open/opencell,parMap:{"AppId":"aef9400912e14c8db42201b42c075cab","OutOrderId":"18911123563","Digest":"6A3DB69AA2BE8C4B144F4ED221B8FD7D","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","Timestamp":"1555045625617"},headerMap:null
+2019-04-12 13:49:12.399 [main] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2019-04-12 13:49:12.408 [main] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2019-04-12 13:49:12.410 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2019-04-12 13:49:12.461 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:49:12.463 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://sandbox.iplitz.com:80
+2019-04-12 13:49:13.099 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connecting to sandbox.iplitz.com/116.62.137.37:80
+2019-04-12 13:49:13.139 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.36.130:51782<->116.62.137.37:80
+2019-04-12 13:49:13.139 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /api/open/digest/get HTTP/1.1
+2019-04-12 13:49:13.140 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+2019-04-12 13:49:13.140 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+2019-04-12 13:49:13.143 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> POST /api/open/digest/get HTTP/1.1
+2019-04-12 13:49:13.143 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Type: application/json
+2019-04-12 13:49:13.143 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Length: 118
+2019-04-12 13:49:13.144 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Host: sandbox.iplitz.com
+2019-04-12 13:49:13.144 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Connection: Keep-Alive
+2019-04-12 13:49:13.144 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)
+2019-04-12 13:49:13.144 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2019-04-12 13:49:13.145 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "POST /api/open/digest/get HTTP/1.1[\r][\n]"
+2019-04-12 13:49:13.145 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Type: application/json[\r][\n]"
+2019-04-12 13:49:13.145 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Length: 118[\r][\n]"
+2019-04-12 13:49:13.145 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Host: sandbox.iplitz.com[\r][\n]"
+2019-04-12 13:49:13.145 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2019-04-12 13:49:13.146 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)[\r][\n]"
+2019-04-12 13:49:13.146 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2019-04-12 13:49:13.146 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "[\r][\n]"
+2019-04-12 13:49:13.146 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "{"AppId":"aef9400912e14c8db42201b42c075cab","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","Timestamp":"1555048151766"}"
+2019-04-12 13:49:13.202 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+2019-04-12 13:49:13.203 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Server: nginx[\r][\n]"
+2019-04-12 13:49:13.203 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Date: Fri, 12 Apr 2019 05:49:13 GMT[\r][\n]"
+2019-04-12 13:49:13.203 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2019-04-12 13:49:13.203 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Length: 94[\r][\n]"
+2019-04-12 13:49:13.203 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+2019-04-12 13:49:13.203 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Set-Cookie: JSESSIONID=BC3FA85B27684A20EEABC92ADD3B0F00; Path=/; HttpOnly[\r][\n]"
+2019-04-12 13:49:13.203 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Origin: *[\r][\n]"
+2019-04-12 13:49:13.203 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:49:13.203 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:49:13.203 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization[\r][\n]"
+2019-04-12 13:49:13.203 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+2019-04-12 13:49:13.203 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "{"Data":"8CED5DAB6469ECC49820E735CB1D456C","Success":true,"Code":0,"Msg":"[0xe8][0x8e][0xb7][0xe5][0x8f][0x96][0xe7][0xad][0xbe][0xe5][0x90][0x8d][0xe6][0x88][0x90][0xe5][0x8a][0x9f]"}"
+2019-04-12 13:49:13.207 [main] DEBUG org.apache.http.headers - http-outgoing-0 << HTTP/1.1 200 OK
+2019-04-12 13:49:13.208 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Server: nginx
+2019-04-12 13:49:13.208 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Date: Fri, 12 Apr 2019 05:49:13 GMT
+2019-04-12 13:49:13.208 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Type: application/json;charset=UTF-8
+2019-04-12 13:49:13.208 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Length: 94
+2019-04-12 13:49:13.208 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Connection: keep-alive
+2019-04-12 13:49:13.208 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Set-Cookie: JSESSIONID=BC3FA85B27684A20EEABC92ADD3B0F00; Path=/; HttpOnly
+2019-04-12 13:49:13.208 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Origin: *
+2019-04-12 13:49:13.208 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:49:13.208 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:49:13.208 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+2019-04-12 13:49:13.212 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+2019-04-12 13:49:13.216 [main] DEBUG o.a.http.client.protocol.ResponseProcessCookies - Cookie accepted [JSESSIONID="BC3FA85B27684A20EEABC92ADD3B0F00", version:0, domain:sandbox.iplitz.com, path:/, expiry:null]
+2019-04-12 13:49:13.218 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 0][route: {}->http://sandbox.iplitz.com:80] can be kept alive indefinitely
+2019-04-12 13:49:13.218 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {}->http://sandbox.iplitz.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:49:13.218 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Cancelling request execution
+2019-04-12 13:49:13.219 [main] INFO  com.jk.framework.common.utils.CloseableHttpUtil - time:1198ms,API:http://sandbox.iplitz.com/api/open/digest/get,parMap:{"AppId":"aef9400912e14c8db42201b42c075cab","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","Timestamp":"1555048151766"},headerMap:null
+2019-04-12 13:49:13.274 [main] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2019-04-12 13:49:13.275 [main] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2019-04-12 13:49:13.275 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2019-04-12 13:49:13.275 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 1][route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:49:13.275 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://sandbox.iplitz.com:80
+2019-04-12 13:49:13.275 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connecting to sandbox.iplitz.com/116.62.137.37:80
+2019-04-12 13:49:13.311 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.36.130:51783<->116.62.137.37:80
+2019-04-12 13:49:13.313 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /api/open/device/status HTTP/1.1
+2019-04-12 13:49:13.314 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+2019-04-12 13:49:13.315 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+2019-04-12 13:49:13.316 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> POST /api/open/device/status HTTP/1.1
+2019-04-12 13:49:13.316 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Content-Type: application/json
+2019-04-12 13:49:13.317 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Content-Length: 162
+2019-04-12 13:49:13.317 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Host: sandbox.iplitz.com
+2019-04-12 13:49:13.317 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Connection: Keep-Alive
+2019-04-12 13:49:13.317 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)
+2019-04-12 13:49:13.317 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Accept-Encoding: gzip,deflate
+2019-04-12 13:49:13.317 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "POST /api/open/device/status HTTP/1.1[\r][\n]"
+2019-04-12 13:49:13.317 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Content-Type: application/json[\r][\n]"
+2019-04-12 13:49:13.317 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Content-Length: 162[\r][\n]"
+2019-04-12 13:49:13.317 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Host: sandbox.iplitz.com[\r][\n]"
+2019-04-12 13:49:13.317 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+2019-04-12 13:49:13.317 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)[\r][\n]"
+2019-04-12 13:49:13.317 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2019-04-12 13:49:13.317 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "[\r][\n]"
+2019-04-12 13:49:13.317 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "{"AppId":"aef9400912e14c8db42201b42c075cab","Digest":"8CED5DAB6469ECC49820E735CB1D456C","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","Timestamp":"1555048151766"}"
+2019-04-12 13:49:13.645 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "HTTP/1.1 200 OK[\r][\n]"
+2019-04-12 13:49:13.646 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Server: nginx[\r][\n]"
+2019-04-12 13:49:13.646 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Date: Fri, 12 Apr 2019 05:49:14 GMT[\r][\n]"
+2019-04-12 13:49:13.646 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2019-04-12 13:49:13.646 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Transfer-Encoding: chunked[\r][\n]"
+2019-04-12 13:49:13.646 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Connection: keep-alive[\r][\n]"
+2019-04-12 13:49:13.646 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Vary: Accept-Encoding[\r][\n]"
+2019-04-12 13:49:13.646 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Set-Cookie: JSESSIONID=7523C73B0A3D2E7E2A693EADE5396BFB; Path=/; HttpOnly[\r][\n]"
+2019-04-12 13:49:13.646 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Origin: *[\r][\n]"
+2019-04-12 13:49:13.646 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:49:13.646 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:49:13.647 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization[\r][\n]"
+2019-04-12 13:49:13.647 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Content-Encoding: gzip[\r][\n]"
+2019-04-12 13:49:13.647 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "[\r][\n]"
+2019-04-12 13:49:13.647 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "39e[\r][\n]"
+2019-04-12 13:49:13.647 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "[0x1f][0x8b][0x8][0x0][0x0][0x0][0x0][0x0][0x0][0x3][0xad][0x97][0xcd][0x8a]$E[0x10][0x80][0xdf][0xa5][0xce]}[0xc8][0x88][0x8c][0xc8][0x9f][0xb9][0xe9][0xce]e[0x11][0xf5][0xb0]x[0x12][0xf][0x19]?)[0xc2][0xc2],[0xd3]3.2[0xcc]][0x4]A[0xf0][0xba][0xe0][0xd5]g[0x10][0xc4][0x97]q[0xd7][0xd7]0j\[0xdc][0xda][0xe3][0xd4]T[0x1f][0xba][0xab][0x9a][0xec][0xea][0xaf]"#[0xe2][0x8b][0xba][[0x9e]][0x99]/[0x17][0xe9][0xb4]\[0x8e][0x9b][0xb1]\[0xdc]-/n[0xc6][0xcd][0xed]y[0xb9][0x80][0xd3][0xfb][0xc3]K?[0xeb]r[0xb1][0xbc]}[0xf3][0xfb]?[0xfc][0xb5][0x9c][0x96]O^[0xbd]zn[0xf1][0xc5][0xf0][0xd9])[0xa5][0xe][0xe8]@[0xda]L[0x8]1A[0xbc]k[0xaa][0xac]Cb[0xe9][0xa5][0xff][0x9d][0xfa][0xc3]j[0x98][0xa9][0xb5][0xd4][0xb3][0xb]@[0x9d][0x8d]1[0xd9]h^+7[0xd1][0xec][0xcd]c[0xf5]3[0xf9]2[0xfe][0xf8][0xeb][0xbb][0x87][0xa3][0xf5]W[0xc1][0xb0][0x1e]~q[0xb5]^[0xe0][0xfd][0x8a][\r][0xdf][0xe3].[0xff][0x80][0xc1]2[0xa5][0x92]v[0x95],[0x94][0x19][0x85][0xad][0xa6][0xe4][0x1d][0xb4]b[0xad][0x11][0x8a][0xd3][0xf2][0x99][0xbf]~}u[0xbd].[0x8e][0x93]/[0xaf][0xcd][0xaf]?[0xfd][0xe1][0xbf][0x93][0xaf][0xce][0xfe][0xff][0xbf][0xdf][0x9f]>`[0xe2][0x6][0x13][0xf][0xc1][0xac]E[[0x93]V@J[0xa5]Z[0xb5][0xf]"[0xee]V[0x8d][0xa7]dl[0xbc][0xb]3o0[0xf3]![0x98][0xc1][0x88]}N[0xc8][0x1d][\n]"
+2019-04-12 13:49:13.647 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "[0xe5][0xaa]2[0xe2][0xb4][0x16][0x12][0x87][\n]"
+2019-04-12 13:49:13.647 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "[0xde][0xfa].L[0xda]`[0xd2]![0x98][0x96]$[0xfb][0xe0][0x2][0xd4]&[0x11][0x15][0xf1]f[0xad]s[0xd7][0xce][0x9]k[0xaa][0xbb]0y[0x83][0xb9][0xee][0xc7][0x9a][0xa8]O[0xcb]M2r[0xd2][0x99][0x88]\[0x89][0xd9][0x9a]M[0x1d][0xd3]8#@[0xa7][0xba]n[0xd9][0xe3]s[0xb3]l0[0xcb]![0x98][0xa8][0xb5]6[0x8c][0x1a]o=*[0xa9]Q3[0xa2][0xd9],[0x8f][0xd8][0xf0]^y[0xee][0xc2][0xac][0x1b][0xcc]u?[0x9e][0x1e]M,[0xae][0xa5]8+3R2ol[0xce][0xd6][0xa3][0xc6][0xa1][0xcf]h][0xbb]0[0xdb][0x6][0xb3][0x1d][0x82]9[0x8b][0x9b]'[0x19][0x4]5Q.y[0xc0][0xb4]6[0x1b]([0x8e][0xae][0xdc][0xf7]5[0xa4][0xbe][0xc1]\o[0xf4][0xe9][0xd1][0xac][0xb3][0xf4][0x9][0xde]G[0xb7]L#*|Dx![0xa1][0x99]hU\[0x9b][0xfd][0xe3]s[0x13]B;[0x1f][0xfa]{:[0x4]t`+Sk6[0xc8]D-[0xba]|[0x9e][0x96][0x91][0xa6]C6[0x91][0xb9]/[0x9e][0xf0][0x91][0x88][0x8e]1[0x11][0xc][0xf6][0xd8][0xf4][0xe2]b[0xd1][0x97][0xaa][0x8b]S[0x1a]j[0x12][0x7])e[0xd4]}[0x11][0xc5]mD[0x8f]q[0x91][0xb7][0xc8][0xcb][0x8a]m"5[0x9a][0x94][0x9b][0x82]4[0xcf][0x91][\n]"
+2019-04-12 13:49:13.648 [main] DEBUG org.apache.http.wire - http-outgoing-1 << ")q[0xd4][0xd3]>[0xd0][0xad][0x8c][0xe0][0x18][0x1b][0xf9][0x88][0xd2]f2[0xc9][0x15]([0xda]{[0xb7][0xc1]}[0xe6]ns:[0x1a][0xec][0x4][0xdd][0xea][0x8][0x8e][0xf1]QMV[0x18]G[0x4][0x92][0x95]R[0xe9][0x8d]%p[0x8b]4[0x0][0xa7][0xb8][0x81]}[0x11][0xdd][\n]"
+2019-04-12 13:49:13.650 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "[0x9][0x8e]1[0x92]y[0x99]Q[0xeb][0xa9]`[0xed]Tj[0x19]Vz|[0xa4][0xcc]-z[0x93][0xad]>[0xd9]Q[0xf5][%[0xc1]1N*F[0xa2]:([0x86][0x8f]A6kS[0xb1]x[0x8d]R[0x8a][0xce][0x9e][0xc7]>[0xd0][0xad][0x94][0xe0][0x18]+[0xcd][0x12][0xb1]K[0x9][0xb][0xd5]A[0x18]#q[0xcc]!Tr[0xc][0xd2]$[0xa8]s[0x9f][0xe3]a[0xab]%8[0xc6]K[0x94]ZBd[0x10][0x94][0x18][0x94][0xb1][0xb6]0[0xa8]O[0xe5]H[0x7][0x1e]2[0xf7]Y[0x1e][0xb6]b[0x82]c[0xcc][0xd4][0x11]][0xfa][0x18]6qR[0x80][\r][0x91][0x18]J[0xd1]#U9E[0xeb][0xda][0xb5][0xf5][0xb8]5[0x13][0x1e]c&[0x15][0xa2].[0x92]9+S[0xf7]([0xa6][0x1c][0xf]AVb[0x86][0x1e][0x11][0xe8]}3=n[0xcd][0x84][0xc7][0x98][0xc9][0x87]B [0xc9]4KTxt[0xce]$1[0xeb][0x19][0xd5][0x10][0xe9]\[0xa3][0xf1][0xf8][0xaa][0xc7][0xad][0x99][0xf0][0x18]3[0xa5]H[0xce]Ie[0xcd][0xd3][0xd8]z[0xb4][0x1][0x9c]A[0xdd]si[0xd1]V[0x1f][0xac][0xb2][0x3]tk&<[0xc6]L[0xad]B[0x8f][0xb9][0x4]Rt#[0xca]^[0x87][0xc4][0xf3]GNBC[0xd9][0xb9][0xae]V[0xd9][0x1][0xba]5[0x13][0x1e]d&[0x94][0xc][0x84][0x5]5[0xaf][0x1d]J[0x1b]X8i[0xf0][0xba][0xf5]E[0xf5][0x11][0xd3][0xd3]7[0xf7][0xa7][0xe5][0xf3][0xf3][0xb7][0xf1][0xe0][0xfc][0xee][0xd7][0x9f][0xff][0xfe][0xf3][0xcd][0xbb][0x1f]y[0xfb][0xd3]oq[0xa3]/n[0xe3]:[0xe7]x[0xce][0xbf][0xb9][0xbe][0xf5][0xfb][0x1][0xff]L^%[0x81][0x10][0x0][0x0][\r][\n]"
+2019-04-12 13:49:13.651 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "0[\r][\n]"
+2019-04-12 13:49:13.651 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "[\r][\n]"
+2019-04-12 13:49:13.652 [main] DEBUG org.apache.http.headers - http-outgoing-1 << HTTP/1.1 200 OK
+2019-04-12 13:49:13.652 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Server: nginx
+2019-04-12 13:49:13.653 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Date: Fri, 12 Apr 2019 05:49:14 GMT
+2019-04-12 13:49:13.653 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Content-Type: application/json;charset=UTF-8
+2019-04-12 13:49:13.653 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Transfer-Encoding: chunked
+2019-04-12 13:49:13.653 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Connection: keep-alive
+2019-04-12 13:49:13.653 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Vary: Accept-Encoding
+2019-04-12 13:49:13.653 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Set-Cookie: JSESSIONID=7523C73B0A3D2E7E2A693EADE5396BFB; Path=/; HttpOnly
+2019-04-12 13:49:13.653 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Origin: *
+2019-04-12 13:49:13.653 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:49:13.653 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:49:13.653 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+2019-04-12 13:49:13.654 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Content-Encoding: gzip
+2019-04-12 13:49:13.655 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+2019-04-12 13:49:13.655 [main] DEBUG o.a.http.client.protocol.ResponseProcessCookies - Cookie accepted [JSESSIONID="7523C73B0A3D2E7E2A693EADE5396BFB", version:0, domain:sandbox.iplitz.com, path:/, expiry:null]
+2019-04-12 13:49:13.658 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 1][route: {}->http://sandbox.iplitz.com:80] can be kept alive indefinitely
+2019-04-12 13:49:13.658 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 1][route: {}->http://sandbox.iplitz.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:49:13.658 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Cancelling request execution
+2019-04-12 13:49:13.659 [main] INFO  com.jk.framework.common.utils.CloseableHttpUtil - time:387ms,API:http://sandbox.iplitz.com/api/open/device/status,parMap:{"AppId":"aef9400912e14c8db42201b42c075cab","Digest":"8CED5DAB6469ECC49820E735CB1D456C","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","Timestamp":"1555048151766"},headerMap:null
+2019-04-12 13:49:29.669 [main] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2019-04-12 13:49:29.679 [main] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2019-04-12 13:49:29.682 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2019-04-12 13:49:29.738 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:49:29.740 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://sandbox.iplitz.com:80
+2019-04-12 13:49:29.745 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connecting to sandbox.iplitz.com/116.62.137.37:80
+2019-04-12 13:49:29.786 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.36.130:51806<->116.62.137.37:80
+2019-04-12 13:49:29.786 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /api/open/digest/get HTTP/1.1
+2019-04-12 13:49:29.786 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+2019-04-12 13:49:29.787 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+2019-04-12 13:49:29.789 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> POST /api/open/digest/get HTTP/1.1
+2019-04-12 13:49:29.789 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Type: application/json
+2019-04-12 13:49:29.790 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Length: 118
+2019-04-12 13:49:29.790 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Host: sandbox.iplitz.com
+2019-04-12 13:49:29.790 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Connection: Keep-Alive
+2019-04-12 13:49:29.790 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)
+2019-04-12 13:49:29.790 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2019-04-12 13:49:29.790 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "POST /api/open/digest/get HTTP/1.1[\r][\n]"
+2019-04-12 13:49:29.790 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Type: application/json[\r][\n]"
+2019-04-12 13:49:29.790 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Length: 118[\r][\n]"
+2019-04-12 13:49:29.790 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Host: sandbox.iplitz.com[\r][\n]"
+2019-04-12 13:49:29.791 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2019-04-12 13:49:29.791 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)[\r][\n]"
+2019-04-12 13:49:29.791 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2019-04-12 13:49:29.791 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "[\r][\n]"
+2019-04-12 13:49:29.791 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "{"AppId":"aef9400912e14c8db42201b42c075cab","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","Timestamp":"1555048168944"}"
+2019-04-12 13:49:29.833 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+2019-04-12 13:49:29.833 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Server: nginx[\r][\n]"
+2019-04-12 13:49:29.833 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Date: Fri, 12 Apr 2019 05:49:30 GMT[\r][\n]"
+2019-04-12 13:49:29.833 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2019-04-12 13:49:29.833 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Length: 94[\r][\n]"
+2019-04-12 13:49:29.833 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+2019-04-12 13:49:29.834 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Set-Cookie: JSESSIONID=8280E1DC59DAFE67A7E192EA68EB6D5C; Path=/; HttpOnly[\r][\n]"
+2019-04-12 13:49:29.834 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Origin: *[\r][\n]"
+2019-04-12 13:49:29.834 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:49:29.834 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:49:29.834 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization[\r][\n]"
+2019-04-12 13:49:29.834 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+2019-04-12 13:49:29.834 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "{"Data":"8BE4CEBC9EE3380F3064F72B719A9FC9","Success":true,"Code":0,"Msg":"[0xe8][0x8e][0xb7][0xe5][0x8f][0x96][0xe7][0xad][0xbe][0xe5][0x90][0x8d][0xe6][0x88][0x90][0xe5][0x8a][0x9f]"}"
+2019-04-12 13:49:29.837 [main] DEBUG org.apache.http.headers - http-outgoing-0 << HTTP/1.1 200 OK
+2019-04-12 13:49:29.837 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Server: nginx
+2019-04-12 13:49:29.837 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Date: Fri, 12 Apr 2019 05:49:30 GMT
+2019-04-12 13:49:29.837 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Type: application/json;charset=UTF-8
+2019-04-12 13:49:29.837 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Length: 94
+2019-04-12 13:49:29.837 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Connection: keep-alive
+2019-04-12 13:49:29.837 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Set-Cookie: JSESSIONID=8280E1DC59DAFE67A7E192EA68EB6D5C; Path=/; HttpOnly
+2019-04-12 13:49:29.837 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Origin: *
+2019-04-12 13:49:29.838 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:49:29.838 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:49:29.838 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+2019-04-12 13:49:29.843 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+2019-04-12 13:49:29.847 [main] DEBUG o.a.http.client.protocol.ResponseProcessCookies - Cookie accepted [JSESSIONID="8280E1DC59DAFE67A7E192EA68EB6D5C", version:0, domain:sandbox.iplitz.com, path:/, expiry:null]
+2019-04-12 13:49:29.849 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 0][route: {}->http://sandbox.iplitz.com:80] can be kept alive indefinitely
+2019-04-12 13:49:29.849 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {}->http://sandbox.iplitz.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:49:29.849 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Cancelling request execution
+2019-04-12 13:49:29.850 [main] INFO  com.jk.framework.common.utils.CloseableHttpUtil - time:659ms,API:http://sandbox.iplitz.com/api/open/digest/get,parMap:{"AppId":"aef9400912e14c8db42201b42c075cab","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","Timestamp":"1555048168944"},headerMap:null
+2019-04-12 13:49:29.880 [main] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2019-04-12 13:49:29.880 [main] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2019-04-12 13:49:29.881 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2019-04-12 13:49:29.881 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 1][route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:49:29.881 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://sandbox.iplitz.com:80
+2019-04-12 13:49:29.881 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connecting to sandbox.iplitz.com/116.62.137.37:80
+2019-04-12 13:49:29.914 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.36.130:51807<->116.62.137.37:80
+2019-04-12 13:49:29.915 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /api/open/query/all HTTP/1.1
+2019-04-12 13:49:29.915 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+2019-04-12 13:49:29.915 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+2019-04-12 13:49:29.915 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> POST /api/open/query/all HTTP/1.1
+2019-04-12 13:49:29.915 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Content-Type: application/json
+2019-04-12 13:49:29.915 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Content-Length: 162
+2019-04-12 13:49:29.915 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Host: sandbox.iplitz.com
+2019-04-12 13:49:29.915 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Connection: Keep-Alive
+2019-04-12 13:49:29.915 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)
+2019-04-12 13:49:29.915 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Accept-Encoding: gzip,deflate
+2019-04-12 13:49:29.915 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "POST /api/open/query/all HTTP/1.1[\r][\n]"
+2019-04-12 13:49:29.916 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Content-Type: application/json[\r][\n]"
+2019-04-12 13:49:29.916 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Content-Length: 162[\r][\n]"
+2019-04-12 13:49:29.916 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Host: sandbox.iplitz.com[\r][\n]"
+2019-04-12 13:49:29.916 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+2019-04-12 13:49:29.916 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)[\r][\n]"
+2019-04-12 13:49:29.916 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2019-04-12 13:49:29.916 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "[\r][\n]"
+2019-04-12 13:49:29.916 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "{"AppId":"aef9400912e14c8db42201b42c075cab","Digest":"8BE4CEBC9EE3380F3064F72B719A9FC9","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","Timestamp":"1555048168944"}"
+2019-04-12 13:49:30.268 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "HTTP/1.1 200 OK[\r][\n]"
+2019-04-12 13:49:30.269 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Server: nginx[\r][\n]"
+2019-04-12 13:49:30.269 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Date: Fri, 12 Apr 2019 05:49:30 GMT[\r][\n]"
+2019-04-12 13:49:30.269 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2019-04-12 13:49:30.269 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Transfer-Encoding: chunked[\r][\n]"
+2019-04-12 13:49:30.269 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Connection: keep-alive[\r][\n]"
+2019-04-12 13:49:30.269 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Vary: Accept-Encoding[\r][\n]"
+2019-04-12 13:49:30.269 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Set-Cookie: JSESSIONID=250F59D95665432246D58CB8F41C8527; Path=/; HttpOnly[\r][\n]"
+2019-04-12 13:49:30.269 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Origin: *[\r][\n]"
+2019-04-12 13:49:30.269 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:49:30.269 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:49:30.270 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization[\r][\n]"
+2019-04-12 13:49:30.270 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Content-Encoding: gzip[\r][\n]"
+2019-04-12 13:49:30.270 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "[\r][\n]"
+2019-04-12 13:49:30.270 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "174[\r][\n]"
+2019-04-12 13:49:30.270 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "[0x1f][0x8b][0x8][0x0][0x0][0x0][0x0][0x0][0x0][0x3][0xb5][0x96]1K[0x3]1[0x14][0xc7][0xbf]K[0xe6][0x1b][0xf2]rw^[0xee][0xb6]j)[0x16][0xb5][0x15];[0x14][0x11][0x87]\.[0xad][0xc5][0xab])iN[0x90]RPD[0x90].vp[0xaf][0x8]B[0x17][0xe9][0xe6][0xe4][0xd7][0xb9][0xab]~[0xb][0xd3].Nn[0xbe]%[0xe4][0xe5]=[0xde]o[0xfa][0x85][0xff][0x84][0xd4]F[0xa3]fF[0x12]"T/[0xe]([0x8d][0x81])[0x8]$[0xcf][0xd2][0x80]1[\n]"
+2019-04-12 13:49:30.270 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "[0xee][0x94]4[\n]"
+2019-04-12 13:49:30.270 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "[0xa5]H[0x89]G[0xea][0xc2][\n]"
+2019-04-12 13:49:30.270 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "[0x92]L[0xc8][0x9e][0xca][0xf3]1I[0xce]&dW[0xc8][0xcb][0xc3]A[0xff][0xc2][0x92][0x84]y[0xdb][0xf7][0x96]v[0xbb][0xc0][\r]7r[0xad][0xb3][0xdf]^[0xc3][0xe8]+[[0xd7][0xda][0x90][0xc4][0xf7]H[0xbb][0xb0]m[0x93])[0xb3]%[0xbb][0xe1][0x8e]Uf[0x90][0x8b][0xe1]h[0xbb][0xa7]+[0xcc][0xd0]][0xa6][0xde][0x9f][0x0][0x86][\r][0xf0][0xb1][0x1][0x1]6 [0xc4][0x6][0xec]`[0x3]"l[0x0][0xc7][0x6][0xc4][0xd8][0x0][0xa0][0xe8][0x4]t[0x97][0x1]]f@[0xb7][0x19][0xd0]u[0x6]t[0x9f][0x1]]h@7[0x1a][0xd0][0x95][0x6]t[0xa7][0x19][0xba][0xd3][0xc][0xdd]i[0x86][0xee]4Cw[0x9a][0xfd][0x93][0xd3][0xe7].8[0xa9][0xeb][0x81]T-1T[0x9b]p[0xd4][0xa3][0x9c][0xd3][0xd8]W)@[0xd4][0xe3]![0xa3][0x99][0xe0]*[0x8a]B[0x9e]J_q[0xe5]~[0xf4]c[0xa3][0xb3]B[0xda][0x3]u[0xb3][0x9]fpr[0xba][0xdf][0xcc]k[0xac][0xd1]u[0xad][0x8e][0x15][0xb6]p[0xe1][0x8b][0x90][0xa9]+[\n]"
+2019-04-12 13:49:30.270 [main] DEBUG org.apache.http.wire - http-outgoing-1 << ")[0xd5][0xd8]U[0xd6][0x14][0xca][0xe5]/[0x9d]9[0x0][0xf5][0xc8][0xd1][0xb8][0xef]&[0xaa][0xc5][0xdb][0xd7][0xea][0xb5]|X~[0xdf]/[0xab][0x97][0xcf][0xf2]}^>[0xad][0xd6][0xcf][0xcb][0xf5][0xec][0xa3][0xba][0xbd][0xab][0x1e][0xe7][0xe5]lA[0xa6]?[0x3]"c[0x89][0x2][\n]"
+2019-04-12 13:49:30.270 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "[0x0][0x0][\r][\n]"
+2019-04-12 13:49:30.270 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "0[\r][\n]"
+2019-04-12 13:49:30.271 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "[\r][\n]"
+2019-04-12 13:49:30.271 [main] DEBUG org.apache.http.headers - http-outgoing-1 << HTTP/1.1 200 OK
+2019-04-12 13:49:30.271 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Server: nginx
+2019-04-12 13:49:30.271 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Date: Fri, 12 Apr 2019 05:49:30 GMT
+2019-04-12 13:49:30.271 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Content-Type: application/json;charset=UTF-8
+2019-04-12 13:49:30.271 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Transfer-Encoding: chunked
+2019-04-12 13:49:30.271 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Connection: keep-alive
+2019-04-12 13:49:30.271 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Vary: Accept-Encoding
+2019-04-12 13:49:30.271 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Set-Cookie: JSESSIONID=250F59D95665432246D58CB8F41C8527; Path=/; HttpOnly
+2019-04-12 13:49:30.271 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Origin: *
+2019-04-12 13:49:30.271 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:49:30.272 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:49:30.272 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+2019-04-12 13:49:30.272 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Content-Encoding: gzip
+2019-04-12 13:49:30.273 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+2019-04-12 13:49:30.273 [main] DEBUG o.a.http.client.protocol.ResponseProcessCookies - Cookie accepted [JSESSIONID="250F59D95665432246D58CB8F41C8527", version:0, domain:sandbox.iplitz.com, path:/, expiry:null]
+2019-04-12 13:49:30.276 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 1][route: {}->http://sandbox.iplitz.com:80] can be kept alive indefinitely
+2019-04-12 13:49:30.277 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 1][route: {}->http://sandbox.iplitz.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:49:30.277 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Cancelling request execution
+2019-04-12 13:49:30.278 [main] INFO  com.jk.framework.common.utils.CloseableHttpUtil - time:402ms,API:http://sandbox.iplitz.com//api/open/query/all,parMap:{"AppId":"aef9400912e14c8db42201b42c075cab","Digest":"8BE4CEBC9EE3380F3064F72B719A9FC9","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","Timestamp":"1555048168944"},headerMap:null
+2019-04-12 13:49:48.285 [main] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2019-04-12 13:49:48.296 [main] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2019-04-12 13:49:48.297 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2019-04-12 13:49:48.352 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:49:48.357 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://sandbox.iplitz.com:80
+2019-04-12 13:49:48.363 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connecting to sandbox.iplitz.com/116.62.137.37:80
+2019-04-12 13:49:48.400 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.36.130:51826<->116.62.137.37:80
+2019-04-12 13:49:48.400 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /api/open/digest/get HTTP/1.1
+2019-04-12 13:49:48.400 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+2019-04-12 13:49:48.401 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+2019-04-12 13:49:48.405 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> POST /api/open/digest/get HTTP/1.1
+2019-04-12 13:49:48.405 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Type: application/json
+2019-04-12 13:49:48.405 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Length: 160
+2019-04-12 13:49:48.405 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Host: sandbox.iplitz.com
+2019-04-12 13:49:48.405 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Connection: Keep-Alive
+2019-04-12 13:49:48.405 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)
+2019-04-12 13:49:48.405 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2019-04-12 13:49:48.406 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "POST /api/open/digest/get HTTP/1.1[\r][\n]"
+2019-04-12 13:49:48.406 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Type: application/json[\r][\n]"
+2019-04-12 13:49:48.407 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Length: 160[\r][\n]"
+2019-04-12 13:49:48.407 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Host: sandbox.iplitz.com[\r][\n]"
+2019-04-12 13:49:48.407 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2019-04-12 13:49:48.407 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)[\r][\n]"
+2019-04-12 13:49:48.407 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2019-04-12 13:49:48.407 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "[\r][\n]"
+2019-04-12 13:49:48.407 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "{"AppId":"aef9400912e14c8db42201b42c075cab","OutOrderId":"18911123563","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","ApplyNum":"1","Timestamp":"1555048187064"}"
+2019-04-12 13:49:48.447 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+2019-04-12 13:49:48.448 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Server: nginx[\r][\n]"
+2019-04-12 13:49:48.450 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Date: Fri, 12 Apr 2019 05:49:49 GMT[\r][\n]"
+2019-04-12 13:49:48.451 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2019-04-12 13:49:48.452 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Length: 94[\r][\n]"
+2019-04-12 13:49:48.452 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+2019-04-12 13:49:48.453 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Set-Cookie: JSESSIONID=2F949740B586B762EC2E8E7231DDE3C9; Path=/; HttpOnly[\r][\n]"
+2019-04-12 13:49:48.453 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Origin: *[\r][\n]"
+2019-04-12 13:49:48.453 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:49:48.453 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:49:48.453 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization[\r][\n]"
+2019-04-12 13:49:48.454 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+2019-04-12 13:49:48.454 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "{"Data":"4B7D2C463E224FE8768E0FE85287C5DC","Success":true,"Code":0,"Msg":"[0xe8][0x8e][0xb7][0xe5][0x8f][0x96][0xe7][0xad][0xbe][0xe5][0x90][0x8d][0xe6][0x88][0x90][0xe5][0x8a][0x9f]"}"
+2019-04-12 13:49:48.459 [main] DEBUG org.apache.http.headers - http-outgoing-0 << HTTP/1.1 200 OK
+2019-04-12 13:49:48.460 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Server: nginx
+2019-04-12 13:49:48.460 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Date: Fri, 12 Apr 2019 05:49:49 GMT
+2019-04-12 13:49:48.461 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Type: application/json;charset=UTF-8
+2019-04-12 13:49:48.461 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Length: 94
+2019-04-12 13:49:48.461 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Connection: keep-alive
+2019-04-12 13:49:48.461 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Set-Cookie: JSESSIONID=2F949740B586B762EC2E8E7231DDE3C9; Path=/; HttpOnly
+2019-04-12 13:49:48.461 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Origin: *
+2019-04-12 13:49:48.462 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:49:48.463 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:49:48.463 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+2019-04-12 13:49:48.478 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+2019-04-12 13:49:48.502 [main] DEBUG o.a.http.client.protocol.ResponseProcessCookies - Cookie accepted [JSESSIONID="2F949740B586B762EC2E8E7231DDE3C9", version:0, domain:sandbox.iplitz.com, path:/, expiry:null]
+2019-04-12 13:49:48.507 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 0][route: {}->http://sandbox.iplitz.com:80] can be kept alive indefinitely
+2019-04-12 13:49:48.515 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {}->http://sandbox.iplitz.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:49:48.515 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Cancelling request execution
+2019-04-12 13:49:48.527 [main] INFO  com.jk.framework.common.utils.CloseableHttpUtil - time:1205ms,API:http://sandbox.iplitz.com/api/open/digest/get,parMap:{"AppId":"aef9400912e14c8db42201b42c075cab","OutOrderId":"18911123563","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","ApplyNum":"1","Timestamp":"1555048187064"},headerMap:null
+2019-04-12 13:49:48.708 [main] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2019-04-12 13:49:48.709 [main] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2019-04-12 13:49:48.710 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2019-04-12 13:49:48.710 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 1][route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:49:48.711 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://sandbox.iplitz.com:80
+2019-04-12 13:49:48.712 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connecting to sandbox.iplitz.com/116.62.137.37:80
+2019-04-12 13:49:48.757 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.36.130:51827<->116.62.137.37:80
+2019-04-12 13:49:48.758 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /api/open/applycell HTTP/1.1
+2019-04-12 13:49:48.758 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+2019-04-12 13:49:48.758 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+2019-04-12 13:49:48.758 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> POST /api/open/applycell HTTP/1.1
+2019-04-12 13:49:48.758 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Content-Type: application/json
+2019-04-12 13:49:48.758 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Content-Length: 204
+2019-04-12 13:49:48.758 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Host: sandbox.iplitz.com
+2019-04-12 13:49:48.759 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Connection: Keep-Alive
+2019-04-12 13:49:48.759 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)
+2019-04-12 13:49:48.759 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Accept-Encoding: gzip,deflate
+2019-04-12 13:49:48.759 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "POST /api/open/applycell HTTP/1.1[\r][\n]"
+2019-04-12 13:49:48.760 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Content-Type: application/json[\r][\n]"
+2019-04-12 13:49:48.761 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Content-Length: 204[\r][\n]"
+2019-04-12 13:49:48.762 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Host: sandbox.iplitz.com[\r][\n]"
+2019-04-12 13:49:48.762 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+2019-04-12 13:49:48.762 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)[\r][\n]"
+2019-04-12 13:49:48.762 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2019-04-12 13:49:48.762 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "[\r][\n]"
+2019-04-12 13:49:48.762 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "{"AppId":"aef9400912e14c8db42201b42c075cab","OutOrderId":"18911123563","Digest":"4B7D2C463E224FE8768E0FE85287C5DC","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","ApplyNum":"1","Timestamp":"1555048187064"}"
+2019-04-12 13:49:48.890 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "HTTP/1.1 200 OK[\r][\n]"
+2019-04-12 13:49:48.891 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Server: nginx[\r][\n]"
+2019-04-12 13:49:48.891 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Date: Fri, 12 Apr 2019 05:49:49 GMT[\r][\n]"
+2019-04-12 13:49:48.891 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2019-04-12 13:49:48.891 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Content-Length: 71[\r][\n]"
+2019-04-12 13:49:48.891 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Connection: keep-alive[\r][\n]"
+2019-04-12 13:49:48.891 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Set-Cookie: JSESSIONID=490352D98CCA0EDE169708561B003371; Path=/; HttpOnly[\r][\n]"
+2019-04-12 13:49:48.891 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Origin: *[\r][\n]"
+2019-04-12 13:49:48.891 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:49:48.891 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:49:48.891 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization[\r][\n]"
+2019-04-12 13:49:48.891 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "[\r][\n]"
+2019-04-12 13:49:48.891 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "{"Code":1000,"Data":null,"Msg":"[0xe8][0xae][0xa2][0xe5][0x8d][0x95][0xe5][0x8f][0xb7][0xe5][0xb7][0xb2][0xe8][0xa2][0xab][0xe4][0xbd][0xbf][0xe7][0x94][0xa8]","Success":false}"
+2019-04-12 13:49:48.891 [main] DEBUG org.apache.http.headers - http-outgoing-1 << HTTP/1.1 200 OK
+2019-04-12 13:49:48.892 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Server: nginx
+2019-04-12 13:49:48.892 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Date: Fri, 12 Apr 2019 05:49:49 GMT
+2019-04-12 13:49:48.892 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Content-Type: application/json;charset=UTF-8
+2019-04-12 13:49:48.892 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Content-Length: 71
+2019-04-12 13:49:48.892 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Connection: keep-alive
+2019-04-12 13:49:48.892 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Set-Cookie: JSESSIONID=490352D98CCA0EDE169708561B003371; Path=/; HttpOnly
+2019-04-12 13:49:48.892 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Origin: *
+2019-04-12 13:49:48.892 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:49:48.892 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:49:48.892 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+2019-04-12 13:49:48.892 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+2019-04-12 13:49:48.893 [main] DEBUG o.a.http.client.protocol.ResponseProcessCookies - Cookie accepted [JSESSIONID="490352D98CCA0EDE169708561B003371", version:0, domain:sandbox.iplitz.com, path:/, expiry:null]
+2019-04-12 13:49:48.893 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 1][route: {}->http://sandbox.iplitz.com:80] can be kept alive indefinitely
+2019-04-12 13:49:48.893 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 1][route: {}->http://sandbox.iplitz.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:49:48.893 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Cancelling request execution
+2019-04-12 13:49:48.894 [main] INFO  com.jk.framework.common.utils.CloseableHttpUtil - time:201ms,API:http://sandbox.iplitz.com//api/open/applycell,parMap:{"AppId":"aef9400912e14c8db42201b42c075cab","OutOrderId":"18911123563","Digest":"4B7D2C463E224FE8768E0FE85287C5DC","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","ApplyNum":"1","Timestamp":"1555048187064"},headerMap:null
+2019-04-12 13:50:00.391 [main] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2019-04-12 13:50:00.401 [main] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2019-04-12 13:50:00.403 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2019-04-12 13:50:00.462 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:50:00.464 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://sandbox.iplitz.com:80
+2019-04-12 13:50:00.472 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connecting to sandbox.iplitz.com/116.62.137.37:80
+2019-04-12 13:50:00.587 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.36.130:51836<->116.62.137.37:80
+2019-04-12 13:50:00.588 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /api/open/digest/get HTTP/1.1
+2019-04-12 13:50:00.588 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+2019-04-12 13:50:00.588 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+2019-04-12 13:50:00.591 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> POST /api/open/digest/get HTTP/1.1
+2019-04-12 13:50:00.591 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Type: application/json
+2019-04-12 13:50:00.591 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Length: 160
+2019-04-12 13:50:00.591 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Host: sandbox.iplitz.com
+2019-04-12 13:50:00.591 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Connection: Keep-Alive
+2019-04-12 13:50:00.591 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)
+2019-04-12 13:50:00.591 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2019-04-12 13:50:00.592 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "POST /api/open/digest/get HTTP/1.1[\r][\n]"
+2019-04-12 13:50:00.592 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Type: application/json[\r][\n]"
+2019-04-12 13:50:00.592 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Length: 160[\r][\n]"
+2019-04-12 13:50:00.592 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Host: sandbox.iplitz.com[\r][\n]"
+2019-04-12 13:50:00.592 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2019-04-12 13:50:00.592 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)[\r][\n]"
+2019-04-12 13:50:00.592 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2019-04-12 13:50:00.593 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "[\r][\n]"
+2019-04-12 13:50:00.593 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "{"AppId":"aef9400912e14c8db42201b42c075cab","OutOrderId":"18911123564","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","ApplyNum":"1","Timestamp":"1555048199612"}"
+2019-04-12 13:50:00.634 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+2019-04-12 13:50:00.636 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Server: nginx[\r][\n]"
+2019-04-12 13:50:00.638 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Date: Fri, 12 Apr 2019 05:50:01 GMT[\r][\n]"
+2019-04-12 13:50:00.639 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2019-04-12 13:50:00.639 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Length: 94[\r][\n]"
+2019-04-12 13:50:00.639 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+2019-04-12 13:50:00.639 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Set-Cookie: JSESSIONID=3FDE3194BE3D01F2181B2DD9F57DA198; Path=/; HttpOnly[\r][\n]"
+2019-04-12 13:50:00.639 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Origin: *[\r][\n]"
+2019-04-12 13:50:00.639 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:50:00.639 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:50:00.639 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization[\r][\n]"
+2019-04-12 13:50:00.639 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+2019-04-12 13:50:00.639 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "{"Data":"F0C1EB004DCBE63E769A4D151573382C","Success":true,"Code":0,"Msg":"[0xe8][0x8e][0xb7][0xe5][0x8f][0x96][0xe7][0xad][0xbe][0xe5][0x90][0x8d][0xe6][0x88][0x90][0xe5][0x8a][0x9f]"}"
+2019-04-12 13:50:00.645 [main] DEBUG org.apache.http.headers - http-outgoing-0 << HTTP/1.1 200 OK
+2019-04-12 13:50:00.645 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Server: nginx
+2019-04-12 13:50:00.645 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Date: Fri, 12 Apr 2019 05:50:01 GMT
+2019-04-12 13:50:00.646 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Type: application/json;charset=UTF-8
+2019-04-12 13:50:00.646 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Length: 94
+2019-04-12 13:50:00.646 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Connection: keep-alive
+2019-04-12 13:50:00.646 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Set-Cookie: JSESSIONID=3FDE3194BE3D01F2181B2DD9F57DA198; Path=/; HttpOnly
+2019-04-12 13:50:00.646 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Origin: *
+2019-04-12 13:50:00.646 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:50:00.646 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:50:00.646 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+2019-04-12 13:50:00.653 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+2019-04-12 13:50:00.659 [main] DEBUG o.a.http.client.protocol.ResponseProcessCookies - Cookie accepted [JSESSIONID="3FDE3194BE3D01F2181B2DD9F57DA198", version:0, domain:sandbox.iplitz.com, path:/, expiry:null]
+2019-04-12 13:50:00.661 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 0][route: {}->http://sandbox.iplitz.com:80] can be kept alive indefinitely
+2019-04-12 13:50:00.661 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {}->http://sandbox.iplitz.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:50:00.661 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Cancelling request execution
+2019-04-12 13:50:00.662 [main] INFO  com.jk.framework.common.utils.CloseableHttpUtil - time:791ms,API:http://sandbox.iplitz.com/api/open/digest/get,parMap:{"AppId":"aef9400912e14c8db42201b42c075cab","OutOrderId":"18911123564","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","ApplyNum":"1","Timestamp":"1555048199612"},headerMap:null
+2019-04-12 13:50:00.718 [main] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2019-04-12 13:50:00.718 [main] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2019-04-12 13:50:00.719 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2019-04-12 13:50:00.719 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 1][route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:50:00.719 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://sandbox.iplitz.com:80
+2019-04-12 13:50:00.719 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connecting to sandbox.iplitz.com/116.62.137.37:80
+2019-04-12 13:50:00.752 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.36.130:51837<->116.62.137.37:80
+2019-04-12 13:50:00.754 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /api/open/applycell HTTP/1.1
+2019-04-12 13:50:00.754 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+2019-04-12 13:50:00.754 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+2019-04-12 13:50:00.754 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> POST /api/open/applycell HTTP/1.1
+2019-04-12 13:50:00.755 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Content-Type: application/json
+2019-04-12 13:50:00.755 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Content-Length: 204
+2019-04-12 13:50:00.755 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Host: sandbox.iplitz.com
+2019-04-12 13:50:00.755 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Connection: Keep-Alive
+2019-04-12 13:50:00.755 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)
+2019-04-12 13:50:00.755 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Accept-Encoding: gzip,deflate
+2019-04-12 13:50:00.755 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "POST /api/open/applycell HTTP/1.1[\r][\n]"
+2019-04-12 13:50:00.756 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Content-Type: application/json[\r][\n]"
+2019-04-12 13:50:00.756 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Content-Length: 204[\r][\n]"
+2019-04-12 13:50:00.756 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Host: sandbox.iplitz.com[\r][\n]"
+2019-04-12 13:50:00.756 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+2019-04-12 13:50:00.756 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)[\r][\n]"
+2019-04-12 13:50:00.756 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2019-04-12 13:50:00.756 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "[\r][\n]"
+2019-04-12 13:50:00.756 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "{"AppId":"aef9400912e14c8db42201b42c075cab","OutOrderId":"18911123564","Digest":"F0C1EB004DCBE63E769A4D151573382C","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","ApplyNum":"1","Timestamp":"1555048199612"}"
+2019-04-12 13:50:01.084 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "HTTP/1.1 200 OK[\r][\n]"
+2019-04-12 13:50:01.085 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Server: nginx[\r][\n]"
+2019-04-12 13:50:01.085 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Date: Fri, 12 Apr 2019 05:50:01 GMT[\r][\n]"
+2019-04-12 13:50:01.085 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2019-04-12 13:50:01.086 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Content-Length: 236[\r][\n]"
+2019-04-12 13:50:01.086 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Connection: keep-alive[\r][\n]"
+2019-04-12 13:50:01.086 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Set-Cookie: JSESSIONID=D24495393BB4226C6CBE29CFB7C70343; Path=/; HttpOnly[\r][\n]"
+2019-04-12 13:50:01.086 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Origin: *[\r][\n]"
+2019-04-12 13:50:01.086 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:50:01.086 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:50:01.087 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization[\r][\n]"
+2019-04-12 13:50:01.089 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "[\r][\n]"
+2019-04-12 13:50:01.090 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "{"AppId":"aef9400912e14c8db42201b42c075cab","Data":{"OutOrderId":"18911123564","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","BusinessId":"D3F5D0EB35454988AA7FB3B892669C88","CellNos":["13"]},"Success":true,"Code":0,"Msg":"[0xe7][0x94][0xb3][0xe8][0xaf][0xb7][0xe6][0x88][0x90][0xe5][0x8a][0x9f]"}"
+2019-04-12 13:50:01.091 [main] DEBUG org.apache.http.headers - http-outgoing-1 << HTTP/1.1 200 OK
+2019-04-12 13:50:01.091 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Server: nginx
+2019-04-12 13:50:01.091 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Date: Fri, 12 Apr 2019 05:50:01 GMT
+2019-04-12 13:50:01.091 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Content-Type: application/json;charset=UTF-8
+2019-04-12 13:50:01.091 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Content-Length: 236
+2019-04-12 13:50:01.092 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Connection: keep-alive
+2019-04-12 13:50:01.092 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Set-Cookie: JSESSIONID=D24495393BB4226C6CBE29CFB7C70343; Path=/; HttpOnly
+2019-04-12 13:50:01.092 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Origin: *
+2019-04-12 13:50:01.092 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:50:01.092 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:50:01.092 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+2019-04-12 13:50:01.092 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+2019-04-12 13:50:01.093 [main] DEBUG o.a.http.client.protocol.ResponseProcessCookies - Cookie accepted [JSESSIONID="D24495393BB4226C6CBE29CFB7C70343", version:0, domain:sandbox.iplitz.com, path:/, expiry:null]
+2019-04-12 13:50:01.093 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 1][route: {}->http://sandbox.iplitz.com:80] can be kept alive indefinitely
+2019-04-12 13:50:01.093 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 1][route: {}->http://sandbox.iplitz.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:50:01.094 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Cancelling request execution
+2019-04-12 13:50:01.094 [main] INFO  com.jk.framework.common.utils.CloseableHttpUtil - time:379ms,API:http://sandbox.iplitz.com//api/open/applycell,parMap:{"AppId":"aef9400912e14c8db42201b42c075cab","OutOrderId":"18911123564","Digest":"F0C1EB004DCBE63E769A4D151573382C","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","ApplyNum":"1","Timestamp":"1555048199612"},headerMap:null
+2019-04-12 13:50:52.043 [main] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2019-04-12 13:50:52.052 [main] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2019-04-12 13:50:52.054 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2019-04-12 13:50:52.114 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:50:52.116 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://sandbox.iplitz.com:80
+2019-04-12 13:50:52.120 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connecting to sandbox.iplitz.com/116.62.137.37:80
+2019-04-12 13:50:52.160 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.36.130:51870<->116.62.137.37:80
+2019-04-12 13:50:52.160 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /api/open/digest/get HTTP/1.1
+2019-04-12 13:50:52.160 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+2019-04-12 13:50:52.161 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+2019-04-12 13:50:52.168 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> POST /api/open/digest/get HTTP/1.1
+2019-04-12 13:50:52.168 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Type: application/json
+2019-04-12 13:50:52.168 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Length: 145
+2019-04-12 13:50:52.168 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Host: sandbox.iplitz.com
+2019-04-12 13:50:52.168 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Connection: Keep-Alive
+2019-04-12 13:50:52.168 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)
+2019-04-12 13:50:52.168 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2019-04-12 13:50:52.169 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "POST /api/open/digest/get HTTP/1.1[\r][\n]"
+2019-04-12 13:50:52.169 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Type: application/json[\r][\n]"
+2019-04-12 13:50:52.169 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Length: 145[\r][\n]"
+2019-04-12 13:50:52.169 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Host: sandbox.iplitz.com[\r][\n]"
+2019-04-12 13:50:52.169 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2019-04-12 13:50:52.169 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)[\r][\n]"
+2019-04-12 13:50:52.169 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2019-04-12 13:50:52.170 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "[\r][\n]"
+2019-04-12 13:50:52.170 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "{"AppId":"aef9400912e14c8db42201b42c075cab","OutOrderId":"18911123564","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","Timestamp":"1555048251327"}"
+2019-04-12 13:50:52.210 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+2019-04-12 13:50:52.211 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Server: nginx[\r][\n]"
+2019-04-12 13:50:52.211 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Date: Fri, 12 Apr 2019 05:50:52 GMT[\r][\n]"
+2019-04-12 13:50:52.211 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2019-04-12 13:50:52.211 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Length: 94[\r][\n]"
+2019-04-12 13:50:52.211 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+2019-04-12 13:50:52.211 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Set-Cookie: JSESSIONID=6674B8BC2FA9A9281300BE02BE6CA691; Path=/; HttpOnly[\r][\n]"
+2019-04-12 13:50:52.211 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Origin: *[\r][\n]"
+2019-04-12 13:50:52.211 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:50:52.211 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:50:52.211 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization[\r][\n]"
+2019-04-12 13:50:52.211 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+2019-04-12 13:50:52.212 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "{"Data":"F3BC0A2AE2FF07359623F9D6FD21D165","Success":true,"Code":0,"Msg":"[0xe8][0x8e][0xb7][0xe5][0x8f][0x96][0xe7][0xad][0xbe][0xe5][0x90][0x8d][0xe6][0x88][0x90][0xe5][0x8a][0x9f]"}"
+2019-04-12 13:50:52.215 [main] DEBUG org.apache.http.headers - http-outgoing-0 << HTTP/1.1 200 OK
+2019-04-12 13:50:52.215 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Server: nginx
+2019-04-12 13:50:52.215 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Date: Fri, 12 Apr 2019 05:50:52 GMT
+2019-04-12 13:50:52.215 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Type: application/json;charset=UTF-8
+2019-04-12 13:50:52.216 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Length: 94
+2019-04-12 13:50:52.216 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Connection: keep-alive
+2019-04-12 13:50:52.216 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Set-Cookie: JSESSIONID=6674B8BC2FA9A9281300BE02BE6CA691; Path=/; HttpOnly
+2019-04-12 13:50:52.216 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Origin: *
+2019-04-12 13:50:52.216 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:50:52.216 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:50:52.216 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+2019-04-12 13:50:52.220 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+2019-04-12 13:50:52.227 [main] DEBUG o.a.http.client.protocol.ResponseProcessCookies - Cookie accepted [JSESSIONID="6674B8BC2FA9A9281300BE02BE6CA691", version:0, domain:sandbox.iplitz.com, path:/, expiry:null]
+2019-04-12 13:50:52.228 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 0][route: {}->http://sandbox.iplitz.com:80] can be kept alive indefinitely
+2019-04-12 13:50:52.229 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {}->http://sandbox.iplitz.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:50:52.229 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Cancelling request execution
+2019-04-12 13:50:52.230 [main] INFO  com.jk.framework.common.utils.CloseableHttpUtil - time:630ms,API:http://sandbox.iplitz.com/api/open/digest/get,parMap:{"AppId":"aef9400912e14c8db42201b42c075cab","OutOrderId":"18911123564","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","Timestamp":"1555048251327"},headerMap:null
+2019-04-12 13:50:52.270 [main] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2019-04-12 13:50:52.270 [main] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2019-04-12 13:50:52.270 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2019-04-12 13:50:52.270 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 1][route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:50:52.270 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://sandbox.iplitz.com:80
+2019-04-12 13:50:52.271 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connecting to sandbox.iplitz.com/116.62.137.37:80
+2019-04-12 13:50:52.300 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.36.130:51871<->116.62.137.37:80
+2019-04-12 13:50:52.300 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /api/open/opencell HTTP/1.1
+2019-04-12 13:50:52.300 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+2019-04-12 13:50:52.300 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+2019-04-12 13:50:52.301 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> POST /api/open/opencell HTTP/1.1
+2019-04-12 13:50:52.301 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Content-Type: application/json
+2019-04-12 13:50:52.301 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Content-Length: 189
+2019-04-12 13:50:52.301 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Host: sandbox.iplitz.com
+2019-04-12 13:50:52.301 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Connection: Keep-Alive
+2019-04-12 13:50:52.301 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)
+2019-04-12 13:50:52.301 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Accept-Encoding: gzip,deflate
+2019-04-12 13:50:52.301 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "POST /api/open/opencell HTTP/1.1[\r][\n]"
+2019-04-12 13:50:52.301 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Content-Type: application/json[\r][\n]"
+2019-04-12 13:50:52.301 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Content-Length: 189[\r][\n]"
+2019-04-12 13:50:52.301 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Host: sandbox.iplitz.com[\r][\n]"
+2019-04-12 13:50:52.301 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+2019-04-12 13:50:52.301 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)[\r][\n]"
+2019-04-12 13:50:52.302 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2019-04-12 13:50:52.302 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "[\r][\n]"
+2019-04-12 13:50:52.302 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "{"AppId":"aef9400912e14c8db42201b42c075cab","OutOrderId":"18911123564","Digest":"F3BC0A2AE2FF07359623F9D6FD21D165","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","Timestamp":"1555048251327"}"
+2019-04-12 13:50:52.606 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "HTTP/1.1 200 OK[\r][\n]"
+2019-04-12 13:50:52.607 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Server: nginx[\r][\n]"
+2019-04-12 13:50:52.607 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Date: Fri, 12 Apr 2019 05:50:53 GMT[\r][\n]"
+2019-04-12 13:50:52.607 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2019-04-12 13:50:52.607 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Content-Length: 240[\r][\n]"
+2019-04-12 13:50:52.607 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Connection: keep-alive[\r][\n]"
+2019-04-12 13:50:52.607 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Set-Cookie: JSESSIONID=C06453AFF6DCB8ABB52C199F5BAE862A; Path=/; HttpOnly[\r][\n]"
+2019-04-12 13:50:52.608 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Origin: *[\r][\n]"
+2019-04-12 13:50:52.608 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:50:52.608 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:50:52.608 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization[\r][\n]"
+2019-04-12 13:50:52.608 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "[\r][\n]"
+2019-04-12 13:50:52.608 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "{"AppId":"aef9400912e14c8db42201b42c075cab","Data":{"AppId":"aef9400912e14c8db42201b42c075cab","Cells":[{"CellNo":"13","OutOrderId":"18911123564"}],"DeviceId":"1f088093eb117f8520da8e7758bc3e8e"},"Success":true,"Code":0,"Msg":"[0xe5][0xbc][0x80][0xe5][0x90][0xaf][0xe6][0x88][0x90][0xe5][0x8a][0x9f]"}"
+2019-04-12 13:50:52.608 [main] DEBUG org.apache.http.headers - http-outgoing-1 << HTTP/1.1 200 OK
+2019-04-12 13:50:52.608 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Server: nginx
+2019-04-12 13:50:52.608 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Date: Fri, 12 Apr 2019 05:50:53 GMT
+2019-04-12 13:50:52.608 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Content-Type: application/json;charset=UTF-8
+2019-04-12 13:50:52.608 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Content-Length: 240
+2019-04-12 13:50:52.608 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Connection: keep-alive
+2019-04-12 13:50:52.608 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Set-Cookie: JSESSIONID=C06453AFF6DCB8ABB52C199F5BAE862A; Path=/; HttpOnly
+2019-04-12 13:50:52.608 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Origin: *
+2019-04-12 13:50:52.608 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:50:52.609 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:50:52.609 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+2019-04-12 13:50:52.609 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+2019-04-12 13:50:52.609 [main] DEBUG o.a.http.client.protocol.ResponseProcessCookies - Cookie accepted [JSESSIONID="C06453AFF6DCB8ABB52C199F5BAE862A", version:0, domain:sandbox.iplitz.com, path:/, expiry:null]
+2019-04-12 13:50:52.609 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 1][route: {}->http://sandbox.iplitz.com:80] can be kept alive indefinitely
+2019-04-12 13:50:52.609 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 1][route: {}->http://sandbox.iplitz.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:50:52.610 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Cancelling request execution
+2019-04-12 13:50:52.610 [main] INFO  com.jk.framework.common.utils.CloseableHttpUtil - time:349ms,API:http://sandbox.iplitz.com/api/open/opencell,parMap:{"AppId":"aef9400912e14c8db42201b42c075cab","OutOrderId":"18911123564","Digest":"F3BC0A2AE2FF07359623F9D6FD21D165","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","Timestamp":"1555048251327"},headerMap:null
+2019-04-12 13:51:45.145 [main] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2019-04-12 13:51:45.165 [main] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2019-04-12 13:51:45.166 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2019-04-12 13:51:45.226 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:51:45.228 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://sandbox.iplitz.com:80
+2019-04-12 13:51:45.232 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connecting to sandbox.iplitz.com/116.62.137.37:80
+2019-04-12 13:51:45.268 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.36.130:51880<->116.62.137.37:80
+2019-04-12 13:51:45.269 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /api/open/digest/get HTTP/1.1
+2019-04-12 13:51:45.269 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+2019-04-12 13:51:45.269 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+2019-04-12 13:51:45.272 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> POST /api/open/digest/get HTTP/1.1
+2019-04-12 13:51:45.272 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Type: application/json
+2019-04-12 13:51:45.272 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Length: 145
+2019-04-12 13:51:45.272 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Host: sandbox.iplitz.com
+2019-04-12 13:51:45.272 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Connection: Keep-Alive
+2019-04-12 13:51:45.272 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)
+2019-04-12 13:51:45.272 [main] DEBUG org.apache.http.headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2019-04-12 13:51:45.273 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "POST /api/open/digest/get HTTP/1.1[\r][\n]"
+2019-04-12 13:51:45.273 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Type: application/json[\r][\n]"
+2019-04-12 13:51:45.273 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Length: 145[\r][\n]"
+2019-04-12 13:51:45.273 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Host: sandbox.iplitz.com[\r][\n]"
+2019-04-12 13:51:45.273 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2019-04-12 13:51:45.273 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)[\r][\n]"
+2019-04-12 13:51:45.273 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2019-04-12 13:51:45.273 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "[\r][\n]"
+2019-04-12 13:51:45.273 [main] DEBUG org.apache.http.wire - http-outgoing-0 >> "{"AppId":"aef9400912e14c8db42201b42c075cab","OutOrderId":"18911123564","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","Timestamp":"1555048304436"}"
+2019-04-12 13:51:45.311 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+2019-04-12 13:51:45.311 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Server: nginx[\r][\n]"
+2019-04-12 13:51:45.311 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Date: Fri, 12 Apr 2019 05:51:45 GMT[\r][\n]"
+2019-04-12 13:51:45.311 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2019-04-12 13:51:45.312 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Length: 94[\r][\n]"
+2019-04-12 13:51:45.312 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+2019-04-12 13:51:45.312 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Set-Cookie: JSESSIONID=8CE9A7B8AA67F5711FD923317CD07AC8; Path=/; HttpOnly[\r][\n]"
+2019-04-12 13:51:45.312 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Origin: *[\r][\n]"
+2019-04-12 13:51:45.314 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:51:45.314 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:51:45.314 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization[\r][\n]"
+2019-04-12 13:51:45.314 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+2019-04-12 13:51:45.314 [main] DEBUG org.apache.http.wire - http-outgoing-0 << "{"Data":"70A914419F3F710B73AD4B559B8E5223","Success":true,"Code":0,"Msg":"[0xe8][0x8e][0xb7][0xe5][0x8f][0x96][0xe7][0xad][0xbe][0xe5][0x90][0x8d][0xe6][0x88][0x90][0xe5][0x8a][0x9f]"}"
+2019-04-12 13:51:45.317 [main] DEBUG org.apache.http.headers - http-outgoing-0 << HTTP/1.1 200 OK
+2019-04-12 13:51:45.317 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Server: nginx
+2019-04-12 13:51:45.317 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Date: Fri, 12 Apr 2019 05:51:45 GMT
+2019-04-12 13:51:45.317 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Type: application/json;charset=UTF-8
+2019-04-12 13:51:45.317 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Length: 94
+2019-04-12 13:51:45.317 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Connection: keep-alive
+2019-04-12 13:51:45.317 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Set-Cookie: JSESSIONID=8CE9A7B8AA67F5711FD923317CD07AC8; Path=/; HttpOnly
+2019-04-12 13:51:45.317 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Origin: *
+2019-04-12 13:51:45.317 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:51:45.317 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:51:45.317 [main] DEBUG org.apache.http.headers - http-outgoing-0 << Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+2019-04-12 13:51:45.321 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+2019-04-12 13:51:45.325 [main] DEBUG o.a.http.client.protocol.ResponseProcessCookies - Cookie accepted [JSESSIONID="8CE9A7B8AA67F5711FD923317CD07AC8", version:0, domain:sandbox.iplitz.com, path:/, expiry:null]
+2019-04-12 13:51:45.326 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 0][route: {}->http://sandbox.iplitz.com:80] can be kept alive indefinitely
+2019-04-12 13:51:45.326 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {}->http://sandbox.iplitz.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:51:45.326 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Cancelling request execution
+2019-04-12 13:51:45.327 [main] INFO  com.jk.framework.common.utils.CloseableHttpUtil - time:605ms,API:http://sandbox.iplitz.com/api/open/digest/get,parMap:{"AppId":"aef9400912e14c8db42201b42c075cab","OutOrderId":"18911123564","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","Timestamp":"1555048304436"},headerMap:null
+2019-04-12 13:51:45.356 [main] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2019-04-12 13:51:45.357 [main] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2019-04-12 13:51:45.357 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2019-04-12 13:51:45.357 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 1][route: {}->http://sandbox.iplitz.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:51:45.357 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://sandbox.iplitz.com:80
+2019-04-12 13:51:45.357 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connecting to sandbox.iplitz.com/116.62.137.37:80
+2019-04-12 13:51:45.390 [main] DEBUG o.a.h.i.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.36.130:51881<->116.62.137.37:80
+2019-04-12 13:51:45.390 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /api/open/opencell HTTP/1.1
+2019-04-12 13:51:45.390 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+2019-04-12 13:51:45.390 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+2019-04-12 13:51:45.390 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> POST /api/open/opencell HTTP/1.1
+2019-04-12 13:51:45.390 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Content-Type: application/json
+2019-04-12 13:51:45.390 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Content-Length: 189
+2019-04-12 13:51:45.390 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Host: sandbox.iplitz.com
+2019-04-12 13:51:45.390 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Connection: Keep-Alive
+2019-04-12 13:51:45.390 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)
+2019-04-12 13:51:45.390 [main] DEBUG org.apache.http.headers - http-outgoing-1 >> Accept-Encoding: gzip,deflate
+2019-04-12 13:51:45.391 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "POST /api/open/opencell HTTP/1.1[\r][\n]"
+2019-04-12 13:51:45.391 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Content-Type: application/json[\r][\n]"
+2019-04-12 13:51:45.391 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Content-Length: 189[\r][\n]"
+2019-04-12 13:51:45.391 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Host: sandbox.iplitz.com[\r][\n]"
+2019-04-12 13:51:45.391 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+2019-04-12 13:51:45.391 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.4.1 (Java/1.8.0_131)[\r][\n]"
+2019-04-12 13:51:45.391 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2019-04-12 13:51:45.391 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "[\r][\n]"
+2019-04-12 13:51:45.391 [main] DEBUG org.apache.http.wire - http-outgoing-1 >> "{"AppId":"aef9400912e14c8db42201b42c075cab","OutOrderId":"18911123564","Digest":"70A914419F3F710B73AD4B559B8E5223","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","Timestamp":"1555048304436"}"
+2019-04-12 13:51:45.534 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "HTTP/1.1 200 OK[\r][\n]"
+2019-04-12 13:51:45.535 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Server: nginx[\r][\n]"
+2019-04-12 13:51:45.535 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Date: Fri, 12 Apr 2019 05:51:46 GMT[\r][\n]"
+2019-04-12 13:51:45.535 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2019-04-12 13:51:45.535 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Content-Length: 105[\r][\n]"
+2019-04-12 13:51:45.535 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Connection: keep-alive[\r][\n]"
+2019-04-12 13:51:45.535 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Set-Cookie: JSESSIONID=944A2ECD7AB731D59A6E93D09E1945B7; Path=/; HttpOnly[\r][\n]"
+2019-04-12 13:51:45.535 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Origin: *[\r][\n]"
+2019-04-12 13:51:45.535 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:51:45.535 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Methods: GET, POST, OPTIONS[\r][\n]"
+2019-04-12 13:51:45.535 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization[\r][\n]"
+2019-04-12 13:51:45.535 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "[\r][\n]"
+2019-04-12 13:51:45.535 [main] DEBUG org.apache.http.wire - http-outgoing-1 << "{"AppId":"aef9400912e14c8db42201b42c075cab","Success":false,"Code":1016,"Msg":"[0xe5][0x8d][0x95][0xe5][0x85][0x83][0xe6][0xa0][0xbc][0xe5][0xb7][0xb2][0xe5][0xae][0x8c][0xe6][0x88][0x90][0xe4][0xbd][0xbf][0xe7][0x94][0xa8]"}"
+2019-04-12 13:51:45.536 [main] DEBUG org.apache.http.headers - http-outgoing-1 << HTTP/1.1 200 OK
+2019-04-12 13:51:45.536 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Server: nginx
+2019-04-12 13:51:45.536 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Date: Fri, 12 Apr 2019 05:51:46 GMT
+2019-04-12 13:51:45.536 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Content-Type: application/json;charset=UTF-8
+2019-04-12 13:51:45.536 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Content-Length: 105
+2019-04-12 13:51:45.536 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Connection: keep-alive
+2019-04-12 13:51:45.536 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Set-Cookie: JSESSIONID=944A2ECD7AB731D59A6E93D09E1945B7; Path=/; HttpOnly
+2019-04-12 13:51:45.536 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Origin: *
+2019-04-12 13:51:45.536 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:51:45.536 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Methods: GET, POST, OPTIONS
+2019-04-12 13:51:45.536 [main] DEBUG org.apache.http.headers - http-outgoing-1 << Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+2019-04-12 13:51:45.537 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+2019-04-12 13:51:45.537 [main] DEBUG o.a.http.client.protocol.ResponseProcessCookies - Cookie accepted [JSESSIONID="944A2ECD7AB731D59A6E93D09E1945B7", version:0, domain:sandbox.iplitz.com, path:/, expiry:null]
+2019-04-12 13:51:45.538 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 1][route: {}->http://sandbox.iplitz.com:80] can be kept alive indefinitely
+2019-04-12 13:51:45.538 [main] DEBUG o.a.h.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 1][route: {}->http://sandbox.iplitz.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-04-12 13:51:45.538 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Cancelling request execution
+2019-04-12 13:51:45.538 [main] INFO  com.jk.framework.common.utils.CloseableHttpUtil - time:185ms,API:http://sandbox.iplitz.com/api/open/opencell,parMap:{"AppId":"aef9400912e14c8db42201b42c075cab","OutOrderId":"18911123564","Digest":"70A914419F3F710B73AD4B559B8E5223","DeviceId":"1f088093eb117f8520da8e7758bc3e8e","Timestamp":"1555048304436"},headerMap:null

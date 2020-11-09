@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="refund.refundDao" >
+  <resultMap id="BaseResultMap" type="com.taisf.services.refund.entity.RefundEntity" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="refund_sn" property="refundSn" jdbcType="VARCHAR" />
+    <result column="order_sn" property="orderSn" jdbcType="VARCHAR" />
+    <result column="supplier_code" property="supplierCode" jdbcType="VARCHAR" />
+    <result column="refund_type" property="refundType" jdbcType="INTEGER" />
+    <result column="source_type" property="sourceType" jdbcType="INTEGER" />
+    <result column="refund_status" property="refundStatus" jdbcType="INTEGER" />
+    <result column="card_type" property="cardType" jdbcType="INTEGER" />
+    <result column="card_no" property="cardNo" jdbcType="VARCHAR" />
+    <result column="refund_name" property="refundName" jdbcType="VARCHAR" />
+    <result column="refund_uid" property="refundUid" jdbcType="VARCHAR" />
+    <result column="record_id" property="recordId" jdbcType="INTEGER" />
+    <result column="retry_times" property="retryTimes" jdbcType="INTEGER" />
+    <result column="pay_fee" property="payFee" jdbcType="INTEGER" />
+    <result column="refund_fee" property="refundFee" jdbcType="INTEGER" />
+    <result column="refund_time" property="refundTime" jdbcType="TIMESTAMP" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, refund_sn, order_sn,supplier_code, refund_type, source_type, refund_status, card_type, card_no,
+    refund_name, refund_uid, record_id, retry_times, pay_fee, refund_fee, refund_time, 
+    create_time, update_time
+  </sql>
+
+
+  <select id="findRefundByCode" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from t_refund
+    where refund_sn = #{refundSn,jdbcType=VARCHAR}
+  </select>
+
+
+  <select id="getRefundPass" resultMap="BaseResultMap" parameterType="com.taisf.services.refund.dto.RefundJobRequest" >
+    select
+    <include refid="Base_Column_List" />
+    from t_refund
+
+    where refund_status = #{refundStatus,jdbcType=INTEGER}
+    <if test="refundSn != null and refundSn != ''" >
+      AND refund_sn = #{refundSn,jdbcType=VARCHAR}
+    </if>
+
+  </select>
+
+
+
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_refund
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_refund
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+  <insert id="saveRefund" parameterType="com.taisf.services.refund.entity.RefundEntity" >
+    insert into t_refund
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+
+      <if test="refundSn != null" >
+        refund_sn,
+      </if>
+
+      <if test="supplierCode != null" >
+        supplier_code,
+      </if>
+
+
+
+      <if test="orderSn != null" >
+        order_sn,
+      </if>
+      <if test="refundType != null" >
+        refund_type,
+      </if>
+      <if test="sourceType != null" >
+        source_type,
+      </if>
+      <if test="refundStatus != null" >
+        refund_status,
+      </if>
+      <if test="cardType != null" >
+        card_type,
+      </if>
+      <if test="cardNo != null" >
+        card_no,
+      </if>
+      <if test="refundName != null" >
+        refund_name,
+      </if>
+      <if test="refundUid != null" >
+        refund_uid,
+      </if>
+      <if test="recordId != null" >
+        record_id,
+      </if>
+      <if test="retryTimes != null" >
+        retry_times,
+      </if>
+      <if test="payFee != null" >
+        pay_fee,
+      </if>
+      <if test="refundFee != null" >
+        refund_fee,
+      </if>
+      <if test="refundTime != null" >
+        refund_time,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+
+      <if test="refundSn != null" >
+        #{refundSn,jdbcType=VARCHAR},
+      </if>
+
+      <if test="supplierCode != null" >
+        #{supplierCode,jdbcType=VARCHAR},
+      </if>
+
+      <if test="orderSn != null" >
+        #{orderSn,jdbcType=VARCHAR},
+      </if>
+      <if test="refundType != null" >
+        #{refundType,jdbcType=INTEGER},
+      </if>
+      <if test="sourceType != null" >
+        #{sourceType,jdbcType=INTEGER},
+      </if>
+      <if test="refundStatus != null" >
+        #{refundStatus,jdbcType=INTEGER},
+      </if>
+      <if test="cardType != null" >
+        #{cardType,jdbcType=INTEGER},
+      </if>
+      <if test="cardNo != null" >
+        #{cardNo,jdbcType=VARCHAR},
+      </if>
+      <if test="refundName != null" >
+        #{refundName,jdbcType=VARCHAR},
+      </if>
+      <if test="refundUid != null" >
+        #{refundUid,jdbcType=VARCHAR},
+      </if>
+      <if test="recordId != null" >
+        #{recordId,jdbcType=INTEGER},
+      </if>
+      <if test="retryTimes != null" >
+        #{retryTimes,jdbcType=INTEGER},
+      </if>
+      <if test="payFee != null" >
+        #{payFee,jdbcType=INTEGER},
+      </if>
+      <if test="refundFee != null" >
+        #{refundFee,jdbcType=INTEGER},
+      </if>
+      <if test="refundTime != null" >
+        #{refundTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.taisf.services.refund.entity.RefundEntity" >
+    update t_refund
+    <set >
+      <if test="refundSn != null" >
+        refund_sn = #{refundSn,jdbcType=VARCHAR},
+      </if>
+      <if test="orderSn != null" >
+        order_sn = #{orderSn,jdbcType=VARCHAR},
+      </if>
+      <if test="refundType != null" >
+        refund_type = #{refundType,jdbcType=INTEGER},
+      </if>
+      <if test="sourceType != null" >
+        source_type = #{sourceType,jdbcType=INTEGER},
+      </if>
+      <if test="refundStatus != null" >
+        refund_status = #{refundStatus,jdbcType=INTEGER},
+      </if>
+      <if test="cardType != null" >
+        card_type = #{cardType,jdbcType=INTEGER},
+      </if>
+      <if test="cardNo != null" >
+        card_no = #{cardNo,jdbcType=VARCHAR},
+      </if>
+      <if test="refundName != null" >
+        refund_name = #{refundName,jdbcType=VARCHAR},
+      </if>
+      <if test="refundUid != null" >
+        refund_uid = #{refundUid,jdbcType=VARCHAR},
+      </if>
+      <if test="recordId != null" >
+        record_id = #{recordId,jdbcType=INTEGER},
+      </if>
+      <if test="retryTimes != null" >
+        retry_times = #{retryTimes,jdbcType=INTEGER},
+      </if>
+      <if test="payFee != null" >
+        pay_fee = #{payFee,jdbcType=INTEGER},
+      </if>
+      <if test="refundFee != null" >
+        refund_fee = #{refundFee,jdbcType=INTEGER},
+      </if>
+      <if test="refundTime != null" >
+        refund_time = #{refundTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <resultMap id="refundPageListMap" type="com.taisf.services.refund.vo.RefundVo" extends="BaseResultMap">
+    <result column="user_phone" property="userPhone" jdbcType="VARCHAR" />
+  </resultMap>
+
+
+  <select id="refundPageList" resultMap="refundPageListMap" parameterType="com.taisf.services.refund.dto.RefundQueryRequest" >
+    select
+    r.id, r.refund_sn, r.order_sn, r.refund_type, r.source_type, r.refund_status, r.card_type, r.card_no,
+    r.refund_name, r.refund_uid, r.record_id, r.retry_times, r.pay_fee, r.refund_fee, r.refund_time,
+    r.create_time, r.update_time,u.user_phone
+    from t_refund r
+    LEFT JOIN  t_user u ON  u.user_uid = r.refund_uid
+    where 1=1 and r.supplier_code = #{supplierCode}
+    <if test="userName != null and userName != ''" >
+      AND u.user_name = #{userName}
+    </if>
+    <if test="userPhone != null and userPhone != ''" >
+      AND  u.user_phone = #{userPhone}
+    </if>
+    <if test="refundStatus != null" >
+      AND  r.refund_status = #{refundStatus}
+    </if>
+    ORDER  BY  r.create_time DESC
+  </select>
+
+
+  <!-- 修改退款状态和失败重试次数的叠加 -->
+  <update id="updateRefundStatusAndRetryTimes" parameterType="java.util.Map">
+    UPDATE t_refund
+    set refund_status =  #{toStatus,jdbcType=INTEGER}, retry_times = retry_times + #{retryTimes, jdbcType=INTEGER},
+    update_time = now()
+    <if test="toStatus == 4">
+      , refund_time = now()
+    </if>
+    where refund_sn = #{refundSn,jdbcType=VARCHAR}
+    AND  refund_status = #{oldStatus,jdbcType=INTEGER}
+  </update>
+
+
+</mapper>

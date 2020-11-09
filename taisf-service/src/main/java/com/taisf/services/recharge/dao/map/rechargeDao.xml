@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="recharge.rechargeDao">
+
+    <resultMap id="BaseResultMap" type="com.taisf.services.recharge.entity.RechargeEntity">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="recharge_sn" jdbcType="VARCHAR" property="rechargeSn" />
+        <result column="recharge_status" jdbcType="INTEGER" property="rechargeStatus" />
+        <result column="recharge_type" jdbcType="INTEGER" property="rechargeType" />
+        <result column="total_price" jdbcType="INTEGER" property="totalPrice" />
+        <result column="pay_money" jdbcType="INTEGER" property="payMoney" />
+        <result column="enterprise_code" jdbcType="VARCHAR" property="enterpriseCode" />
+        <result column="supplier_code" jdbcType="VARCHAR" property="supplierCode" />
+        <result column="enterprise_name" jdbcType="VARCHAR" property="enterpriseName" />
+        <result column="recharge_tel" jdbcType="VARCHAR" property="rechargeTel" />
+        <result column="boss_num" jdbcType="INTEGER" property="bossNum" />
+        <result column="common_num" jdbcType="INTEGER" property="commonNum" />
+        <result column="create_id" jdbcType="VARCHAR" property="createId" />
+        <result column="create_name" jdbcType="VARCHAR" property="createName" />
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    </resultMap>
+
+
+    <sql id="Base_Column_List">
+        id, recharge_sn, recharge_status, recharge_type, total_price, pay_money, enterprise_code,supplier_code,
+        enterprise_name, recharge_tel, boss_num, common_num, create_id, create_name, create_time,
+        update_time
+    </sql>
+
+
+    <select id="getRechargeByPage" parameterType="com.taisf.services.recharge.dto.ChargeHisRequest" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from t_recharge
+        where 1 = 1
+        <if test="rechargeType != null">
+            and recharge_type = #{rechargeType,jdbcType=INTEGER}
+        </if>
+
+        <if test="supplierCode != null and supplierCode != '' ">
+            and supplier_code = #{supplierCode,jdbcType=VARCHAR}
+        </if>
+
+        <if test="rechargeSn != null and rechargeSn!='' ">
+            and recharge_sn = #{rechargeSn,jdbcType=INTEGER}
+        </if>
+
+        <if test="enterpriseCode != null and enterpriseCode!='' ">
+            and enterprise_code = #{enterpriseCode,jdbcType=VARCHAR}
+        </if>
+        <if test="enterpriseName != null and enterpriseName!='' ">
+            and  enterprise_name = #{enterpriseName,jdbcType=VARCHAR}
+        </if>
+        <if test="rechargeTel != null and rechargeTel!='' ">
+            and  recharge_tel = #{rechargeTel,jdbcType=VARCHAR}
+        </if>
+        <if test="createId != null and createId!='' ">
+            and create_id = #{createId,jdbcType=VARCHAR}
+        </if>
+        <if test="start!=null and start!=''">
+            AND create_time <![CDATA[ >= ]]> #{start,jdbcType=TIMESTAMP}
+        </if>
+        <if test="end!=null and end!=''">
+            AND create_time <![CDATA[ <= ]]> #{end,jdbcType=TIMESTAMP}
+        </if>
+        order by id DESC
+
+    </select>
+
+
+    <select id="getRechargeEntityBySn" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from t_recharge
+        where recharge_sn = #{rechargeSn,jdbcType=VARCHAR}
+    </select>
+
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        delete from t_recharge
+        where id = #{id,jdbcType=INTEGER}
+    </delete>
+
+
+    <insert id="saveRecharge" parameterType="com.taisf.services.recharge.entity.RechargeEntity">
+        insert into t_recharge
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+
+            <if test="rechargeSn != null">
+                recharge_sn,
+            </if>
+            <if test="rechargeStatus != null">
+                recharge_status,
+            </if>
+            <if test="rechargeType != null">
+                recharge_type,
+            </if>
+            <if test="totalPrice != null">
+                total_price,
+            </if>
+            <if test="payMoney != null">
+                pay_money,
+            </if>
+            <if test="enterpriseCode != null">
+                enterprise_code,
+            </if>
+
+            <if test="supplierCode != null">
+                supplier_code,
+            </if>
+
+
+            <if test="enterpriseName != null">
+                enterprise_name,
+            </if>
+            <if test="rechargeTel != null">
+                recharge_tel,
+            </if>
+            <if test="bossNum != null">
+                boss_num,
+            </if>
+            <if test="commonNum != null">
+                common_num,
+            </if>
+            <if test="createId != null">
+                create_id,
+            </if>
+            <if test="createName != null">
+                create_name,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="updateTime != null">
+                update_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+
+            <if test="rechargeSn != null">
+                #{rechargeSn,jdbcType=VARCHAR},
+            </if>
+            <if test="rechargeStatus != null">
+                #{rechargeStatus,jdbcType=INTEGER},
+            </if>
+            <if test="rechargeType != null">
+                #{rechargeType,jdbcType=INTEGER},
+            </if>
+            <if test="totalPrice != null">
+                #{totalPrice,jdbcType=INTEGER},
+            </if>
+            <if test="payMoney != null">
+                #{payMoney,jdbcType=INTEGER},
+            </if>
+            <if test="enterpriseCode != null">
+                #{enterpriseCode,jdbcType=VARCHAR},
+            </if>
+            <if test="supplierCode != null">
+                #{supplierCode,jdbcType=VARCHAR},
+            </if>
+
+            <if test="enterpriseName != null">
+                #{enterpriseName,jdbcType=VARCHAR},
+            </if>
+            <if test="rechargeTel != null">
+                #{rechargeTel,jdbcType=VARCHAR},
+            </if>
+            <if test="bossNum != null">
+                #{bossNum,jdbcType=INTEGER},
+            </if>
+            <if test="commonNum != null">
+                #{commonNum,jdbcType=INTEGER},
+            </if>
+            <if test="createId != null">
+                #{createId,jdbcType=VARCHAR},
+            </if>
+            <if test="createName != null">
+                #{createName,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+
+
+    <update id="updateRecharge" parameterType="com.taisf.services.recharge.entity.RechargeEntity">
+        update t_recharge
+        <set>
+
+            <if test="rechargeStatus != null">
+                recharge_status = #{rechargeStatus,jdbcType=INTEGER},
+            </if>
+            <if test="rechargeType != null">
+                recharge_type = #{rechargeType,jdbcType=INTEGER},
+            </if>
+            <if test="totalPrice != null">
+                total_price = #{totalPrice,jdbcType=INTEGER},
+            </if>
+            <if test="payMoney != null">
+                pay_money = #{payMoney,jdbcType=INTEGER},
+            </if>
+            <if test="enterpriseCode != null">
+                enterprise_code = #{enterpriseCode,jdbcType=VARCHAR},
+            </if>
+            <if test="enterpriseName != null">
+                enterprise_name = #{enterpriseName,jdbcType=VARCHAR},
+            </if>
+            <if test="rechargeTel != null">
+                recharge_tel = #{rechargeTel,jdbcType=VARCHAR},
+            </if>
+            <if test="bossNum != null">
+                boss_num = #{bossNum,jdbcType=INTEGER},
+            </if>
+            <if test="commonNum != null">
+                common_num = #{commonNum,jdbcType=INTEGER},
+            </if>
+            <if test="createId != null">
+                create_id = #{createId,jdbcType=VARCHAR},
+            </if>
+            <if test="createName != null">
+                create_name = #{createName,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        where  recharge_sn = #{rechargeSn,jdbcType=VARCHAR}
+    </update>
+
+
+    <select id="getSupRechargeStats" parameterType="com.taisf.services.order.dto.SupStatsRequest"
+            resultType="com.taisf.services.enterprise.vo.SupRechargeStatsVO">
+        SELECT
+        ll.supplier_code AS supplierCode,
+        ll.num AS num,
+        ll.price AS price,
+        p.supplier_name AS supplierName
+        FROM
+
+        (SELECT
+        supplier_code,
+        COUNT( 1 ) AS num,
+        SUM( total_price ) AS price
+        FROM
+        t_recharge t
+        WHERE t.recharge_status = 1 AND t.supplier_code IS NOT NULL
+
+        <if test="supplierCode != null and supplierCode != '' ">
+            and t.supplier_code = #{supplierCode,jdbcType=VARCHAR}
+        </if>
+
+
+        <if test="startStr != null and startStr != '' ">
+            and t.create_time <![CDATA[  >= ]]>#{startStr,jdbcType=VARCHAR}
+        </if>
+        <if test="endStr != null and endStr != '' ">
+            and t.create_time <![CDATA[  <= ]]> #{endStr,jdbcType=VARCHAR}
+        </if>
+        GROUP BY
+        supplier_code
+        ) ll
+        LEFT JOIN t_supplier p ON ll.supplier_code = p.supplier_code
+
+    </select>
+
+
+
+
+    <select id="getEnterpriseRechargeStats" parameterType="com.taisf.services.order.dto.EnterpriseStatsRequest"
+            resultType="com.taisf.services.enterprise.vo.EnterpriseRechargeStatsVO">
+
+        SELECT
+            ll.enterprise_code AS enterpriseCode,
+            ll.num AS num,
+            ll.price AS price,
+            p.enterprise_name AS enterpriseName
+        FROM
+
+          (SELECT
+                enterprise_code,
+                COUNT( 1 ) AS num,
+                SUM( total_price ) AS price
+            FROM
+                t_recharge t
+                WHERE 1 =1
+
+                <if test="supplierCode != null and supplierCode != '' ">
+                    and t.supplier_code = #{supplierCode,jdbcType=VARCHAR}
+                </if>
+
+                <if test="enterpriseCode != null and enterpriseCode != '' ">
+                    and t.enterprise_code = #{enterpriseCode,jdbcType=VARCHAR}
+                </if>
+
+                <if test="startStr != null and startStr != '' ">
+                    and t.create_time <![CDATA[  >= ]]>#{startStr,jdbcType=VARCHAR}
+                </if>
+                <if test="endStr != null and endStr != '' ">
+                    and t.create_time <![CDATA[  <= ]]> #{endStr,jdbcType=VARCHAR}
+                </if>
+            GROUP BY
+                enterprise_code
+            ) ll
+          LEFT JOIN t_enterprise p ON ll.enterprise_code = p.enterprise_code
+
+    </select>
+
+
+</mapper>

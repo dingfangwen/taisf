@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="pay.rechargeOrderDao" >
+
+    <resultMap id="BaseResultMap" type="com.taisf.services.pay.entity.RechargeOrderEntity" >
+      <id column="id" property="id" jdbcType="INTEGER" />
+      <result column="order_sn" property="orderSn" jdbcType="VARCHAR" />
+      <result column="pay_type" property="payType" jdbcType="INTEGER" />
+      <result column="total_fee" property="totalFee" jdbcType="INTEGER" />
+      <result column="need_money" property="needMoney" jdbcType="INTEGER" />
+      <result column="trade_no" property="tradeNo" jdbcType="VARCHAR" />
+      <result column="pay_time" property="payTime" jdbcType="TIMESTAMP" />
+      <result column="accounts_status" property="accountsStatus" jdbcType="INTEGER" />
+      <result column="pay_status" property="payStatus" jdbcType="INTEGER" />
+      <result column="enterprise_code" property="enterpriseCode" jdbcType="VARCHAR" />
+      <result column="supplier_code" property="supplierCode" jdbcType="VARCHAR" />
+      <result column="user_uid" property="userUid" jdbcType="VARCHAR" />
+      <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+      <result column="last_modify_date" property="lastModifyDate" jdbcType="TIMESTAMP" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+      id, order_sn, pay_type,  total_fee, need_money, trade_no, pay_time, accounts_status,
+      pay_status, enterprise_code, supplier_code, user_uid, create_time, last_modify_date
+    </sql>
+
+    <select id="getRechargeOrderByOrderSn" resultMap="BaseResultMap" parameterType="java.lang.String" >
+      select
+      <include refid="Base_Column_List" />
+      from t_recharge_order
+      where order_sn = #{orderSn,jdbcType=INTEGER}
+    </select>
+
+
+
+  <select id="findRechargeOrderList" resultType="com.taisf.services.pay.vo.RechargeOrderVO" parameterType="com.taisf.services.pay.dto.RechargeOrderListRequest" >
+    select
+      t.order_sn  as orderSn,
+      t.pay_type as payType,
+      t.total_fee as totalFee,
+      t.trade_no as tradeNo,
+      t.pay_time as payTime,
+      t.pay_status as payStatus,
+      t.user_uid as userUid,
+      u.user_phone  as userTel
+
+    from t_recharge_order t
+    inner join t_user u on t.user_uid = u.user_uid
+    where  t.pay_status = 1
+
+    <if test="userPhone != null and userPhone != '' " >
+      and  u.user_phone = #{userPhone,jdbcType=VARCHAR}
+    </if>
+
+    <if test="start!=null and start!=''">
+      AND t.create_time <![CDATA[ >= ]]> #{start,jdbcType=TIMESTAMP}
+    </if>
+    <if test="end!=null and end!=''">
+      AND t.create_time <![CDATA[ <= ]]> #{end,jdbcType=TIMESTAMP}
+    </if>
+
+    ORDER BY t.id DESC
+  </select>
+
+
+
+    <insert id="saveRechargeOrder" parameterType="com.taisf.services.pay.entity.RechargeOrderEntity" >
+      insert into t_recharge_order
+      <trim prefix="(" suffix=")" suffixOverrides="," >
+
+        <if test="orderSn != null" >
+          order_sn,
+        </if>
+        <if test="payType != null" >
+          pay_type,
+        </if>
+
+        <if test="totalFee != null" >
+          total_fee,
+        </if>
+        <if test="needMoney != null" >
+          need_money,
+        </if>
+        <if test="tradeNo != null" >
+          trade_no,
+        </if>
+        <if test="payTime != null" >
+          pay_time,
+        </if>
+        <if test="accountsStatus != null" >
+          accounts_status,
+        </if>
+        <if test="payStatus != null" >
+          pay_status,
+        </if>
+        <if test="enterpriseCode != null" >
+          enterprise_code,
+        </if>
+        <if test="supplierCode != null" >
+          supplier_code,
+        </if>
+        <if test="userUid != null" >
+          user_uid,
+        </if>
+        <if test="createTime != null" >
+          create_time,
+        </if>
+        <if test="lastModifyDate != null" >
+          last_modify_date,
+        </if>
+      </trim>
+      <trim prefix="values (" suffix=")" suffixOverrides="," >
+
+        <if test="orderSn != null" >
+          #{orderSn,jdbcType=VARCHAR},
+        </if>
+        <if test="payType != null" >
+          #{payType,jdbcType=INTEGER},
+        </if>
+
+        <if test="totalFee != null" >
+          #{totalFee,jdbcType=INTEGER},
+        </if>
+        <if test="needMoney != null" >
+          #{needMoney,jdbcType=INTEGER},
+        </if>
+        <if test="tradeNo != null" >
+          #{tradeNo,jdbcType=VARCHAR},
+        </if>
+        <if test="payTime != null" >
+          #{payTime,jdbcType=TIMESTAMP},
+        </if>
+        <if test="accountsStatus != null" >
+          #{accountsStatus,jdbcType=INTEGER},
+        </if>
+        <if test="payStatus != null" >
+          #{payStatus,jdbcType=INTEGER},
+        </if>
+        <if test="enterpriseCode != null" >
+          #{enterpriseCode,jdbcType=VARCHAR},
+        </if>
+        <if test="supplierCode != null" >
+          #{supplierCode,jdbcType=VARCHAR},
+        </if>
+        <if test="userUid != null" >
+          #{userUid,jdbcType=VARCHAR},
+        </if>
+        <if test="createTime != null" >
+          #{createTime,jdbcType=TIMESTAMP},
+        </if>
+        <if test="lastModifyDate != null" >
+          #{lastModifyDate,jdbcType=TIMESTAMP},
+        </if>
+      </trim>
+    </insert>
+
+
+    <update id="updateRechargeOrder" parameterType="com.taisf.services.pay.entity.RechargeOrderEntity" >
+      update t_recharge_order
+      <set >
+
+        <if test="payType != null" >
+          pay_type = #{payType,jdbcType=INTEGER},
+        </if>
+
+        <if test="totalFee != null" >
+          total_fee = #{totalFee,jdbcType=INTEGER},
+        </if>
+        <if test="needMoney != null" >
+          need_money = #{needMoney,jdbcType=INTEGER},
+        </if>
+        <if test="tradeNo != null" >
+          trade_no = #{tradeNo,jdbcType=VARCHAR},
+        </if>
+        <if test="payTime != null" >
+          pay_time = #{payTime,jdbcType=TIMESTAMP},
+        </if>
+        <if test="accountsStatus != null" >
+          accounts_status = #{accountsStatus,jdbcType=INTEGER},
+        </if>
+        <if test="payStatus != null" >
+          pay_status = #{payStatus,jdbcType=INTEGER},
+        </if>
+        <if test="enterpriseCode != null" >
+          enterprise_code = #{enterpriseCode,jdbcType=VARCHAR},
+        </if>
+        <if test="supplierCode != null" >
+          supplier_code = #{supplierCode,jdbcType=VARCHAR},
+        </if>
+        <if test="userUid != null" >
+          user_uid = #{userUid,jdbcType=VARCHAR},
+        </if>
+        <if test="createTime != null" >
+          create_time = #{createTime,jdbcType=TIMESTAMP},
+        </if>
+        <if test="lastModifyDate != null" >
+          last_modify_date = #{lastModifyDate,jdbcType=TIMESTAMP},
+        </if>
+      </set>
+      where  order_sn = #{orderSn,jdbcType=VARCHAR}  and trade_no is  null
+    </update>
+
+
+
+    <select id="getSelfRechargeStats" parameterType="com.taisf.services.order.dto.EnterpriseStatsRequest"
+            resultType="com.taisf.services.enterprise.vo.EnterpriseRechargeStatsVO">
+
+      SELECT
+      ll.enterprise_code AS enterpriseCode,
+      ll.num AS num,
+      ll.price AS price,
+      p.enterprise_name AS enterpriseName
+      FROM
+
+      (SELECT
+      enterprise_code,
+      COUNT( 1 ) AS num,
+      SUM( total_fee ) AS price
+      FROM
+      t_recharge_order t
+      WHERE 1 =1  and pay_status = 1
+
+      <if test="supplierCode != null and supplierCode != '' ">
+        and t.supplier_code = #{supplierCode,jdbcType=VARCHAR}
+      </if>
+
+      <if test="enterpriseCode != null and enterpriseCode != '' ">
+        and t.enterprise_code = #{enterpriseCode,jdbcType=VARCHAR}
+      </if>
+
+      <if test="startStr != null and startStr != '' ">
+        and t.pay_time <![CDATA[  >= ]]>#{startStr,jdbcType=VARCHAR}
+      </if>
+      <if test="endStr != null and endStr != '' ">
+        and t.pay_time <![CDATA[  <= ]]> #{endStr,jdbcType=VARCHAR}
+      </if>
+      GROUP BY
+      enterprise_code
+      ) ll
+      LEFT JOIN t_enterprise p ON ll.enterprise_code = p.enterprise_code
+
+    </select>
+
+
+
+    <select id="getSelfRechargeSupStats" parameterType="com.taisf.services.order.dto.SupStatsRequest"
+            resultType="com.taisf.services.enterprise.vo.SupRechargeStatsVO">
+        SELECT
+        ll.supplier_code AS supplierCode,
+        ll.num AS num,
+        ll.price AS price,
+        p.supplier_name AS supplierName
+        FROM
+
+        (SELECT
+        supplier_code,
+        COUNT( 1 ) AS num,
+        SUM( total_fee ) AS price
+        FROM
+        t_recharge_order t
+        WHERE 1 =1  and pay_status = 1
+
+        <if test="supplierCode != null and supplierCode != '' ">
+          and t.supplier_code = #{supplierCode,jdbcType=VARCHAR}
+        </if>
+        <if test="startStr != null and startStr != '' ">
+          and t.pay_time <![CDATA[  >= ]]>#{startStr,jdbcType=VARCHAR}
+        </if>
+        <if test="endStr != null and endStr != '' ">
+          and t.pay_time <![CDATA[  <= ]]> #{endStr,jdbcType=VARCHAR}
+        </if>
+        GROUP BY
+        supplier_code
+        ) ll
+        LEFT JOIN t_supplier p ON ll.supplier_code = p.supplier_code
+    </select>
+
+
+</mapper>

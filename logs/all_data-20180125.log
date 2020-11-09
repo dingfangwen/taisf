@@ -1,0 +1,614 @@
+2018-01-25 16:37:02.075 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-01-25 16:37:02.976 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-01-25 16:37:02.976 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-01-25 16:37:03.066 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-01-25 16:37:03.066 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-01-25 16:37:03.258 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-01-25 16:37:03.319 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderMoney.xml]'
+2018-01-25 16:37:03.341 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderBase.xml]'
+2018-01-25 16:37:03.351 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderPay.xml]'
+2018-01-25 16:37:03.374 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderInfoDao.xml]'
+2018-01-25 16:37:03.387 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderProductDao.xml]'
+2018-01-25 16:37:03.396 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderActivityDao.xml]'
+2018-01-25 16:37:03.405 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderLogDao.xml]'
+2018-01-25 16:37:03.416 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/cartDao.xml]'
+2018-01-25 16:37:03.425 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseContactsDao.xml]'
+2018-01-25 16:37:03.437 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseDayDao.xml]'
+2018-01-25 16:37:03.455 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseDao.xml]'
+2018-01-25 16:37:03.464 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseConfigDao.xml]'
+2018-01-25 16:37:03.477 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseAddressDao.xml]'
+2018-01-25 16:37:03.486 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseFinanceDao.xml]'
+2018-01-25 16:37:03.496 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/pay/dao/map/payRecordDao.xml]'
+2018-01-25 16:37:03.506 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/loginTokenDao.xml]'
+2018-01-25 16:37:03.527 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/userDao.xml]'
+2018-01-25 16:37:03.537 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/userAddressDao.xml]'
+2018-01-25 16:37:03.545 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/accountLogDao.xml]'
+2018-01-25 16:37:03.560 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/userAccountDao.xml]'
+2018-01-25 16:37:03.571 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/product/dao/map/ProductDao.xml]'
+2018-01-25 16:37:03.585 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierPackageDao.xml]'
+2018-01-25 16:37:03.594 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierContactsDao.xml]'
+2018-01-25 16:37:03.609 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierProductDao.xml]'
+2018-01-25 16:37:03.623 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierFinanceDao.xml]'
+2018-01-25 16:37:03.636 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierDao.xml]'
+2018-01-25 16:37:03.647 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierExtDao.xml]'
+2018-01-25 16:37:03.661 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/recharge/dao/map/rechargeDao.xml]'
+2018-01-25 16:37:03.671 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/recharge/dao/map/rechargeLogDao.xml]'
+2018-01-25 16:37:03.680 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/refund/dao/map/refundLogDao.xml]'
+2018-01-25 16:37:03.696 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/refund/dao/map/refundDao.xml]'
+2018-01-25 16:37:03.705 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/base/dao/map/upGradeDao.xml]'
+2018-01-25 16:37:03.716 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/base/dao/map/areaRegionDao.xml]'
+2018-01-25 16:37:03.732 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/roleDao.xml]'
+2018-01-25 16:37:03.743 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/roleResDao.xml]'
+2018-01-25 16:37:03.759 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/employeeDao.xml]'
+2018-01-25 16:37:03.779 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/resourceDao.xml]'
+2018-01-25 16:37:03.790 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/employeeRoleDao.xml]'
+2018-01-25 16:37:03.884 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-01-25 16:37:03.885 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-01-25 16:37:03.962 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-01-25 16:37:03.963 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-01-25 16:37:04.003 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-01-25 16:37:04.011 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderMoney.xml]'
+2018-01-25 16:37:04.022 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderBase.xml]'
+2018-01-25 16:37:04.029 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderPay.xml]'
+2018-01-25 16:37:04.040 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderInfoDao.xml]'
+2018-01-25 16:37:04.046 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderProductDao.xml]'
+2018-01-25 16:37:04.051 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderActivityDao.xml]'
+2018-01-25 16:37:04.056 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderLogDao.xml]'
+2018-01-25 16:37:04.071 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/cartDao.xml]'
+2018-01-25 16:37:04.075 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseContactsDao.xml]'
+2018-01-25 16:37:04.081 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseDayDao.xml]'
+2018-01-25 16:37:04.089 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseDao.xml]'
+2018-01-25 16:37:04.093 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseConfigDao.xml]'
+2018-01-25 16:37:04.098 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseAddressDao.xml]'
+2018-01-25 16:37:04.103 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseFinanceDao.xml]'
+2018-01-25 16:37:04.107 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/pay/dao/map/payRecordDao.xml]'
+2018-01-25 16:37:04.115 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/loginTokenDao.xml]'
+2018-01-25 16:37:04.124 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/userDao.xml]'
+2018-01-25 16:37:04.128 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/userAddressDao.xml]'
+2018-01-25 16:37:04.133 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/accountLogDao.xml]'
+2018-01-25 16:37:04.140 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/userAccountDao.xml]'
+2018-01-25 16:37:04.146 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/product/dao/map/ProductDao.xml]'
+2018-01-25 16:37:04.154 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierPackageDao.xml]'
+2018-01-25 16:37:04.159 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierContactsDao.xml]'
+2018-01-25 16:37:04.167 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierProductDao.xml]'
+2018-01-25 16:37:04.173 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierFinanceDao.xml]'
+2018-01-25 16:37:04.179 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierDao.xml]'
+2018-01-25 16:37:04.184 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierExtDao.xml]'
+2018-01-25 16:37:04.189 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/recharge/dao/map/rechargeDao.xml]'
+2018-01-25 16:37:04.194 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/recharge/dao/map/rechargeLogDao.xml]'
+2018-01-25 16:37:04.197 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/refund/dao/map/refundLogDao.xml]'
+2018-01-25 16:37:04.203 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/refund/dao/map/refundDao.xml]'
+2018-01-25 16:37:04.207 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/base/dao/map/upGradeDao.xml]'
+2018-01-25 16:37:04.213 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/base/dao/map/areaRegionDao.xml]'
+2018-01-25 16:37:04.218 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/roleDao.xml]'
+2018-01-25 16:37:04.223 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/roleResDao.xml]'
+2018-01-25 16:37:04.231 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/employeeDao.xml]'
+2018-01-25 16:37:04.239 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/resourceDao.xml]'
+2018-01-25 16:37:04.245 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/employeeRoleDao.xml]'
+2018-01-25 16:37:04.360 [main] DEBUG druid.sql.Connection - {conn-210001} connected
+2018-01-25 16:37:04.360 [main] DEBUG druid.sql.Connection - {conn-210001} connected
+2018-01-25 16:37:04.438 [main] DEBUG druid.sql.Connection - {conn-210002} connected
+2018-01-25 16:37:04.438 [main] DEBUG druid.sql.Connection - {conn-210002} connected
+2018-01-25 16:37:04.471 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-01-25 16:37:04.476 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderMoney.xml]'
+2018-01-25 16:37:04.484 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderBase.xml]'
+2018-01-25 16:37:04.488 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderPay.xml]'
+2018-01-25 16:37:04.494 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderInfoDao.xml]'
+2018-01-25 16:37:04.498 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderProductDao.xml]'
+2018-01-25 16:37:04.502 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderActivityDao.xml]'
+2018-01-25 16:37:04.505 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderLogDao.xml]'
+2018-01-25 16:37:04.510 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/cartDao.xml]'
+2018-01-25 16:37:04.514 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseContactsDao.xml]'
+2018-01-25 16:37:04.518 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseDayDao.xml]'
+2018-01-25 16:37:04.528 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseDao.xml]'
+2018-01-25 16:37:04.533 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseConfigDao.xml]'
+2018-01-25 16:37:04.537 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseAddressDao.xml]'
+2018-01-25 16:37:04.541 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseFinanceDao.xml]'
+2018-01-25 16:37:04.545 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/pay/dao/map/payRecordDao.xml]'
+2018-01-25 16:37:04.550 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/loginTokenDao.xml]'
+2018-01-25 16:37:04.557 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/userDao.xml]'
+2018-01-25 16:37:04.561 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/userAddressDao.xml]'
+2018-01-25 16:37:04.566 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/accountLogDao.xml]'
+2018-01-25 16:37:04.570 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/userAccountDao.xml]'
+2018-01-25 16:37:04.575 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/product/dao/map/ProductDao.xml]'
+2018-01-25 16:37:04.591 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierPackageDao.xml]'
+2018-01-25 16:37:04.596 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierContactsDao.xml]'
+2018-01-25 16:37:04.601 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierProductDao.xml]'
+2018-01-25 16:37:04.605 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierFinanceDao.xml]'
+2018-01-25 16:37:04.609 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierDao.xml]'
+2018-01-25 16:37:04.613 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierExtDao.xml]'
+2018-01-25 16:37:04.619 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/recharge/dao/map/rechargeDao.xml]'
+2018-01-25 16:37:04.622 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/recharge/dao/map/rechargeLogDao.xml]'
+2018-01-25 16:37:04.626 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/refund/dao/map/refundLogDao.xml]'
+2018-01-25 16:37:04.630 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/refund/dao/map/refundDao.xml]'
+2018-01-25 16:37:04.634 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/base/dao/map/upGradeDao.xml]'
+2018-01-25 16:37:04.640 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/base/dao/map/areaRegionDao.xml]'
+2018-01-25 16:37:04.644 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/roleDao.xml]'
+2018-01-25 16:37:04.648 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/roleResDao.xml]'
+2018-01-25 16:37:04.654 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/employeeDao.xml]'
+2018-01-25 16:37:04.660 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/resourceDao.xml]'
+2018-01-25 16:37:04.664 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/employeeRoleDao.xml]'
+2018-01-25 16:37:04.721 [main] DEBUG druid.sql.Connection - {conn-310001} connected
+2018-01-25 16:37:04.721 [main] DEBUG druid.sql.Connection - {conn-310001} connected
+2018-01-25 16:37:04.792 [main] DEBUG druid.sql.Connection - {conn-310002} connected
+2018-01-25 16:37:04.792 [main] DEBUG druid.sql.Connection - {conn-310002} connected
+2018-01-25 16:37:04.821 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-01-25 16:37:04.825 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderMoney.xml]'
+2018-01-25 16:37:04.830 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderBase.xml]'
+2018-01-25 16:37:04.834 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderPay.xml]'
+2018-01-25 16:37:04.840 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderInfoDao.xml]'
+2018-01-25 16:37:04.844 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderProductDao.xml]'
+2018-01-25 16:37:04.847 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderActivityDao.xml]'
+2018-01-25 16:37:04.850 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/orderLogDao.xml]'
+2018-01-25 16:37:04.853 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/order/dao/map/cartDao.xml]'
+2018-01-25 16:37:04.856 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseContactsDao.xml]'
+2018-01-25 16:37:04.860 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseDayDao.xml]'
+2018-01-25 16:37:04.865 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseDao.xml]'
+2018-01-25 16:37:04.869 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseConfigDao.xml]'
+2018-01-25 16:37:04.872 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseAddressDao.xml]'
+2018-01-25 16:37:04.875 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/enterprise/dao/map/enterpriseFinanceDao.xml]'
+2018-01-25 16:37:04.878 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/pay/dao/map/payRecordDao.xml]'
+2018-01-25 16:37:04.882 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/loginTokenDao.xml]'
+2018-01-25 16:37:04.889 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/userDao.xml]'
+2018-01-25 16:37:04.892 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/userAddressDao.xml]'
+2018-01-25 16:37:04.895 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/accountLogDao.xml]'
+2018-01-25 16:37:04.899 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/user/dao/map/userAccountDao.xml]'
+2018-01-25 16:37:04.902 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/product/dao/map/ProductDao.xml]'
+2018-01-25 16:37:04.908 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierPackageDao.xml]'
+2018-01-25 16:37:04.911 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierContactsDao.xml]'
+2018-01-25 16:37:04.915 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierProductDao.xml]'
+2018-01-25 16:37:04.920 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierFinanceDao.xml]'
+2018-01-25 16:37:04.924 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierDao.xml]'
+2018-01-25 16:37:04.928 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/supplier/dao/map/supplierExtDao.xml]'
+2018-01-25 16:37:04.932 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/recharge/dao/map/rechargeDao.xml]'
+2018-01-25 16:37:04.936 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/recharge/dao/map/rechargeLogDao.xml]'
+2018-01-25 16:37:04.939 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/refund/dao/map/refundLogDao.xml]'
+2018-01-25 16:37:04.945 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/refund/dao/map/refundDao.xml]'
+2018-01-25 16:37:04.948 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/base/dao/map/upGradeDao.xml]'
+2018-01-25 16:37:04.952 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/taisf-service/target/classes/com/taisf/services/base/dao/map/areaRegionDao.xml]'
+2018-01-25 16:37:04.955 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/roleDao.xml]'
+2018-01-25 16:37:04.959 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/roleResDao.xml]'
+2018-01-25 16:37:04.964 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/employeeDao.xml]'
+2018-01-25 16:37:04.969 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/resourceDao.xml]'
+2018-01-25 16:37:04.973 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/ups-service/target/classes/com/taisf/services/ups/dao/map/employeeRoleDao.xml]'
+2018-01-25 16:37:05.400 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2018-01-25 16:37:05.413 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5ffc5491] was not registered for synchronization because synchronization is not active
+2018-01-25 16:37:05.425 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2018-01-25 16:37:05.425 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2018-01-25 16:37:05.425 [main] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@4bd2f0dc] will not be managed by Spring
+2018-01-25 16:37:05.429 [main] DEBUG enterprise.enterpriseDao.getEnterpriseByCode - ==>  Preparing: select id, enterprise_code,supplier_code,enterprise_name, enterprise_tel, enterprise_type,enterprise_status, manger, province_code, province_name, city_code, city_name, area_code, area_name, street, open_time, till_time, contact_name, contact_mail, contact_mobile, contact_tel, contact_tencent, create_time, last_modify_date,is_open from t_enterprise where enterprise_code = ? limit 1 
+2018-01-25 16:37:05.445 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select 
+     
+    id, enterprise_code,supplier_code,enterprise_name, enterprise_tel, enterprise_type,enterprise_status, manger, province_code, province_name,
+    city_code, city_name, area_code, area_name, street, open_time, till_time, contact_name, contact_mail, contact_mobile, contact_tel, contact_tencent,
+    create_time, last_modify_date,is_open
+   
+    from t_enterprise
+    where enterprise_code = ?
+    limit 1
+2018-01-25 16:37:05.445 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} created. 
+select 
+     
+    id, enterprise_code,supplier_code,enterprise_name, enterprise_tel, enterprise_type,enterprise_status, manger, province_code, province_name,
+    city_code, city_name, area_code, area_name, street, open_time, till_time, contact_name, contact_mail, contact_mobile, contact_tel, contact_tencent,
+    create_time, last_modify_date,is_open
+   
+    from t_enterprise
+    where enterprise_code = ?
+    limit 1
+2018-01-25 16:37:05.461 [main] DEBUG enterprise.enterpriseDao.getEnterpriseByCode - ==> Parameters: 0001(String)
+2018-01-25 16:37:05.462 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [0001]
+2018-01-25 16:37:05.462 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2018-01-25 16:37:05.462 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Parameters : [0001]
+2018-01-25 16:37:05.462 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} Types : [VARCHAR]
+2018-01-25 16:37:05.470 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 7.595982 millis. 
+select 
+     
+    id, enterprise_code,supplier_code,enterprise_name, enterprise_tel, enterprise_type,enterprise_status, manger, province_code, province_name,
+    city_code, city_name, area_code, area_name, street, open_time, till_time, contact_name, contact_mail, contact_mobile, contact_tel, contact_tencent,
+    create_time, last_modify_date,is_open
+   
+    from t_enterprise
+    where enterprise_code = ?
+    limit 1
+2018-01-25 16:37:05.470 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} executed. 7.595982 millis. 
+select 
+     
+    id, enterprise_code,supplier_code,enterprise_name, enterprise_tel, enterprise_type,enterprise_status, manger, province_code, province_name,
+    city_code, city_name, area_code, area_name, street, open_time, till_time, contact_name, contact_mail, contact_mobile, contact_tel, contact_tencent,
+    create_time, last_modify_date,is_open
+   
+    from t_enterprise
+    where enterprise_code = ?
+    limit 1
+2018-01-25 16:37:05.473 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2018-01-25 16:37:05.475 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, enterprise_code, supplier_code, enterprise_name, enterprise_tel, enterprise_type, enterprise_status, manger, province_code, province_name, city_code, city_name, area_code, area_name, street, open_time, till_time, contact_name, contact_mail, contact_mobile, contact_tel, contact_tencent, create_time, last_modify_date, is_open]
+2018-01-25 16:37:05.476 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} open
+2018-01-25 16:37:05.476 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Header: [id, enterprise_code, supplier_code, enterprise_name, enterprise_tel, enterprise_type, enterprise_status, manger, province_code, province_name, city_code, city_name, area_code, area_name, street, open_time, till_time, contact_name, contact_mail, contact_mobile, contact_tel, contact_tencent, create_time, last_modify_date, is_open]
+2018-01-25 16:37:05.492 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [2, 0001, jipin, 上海馋滴网络科技有限公司, , 1, 1, 2c91340c5ffd23350160019b29cc000f, 310000, null, 310100, null, 310101, null, 淮海中路333号瑞安广场12楼1207, 2017-11-24 00:00:00.0, 2018-11-24 23:59:59.0, 袁浩, yuanhao@chdwang.com, , , , 2017-11-24 09:58:17.0, 2018-01-22 11:12:12.0, 1]
+2018-01-25 16:37:05.493 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} Result: [2, 0001, jipin, 上海馋滴网络科技有限公司, , 1, 1, 2c91340c5ffd23350160019b29cc000f, 310000, null, 310100, null, 310101, null, 淮海中路333号瑞安广场12楼1207, 2017-11-24 00:00:00.0, 2018-11-24 23:59:59.0, 袁浩, yuanhao@chdwang.com, , , , 2017-11-24 09:58:17.0, 2018-01-22 11:12:12.0, 1]
+2018-01-25 16:37:05.496 [main] DEBUG enterprise.enterpriseDao.getEnterpriseByCode - <==      Total: 1
+2018-01-25 16:37:05.496 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2018-01-25 16:37:05.497 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20000, rs-50000} closed
+2018-01-25 16:37:05.497 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2018-01-25 16:37:05.497 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20000} closed
+2018-01-25 16:37:05.497 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5ffc5491]
+2018-01-25 16:37:05.498 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2018-01-25 16:37:05.498 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2018-01-25 16:37:05.498 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2018-01-25 16:37:05.498 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e6b9a95] was not registered for synchronization because synchronization is not active
+2018-01-25 16:37:05.498 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2018-01-25 16:37:05.498 [main] DEBUG druid.sql.Connection - {conn-10002} pool-connect
+2018-01-25 16:37:05.498 [main] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@4bd2f0dc] will not be managed by Spring
+2018-01-25 16:37:05.498 [main] DEBUG e.enterpriseConfigDao.getEnterpriseConfigByCode - ==>  Preparing: select id, enterprise_code, boss_price, emp_price, for_lunch, lunch_start, lunch_end, for_dinner, dinner_start, dinner_end from t_enterprise_config where enterprise_code = ? limit 1 
+2018-01-25 16:37:05.499 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20001} created. 
+select 
+     
+    id, enterprise_code, boss_price, emp_price, for_lunch, lunch_start,
+    lunch_end, for_dinner, dinner_start, dinner_end
+   
+    from t_enterprise_config
+    where enterprise_code = ?
+    limit 1
+2018-01-25 16:37:05.499 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20001} created. 
+select 
+     
+    id, enterprise_code, boss_price, emp_price, for_lunch, lunch_start,
+    lunch_end, for_dinner, dinner_start, dinner_end
+   
+    from t_enterprise_config
+    where enterprise_code = ?
+    limit 1
+2018-01-25 16:37:05.499 [main] DEBUG e.enterpriseConfigDao.getEnterpriseConfigByCode - ==> Parameters: 0001(String)
+2018-01-25 16:37:05.499 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20001} Parameters : [0001]
+2018-01-25 16:37:05.499 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20001} Types : [VARCHAR]
+2018-01-25 16:37:05.499 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20001} Parameters : [0001]
+2018-01-25 16:37:05.499 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20001} Types : [VARCHAR]
+2018-01-25 16:37:05.506 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20001} executed. 7.365021 millis. 
+select 
+     
+    id, enterprise_code, boss_price, emp_price, for_lunch, lunch_start,
+    lunch_end, for_dinner, dinner_start, dinner_end
+   
+    from t_enterprise_config
+    where enterprise_code = ?
+    limit 1
+2018-01-25 16:37:05.506 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20001} executed. 7.365021 millis. 
+select 
+     
+    id, enterprise_code, boss_price, emp_price, for_lunch, lunch_start,
+    lunch_end, for_dinner, dinner_start, dinner_end
+   
+    from t_enterprise_config
+    where enterprise_code = ?
+    limit 1
+2018-01-25 16:37:05.507 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20001, rs-50001} open
+2018-01-25 16:37:05.507 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20001, rs-50001} Header: [id, enterprise_code, boss_price, emp_price, for_lunch, lunch_start, lunch_end, for_dinner, dinner_start, dinner_end]
+2018-01-25 16:37:05.507 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20001, rs-50001} open
+2018-01-25 16:37:05.507 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20001, rs-50001} Header: [id, enterprise_code, boss_price, emp_price, for_lunch, lunch_start, lunch_end, for_dinner, dinner_start, dinner_end]
+2018-01-25 16:37:05.507 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20001, rs-50001} Result: [2, 0001, 20, 20, 1, 8:30:00, 16:30:00, 1, 16:30:00, 23:30:00]
+2018-01-25 16:37:05.507 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20001, rs-50001} Result: [2, 0001, 20, 20, 1, 8:30:00, 16:30:00, 1, 16:30:00, 23:30:00]
+2018-01-25 16:37:05.508 [main] DEBUG e.enterpriseConfigDao.getEnterpriseConfigByCode - <==      Total: 1
+2018-01-25 16:37:05.508 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20001, rs-50001} closed
+2018-01-25 16:37:05.508 [main] DEBUG druid.sql.ResultSet - {conn-10002, pstmt-20001, rs-50001} closed
+2018-01-25 16:37:05.508 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20001} closed
+2018-01-25 16:37:05.508 [main] DEBUG druid.sql.Statement - {conn-10002, pstmt-20001} closed
+2018-01-25 16:37:05.508 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e6b9a95]
+2018-01-25 16:37:05.509 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2018-01-25 16:37:05.509 [main] DEBUG druid.sql.Connection - {conn-10002} pool-recycle
+2018-01-25 16:37:05.512 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2018-01-25 16:37:05.512 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5e76a2bb] was not registered for synchronization because synchronization is not active
+2018-01-25 16:37:05.538 [main] DEBUG druid.sql.Connection - {conn-110002} pool-connect
+2018-01-25 16:37:05.539 [main] DEBUG druid.sql.Connection - {conn-110002} pool-connect
+2018-01-25 16:37:05.539 [main] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@60f2e0bd] will not be managed by Spring
+2018-01-25 16:37:05.539 [main] DEBUG e.enterpriseDayDao.getEnterpriseDaysByTime - ==>  Preparing: select id, enterprise_code, day_time, day_type, op_code, op_name, is_del from t_enterprise_day where enterprise_code = ? and day_time >= ? and day_time <= ? 
+2018-01-25 16:37:05.539 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120000} created. 
+select
+     
+    id, enterprise_code, day_time, day_type, op_code, op_name, is_del
+   
+    from t_enterprise_day
+    where enterprise_code = ?
+     
+      and day_time >= ?
+     
+
+     
+      and   day_time <= ?
+2018-01-25 16:37:05.539 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120000} created. 
+select
+     
+    id, enterprise_code, day_time, day_type, op_code, op_name, is_del
+   
+    from t_enterprise_day
+    where enterprise_code = ?
+     
+      and day_time >= ?
+     
+
+     
+      and   day_time <= ?
+2018-01-25 16:37:05.540 [main] DEBUG e.enterpriseDayDao.getEnterpriseDaysByTime - ==> Parameters: 0001(String), 20171231(Integer), 20180211(Integer)
+2018-01-25 16:37:05.540 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120000} Parameters : [0001, 20171231, 20180211]
+2018-01-25 16:37:05.540 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120000} Types : [VARCHAR, INTEGER, INTEGER]
+2018-01-25 16:37:05.540 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120000} Parameters : [0001, 20171231, 20180211]
+2018-01-25 16:37:05.540 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120000} Types : [VARCHAR, INTEGER, INTEGER]
+2018-01-25 16:37:05.547 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120000} executed. 7.309228 millis. 
+select
+     
+    id, enterprise_code, day_time, day_type, op_code, op_name, is_del
+   
+    from t_enterprise_day
+    where enterprise_code = ?
+     
+      and day_time >= ?
+     
+
+     
+      and   day_time <= ?
+2018-01-25 16:37:05.548 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120000} executed. 7.309228 millis. 
+select
+     
+    id, enterprise_code, day_time, day_type, op_code, op_name, is_del
+   
+    from t_enterprise_day
+    where enterprise_code = ?
+     
+      and day_time >= ?
+     
+
+     
+      and   day_time <= ?
+2018-01-25 16:37:05.548 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120000, rs-150000} open
+2018-01-25 16:37:05.548 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120000, rs-150000} Header: [id, enterprise_code, day_time, day_type, op_code, op_name, is_del]
+2018-01-25 16:37:05.548 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120000, rs-150000} open
+2018-01-25 16:37:05.548 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120000, rs-150000} Header: [id, enterprise_code, day_time, day_type, op_code, op_name, is_del]
+2018-01-25 16:37:05.548 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120000, rs-150000} Result: [1, 0001, 20180120, 1, null, null, 0]
+2018-01-25 16:37:05.548 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120000, rs-150000} Result: [1, 0001, 20180120, 1, null, null, 0]
+2018-01-25 16:37:05.549 [main] DEBUG e.enterpriseDayDao.getEnterpriseDaysByTime - <==      Total: 1
+2018-01-25 16:37:05.549 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120000, rs-150000} closed
+2018-01-25 16:37:05.549 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120000, rs-150000} closed
+2018-01-25 16:37:05.549 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120000} closed
+2018-01-25 16:37:05.550 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120000} closed
+2018-01-25 16:37:05.550 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5e76a2bb]
+2018-01-25 16:37:05.550 [main] DEBUG druid.sql.Connection - {conn-110002} pool-recycle
+2018-01-25 16:37:05.550 [main] DEBUG druid.sql.Connection - {conn-110002} pool-recycle
+2018-01-25 16:37:05.555 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2018-01-25 16:37:05.555 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e8fadb0] was not registered for synchronization because synchronization is not active
+2018-01-25 16:37:05.557 [main] DEBUG druid.sql.Connection - {conn-110002} pool-connect
+2018-01-25 16:37:05.557 [main] DEBUG druid.sql.Connection - {conn-110002} pool-connect
+2018-01-25 16:37:05.557 [main] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@60f2e0bd] will not be managed by Spring
+2018-01-25 16:37:05.557 [main] DEBUG s.s.getProductListBySupplierAndType - ==>  Preparing: select t.id, t.product_name, t.product_classify, t.product_type, t.product_source, t.product_des, t.product_pic, t.price_sale as price_sale, t.price_market as price_market, t.create_time, t.update_time, is_del, p.for_lunch, p.for_dinner from t_product t inner join t_supplier_product p ON p.product_code = t.id and p.product_type = 1 where p.supplier_code = ? and p.week = ? and p.for_dinner = 1 
+2018-01-25 16:37:05.558 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120001} created. 
+select
+         
+    t.id, t.product_name, t.product_classify, t.product_type, t.product_source, t.product_des, t.product_pic,
+    t.price_sale  as price_sale,   t.price_market  as price_market, t.create_time, t.update_time, is_del, p.for_lunch, p.for_dinner
+   
+        from t_product t
+        inner join t_supplier_product p ON p.product_code = t.id and p.product_type = 1
+        where p.supplier_code = ?
+         
+         
+            and p.week = ?
+         
+
+         
+
+         
+            and p.for_dinner = 1
+2018-01-25 16:37:05.558 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120001} created. 
+select
+         
+    t.id, t.product_name, t.product_classify, t.product_type, t.product_source, t.product_des, t.product_pic,
+    t.price_sale  as price_sale,   t.price_market  as price_market, t.create_time, t.update_time, is_del, p.for_lunch, p.for_dinner
+   
+        from t_product t
+        inner join t_supplier_product p ON p.product_code = t.id and p.product_type = 1
+        where p.supplier_code = ?
+         
+         
+            and p.week = ?
+         
+
+         
+
+         
+            and p.for_dinner = 1
+2018-01-25 16:37:05.558 [main] DEBUG s.s.getProductListBySupplierAndType - ==> Parameters: jipin(String), 5(Integer)
+2018-01-25 16:37:05.558 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120001} Parameters : [jipin, 5]
+2018-01-25 16:37:05.558 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120001} Types : [VARCHAR, INTEGER]
+2018-01-25 16:37:05.558 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120001} Parameters : [jipin, 5]
+2018-01-25 16:37:05.558 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120001} Types : [VARCHAR, INTEGER]
+2018-01-25 16:37:05.566 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120001} executed. 8.545773 millis. 
+select
+         
+    t.id, t.product_name, t.product_classify, t.product_type, t.product_source, t.product_des, t.product_pic,
+    t.price_sale  as price_sale,   t.price_market  as price_market, t.create_time, t.update_time, is_del, p.for_lunch, p.for_dinner
+   
+        from t_product t
+        inner join t_supplier_product p ON p.product_code = t.id and p.product_type = 1
+        where p.supplier_code = ?
+         
+         
+            and p.week = ?
+         
+
+         
+
+         
+            and p.for_dinner = 1
+2018-01-25 16:37:05.567 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120001} executed. 8.545773 millis. 
+select
+         
+    t.id, t.product_name, t.product_classify, t.product_type, t.product_source, t.product_des, t.product_pic,
+    t.price_sale  as price_sale,   t.price_market  as price_market, t.create_time, t.update_time, is_del, p.for_lunch, p.for_dinner
+   
+        from t_product t
+        inner join t_supplier_product p ON p.product_code = t.id and p.product_type = 1
+        where p.supplier_code = ?
+         
+         
+            and p.week = ?
+         
+
+         
+
+         
+            and p.for_dinner = 1
+2018-01-25 16:37:05.567 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} open
+2018-01-25 16:37:05.567 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Header: [id, product_name, product_classify, product_type, product_source, product_des, product_pic, price_sale, price_market, create_time, update_time, is_del, for_lunch, for_dinner]
+2018-01-25 16:37:05.567 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} open
+2018-01-25 16:37:05.567 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Header: [id, product_name, product_classify, product_type, product_source, product_des, product_pic, price_sale, price_market, create_time, update_time, is_del, for_lunch, for_dinner]
+2018-01-25 16:37:05.568 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [5, 油爆虾, 1, 1, 3, 微甜, /common/2018-01-25/2c91340c6128075301612be1bddb0008, 1500, 1500, 2017-11-23 17:15:35.0, 2018-01-25 13:54:38.0, 0, 1, 1]
+2018-01-25 16:37:05.568 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [5, 油爆虾, 1, 1, 3, 微甜, /common/2018-01-25/2c91340c6128075301612be1bddb0008, 1500, 1500, 2017-11-23 17:15:35.0, 2018-01-25 13:54:38.0, 0, 1, 1]
+2018-01-25 16:37:05.570 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [8, 葱烤鲫鱼, 1, 1, 3, 微甜, /common/2018-01-25/2c91340c6128075301612be2f9c8000b, 1000, 1000, 2017-11-23 17:15:29.0, 2018-01-25 13:55:54.0, 0, 1, 1]
+2018-01-25 16:37:05.570 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [8, 葱烤鲫鱼, 1, 1, 3, 微甜, /common/2018-01-25/2c91340c6128075301612be2f9c8000b, 1000, 1000, 2017-11-23 17:15:29.0, 2018-01-25 13:55:54.0, 0, 1, 1]
+2018-01-25 16:37:05.571 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [15, 红烧小黄鱼, 1, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612be535710012, 1200, 1200, 2017-11-23 17:15:15.0, 2018-01-25 13:58:19.0, 0, 1, 1]
+2018-01-25 16:37:05.571 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [15, 红烧小黄鱼, 1, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612be535710012, 1200, 1200, 2017-11-23 17:15:15.0, 2018-01-25 13:58:19.0, 0, 1, 1]
+2018-01-25 16:37:05.571 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [21, 红烧大排, 1, 1, 3, 微甜, /common/2018-01-25/2c91340c6128075301612be6ed710018, 1000, 1000, 2017-11-23 17:15:03.0, 2018-01-25 14:00:12.0, 0, 1, 1]
+2018-01-25 16:37:05.572 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [21, 红烧大排, 1, 1, 3, 微甜, /common/2018-01-25/2c91340c6128075301612be6ed710018, 1000, 1000, 2017-11-23 17:15:03.0, 2018-01-25 14:00:12.0, 0, 1, 1]
+2018-01-25 16:37:05.572 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [22, 麻辣牛肉, 1, 1, 3, 中辣, /common/2018-01-25/2c91340c6128075301612be7274f0019, 1500, 1500, 2017-11-23 17:15:01.0, 2018-01-25 14:00:27.0, 0, 1, 1]
+2018-01-25 16:37:05.572 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [22, 麻辣牛肉, 1, 1, 3, 中辣, /common/2018-01-25/2c91340c6128075301612be7274f0019, 1500, 1500, 2017-11-23 17:15:01.0, 2018-01-25 14:00:27.0, 0, 1, 1]
+2018-01-25 16:37:05.573 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [24, 梅菜扣肉, 1, 1, 3, 微甜, /common/2018-01-25/2c91340c6128075301612be7a01c001b, 1200, 1200, 2017-11-23 17:14:56.0, 2018-01-25 14:00:58.0, 0, 1, 1]
+2018-01-25 16:37:05.573 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [24, 梅菜扣肉, 1, 1, 3, 微甜, /common/2018-01-25/2c91340c6128075301612be7a01c001b, 1200, 1200, 2017-11-23 17:14:56.0, 2018-01-25 14:00:58.0, 0, 1, 1]
+2018-01-25 16:37:05.574 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [28, 水煮肉片, 1, 1, 3, 中辣, /common/2018-01-25/2c91340c6128075301612be8bbc4001f, 1000, 1000, 2017-11-23 17:14:48.0, 2018-01-25 14:02:11.0, 0, 1, 1]
+2018-01-25 16:37:05.574 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [28, 水煮肉片, 1, 1, 3, 中辣, /common/2018-01-25/2c91340c6128075301612be8bbc4001f, 1000, 1000, 2017-11-23 17:14:48.0, 2018-01-25 14:02:11.0, 0, 1, 1]
+2018-01-25 16:37:05.575 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [33, 鱼香肉丝, 1, 1, 3, 微辣, /common/2017-11-23/2c91340c5fe81851015fe81851550000, 1000, 1000, 2017-11-23 17:14:38.0, 2018-01-23 19:21:51.0, 0, 1, 1]
+2018-01-25 16:37:05.575 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [33, 鱼香肉丝, 1, 1, 3, 微辣, /common/2017-11-23/2c91340c5fe81851015fe81851550000, 1000, 1000, 2017-11-23 17:14:38.0, 2018-01-23 19:21:51.0, 0, 1, 1]
+2018-01-25 16:37:05.575 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [36, 椒盐排条, 1, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612bea7cc10026, 1200, 1200, 2017-11-23 17:14:32.0, 2018-01-25 14:04:06.0, 0, 1, 1]
+2018-01-25 16:37:05.575 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [36, 椒盐排条, 1, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612bea7cc10026, 1200, 1200, 2017-11-23 17:14:32.0, 2018-01-25 14:04:06.0, 0, 1, 1]
+2018-01-25 16:37:05.576 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [48, 青椒鸭脯, 1, 1, 3, 微辣, /common/2018-01-25/2c91340c6128075301612beda5c00032, 1000, 1000, 2017-11-23 17:14:08.0, 2018-01-25 14:07:33.0, 0, 1, 1]
+2018-01-25 16:37:05.577 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [48, 青椒鸭脯, 1, 1, 3, 微辣, /common/2018-01-25/2c91340c6128075301612beda5c00032, 1000, 1000, 2017-11-23 17:14:08.0, 2018-01-25 14:07:33.0, 0, 1, 1]
+2018-01-25 16:37:05.577 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [49, 本帮酱鸭, 1, 1, 3, 微甜, /common/2018-01-25/2c91340c6128075301612bede49e0033, 1000, 1000, 2017-11-23 17:14:05.0, 2018-01-25 14:07:49.0, 0, 1, 1]
+2018-01-25 16:37:05.577 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [49, 本帮酱鸭, 1, 1, 3, 微甜, /common/2018-01-25/2c91340c6128075301612bede49e0033, 1000, 1000, 2017-11-23 17:14:05.0, 2018-01-25 14:07:49.0, 0, 1, 1]
+2018-01-25 16:37:05.578 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [54, 奥尔良烤翅, 1, 1, 3, 中辣, /common/2018-01-25/2c91340c6128075301612bef507c0039, 800, 800, 2017-11-23 17:13:55.0, 2018-01-25 14:09:22.0, 0, 1, 1]
+2018-01-25 16:37:05.578 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [54, 奥尔良烤翅, 1, 1, 3, 中辣, /common/2018-01-25/2c91340c6128075301612bef507c0039, 800, 800, 2017-11-23 17:13:55.0, 2018-01-25 14:09:22.0, 0, 1, 1]
+2018-01-25 16:37:05.578 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [56, 咖喱鸡, 1, 1, 3, 咖喱, /common/2018-01-25/2c91340c6128075301612bef9095003a, 1000, 1000, 2017-11-23 17:13:51.0, 2018-01-25 14:09:38.0, 0, 1, 1]
+2018-01-25 16:37:05.579 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [56, 咖喱鸡, 1, 1, 3, 咖喱, /common/2018-01-25/2c91340c6128075301612bef9095003a, 1000, 1000, 2017-11-23 17:13:51.0, 2018-01-25 14:09:38.0, 0, 1, 1]
+2018-01-25 16:37:05.579 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [59, 香酥鸭, 1, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612bf04364003d, 1200, 1200, 2017-11-23 17:13:45.0, 2018-01-25 14:10:24.0, 0, 1, 1]
+2018-01-25 16:37:05.579 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [59, 香酥鸭, 1, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612bf04364003d, 1200, 1200, 2017-11-23 17:13:45.0, 2018-01-25 14:10:24.0, 0, 1, 1]
+2018-01-25 16:37:05.580 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [61, 山药肉片, 2, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612bf0b105003f, 700, 700, 2017-11-23 17:13:41.0, 2018-01-25 14:10:52.0, 0, 1, 1]
+2018-01-25 16:37:05.580 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [61, 山药肉片, 2, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612bf0b105003f, 700, 700, 2017-11-23 17:13:41.0, 2018-01-25 14:10:52.0, 0, 1, 1]
+2018-01-25 16:37:05.580 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [65, 海鲜豆腐, 2, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612bf1d2a70043, 600, 600, 2017-11-23 17:13:32.0, 2018-01-25 14:12:06.0, 0, 1, 1]
+2018-01-25 16:37:05.580 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [65, 海鲜豆腐, 2, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612bf1d2a70043, 600, 600, 2017-11-23 17:13:32.0, 2018-01-25 14:12:06.0, 0, 1, 1]
+2018-01-25 16:37:05.585 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [69, 炒三丁, 2, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612bf33c620047, 600, 600, 2017-11-23 17:13:24.0, 2018-01-25 14:13:39.0, 0, 1, 1]
+2018-01-25 16:37:05.585 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [69, 炒三丁, 2, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612bf33c620047, 600, 600, 2017-11-23 17:13:24.0, 2018-01-25 14:13:39.0, 0, 1, 1]
+2018-01-25 16:37:05.585 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [73, 雪菜笋丝肉丝, 2, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612bf3f191004b, 600, 600, 2017-11-23 17:13:16.0, 2018-01-25 14:14:25.0, 0, 1, 1]
+2018-01-25 16:37:05.586 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [73, 雪菜笋丝肉丝, 2, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612bf3f191004b, 600, 600, 2017-11-23 17:13:16.0, 2018-01-25 14:14:25.0, 0, 1, 1]
+2018-01-25 16:37:05.586 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [78, 千叶豆腐, 2, 1, 3, 微辣, /common/2018-01-25/2c91340c6128075301612bf53bad0050, 600, 600, 2017-11-23 17:13:05.0, 2018-01-25 14:15:50.0, 0, 1, 1]
+2018-01-25 16:37:05.586 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [78, 千叶豆腐, 2, 1, 3, 微辣, /common/2018-01-25/2c91340c6128075301612bf53bad0050, 600, 600, 2017-11-23 17:13:05.0, 2018-01-25 14:15:50.0, 0, 1, 1]
+2018-01-25 16:37:05.587 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [81, 藕片小炒肉, 2, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612bf5c2610053, 800, 800, 2017-11-23 17:12:59.0, 2018-01-25 14:16:24.0, 0, 1, 1]
+2018-01-25 16:37:05.587 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [81, 藕片小炒肉, 2, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612bf5c2610053, 800, 800, 2017-11-23 17:12:59.0, 2018-01-25 14:16:24.0, 0, 1, 1]
+2018-01-25 16:37:05.587 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [85, 香菇肉丝, 2, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612bf6d21e0057, 800, 800, 2017-11-23 17:12:51.0, 2018-01-25 14:17:34.0, 0, 1, 1]
+2018-01-25 16:37:05.587 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [85, 香菇肉丝, 2, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612bf6d21e0057, 800, 800, 2017-11-23 17:12:51.0, 2018-01-25 14:17:34.0, 0, 1, 1]
+2018-01-25 16:37:05.588 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [88, 外婆菜炒蛋, 2, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612bf76243005a, 600, 600, 2017-11-23 17:12:45.0, 2018-01-25 14:18:11.0, 0, 1, 1]
+2018-01-25 16:37:05.588 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [88, 外婆菜炒蛋, 2, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612bf76243005a, 600, 600, 2017-11-23 17:12:45.0, 2018-01-25 14:18:11.0, 0, 1, 1]
+2018-01-25 16:37:05.588 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [90, 酸辣土豆丝, 3, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612bf7f60c005c, 300, 300, 2017-11-23 17:12:41.0, 2018-01-25 14:18:48.0, 0, 1, 1]
+2018-01-25 16:37:05.588 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [90, 酸辣土豆丝, 3, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612bf7f60c005c, 300, 300, 2017-11-23 17:12:41.0, 2018-01-25 14:18:48.0, 0, 1, 1]
+2018-01-25 16:37:05.589 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [92, 什锦白菜, 3, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612bf846ee005e, 300, 300, 2017-11-23 17:12:37.0, 2018-01-25 14:19:09.0, 0, 1, 1]
+2018-01-25 16:37:05.589 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [92, 什锦白菜, 3, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612bf846ee005e, 300, 300, 2017-11-23 17:12:37.0, 2018-01-25 14:19:09.0, 0, 1, 1]
+2018-01-25 16:37:05.590 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [95, 蒜泥白菜, 3, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612bf8cc870061, 300, 300, 2017-11-23 17:12:31.0, 2018-01-25 14:19:44.0, 0, 1, 1]
+2018-01-25 16:37:05.590 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [95, 蒜泥白菜, 3, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612bf8cc870061, 300, 300, 2017-11-23 17:12:31.0, 2018-01-25 14:19:44.0, 0, 1, 1]
+2018-01-25 16:37:05.590 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [103, 地三鲜, 3, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612bfad0ef0069, 300, 300, 2017-11-23 17:12:15.0, 2018-01-25 14:21:56.0, 0, 1, 1]
+2018-01-25 16:37:05.591 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [103, 地三鲜, 3, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612bfad0ef0069, 300, 300, 2017-11-23 17:12:15.0, 2018-01-25 14:21:56.0, 0, 1, 1]
+2018-01-25 16:37:05.591 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [109, 菇片油麦菜, 3, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612bfbeabf006f, 300, 300, 2017-11-23 17:12:02.0, 2018-01-25 14:23:08.0, 0, 1, 1]
+2018-01-25 16:37:05.591 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [109, 菇片油麦菜, 3, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612bfbeabf006f, 300, 300, 2017-11-23 17:12:02.0, 2018-01-25 14:23:08.0, 0, 1, 1]
+2018-01-25 16:37:05.592 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [110, 米饭, 6, 1, 3, 描述, /common/2018-01-25/2c91340c6128075301612bfc50a30070, 100, 100, 2017-11-24 10:36:44.0, 2018-01-25 14:23:34.0, 0, 1, 1]
+2018-01-25 16:37:05.592 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [110, 米饭, 6, 1, 3, 描述, /common/2018-01-25/2c91340c6128075301612bfc50a30070, 100, 100, 2017-11-24 10:36:44.0, 2018-01-25 14:23:34.0, 0, 1, 1]
+2018-01-25 16:37:05.592 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [111, 排骨萝卜汤, 4, 1, 3, 清淡, /common/2018-01-25/2c91340c6128075301612bfcc4190071, 300, 300, 2017-11-24 10:45:26.0, 2018-01-25 14:24:24.0, 0, 1, 1]
+2018-01-25 16:37:05.592 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [111, 排骨萝卜汤, 4, 1, 3, 清淡, /common/2018-01-25/2c91340c6128075301612bfcc4190071, 300, 300, 2017-11-24 10:45:26.0, 2018-01-25 14:24:24.0, 0, 1, 1]
+2018-01-25 16:37:05.593 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [112, 光明酸奶, 5, 1, 3, 原味, /common/2018-01-25/2c91340c6128075301612bfd5fec0072, 300, 300, 2017-11-24 10:45:58.0, 2018-01-25 14:24:48.0, 0, 1, 1]
+2018-01-25 16:37:05.593 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [112, 光明酸奶, 5, 1, 3, 原味, /common/2018-01-25/2c91340c6128075301612bfd5fec0072, 300, 300, 2017-11-24 10:45:58.0, 2018-01-25 14:24:48.0, 0, 1, 1]
+2018-01-25 16:37:05.593 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [116, 响油鳝丝, 1, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612b743a1f0005, 1500, 1500, 2018-01-24 23:08:45.0, 2018-01-25 11:54:55.0, 0, 1, 1]
+2018-01-25 16:37:05.593 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [116, 响油鳝丝, 1, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612b743a1f0005, 1500, 1500, 2018-01-24 23:08:45.0, 2018-01-25 11:54:55.0, 0, 1, 1]
+2018-01-25 16:37:05.594 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [117, 芦笋虾仁, 1, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612b660ab10004, 1500, 1500, 2018-01-25 11:39:27.0, 2018-01-25 11:39:54.0, 0, 1, 1]
+2018-01-25 16:37:05.594 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [117, 芦笋虾仁, 1, 1, 3, 本帮, /common/2018-01-25/2c91340c6128075301612b660ab10004, 1500, 1500, 2018-01-25 11:39:27.0, 2018-01-25 11:39:54.0, 0, 1, 1]
+2018-01-25 16:37:05.594 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [146, 方腿炒蛋, 2, 1, 1, 本帮, /common/2018-01-25/2c91340c6128075301612c4093f50091, 600, 600, 2018-01-25 15:38:08.0, 2018-01-25 15:40:03.0, 0, 0, 1]
+2018-01-25 16:37:05.594 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [146, 方腿炒蛋, 2, 1, 1, 本帮, /common/2018-01-25/2c91340c6128075301612c4093f50091, 600, 600, 2018-01-25 15:38:08.0, 2018-01-25 15:40:03.0, 0, 0, 1]
+2018-01-25 16:37:05.594 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [147, 酱蛋, 2, 1, 3, 我填写了描述, /common/2018-01-25/2c91340c6128075301612c4145ab0092, 300, 400, 2018-01-25 15:38:53.0, 2018-01-25 15:44:34.0, 0, 0, 1]
+2018-01-25 16:37:05.595 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} Result: [147, 酱蛋, 2, 1, 3, 我填写了描述, /common/2018-01-25/2c91340c6128075301612c4145ab0092, 300, 400, 2018-01-25 15:38:53.0, 2018-01-25 15:44:34.0, 0, 0, 1]
+2018-01-25 16:37:05.595 [main] DEBUG s.s.getProductListBySupplierAndType - <==      Total: 34
+2018-01-25 16:37:05.595 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} closed
+2018-01-25 16:37:05.595 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120001, rs-150001} closed
+2018-01-25 16:37:05.596 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120001} closed
+2018-01-25 16:37:05.596 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120001} closed
+2018-01-25 16:37:05.596 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e8fadb0]
+2018-01-25 16:37:05.596 [main] DEBUG druid.sql.Connection - {conn-110002} pool-recycle
+2018-01-25 16:37:05.596 [main] DEBUG druid.sql.Connection - {conn-110002} pool-recycle
+2018-01-25 16:37:05.613 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2018-01-25 16:37:05.613 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5bb3131b] was not registered for synchronization because synchronization is not active
+2018-01-25 16:37:05.613 [main] DEBUG druid.sql.Connection - {conn-110002} pool-connect
+2018-01-25 16:37:05.614 [main] DEBUG druid.sql.Connection - {conn-110002} pool-connect
+2018-01-25 16:37:05.614 [main] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@60f2e0bd] will not be managed by Spring
+2018-01-25 16:37:05.614 [main] DEBUG s.s.getSupplierPackageByCodeAndWeek - ==>  Preparing: select id, week,supplier_code, title, package_pic, package_status,package_price, big_code, small_code, su_code, tang_code, drink_code, food_code, fruit_code, create_time,for_lunch,for_dinner from t_supplier_product_package where supplier_code = ? AND week = ? 
+2018-01-25 16:37:05.614 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120002} created. 
+select
+     
+    id, week,supplier_code, title, package_pic, package_status,package_price, big_code, small_code, su_code,
+    tang_code, drink_code, food_code, fruit_code, create_time,for_lunch,for_dinner
+   
+    from t_supplier_product_package
+    where supplier_code = ?
+    AND week = ?
+2018-01-25 16:37:05.614 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120002} created. 
+select
+     
+    id, week,supplier_code, title, package_pic, package_status,package_price, big_code, small_code, su_code,
+    tang_code, drink_code, food_code, fruit_code, create_time,for_lunch,for_dinner
+   
+    from t_supplier_product_package
+    where supplier_code = ?
+    AND week = ?
+2018-01-25 16:37:05.614 [main] DEBUG s.s.getSupplierPackageByCodeAndWeek - ==> Parameters: jipin(String), 5(Integer)
+2018-01-25 16:37:05.614 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120002} Parameters : [jipin, 5]
+2018-01-25 16:37:05.615 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120002} Types : [VARCHAR, INTEGER]
+2018-01-25 16:37:05.615 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120002} Parameters : [jipin, 5]
+2018-01-25 16:37:05.615 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120002} Types : [VARCHAR, INTEGER]
+2018-01-25 16:37:05.621 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120002} executed. 6.476577 millis. 
+select
+     
+    id, week,supplier_code, title, package_pic, package_status,package_price, big_code, small_code, su_code,
+    tang_code, drink_code, food_code, fruit_code, create_time,for_lunch,for_dinner
+   
+    from t_supplier_product_package
+    where supplier_code = ?
+    AND week = ?
+2018-01-25 16:37:05.621 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120002} executed. 6.476577 millis. 
+select
+     
+    id, week,supplier_code, title, package_pic, package_status,package_price, big_code, small_code, su_code,
+    tang_code, drink_code, food_code, fruit_code, create_time,for_lunch,for_dinner
+   
+    from t_supplier_product_package
+    where supplier_code = ?
+    AND week = ?
+2018-01-25 16:37:05.621 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120002, rs-150002} open
+2018-01-25 16:37:05.621 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120002, rs-150002} Header: [id, week, supplier_code, title, package_pic, package_status, package_price, big_code, small_code, su_code, tang_code, drink_code, food_code, fruit_code, create_time, for_lunch, for_dinner]
+2018-01-25 16:37:05.621 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120002, rs-150002} open
+2018-01-25 16:37:05.621 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120002, rs-150002} Header: [id, week, supplier_code, title, package_pic, package_status, package_price, big_code, small_code, su_code, tang_code, drink_code, food_code, fruit_code, create_time, for_lunch, for_dinner]
+2018-01-25 16:37:05.622 [main] DEBUG s.s.getSupplierPackageByCodeAndWeek - <==      Total: 0
+2018-01-25 16:37:05.622 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120002, rs-150002} closed
+2018-01-25 16:37:05.622 [main] DEBUG druid.sql.ResultSet - {conn-110002, pstmt-120002, rs-150002} closed
+2018-01-25 16:37:05.622 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120002} closed
+2018-01-25 16:37:05.622 [main] DEBUG druid.sql.Statement - {conn-110002, pstmt-120002} closed
+2018-01-25 16:37:05.622 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5bb3131b]
+2018-01-25 16:37:05.622 [main] DEBUG druid.sql.Connection - {conn-110002} pool-recycle
+2018-01-25 16:37:05.622 [main] DEBUG druid.sql.Connection - {conn-110002} pool-recycle
+2018-01-25 16:37:05.837 [Thread-3] DEBUG druid.sql.Connection - {conn-310001} closed
+2018-01-25 16:37:05.837 [Thread-3] DEBUG druid.sql.Connection - {conn-310001} closed
+2018-01-25 16:37:05.838 [Thread-3] DEBUG druid.sql.Connection - {conn-310002} closed
+2018-01-25 16:37:05.838 [Thread-3] DEBUG druid.sql.Connection - {conn-310002} closed
+2018-01-25 16:37:05.840 [Thread-3] DEBUG druid.sql.Connection - {conn-210001} closed
+2018-01-25 16:37:05.840 [Thread-3] DEBUG druid.sql.Connection - {conn-210001} closed
+2018-01-25 16:37:05.840 [Thread-3] DEBUG druid.sql.Connection - {conn-210002} closed
+2018-01-25 16:37:05.840 [Thread-3] DEBUG druid.sql.Connection - {conn-210002} closed
+2018-01-25 16:37:05.841 [Thread-3] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-01-25 16:37:05.841 [Thread-3] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-01-25 16:37:05.841 [Thread-3] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-01-25 16:37:05.841 [Thread-3] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-01-25 16:37:05.842 [Thread-3] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-01-25 16:37:05.842 [Thread-3] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-01-25 16:37:05.842 [Thread-3] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-01-25 16:37:05.842 [Thread-3] DEBUG druid.sql.Connection - {conn-10002} closed

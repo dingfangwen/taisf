@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="order.orderBaseDao" >
+
+    <resultMap id="BaseResultMap" type="com.taisf.services.order.entity.OrderEntity">
+        <!-- map -->
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="order_sn" jdbcType="VARCHAR" property="orderSn" />
+        <result column="title" jdbcType="VARCHAR" property="title" />
+        <result column="province_code" jdbcType="VARCHAR" property="provinceCode" />
+        <result column="area_code" jdbcType="VARCHAR" property="areaCode" />
+        <result column="city_code" jdbcType="VARCHAR" property="cityCode" />
+        <result column="address" jdbcType="VARCHAR" property="address" />
+        <result column="is_self" jdbcType="INTEGER" property="isSelf" />
+        <result column="order_source" jdbcType="TINYINT" property="orderSource" />
+        <result column="order_status" jdbcType="TINYINT" property="orderStatus" />
+        <result column="accounts_status" jdbcType="TINYINT" property="accountsStatus" />
+        <result column="pay_status" jdbcType="TINYINT" property="payStatus" />
+        <result column="eva_status" jdbcType="TINYINT" property="evaStatus" />
+        <result column="order_type" jdbcType="TINYINT" property="orderType" />
+        <result column="face_type" jdbcType="TINYINT" property="faceType" />
+        <result column="business_uid" jdbcType="VARCHAR" property="businessUid" />
+        <result column="user_uid" jdbcType="VARCHAR" property="userUid" />
+        <result column="user_tel" jdbcType="VARCHAR" property="userTel" />
+        <result column="user_name" jdbcType="VARCHAR" property="userName" />
+        <result column="user_code" jdbcType="VARCHAR" property="userCode" />
+        <result column="knight_uid" jdbcType="VARCHAR" property="knightUid" />
+        <result column="pay_time" jdbcType="TIMESTAMP" property="payTime" />
+        <result column="send_time" jdbcType="TIMESTAMP" property="sendTime" />
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+        <result column="last_modify_date" jdbcType="TIMESTAMP" property="lastModifyDate" />
+        <result column="mark" jdbcType="VARCHAR" property="mark" />
+        <result column="supplier_code" jdbcType="VARCHAR" property="supplierCode" />
+        <result column="enterprise_code" jdbcType="VARCHAR" property="enterpriseCode" />
+        <result column="order_json" jdbcType="VARCHAR" property="orderJson" />
+
+
+
+    </resultMap>
+
+
+    <sql id="Base_Column_List">
+        <!--  -->
+        id, order_sn,title, province_code,area_code, city_code,address, order_source,eva_status, order_status, accounts_status,
+        pay_status,order_type,face_type, business_uid, user_uid, user_tel, user_name,user_code,knight_uid,
+        send_time, pay_time,create_time, last_modify_date, mark,supplier_code,enterprise_code,is_self,order_json
+    </sql>
+
+
+
+
+
+    <!-- 通过订单号 查询订单的基础信息 -->
+    <select id="getOrder2Canceled" resultMap="BaseResultMap" parameterType="java.util.Map" >
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM t_order
+        WHERE  order_status = 10 and create_time  <![CDATA[ <= ]]>  #{time,jdbcType=TIMESTAMP}
+    </select>
+
+
+    <!-- 通过订单号 查询订单的基础信息 -->
+    <select id="getOrderBaseByOrderSn" resultMap="BaseResultMap" parameterType="java.lang.String" >
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM t_order
+        WHERE  order_sn=#{orderSn,jdbcType=VARCHAR}
+        limit 1
+    </select>
+
+
+    <insert id="saveOrderBase" parameterType="com.taisf.services.order.entity.OrderEntity">
+        <!-- 保存订单信息  -->
+        insert into t_order
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+
+
+            <if test="orderSn != null">
+                order_sn,
+            </if>
+
+            <if test="title != null">
+                title,
+            </if>
+
+            <if test="provinceCode != null">
+                province_code,
+            </if>
+            <if test="cityCode != null">
+                city_code,
+            </if>
+            <if test="areaCode != null">
+                area_code,
+            </if>
+
+            <if test="addressFid != null">
+                address_fid,
+            </if>
+
+            <if test="address != null">
+                address,
+            </if>
+
+            <if test="isSelf != null">
+                is_self,
+            </if>
+
+
+
+            <if test="orderSource != null">
+                order_source,
+            </if>
+            <if test="orderStatus != null">
+                order_status,
+            </if>
+            <if test="accountsStatus != null">
+                accounts_status,
+            </if>
+            <if test="payStatus != null">
+                pay_status,
+            </if>
+            <if test="orderType != null">
+                order_type,
+            </if>
+
+            <if test="faceType != null">
+                face_type,
+            </if>
+
+            <if test="businessUid != null">
+                business_uid,
+            </if>
+
+            <if test="userUid != null">
+                user_uid,
+            </if>
+            <if test="userTel != null">
+                user_tel,
+            </if>
+            <if test="userName != null">
+                user_name,
+            </if>
+            <if test="userCode != null">
+                user_code,
+            </if>
+            <if test="payTime != null">
+                pay_time,
+            </if>
+            <if test="sendTime != null">
+                send_time,
+            </if>
+
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="lastModifyDate != null">
+                last_modify_date,
+            </if>
+
+            <if test="mark != null">
+                mark,
+            </if>
+
+            <if test="enterpriseCode != null">
+                enterprise_code,
+            </if>
+
+            <if test="supplierCode != null">
+                supplier_code,
+            </if>
+
+            <if test="orderJson != null">
+                order_json,
+            </if>
+
+
+            <if test="knightUid != null">
+                knight_uid,
+            </if>
+
+
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="orderSn != null">
+                #{orderSn,jdbcType=VARCHAR},
+            </if>
+
+            <if test="title != null">
+                #{title,jdbcType=VARCHAR},
+            </if>
+
+
+            <if test="provinceCode != null">
+                #{provinceCode,jdbcType=VARCHAR},
+            </if>
+            <if test="cityCode != null">
+                #{cityCode,jdbcType=VARCHAR},
+            </if>
+            <if test="areaCode != null">
+                #{areaCode,jdbcType=VARCHAR},
+            </if>
+
+            <if test="addressFid != null">
+                #{addressFid,jdbcType=VARCHAR},
+            </if>
+            <if test="address != null">
+                #{address,jdbcType=VARCHAR},
+            </if>
+            <if test="isSelf != null">
+                #{isSelf,jdbcType=TINYINT},
+            </if>
+            <if test="orderSource != null">
+                #{orderSource,jdbcType=TINYINT},
+            </if>
+            <if test="orderStatus != null">
+                #{orderStatus,jdbcType=TINYINT},
+            </if>
+            <if test="accountsStatus != null">
+                #{accountsStatus,jdbcType=TINYINT},
+            </if>
+            <if test="payStatus != null">
+                #{payStatus,jdbcType=TINYINT},
+            </if>
+
+            <if test="orderType != null">
+                #{orderType,jdbcType=TINYINT},
+            </if>
+
+            <if test="faceType != null">
+                #{faceType,jdbcType=TINYINT},
+            </if>
+
+
+            <if test="businessUid != null">
+                #{businessUid,jdbcType=VARCHAR},
+            </if>
+
+            <if test="userUid != null">
+                #{userUid,jdbcType=VARCHAR},
+            </if>
+            <if test="userTel != null">
+                #{userTel,jdbcType=VARCHAR},
+            </if>
+            <if test="userName != null">
+                #{userName,jdbcType=VARCHAR},
+            </if>
+            <if test="userCode != null">
+                #{userCode,jdbcType=VARCHAR},
+            </if>
+
+            <if test="payTime != null">
+                #{payTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="sendTime != null">
+                #{sendTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="lastModifyDate != null">
+                #{lastModifyDate,jdbcType=TIMESTAMP},
+            </if>
+
+            <if test="mark != null">
+                #{mark,jdbcType=VARCHAR},
+            </if>
+            <if test="enterpriseCode != null">
+                #{enterpriseCode,jdbcType=VARCHAR},
+            </if>
+
+            <if test="supplierCode != null">
+                #{supplierCode,jdbcType=VARCHAR},
+            </if>
+
+            <if test="orderJson != null">
+                #{orderJson,jdbcType=VARCHAR},
+            </if>
+            <if test="knightUid != null">
+                #{knightUid,jdbcType=VARCHAR},
+            </if>
+
+        </trim>
+    </insert>
+
+
+
+
+    <update id="payOrder" parameterType="java.util.Map">
+        <!-- 更新订单金额 -->
+        UPDATE t_order
+        set
+        order_status = #{orderStatus,jdbcType=TINYINT}
+        WHERE order_sn = #{orderSn,jdbcType=VARCHAR}
+        AND order_status =  #{oldStatus,jdbcType=TINYINT}
+    </update>
+
+
+    <update id="refundOrderSuccess" parameterType="com.taisf.services.order.entity.OrderEntity">
+        <!-- 退款成功 -->
+        UPDATE t_order
+        set
+        order_status = 41
+        WHERE order_sn = #{orderSn,jdbcType=VARCHAR}
+    </update>
+
+
+    <update id="cancelOrder" parameterType="com.taisf.services.order.entity.OrderEntity">
+        <!-- 更新订单为取消 -->
+        UPDATE t_order
+        set
+        order_status = 30
+        WHERE order_sn = #{orderSn,jdbcType=VARCHAR}
+        AND order_status =  #{oldStatus,jdbcType=TINYINT}
+    </update>
+
+
+
+    <update id="refundOrder" parameterType="com.taisf.services.order.entity.OrderEntity">
+        <!-- 更新订单金额 -->
+        UPDATE t_order
+        set
+        order_status = 40
+        WHERE order_sn = #{orderSn,jdbcType=VARCHAR}
+        AND order_status =  #{oldStatus,jdbcType=TINYINT}
+    </update>
+
+
+    <!--<update id="finishOrder" parameterType="com.taisf.services.order.entity.OrderEntity">-->
+        <!--&lt;!&ndash; 更新订单金额 &ndash;&gt;-->
+        <!--UPDATE t_order-->
+        <!--set-->
+            <!--knight_uid = #{knightUid,jdbcType=VARCHAR},-->
+            <!--order_status = 70-->
+        <!--WHERE order_sn = #{orderSn,jdbcType=VARCHAR}-->
+        <!--AND order_status =  #{oldStatus,jdbcType=TINYINT}-->
+    <!--</update>-->
+
+
+    <update id="updateOrderStatusOnly" parameterType="java.util.Map">
+        <!-- 更新订单金额 -->
+        UPDATE t_order
+        set
+        <if test="knightUid != null">
+            knight_uid = #{knightUid,jdbcType=VARCHAR},
+        </if>
+        order_status = #{orderStatus,jdbcType=TINYINT}
+        WHERE order_sn = #{orderSn,jdbcType=VARCHAR}
+        AND order_status =  #{oldStatus,jdbcType=TINYINT}
+    </update>
+
+
+
+    <update id="updateOrderBaseByOrderSn" parameterType="com.taisf.services.order.entity.OrderEntity">
+        <!-- 更新订单金额 -->
+        UPDATE t_order
+        <set >
+
+            <if test="title != null">
+                title = #{title,jdbcType=VARCHAR},
+            </if>
+
+            <if test="provinceCode != null">
+                province_code = #{provinceCode,jdbcType=VARCHAR},
+            </if>
+            <if test="cityCode != null">
+                city_code = #{cityCode,jdbcType=VARCHAR},
+            </if>
+            <if test="areaCode != null">
+                area_code = #{areaCode,jdbcType=VARCHAR},
+            </if>
+            <if test="address != null">
+                address = #{address,jdbcType=VARCHAR},
+            </if>
+
+            <if test="orderSource != null">
+                order_source = #{orderSource,jdbcType=TINYINT},
+            </if>
+            <if test="orderStatus != null">
+                order_status = #{orderStatus,jdbcType=TINYINT},
+            </if>
+            <if test="accountsStatus != null">
+                accounts_status = #{accountsStatus,jdbcType=TINYINT},
+            </if>
+            <if test="payStatus != null">
+                pay_status = #{payStatus,jdbcType=TINYINT},
+            </if>
+
+            <if test="orderType != null">
+                order_type = #{orderType,jdbcType=TINYINT},
+            </if>
+
+            <if test="businessUid != null">
+                business_uid = #{businessUid,jdbcType=VARCHAR},
+            </if>
+
+            <if test="userUid != null">
+                user_uid = #{userUid,jdbcType=VARCHAR},
+            </if>
+            <if test="userTel != null">
+                user_tel = #{userTel,jdbcType=VARCHAR},
+            </if>
+            <if test="userName != null">
+                user_name = #{userName,jdbcType=VARCHAR},
+            </if>
+            <if test="payTime != null">
+                pay_time = #{payTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="sendTime != null">
+                send_time = #{sendTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="lastModifyDate != null">
+                last_modify_date = #{lastModifyDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="mark != null">
+                mark = #{mark,jdbcType=VARCHAR},
+            </if>
+
+        </set>
+        WHERE order_sn = #{orderSn,jdbcType=VARCHAR}
+    </update>
+
+</mapper>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="supplierPrinterDao" >
+  <resultMap id="BaseResultMap" type="com.taisf.services.supplier.entity.SupplierPrintterEntity" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="supplier_code" property="supplierCode" jdbcType="VARCHAR" />
+    <result column="printer_num" property="printerNum" jdbcType="VARCHAR" />
+    <result column="description" property="description" jdbcType="VARCHAR" />
+    <result column="is_default" property="isDefault" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, supplier_code, printer_num, description, is_default, create_time, update_time
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_supplier_printter
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="findListSupplierPrinter" resultMap="BaseResultMap" parameterType="com.taisf.services.supplier.dto.SupplierPrinterRequest" >
+    select
+    <include refid="Base_Column_List" />
+    from t_supplier_printter
+    where 1=1
+    <if test="supplierCode != null and supplierCode != ''">
+     AND supplier_code = #{supplierCode,jdbcType=VARCHAR}
+    </if>
+   <if test="isDefault != null and isDefault != ''">
+     AND is_default = #{isDefault,jdbcType=INTEGER}
+    </if>
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_supplier_printter
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.taisf.services.supplier.entity.SupplierPrintterEntity" >
+    insert into t_supplier_printter (id, supplier_code, printer_num, 
+      description, is_default, create_time, 
+      update_time)
+    values (#{id,jdbcType=INTEGER}, #{supplierCode,jdbcType=VARCHAR}, #{printerNum,jdbcType=VARCHAR}, 
+      #{description,jdbcType=VARCHAR}, #{isDefault,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.taisf.services.supplier.entity.SupplierPrintterEntity" >
+    insert into t_supplier_printter
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="supplierCode != null" >
+        supplier_code,
+      </if>
+      <if test="printerNum != null" >
+        printer_num,
+      </if>
+      <if test="description != null" >
+        description,
+      </if>
+      <if test="isDefault != null" >
+        is_default,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="supplierCode != null" >
+        #{supplierCode,jdbcType=VARCHAR},
+      </if>
+      <if test="printerNum != null" >
+        #{printerNum,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null" >
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="isDefault != null" >
+        #{isDefault,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.taisf.services.supplier.entity.SupplierPrintterEntity" >
+    update t_supplier_printter
+    <set >
+      <if test="supplierCode != null" >
+        supplier_code = #{supplierCode,jdbcType=VARCHAR},
+      </if>
+      <if test="printerNum != null" >
+        printer_num = #{printerNum,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null" >
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="isDefault != null" >
+        is_default = #{isDefault,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.taisf.services.supplier.entity.SupplierPrintterEntity" >
+    update t_supplier_printter
+    set supplier_code = #{supplierCode,jdbcType=VARCHAR},
+      printer_num = #{printerNum,jdbcType=VARCHAR},
+      description = #{description,jdbcType=VARCHAR},
+      is_default = #{isDefault,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

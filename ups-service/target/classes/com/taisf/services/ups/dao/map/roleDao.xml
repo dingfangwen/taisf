@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="ups.roleDao">
+	<resultMap id="BaseResultMap" type="com.taisf.services.ups.entity.RoleEntity">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="fid" property="fid" jdbcType="VARCHAR" />
+		<result column="role_name" property="roleName" jdbcType="VARCHAR" />
+		<result column="role_type" property="roleType" jdbcType="INTEGER" />
+		<result column="role_desc" property="roleDesc" jdbcType="VARCHAR" />
+		<result column="is_del" property="isDel" jdbcType="INTEGER" />
+		<result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+		<result column="modify_date" property="modifyDate" jdbcType="TIMESTAMP" />
+		<result column="create_fid" property="createFid" jdbcType="VARCHAR" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		ro.id, ro.fid, ro.role_name, ro.role_type, ro.role_desc, ro.is_del,
+		ro.create_date, ro.modify_date, ro.create_fid
+	</sql>
+
+	<resultMap type="com.taisf.services.ups.vo.RoleVo" id="listResultMap"
+               extends="BaseResultMap">
+		<result column="emp_name" property="createrName" jdbcType="VARCHAR" />
+	</resultMap>
+
+	<select id="findRoleListByPage" resultMap="listResultMap"
+		parameterType="com.taisf.services.ups.dto.RoleRequest">
+		select
+		<include refid="Base_Column_List" />
+		,ee.emp_name
+		from t_sys_role ro
+		left join t_sys_employee ee
+		on ro.create_fid = ee.user_id
+
+		<where>
+			<if test="roleName!=null and roleName!=''">
+				and ro.role_name like '%${roleName}%'
+			</if>
+			<if test="createrName!=null and createrName!=''">
+				and ee.emp_name like '%${createrName}%'
+			</if>
+			<if test="isVail!=null">
+				and ro.is_del=#{isVail}
+			</if>
+		</where>
+	</select>
+
+
+
+
+
+
+
+	<select id="findRoleByFid" resultMap="BaseResultMap"
+		parameterType="java.lang.String">
+		select
+		<include refid="Base_Column_List" />
+		from t_sys_role ro
+		where ro.fid = #{roleFid,jdbcType=VARCHAR}
+		limit 1
+	</select>
+
+	<insert id="insertRole" parameterType="com.taisf.services.ups.entity.RoleEntity">
+		insert into t_sys_role
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="fid != null">
+				fid,
+			</if>
+			<if test="roleName != null">
+				role_name,
+			</if>
+			<if test="roleType != null">
+				role_type,
+			</if>
+			<if test="roleDesc != null">
+				role_desc,
+			</if>
+			<if test="isDel != null">
+				is_del,
+			</if>
+			<if test="createDate != null">
+				create_date,
+			</if>
+			<if test="modifyDate != null">
+				modify_date,
+			</if>
+			<if test="createFid != null">
+				create_fid,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=INTEGER},
+			</if>
+			<if test="fid != null">
+				#{fid,jdbcType=VARCHAR},
+			</if>
+			<if test="roleName != null">
+				#{roleName,jdbcType=VARCHAR},
+			</if>
+			<if test="roleType != null">
+				#{roleType,jdbcType=VARCHAR},
+			</if>
+			<if test="roleDesc != null">
+				#{roleDesc,jdbcType=VARCHAR},
+			</if>
+			<if test="isDel != null">
+				#{isDel,jdbcType=INTEGER},
+			</if>
+			<if test="createDate != null">
+				#{createDate,jdbcType=TIMESTAMP},
+			</if>
+			<if test="modifyDate != null">
+				#{modifyDate,jdbcType=TIMESTAMP},
+			</if>
+			<if test="createFid != null">
+				#{createFid,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+
+	<update id="updateRoleByFid" parameterType="com.taisf.services.ups.entity.RoleEntity">
+		update t_sys_role
+		<set>
+			<if test="roleName != null">
+				role_name = #{roleName,jdbcType=VARCHAR},
+			</if>
+			<if test="roleType != null">
+				role_type = #{roleType,jdbcType=VARCHAR},
+			</if>
+			<if test="roleDesc != null">
+				role_desc = #{roleDesc,jdbcType=VARCHAR},
+			</if>
+			<if test="isDel != null">
+				is_del = #{isDel,jdbcType=INTEGER},
+			</if>
+			<if test="createDate != null">
+				create_date = #{createDate,jdbcType=TIMESTAMP},
+			</if>
+			<if test="modifyDate != null">
+				modify_date = #{modifyDate,jdbcType=TIMESTAMP},
+			</if>
+			<if test="createFid != null">
+				create_fid = #{createFid,jdbcType=VARCHAR},
+			</if>
+		</set>
+		where fid = #{fid,jdbcType=VARCHAR}
+	</update>
+</mapper>

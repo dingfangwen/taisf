@@ -1,0 +1,40 @@
+tr.trbg {
+	background: #d1d1d1;
+}
+
+.ibox-content .mtop {
+	height: 30px;
+	line-height: 35px;
+	display: block;
+}
+
+.form-group .form-len {
+	width: 150px;
+	display: block;
+	border-radius: 1px;
+	padding-left: 5px;
+	float: left;
+	margin-right: 25px;
+}
+
+.daop {
+	position: relative;
+}
+
+.dao {
+	position: absolute;
+	top: 7px;
+	left: 170px;
+}
+
+.ibox-content .title-font {
+	font: 20px bold "微软雅黑";
+	color: #676a6c;
+}
+
+.oneline {
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

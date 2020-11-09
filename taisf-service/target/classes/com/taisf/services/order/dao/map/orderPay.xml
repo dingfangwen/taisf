@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="order.payDao" >
+  <resultMap id="BaseResultMap" type="com.taisf.services.order.entity.OrderPayEntity" >
+    <!--   基本列  -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="order_sn" property="orderSn" jdbcType="VARCHAR" />
+    <result column="pay_uid" property="payUid" jdbcType="VARCHAR" />
+    <result column="pay_type" property="payType" jdbcType="TINYINT" />
+    <result column="pay_money" property="payMoney" jdbcType="INTEGER" />
+    <result column="pay_status" property="payStatus" jdbcType="TINYINT" />
+    <result column="trade_no" property="tradeNo" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="last_modify_date" property="lastModifyDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  
+  
+  <sql id="Base_Column_List" >
+    <!--
+      基本列字段
+    -->
+    id,  order_sn, pay_uid, pay_type, pay_money, pay_status, trade_no, create_time,   last_modify_date
+  </sql>
+  
+  
+  <select id="selectByOrderSn" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    SELECT 
+    <include refid="Base_Column_List" />
+    FROM t_order_pay pe
+    WHERE order_sn = #{orderSn,jdbcType=VARCHAR}
+  </select>
+  
+  
+  
+  
+  <insert id="saveOrderPay" parameterType="com.taisf.services.order.entity.OrderPayEntity" >
+    <!--
+     添加收款单
+    -->
+    insert into t_order_pay
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+
+      <if test="orderSn != null" >
+        order_sn,
+      </if>
+
+      <if test="payUid != null" >
+        pay_uid,
+      </if>
+      
+      <if test="payType != null" >
+        pay_type,
+      </if>
+      <if test="payMoney != null" >
+        pay_money,
+      </if>
+      
+
+      <if test="payStatus != null" >
+        pay_status,
+      </if>
+      <if test="tradeNo != null" >
+        trade_no,
+      </if>
+
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="lastModifyDate != null" >
+        last_modify_date,
+      </if>
+
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="orderSn != null" >
+        #{orderSn,jdbcType=VARCHAR},
+      </if>
+      <if test="payUid != null" >
+        #{payUid,jdbcType=TINYINT},
+      </if>
+      <if test="payType != null" >
+        #{payType,jdbcType=TINYINT},
+      </if>
+      <if test="payMoney != null" >
+        #{payMoney,jdbcType=INTEGER},
+      </if>
+      <if test="payStatus != null" >
+        #{payStatus,jdbcType=TINYINT},
+      </if>
+      <if test="tradeNo != null" >
+        #{tradeNo,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastModifyDate != null" >
+        #{lastModifyDate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  
+  
+  
+  <update id="updateOrderPay" parameterType="com.taisf.services.order.entity.OrderPayEntity" >
+    <!--  根据条件更新  -->
+    update t_order_pay
+    <set >
+      <if test="orderSn != null" >
+        order_sn = #{orderSn,jdbcType=VARCHAR},
+      </if>
+      <if test="payUid != null" >
+        pay_uid = #{payUid,jdbcType=TINYINT},
+      </if>
+      <if test="payType != null" >
+        pay_type = #{payType,jdbcType=TINYINT},
+      </if>
+      <if test="payMoney != null" >
+        pay_money = #{payMoney,jdbcType=INTEGER},
+      </if>
+      <if test="payStatus != null" >
+        pay_status = #{payStatus,jdbcType=TINYINT},
+      </if>
+      <if test="tradeNo != null" >
+        trade_no = #{tradeNo,jdbcType=VARCHAR},
+      </if>
+      <if test="lastModifyDate != null" >
+        last_modify_date = #{lastModifyDate,jdbcType=TIMESTAMP},
+      </if>
+    </set>  
+     where  id = #{id,jdbcType=INTEGER}
+  </update>
+
+</mapper>

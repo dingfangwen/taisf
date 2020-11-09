@@ -1,0 +1,62 @@
+2018-04-27 16:47:27.790 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-04-27 16:47:28.926 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-04-27 16:47:28.926 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-04-27 16:47:29.135 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-04-27 16:47:29.135 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-04-27 16:47:29.319 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-04-27 16:47:29.401 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-04-27 16:47:29.565 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-04-27 16:47:29.565 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-04-27 16:47:31.436 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-04-27 16:47:31.436 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-04-27 16:47:31.509 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-04-27 16:47:31.522 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-04-27 16:47:31.780 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2018-04-27 16:47:31.976 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2018-04-27 16:47:31.979 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2018-04-27 16:47:31.980 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2018-04-27 16:47:32.037 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Send request - POST https://api.jpush.cn/v3/push
+2018-04-27 16:47:32.037 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Request Content - {"platform":["android"],"audience":{"registration_id":["1a0018970a8b36725ca"]},"message":{"title":"title","msg_content":"content","extras":{"voiceAlert":"支付宝到账2亿元","messageType":"1","money":"money","phone":"phone","name":"name"}},"options":{"sendno":1320085498,"apns_production":false}}
+2018-04-27 16:47:32.320 [main] DEBUG cn.jiguang.common.resp.ResponseWrapper - JPush API Rate Limiting params - quota:600, remaining:599, reset:60
+2018-04-27 16:47:32.320 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Succeed to get response OK - responseCode:200
+2018-04-27 16:47:32.320 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Response Content - {"sendno":"1320085498","msg_id":"1659983790"}
+2018-04-27 16:47:32.338 [main] INFO  com.taisf.services.push.jiguang.JiguangPushHandle - Got result - {"msg_id":1659983790,"sendno":1320085498,"statusCode":0}
+2018-04-27 16:47:32.584 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-04-27 16:47:32.585 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-04-27 16:47:32.585 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-04-27 16:47:32.585 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-04-27 16:47:32.586 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-04-27 16:47:32.586 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-04-27 16:47:32.587 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-04-27 16:47:32.587 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-04-27 16:55:44.990 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-04-27 16:55:46.079 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-04-27 16:55:46.080 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2018-04-27 16:55:46.274 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-04-27 16:55:46.275 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2018-04-27 16:55:46.487 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-04-27 16:55:46.574 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-04-27 16:55:46.714 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-04-27 16:55:46.714 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2018-04-27 16:55:47.034 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-04-27 16:55:47.034 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2018-04-27 16:55:47.116 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2018-04-27 16:55:47.134 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fangwending/github/x/tuanche/push-service/target/classes/com/taisf/services/device/dao/map/deviceDao.xml]'
+2018-04-27 16:55:47.378 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2018-04-27 16:55:47.569 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2018-04-27 16:55:47.571 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2018-04-27 16:55:47.572 [main] INFO  cn.jiguang.common.connection.NativeHttpClient - Created instance with connectionTimeout 5,000, readTimeout 30,000, maxRetryTimes 3, SSL Version TLS
+2018-04-27 16:55:47.625 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Send request - POST https://api.jpush.cn/v3/push
+2018-04-27 16:55:47.625 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Request Content - {"platform":["android"],"audience":{"registration_id":["1a0018970a8b36725ca"]},"message":{"title":"title","msg_content":"content","extras":{"voiceAlert":"支付宝到账2亿元","messageType":"1","money":"money","phone":"phone","name":"name"}},"options":{"sendno":1300036694,"apns_production":false}}
+2018-04-27 16:55:48.107 [main] DEBUG cn.jiguang.common.resp.ResponseWrapper - JPush API Rate Limiting params - quota:600, remaining:599, reset:60
+2018-04-27 16:55:48.107 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Succeed to get response OK - responseCode:200
+2018-04-27 16:55:48.107 [main] DEBUG cn.jiguang.common.connection.NativeHttpClient - Response Content - {"sendno":"1300036694","msg_id":"27021599013666808"}
+2018-04-27 16:55:48.121 [main] INFO  com.taisf.services.push.jiguang.JiguangPushHandle - Got result - {"msg_id":27021599013666808,"sendno":1300036694,"statusCode":0}
+2018-04-27 16:55:48.378 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-04-27 16:55:48.378 [Thread-1] DEBUG druid.sql.Connection - {conn-110001} closed
+2018-04-27 16:55:48.379 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-04-27 16:55:48.380 [Thread-1] DEBUG druid.sql.Connection - {conn-110002} closed
+2018-04-27 16:55:48.381 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-04-27 16:55:48.382 [Thread-1] DEBUG druid.sql.Connection - {conn-10001} closed
+2018-04-27 16:55:48.382 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed
+2018-04-27 16:55:48.382 [Thread-1] DEBUG druid.sql.Connection - {conn-10002} closed

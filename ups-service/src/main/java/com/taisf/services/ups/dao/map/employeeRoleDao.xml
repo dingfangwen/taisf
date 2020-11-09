@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="ups.employeeRoleDao">
+	<resultMap id="BaseResultMap"
+		type="com.taisf.services.ups.entity.EmployeeEntity">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="user_id" property="userId" jdbcType="VARCHAR" />
+		<result column="role_fid" property="roleFid" jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, user_id, role_fid
+	</sql>
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		from t_sys_employee_role
+		where id = #{id,jdbcType=INTEGER}
+	</select>
+
+
+	<resultMap id="EmployeeRoleMap" type="com.taisf.services.ups.vo.EmployeeRoleVo">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="user_id" property="userId" jdbcType="VARCHAR" />
+		<result column="role_fid" property="roleFid" jdbcType="VARCHAR" />
+		<result column="role_name" property="roleName" jdbcType="VARCHAR" />
+	</resultMap>
+	<!-- 根据用户id查询角色id和角色名称 -->
+	<select id="selectByUserId" resultMap="EmployeeRoleMap"
+		parameterType="java.lang.String">
+		select
+		tser.role_fid,tsr.role_name
+		from t_sys_employee_role tser inner join t_sys_role tsr on
+		tser.role_fid=tsr.fid
+		where user_id = #{userId,jdbcType=VARCHAR}
+	</select>
+	<!-- 插入用户角色 -->
+	<insert id="insertEmployeeRole" parameterType="com.taisf.services.ups.entity.EmployeeEntity">
+		insert into t_sys_employee_role (user_id, role_fid)
+		values (#{userId,jdbcType=VARCHAR}, #{roleFid,jdbcType=VARCHAR})
+	</insert>
+
+
+	<delete id="deleteByUid" parameterType="java.util.Map">
+		delete from t_sys_employee_role
+		where user_id = #{userId,jdbcType=VARCHAR}
+	</delete>
+	<insert id="insert" parameterType="com.taisf.services.ups.entity.EmployeeEntity">
+		insert into t_sys_employee_role (id, user_id, role_fid
+		)
+		values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=VARCHAR},
+		#{roleFid,jdbcType=VARCHAR}
+		)
+	</insert>
+	<insert id="insertSelective" parameterType="com.taisf.services.ups.entity.EmployeeEntity">
+		insert into t_sys_employee_role
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="userId != null">
+				user_id,
+			</if>
+			<if test="roleFid != null">
+				role_fid,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=INTEGER},
+			</if>
+			<if test="userId != null">
+				#{userId,jdbcType=VARCHAR},
+			</if>
+			<if test="roleFid != null">
+				#{roleFid,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective" parameterType="com.taisf.services.ups.entity.EmployeeEntity">
+		update t_sys_employee_role
+		<set>
+			<if test="userId != null">
+				user_id = #{userId,jdbcType=VARCHAR},
+			</if>
+			<if test="roleFid != null">
+				role_fid = #{roleFid,jdbcType=VARCHAR},
+			</if>
+		</set>
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="com.taisf.services.ups.entity.EmployeeEntity">
+		update t_sys_employee_role
+		set user_id = #{userId,jdbcType=VARCHAR},
+		role_fid = #{roleFid,jdbcType=VARCHAR}
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+	<!-- 根据角色ID查询 用户角色中间表 -->
+	<select id="selectByRoleFid" resultMap="BaseResultMap"
+		parameterType="java.lang.String">
+		select
+		<include refid="Base_Column_List" />
+		from t_sys_employee_role
+		where role_fid = #{roleFid,jdbcType=VARCHAR}
+	</select>
+</mapper>

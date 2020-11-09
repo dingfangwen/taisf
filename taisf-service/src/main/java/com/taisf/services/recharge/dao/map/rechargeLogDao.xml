@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="recharge.rechargeLogDao">
+
+
+    <resultMap id="BaseResultMap" type="com.taisf.services.recharge.entity.RechargeLogEntity">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="recharge_sn" jdbcType="VARCHAR" property="rechargeSn" />
+        <result column="from_status" jdbcType="INTEGER" property="fromStatus" />
+        <result column="to_status" jdbcType="INTEGER" property="toStatus" />
+        <result column="title" jdbcType="VARCHAR" property="title" />
+        <result column="remark" jdbcType="VARCHAR" property="remark" />
+        <result column="create_id" jdbcType="VARCHAR" property="createId" />
+        <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, recharge_sn, from_status, to_status, title, remark, create_id, create_date
+    </sql>
+
+    <select id="getRechargeLogBySn" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from t_recharge_log
+        where recharge_sn = #{rechargeSn,jdbcType=VARCHAR}
+    </select>
+
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        delete from t_recharge_log
+        where id = #{id,jdbcType=INTEGER}
+    </delete>
+
+
+
+    <insert id="saveRechargeLog" parameterType="com.taisf.services.recharge.entity.RechargeLogEntity">
+        insert into t_recharge_log
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+
+            <if test="rechargeSn != null">
+                recharge_sn,
+            </if>
+            <if test="fromStatus != null">
+                from_status,
+            </if>
+            <if test="toStatus != null">
+                to_status,
+            </if>
+            <if test="title != null">
+                title,
+            </if>
+            <if test="remark != null">
+                remark,
+            </if>
+            <if test="createId != null">
+                create_id,
+            </if>
+            <if test="createDate != null">
+                create_date,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+
+            <if test="rechargeSn != null">
+                #{rechargeSn,jdbcType=VARCHAR},
+            </if>
+            <if test="fromStatus != null">
+                #{fromStatus,jdbcType=INTEGER},
+            </if>
+            <if test="toStatus != null">
+                #{toStatus,jdbcType=INTEGER},
+            </if>
+            <if test="title != null">
+                #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="remark != null">
+                #{remark,jdbcType=VARCHAR},
+            </if>
+            <if test="createId != null">
+                #{createId,jdbcType=VARCHAR},
+            </if>
+            <if test="createDate != null">
+                #{createDate,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+
+
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//ibatis.apache.org//DTD Config 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-config.dtd">
+<configuration>
+
+    <settings>
+        <setting name="cacheEnabled" value="false"/>
+        <setting name="lazyLoadingEnabled" value="false"/>
+        <setting name="aggressiveLazyLoading" value="false"/>
+    </settings>
+    
+    <plugins>
+        <!-- 分页查询时计算总数量是异步的  -->
+        <plugin interceptor="com.jk.framework.dao.paginator.OffsetLimitInterceptor">
+            <property name="dialectClass" value="com.jk.framework.dao.dialect.MySQLDialect"/>
+            <property name="asyncTotalCount" value="false"/>
+        </plugin>
+    </plugins>
+
+</configuration>

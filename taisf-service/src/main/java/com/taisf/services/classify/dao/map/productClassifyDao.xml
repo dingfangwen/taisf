@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="productClassifyDao" >
+  <resultMap id="BaseResultMap" type="com.taisf.services.classify.entity.ProductClassifyEntity" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="supplier_code" property="supplierCode" jdbcType="VARCHAR" />
+    <result column="classify_code" property="classifyCode" jdbcType="VARCHAR" />
+    <result column="classify_name" property="classifyName" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="rank" property="rank" jdbcType="INTEGER" />
+    <result column="supplier_product_type" property="supplierProductType" jdbcType="INTEGER" />
+
+
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, supplier_code, classify_code, classify_name, create_time, update_time,rank,supplier_product_type
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_product_classify
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="pageListProductClassify" resultMap="BaseResultMap" parameterType="com.taisf.services.classify.req.ProductClassifyListRequest" >
+    select
+    <include refid="Base_Column_List" />
+    from t_product_classify
+    where 1=1
+    <if test="supplierCode != null and supplierCode != ''">
+      AND supplier_code = #{supplierCode,jdbcType=VARCHAR}
+    </if>
+    <if test="classifyName != null and classifyName != ''">
+      AND classify_name LIKE concat("%",#{classifyName,jdbcType=VARCHAR},"%")
+    </if>
+    order BY rank ASC
+  </select>
+
+  <select id="listProductClassifyBySupplierCode" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from t_product_classify
+    where supplier_code =  #{supplierCode,jdbcType=VARCHAR}
+    order BY rank ASC
+  </select>
+
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_product_classify
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+  <insert id="insertSelective" parameterType="com.taisf.services.classify.entity.ProductClassifyEntity" >
+    insert into t_product_classify
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="supplierCode != null" >
+        supplier_code,
+      </if>
+      <if test="classifyCode != null" >
+        classify_code,
+      </if>
+      <if test="classifyName != null" >
+        classify_name,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+     <if test="rank != null" >
+       rank,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="supplierCode != null" >
+        #{supplierCode,jdbcType=VARCHAR},
+      </if>
+      <if test="classifyCode != null" >
+        #{classifyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="classifyName != null" >
+        #{classifyName,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+     <if test="rank != null" >
+        #{rank},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.taisf.services.classify.entity.ProductClassifyEntity" >
+    update t_product_classify
+    <set >
+      <if test="supplierCode != null" >
+        supplier_code = #{supplierCode,jdbcType=VARCHAR},
+      </if>
+      <if test="classifyCode != null" >
+        classify_code = #{classifyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="classifyName != null" >
+        classify_name = #{classifyName,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+     <if test="rank != null" >
+       rank = #{rank},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+</mapper>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="enterprise.enterpriseDayDao">
+
+  <resultMap id="BaseResultMap" type="com.taisf.services.enterprise.entity.EnterpriseDayEntity">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="enterprise_code" jdbcType="VARCHAR" property="enterpriseCode" />
+    <result column="day_time" jdbcType="VARCHAR" property="dayTime" />
+    <result column="day_type" jdbcType="INTEGER" property="dayType" />
+    <result column="op_code" jdbcType="VARCHAR" property="opCode" />
+    <result column="op_name" jdbcType="VARCHAR" property="opName" />
+    <result column="is_del" jdbcType="SMALLINT" property="isDel" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    id, enterprise_code, day_time, day_type, op_code, op_name, is_del
+  </sql>
+
+
+
+
+  <select id="getEnterpriseDaysByTime" parameterType="java.util.Map" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_enterprise_day
+    where enterprise_code = #{enterpriseCode,jdbcType=VARCHAR}
+    <if test="start != null">
+      and day_time >= #{start,jdbcType=VARCHAR}
+    </if>
+
+    <if test="end != null">
+      and <![CDATA[ day_time <= #{end,jdbcType=VARCHAR} ]]>
+    </if>
+  </select>
+
+
+
+  <select id="getEnterpriseDaysByCode" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_enterprise_day
+    where enterprise_code = #{enterpriseCode,jdbcType=VARCHAR}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_enterprise_day
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+
+
+
+  <select id="getEnterpriseDays" parameterType="com.taisf.services.enterprise.dto.EnterpriseDayRequest" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_enterprise_day
+    where enterprise_code = #{enterpriseCode,jdbcType=VARCHAR}
+    and day_time = #{dayTimeStr,jdbcType=VARCHAR}
+    and day_type = #{dayType,jdbcType=INTEGER}
+  </select>
+
+
+
+  <delete id="delEnterpriseDays" parameterType="com.taisf.services.enterprise.dto.EnterpriseDayRequest">
+    delete from t_enterprise_day
+    where enterprise_code = #{enterpriseCode,jdbcType=VARCHAR}
+    and day_time = #{dayTimeStr,jdbcType=VARCHAR}
+  </delete>
+
+
+
+  <insert id="saveEnterpriseDay" parameterType="com.taisf.services.enterprise.entity.EnterpriseDayEntity">
+    insert into t_enterprise_day
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+
+      <if test="enterpriseCode != null">
+        enterprise_code,
+      </if>
+      <if test="dayTime != null">
+        day_time,
+      </if>
+      <if test="dayType != null">
+        day_type,
+      </if>
+      <if test="opCode != null">
+        op_code,
+      </if>
+      <if test="opName != null">
+        op_name,
+      </if>
+      <if test="isDel != null">
+        is_del,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+
+      <if test="enterpriseCode != null">
+        #{enterpriseCode,jdbcType=VARCHAR},
+      </if>
+      <if test="dayTime != null">
+        #{dayTime,jdbcType=VARCHAR},
+      </if>
+      <if test="dayType != null">
+        #{dayType,jdbcType=INTEGER},
+      </if>
+      <if test="opCode != null">
+        #{opCode,jdbcType=VARCHAR},
+      </if>
+      <if test="opName != null">
+        #{opName,jdbcType=VARCHAR},
+      </if>
+      <if test="isDel != null">
+        #{isDel,jdbcType=SMALLINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateEnterpriseDay" parameterType="com.taisf.services.enterprise.entity.EnterpriseDayEntity">
+    update t_enterprise_day
+    <set>
+      <if test="dayType != null">
+        day_type = #{dayType,jdbcType=INTEGER},
+      </if>
+      <if test="opCode != null">
+        op_code = #{opCode,jdbcType=VARCHAR},
+      </if>
+      <if test="opName != null">
+        op_name = #{opName,jdbcType=VARCHAR},
+      </if>
+      <if test="isDel != null">
+        is_del = #{isDel,jdbcType=SMALLINT},
+      </if>
+    </set>
+    where enterprise_code = #{enterpriseCode,jdbcType=VARCHAR} and day_time = #{dayTime,jdbcType=VARCHAR}
+  </update>
+
+</mapper>

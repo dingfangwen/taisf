@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+
+    <display-name>jk-order-api</display-name>
+
+    <!-- Spring配置文件开始  -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+            classpath:spring-context.xml
+        </param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    <!-- Spring配置文件结束 -->
+
+    <!-- 上下文获取request Listener -->
+    <listener>
+        <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+    </listener>
+    
+    <!-- 解决跨域问题 -->
+    <filter>
+    	<filter-name>CORS</filter-name>
+        <filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>
+        <init-param>
+            <param-name>cors.allowOrigin</param-name>
+            <param-value>*</param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.supportedMethods</param-name>
+            <param-value>GET, POST, HEAD, PUT, DELETE</param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.supportedHeaders</param-name>
+            <param-value>Accept, Origin, X-Requested-With, Content-Type,
+                Last-Modified, traceInfo</param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.exposedHeaders</param-name>
+            <param-value>Set-Cookie</param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.supportsCredentials</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CORS</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- 设置servlet编码开始 -->
+    <filter>
+        <filter-name>Set Character Encoding</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <async-supported>true</async-supported>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>Set Character Encoding</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <!-- 设置servlet编码结束 -->
+
+
+    <!-- 启用spring MVC组件 -->
+    <servlet>
+        <servlet-name>springMVC</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:spring-mvc.xml</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+        <!--
+            开启异步请求支持
+            Servlet 3开始支持异步请求处理
+            Spring MVC 3.2开始支持Servlet3的这项特性
+            controller可以从另外一个线程返回一个java.util.concurrent.Callable,而不是一个简单的值
+                此时Servlet容器线程已经释放,可以处理其他的请求
+                Spring MVC通过借助TaskExecutor调起另外一个线程(例子中的mvcTaskExecutor)
+            controller也可以从另外一个线程返回一个DeferredResult
+                此时,Spring MVC并不知道这个线程的存在
+                比如一个定时任务
+        -->
+        <async-supported>true</async-supported>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>springMVC</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+
+
+    <welcome-file-list>
+        <welcome-file></welcome-file>
+    </welcome-file-list>
+
+    <!-- 错误页面映射
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/views/error/error.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>400</error-code>
+        <location>/WEB-INF/views/error/error.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/WEB-INF/views/error/error.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>503</error-code>
+        <location>/WEB-INF/views/error/error.jsp</location>
+    </error-page>
+    <error-page>
+        <exception-type>java.lang.Exception</exception-type>
+        <location>/WEB-INF/views/error/error.jsp</location>
+    </error-page>
+    -->
+    <!-- 支持el表达式 -->
+    <jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <el-ignored>false</el-ignored>
+        </jsp-property-group>
+    </jsp-config>
+</web-app>

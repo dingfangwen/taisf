@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="product.productDao">
+
+    <resultMap id="BaseResultMap" type="com.taisf.services.product.entity.ProductEntity">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="product_name" jdbcType="VARCHAR" property="productName"/>
+        <result column="product_classify" jdbcType="VARCHAR" property="productClassify"/>
+        <result column="product_type" jdbcType="INTEGER" property="productType"/>
+        <result column="product_source" jdbcType="INTEGER" property="productSource"/>
+        <result column="product_des" jdbcType="VARCHAR" property="productDes"/>
+        <result column="product_pic" jdbcType="VARCHAR" property="productPic"/>
+        <result column="price_sale" jdbcType="INTEGER" property="priceSale"/>
+        <result column="price_market" jdbcType="INTEGER" property="priceMarket"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="is_del" jdbcType="INTEGER" property="isDel"/>
+
+        <result column="totalProductName" jdbcType="VARCHAR" property="totalProductName"/>
+        <result column="supplier_code" jdbcType="VARCHAR" property="supplierCode"/>
+        <result column="window_code" jdbcType="VARCHAR" property="windowCode"/>
+        <result column="calorie" jdbcType="INTEGER" property="calorie"/>
+    </resultMap>
+
+
+    <sql id="Base_Column_List">
+        id, product_name, product_classify, product_type, product_source, product_des, product_pic,
+        price_sale,price_market, create_time, update_time, is_del,supplier_code,window_code,calorie
+    </sql>
+
+
+    <select id="getProductById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from t_product
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+
+    <select id="getListByClassify" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from t_product
+        where product_classify = #{productClassify,jdbcType=VARCHAR}
+    </select>
+
+    <select id="pageListProduct" parameterType="com.taisf.services.product.dto.ProductListRequest"
+            resultMap="BaseResultMap">
+        select
+        p.id, p.product_name, tpc.classify_name AS  product_classify, p.product_type, p.product_source, p.product_des, p.product_pic,
+        p.price_sale,p.price_market, p.create_time, p.update_time, p.is_del,p.supplier_code,tsw.window_name AS window_code,p.calorie
+        ,(
+        SELECT
+        GROUP_CONCAT(p2.product_name)
+        FROM
+        t_product_package pp LEFT JOIN t_product p2 ON pp.product_id = p2.id  WHERE pp.package_id = p.id ) AS totalProductName
+        from t_product p
+        LEFT JOIN t_supplier_window tsw on tsw.window_code = p.window_code
+        LEFT JOIN t_product_classify tpc on tpc.classify_code = p.product_classify
+        <if test="packageId != null and packageId != ''">
+            INNER JOIN t_product_package pp2 on pp2.product_id = p.id
+        </if>
+        where p.id > 0
+        <if test="productName != null and productName != ''">
+           AND p.product_name = #{productName}
+        </if>
+        <if test="productClassify != null and productClassify != ''">
+            AND p.product_classify = #{productClassify}
+        </if>
+
+
+        <if test="supplierProductType != null and supplierProductType != ''">
+            AND p.supplier_product_type = #{supplierProductType}
+        </if>
+
+        <if test="productType != null and productType != ''">
+            AND p.product_type = #{productType}
+        </if>
+        <if test="productSource != null and productSource != ''">
+            AND p.product_source = #{productSource}
+        </if>
+        <if test="supplierCode != null and supplierCode != ''">
+            AND p.supplier_code = #{supplierCode}
+        </if>
+         <if test="windowCode != null and windowCode != ''">
+            AND p.window_code = #{windowCode}
+        </if>
+        <if test="packageId != null and packageId != ''">
+            AND pp2.package_id = #{packageId}
+        </if>
+        ORDER BY id DESC
+    </select>
+
+    <select id="getProductByPackageId" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from t_product
+        where id in
+        (
+        select product_id   from t_product_package  where package_id = #{packageId}
+        )
+    </select>
+
+
+
+    <select id="getProductByList" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from t_product
+        where id in
+        <foreach collection="productIds" item="item" index="index"
+                 open="(" separator="," close=")">#{item}
+        </foreach>
+    </select>
+
+
+    <!-- 保存 -->
+    <insert id="saveProduct" parameterType="com.taisf.services.product.entity.ProductEntity">
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+
+        insert into t_product
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="productName != null">
+                product_name,
+            </if>
+            <if test="productClassify != null">
+                product_classify,
+            </if>
+            <if test="productType != null">
+                product_type,
+            </if>
+            <if test="supplierProductType != null">
+                supplier_product_type,
+            </if>
+            <if test="productSource != null">
+                product_source,
+            </if>
+            <if test="productDes != null">
+                product_des,
+            </if>
+            <if test="productPic != null">
+                product_pic,
+            </if>
+            <if test="priceSale != null">
+                price_sale,
+            </if>
+            <if test="priceMarket != null">
+                price_market,
+            </if>
+
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="updateTime != null">
+                update_time,
+            </if>
+            <if test="isDel != null">
+                is_del,
+            </if>
+        <if test="windowCode != null">
+            window_code,
+            </if>
+        <if test="supplierCode != null">
+            supplier_code,
+            </if>
+        <if test="calorie != null">
+            calorie,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="productName != null">
+                #{productName,jdbcType=VARCHAR},
+            </if>
+            <if test="productClassify != null">
+                #{productClassify,jdbcType=VARCHAR},
+            </if>
+            <if test="productType != null">
+                #{productType,jdbcType=INTEGER},
+            </if>
+            <if test="supplierProductType != null">
+                #{supplierProductType,jdbcType=INTEGER},
+            </if>
+
+            <if test="productSource != null">
+                #{productSource,jdbcType=INTEGER},
+            </if>
+            <if test="productDes != null">
+                #{productDes,jdbcType=VARCHAR},
+            </if>
+            <if test="productPic != null">
+                #{productPic,jdbcType=VARCHAR},
+            </if>
+            <if test="priceSale != null">
+                #{priceSale,jdbcType=INTEGER},
+            </if>
+            <if test="priceMarket != null">
+                #{priceMarket,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="isDel != null">
+                #{isDel,jdbcType=INTEGER},
+            </if>
+            <if test="windowCode != null">
+                #{windowCode,jdbcType=VARCHAR},
+            </if>
+            <if test="supplierCode != null">
+                #{supplierCode,jdbcType=VARCHAR},
+            </if>
+            <if test="calorie != null">
+                #{calorie,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+
+
+    <update id="updateProduct" parameterType="com.taisf.services.product.entity.ProductEntity">
+        update t_product
+        <set>
+            <if test="productName != null">
+                product_name = #{productName,jdbcType=VARCHAR},
+            </if>
+            <if test="productClassify != null">
+                product_classify = #{productClassify,jdbcType=VARCHAR},
+            </if>
+            <if test="productType != null">
+                product_type = #{productType,jdbcType=INTEGER},
+            </if>
+            <if test="productSource != null">
+                product_source = #{productSource,jdbcType=INTEGER},
+            </if>
+            <if test="productDes != null">
+                product_des = #{productDes,jdbcType=VARCHAR},
+            </if>
+            <if test="productPic != null">
+                product_pic = #{productPic,jdbcType=VARCHAR},
+            </if>
+            <if test="priceSale != null">
+                price_sale = #{priceSale,jdbcType=INTEGER},
+            </if>
+
+            <if test="priceMarket != null">
+                price_market = #{priceMarket,jdbcType=INTEGER},
+            </if>
+
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="isDel != null">
+                is_del = #{isDel,jdbcType=INTEGER},
+            </if>
+            <if test="windowCode != null">
+                window_code =  #{windowCode,jdbcType=VARCHAR},
+            </if>
+            <if test="supplierCode != null">
+                supplier_code = #{supplierCode,jdbcType=VARCHAR},
+            </if>
+
+            <if test="calorie != null">
+                calorie = #{calorie,jdbcType=INTEGER},
+            </if>
+        </set>
+
+        WHERE id = #{id,jdbcType=INTEGER}
+    </update>
+
+
+    <select id="getProductBySupplierCode" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from t_product
+        where   supplier_code = #{supplierCode,jdbcType=VARCHAR}
+    </select>
+
+
+
+</mapper>

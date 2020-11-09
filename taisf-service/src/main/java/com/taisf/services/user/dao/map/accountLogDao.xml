@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="user.accountLogDao" >
+
+
+  <resultMap id="BaseResultMap" type="com.taisf.services.user.entity.AccountLogEntity" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="user_id" property="userId" jdbcType="VARCHAR" />
+    <result column="account_type" property="accountType" jdbcType="INTEGER" />
+    <result column="biz_money" property="bizMoney" jdbcType="INTEGER" />
+    <result column="biz_status" property="bizStatus" jdbcType="INTEGER" />
+    <result column="biz_sn" property="bizSn" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+
+
+  <resultMap id="BaseResultMapUser" type="com.taisf.services.user.vo.AccountUserLogVO" extends="BaseResultMap" >
+    <result column="user_name" property="userName" jdbcType="VARCHAR" />
+    <result column="user_phone" property="userPhone" jdbcType="VARCHAR" />
+    <result column="enterprise_name" property="enterpriseName" jdbcType="VARCHAR" />
+  </resultMap>
+
+
+  <sql id="Base_Column_List" >
+    id, user_id, title, account_type,  biz_money, biz_status, biz_sn, create_time
+  </sql>
+
+
+
+
+
+  <select id="rechargeMoneyLogByPage" resultMap="BaseResultMapUser" parameterType="com.taisf.services.user.dto.UserMoneyRequest" >
+    select
+      t.id, t.user_id, t.title, t.account_type,  t.biz_money, t.biz_status, t.biz_sn, t.create_time,
+      u.user_name,  u.user_phone,u.enterprise_name
+    from t_user_account_log t
+      inner join t_user u on t.user_id = u.user_uid
+    where  t.account_type in (4,5)   AND u.user_type = 1
+
+    and u.biz_code = #{supplierCode,jdbcType=VARCHAR}
+
+    <if test="userPhone != null and userPhone != '' " >
+      and  u.user_phone = #{userPhone,jdbcType=VARCHAR}
+    </if>
+    <if test="enterpriseCode != null and enterpriseCode != '' " >
+      and  u.enterprise_code = #{enterpriseCode,jdbcType=VARCHAR}
+    </if>
+
+    <if test="start!=null and start!=''">
+      AND t.create_time <![CDATA[ >= ]]> #{start,jdbcType=TIMESTAMP}
+    </if>
+    <if test="end!=null and end!=''">
+      AND t.create_time <![CDATA[ <= ]]> #{end,jdbcType=TIMESTAMP}
+    </if>
+
+    ORDER BY t.id DESC
+  </select>
+
+
+  <select id="getIncomeLogByPage" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from t_user_account_log
+    where user_id = #{userId,jdbcType=VARCHAR}
+    and account_type in (4,6)
+    ORDER BY id DESC
+  </select>
+
+
+
+  <select id="getAccountLogByPage" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from t_user_account_log
+    where user_id = #{userId,jdbcType=VARCHAR}
+    <if test="accountType != null" >
+     and account_type =  #{accountType,jdbcType=INTEGER}
+    </if>
+    ORDER BY id DESC
+  </select>
+
+
+  <select id="getAccountLogByBizSn" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from t_user_account_log
+    where biz_sn = #{bizSn,jdbcType=VARCHAR}
+  </select>
+
+
+  <!--- 保存当前的账户信息 -->
+  <insert id="saveAccountLog" parameterType="com.taisf.services.user.entity.AccountLogEntity" >
+    insert into t_user_account_log
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+
+      <if test="userId != null" >
+        user_id,
+      </if>
+
+      <if test="accountType != null" >
+        account_type,
+      </if>
+      <if test="bizMoney != null" >
+        biz_money,
+      </if>
+      <if test="bizStatus != null" >
+        biz_status,
+      </if>
+      <if test="bizSn != null" >
+        biz_sn,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+
+      <if test="title != null" >
+        title,
+      </if>
+
+
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+
+      <if test="userId != null" >
+        #{userId,jdbcType=VARCHAR},
+      </if>
+
+      <if test="accountType != null" >
+        #{accountType,jdbcType=INTEGER},
+      </if>
+      <if test="bizMoney != null" >
+        #{bizMoney,jdbcType=INTEGER},
+      </if>
+      <if test="bizStatus != null" >
+        #{bizStatus,jdbcType=INTEGER},
+      </if>
+      <if test="bizSn != null" >
+        #{bizSn,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+
+      <if test="title != null" >
+        #{title,jdbcType=VARCHAR},
+      </if>
+
+    </trim>
+  </insert>
+
+
+
+
+</mapper>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="user.loginTokenDao" >
+  <resultMap id="BaseResultMap" type="com.taisf.services.user.entity.LoginTokenEntity" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="VARCHAR" />
+    <result column="user_token" property="userToken" jdbcType="VARCHAR" />
+    <result column="login_source" property="loginSource" jdbcType="INTEGER" />
+    <result column="device_uuid" property="deviceUuid" jdbcType="VARCHAR" />
+    <result column="source_type" property="sourceType" jdbcType="INTEGER" />
+    <result column="version_code" property="versionCode" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="expire_time" property="expireTime" jdbcType="VARCHAR" />
+    <result column="last_modify_date" property="lastModifyDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, user_id, user_token, login_source, device_uuid, source_type, version_code, create_time, 
+    expire_time, last_modify_date
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_login_token
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+
+
+  <delete id="deleteById" parameterType="java.util.Map" >
+    delete from t_login_token
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+  <insert id="saveLoginToken" parameterType="com.taisf.services.user.entity.LoginTokenEntity" >
+    insert into t_login_token
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="userToken != null" >
+        user_token,
+      </if>
+      <if test="loginSource != null" >
+        login_source,
+      </if>
+      <if test="deviceUuid != null" >
+        device_uuid,
+      </if>
+      <if test="sourceType != null" >
+        source_type,
+      </if>
+      <if test="versionCode != null" >
+        version_code,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="expireTime != null" >
+        expire_time,
+      </if>
+      <if test="lastModifyDate != null" >
+        last_modify_date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+
+      <if test="userId != null" >
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="userToken != null" >
+        #{userToken,jdbcType=VARCHAR},
+      </if>
+      <if test="loginSource != null" >
+        #{loginSource,jdbcType=INTEGER},
+      </if>
+      <if test="deviceUuid != null" >
+        #{deviceUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="sourceType != null" >
+        #{sourceType,jdbcType=INTEGER},
+      </if>
+      <if test="versionCode != null" >
+        #{versionCode,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="expireTime != null" >
+        #{expireTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastModifyDate != null" >
+        #{lastModifyDate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.taisf.services.user.entity.LoginTokenEntity" >
+    update t_login_token
+    <set >
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="userToken != null" >
+        user_token = #{userToken,jdbcType=VARCHAR},
+      </if>
+      <if test="loginSource != null" >
+        login_source = #{loginSource,jdbcType=INTEGER},
+      </if>
+      <if test="deviceUuid != null" >
+        device_uuid = #{deviceUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="sourceType != null" >
+        source_type = #{sourceType,jdbcType=INTEGER},
+      </if>
+      <if test="versionCode != null" >
+        version_code = #{versionCode,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="expireTime != null" >
+        expire_time = #{expireTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastModifyDate != null" >
+        last_modify_date = #{lastModifyDate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.taisf.services.user.entity.LoginTokenEntity" >
+    update t_login_token
+    set user_id = #{userId,jdbcType=VARCHAR},
+      user_token = #{userToken,jdbcType=VARCHAR},
+      login_source = #{loginSource,jdbcType=INTEGER},
+      device_uuid = #{deviceUuid,jdbcType=VARCHAR},
+      source_type = #{sourceType,jdbcType=INTEGER},
+      version_code = #{versionCode,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      expire_time = #{expireTime,jdbcType=TIMESTAMP},
+      last_modify_date = #{lastModifyDate,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <!-- 用户退出   -->
+  <update id="logout" parameterType="com.taisf.services.user.entity.LoginTokenEntity" >
+    update t_login_token
+    set expire_time = #{expireTime,jdbcType=TIMESTAMP}      
+    where user_id = #{userId,jdbcType=INTEGER}
+  </update>
+
+
+  <!-- 查询用户token是否失效 -->
+  <select id="selectExpireTokenCount" resultType="java.lang.Integer" parameterType="com.taisf.services.user.entity.LoginTokenEntity" >
+    select 
+    count(1)
+    from t_login_token
+    where user_id = #{userId,jdbcType=VARCHAR} 
+    and device_uuid = #{deviceUuid,jdbcType=VARCHAR}
+    and user_token = #{userToken,jdbcType=VARCHAR}
+    and login_source = #{loginSource,jdbcType=INTEGER}
+    <![CDATA[and expire_time > now()]]>
+  </select>
+
+
+
+
+  <select id="getTokenByToken" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from t_login_token
+    where user_token = #{token,jdbcType=VARCHAR}
+    ORDER BY id DESC
+    limit 1
+  </select>
+
+
+   <select id="getToken" resultMap="BaseResultMap" parameterType="java.util.Map" >
+    select 
+      <include refid="Base_Column_List" />
+    from t_login_token
+    where user_id = #{userId,jdbcType=VARCHAR}
+     and device_uuid = #{deviceUuid,jdbcType=VARCHAR}
+     and login_source = #{loginSource,jdbcType=INTEGER}
+     <![CDATA[and expire_time > now()]]>
+    ORDER BY id DESC
+     limit 1
+  </select>
+  
+</mapper>

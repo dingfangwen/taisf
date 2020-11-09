@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+
+    <!--输出格式转换-->
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                <property name="supportedMediaTypes">
+                    <list>
+                        <value>text/plain;charset=UTF-8</value>
+                        <value>text/html;charset=UTF-8</value>
+                        <value>application/json;charset=UTF-8</value>
+                    </list>
+                </property>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+
+
+    <mvc:interceptors>
+        <bean class="com.taisf.api.common.interceptor.HeadersInterceptor" />
+        <bean class="com.taisf.api.common.collector.ParamCollector" />
+        <mvc:interceptor>
+            <mvc:mapping path="/order/*" />
+            <mvc:mapping path="/create/*" />
+
+            <mvc:mapping path="/refund/*" />
+            <mvc:mapping path="/user/*" />
+            <mvc:mapping path="/supplier/*" />
+            <mvc:mapping path="/cart/*" />
+            <mvc:mapping path="/my/*" />
+            <mvc:mapping path="/knight/*" />
+            <mvc:mapping path="/push/*" />
+            <mvc:mapping path="/buffet/*" />
+            <mvc:mapping path="/messageInfo/*" />
+            <mvc:mapping path="/knight/*" />
+            <mvc:mapping path="/knightOrder/*" />
+
+
+
+
+
+
+            <mvc:exclude-mapping path="/"/>
+            <mvc:exclude-mapping path="/redis"/>
+            <mvc:exclude-mapping path="/user/regist"/>
+            <mvc:exclude-mapping path="/user/openRegist"/>
+            <mvc:exclude-mapping path="/user/loginByCode"/>
+            <mvc:exclude-mapping path="/user/login"/>
+            <mvc:exclude-mapping path="/user/logout"/>
+            <mvc:exclude-mapping path="/refund/notice"/>
+
+
+
+            <bean class="com.taisf.api.common.interceptor.TokenInterceptor" />
+        </mvc:interceptor>
+
+
+    </mvc:interceptors>
+
+        
+</beans>

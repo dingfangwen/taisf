@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptaglibrary_2_0.xsd"
+	version="2.0">
+
+	<description>JSTL 1.1 core library</description>
+	<display-name>JSTL core</display-name>
+	<tlib-version>1.0</tlib-version>
+	<short-name>customtag</short-name>
+	<uri>http://minsu.ziroom.com</uri>
+
+	<!-- 权限控制 -->
+	<tag>
+		<description>限校验标签，有权限就显示标签体的内容，否则不显示</description>
+		<name>authtag</name>
+		<tag-class>com.taisf.web.enterprise.common.jsptag.AuthTag</tag-class>
+		<attribute>
+			<description>权限url</description>
+			<name>authUrl</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<body-content>JSP</body-content>
+	</tag>
+</taglib>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="order.orderBuffetDao" >
+
+
+  <resultMap id="BaseResultMap" type="com.taisf.services.order.entity.OrderBuffetEntity" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="order_sn" property="orderSn" jdbcType="VARCHAR" />
+    <result column="knight_uid" property="knightUid" jdbcType="VARCHAR" />
+    <result column="buffet_fid" property="buffetFid" jdbcType="VARCHAR" />
+    <result column="cell_sn" property="cellSn" jdbcType="VARCHAR" />
+    <result column="take_time" property="takeTime" jdbcType="TIMESTAMP" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+
+  <sql id="Base_Column_List" >
+    id, order_sn, knight_uid, buffet_fid, cell_sn, take_time, create_time, update_time
+  </sql>
+
+
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_order_buffet
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_order_buffet
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+
+  <insert id="saveOrderBuffet" parameterType="com.taisf.services.order.entity.OrderBuffetEntity" >
+    insert into t_order_buffet
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+
+      <if test="orderSn != null" >
+        order_sn,
+      </if>
+      <if test="knightUid != null" >
+        knight_uid,
+      </if>
+      <if test="buffetFid != null" >
+        buffet_fid,
+      </if>
+      <if test="cellSn != null" >
+        cell_sn,
+      </if>
+      <if test="takeTime != null" >
+        take_time,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+
+      <if test="orderSn != null" >
+        #{orderSn,jdbcType=VARCHAR},
+      </if>
+      <if test="knightUid != null" >
+        #{knightUid,jdbcType=VARCHAR},
+      </if>
+      <if test="buffetFid != null" >
+        #{buffetFid,jdbcType=VARCHAR},
+      </if>
+      <if test="cellSn != null" >
+        #{cellSn,jdbcType=VARCHAR},
+      </if>
+      <if test="takeTime != null" >
+        #{takeTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.taisf.services.order.entity.OrderBuffetEntity" >
+    update t_order_buffet
+    <set >
+      <if test="orderSn != null" >
+        order_sn = #{orderSn,jdbcType=VARCHAR},
+      </if>
+      <if test="knightUid != null" >
+        knight_uid = #{knightUid,jdbcType=VARCHAR},
+      </if>
+      <if test="buffetFid != null" >
+        buffet_fid = #{buffetFid,jdbcType=VARCHAR},
+      </if>
+      <if test="cellSn != null" >
+        cell_sn = #{cellSn,jdbcType=VARCHAR},
+      </if>
+      <if test="takeTime != null" >
+        take_time = #{takeTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.taisf.services.order.entity.OrderBuffetEntity" >
+    update t_order_buffet
+    set order_sn = #{orderSn,jdbcType=VARCHAR},
+      knight_uid = #{knightUid,jdbcType=VARCHAR},
+      buffet_fid = #{buffetFid,jdbcType=VARCHAR},
+      cell_sn = #{cellSn,jdbcType=INTEGER},
+      take_time = #{takeTime,jdbcType=TIMESTAMP},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

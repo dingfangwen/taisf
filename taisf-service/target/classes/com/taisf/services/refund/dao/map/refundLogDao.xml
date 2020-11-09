@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="refund.refundLogDao" >
+
+  <resultMap id="BaseResultMap" type="com.taisf.services.refund.entity.RefundLogEntity" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="refund_sn" property="refundSn" jdbcType="VARCHAR" />
+    <result column="status_from" property="statusFrom" jdbcType="INTEGER" />
+    <result column="status_to" property="statusTo" jdbcType="INTEGER" />
+    <result column="op_name" property="opName" jdbcType="VARCHAR" />
+    <result column="op_uid" property="opUid" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+  <sql id="Base_Column_List" >
+    id, refund_sn, status_from, status_to, op_name, op_uid, remark, create_time, update_time
+  </sql>
+
+
+
+
+  <insert id="saveRefundLog" parameterType="com.taisf.services.refund.entity.RefundLogEntity" >
+    insert into t_refund_log
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+
+      <if test="refundSn != null" >
+        refund_sn,
+      </if>
+      <if test="statusFrom != null" >
+        status_from,
+      </if>
+      <if test="statusTo != null" >
+        status_to,
+      </if>
+      <if test="opName != null" >
+        op_name,
+      </if>
+      <if test="opUid != null" >
+        op_uid,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+
+      <if test="refundSn != null" >
+        #{refundSn,jdbcType=VARCHAR},
+      </if>
+      <if test="statusFrom != null" >
+        #{statusFrom,jdbcType=INTEGER},
+      </if>
+      <if test="statusTo != null" >
+        #{statusTo,jdbcType=INTEGER},
+      </if>
+      <if test="opName != null" >
+        #{opName,jdbcType=VARCHAR},
+      </if>
+      <if test="opUid != null" >
+        #{opUid,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+
+</mapper>
